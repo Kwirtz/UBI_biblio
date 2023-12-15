@@ -38,7 +38,7 @@ def is_english(text):
 # Retrieve abstracts from MongoDB
 documents = [doc["abstract"] for doc in collection.find({"abstract":{"$exists":1}}) if is_english(doc["abstract"])]
 documents_doi = [doc["doi"] for doc in collection.find({"abstract":{"$exists":1}}) if is_english(doc["abstract"])]
-
+documents_title = [doc["title"] for doc in collection.find({"abstract":{"$exists":1}}) if is_english(doc["abstract"])]
 # Tokenize the abstracts into words
 tokenized_documents = [word_tokenize(doc.lower()) for doc in documents]
 
@@ -91,7 +91,8 @@ kmeans = KMeans(n_clusters=k, random_state= 12345)
 cluster_labels = kmeans.fit_predict(document_centroids)
 
 # Assign cluster labels to documents
-clustered_documents = [{'abstract': doc, 'cluster': cluster,"doi":doi} for doc, cluster, doi in zip(documents, cluster_labels,documents_doi)]
+clustered_documents = [{'abstract': doc, 'cluster': cluster,"doi":doi,"title":title} for doc, cluster, doi, title 
+                       in zip(documents, cluster_labels,documents_doi,documents_title)]
 
 # Print or store the results as needed
 for document in clustered_documents:
@@ -104,7 +105,7 @@ centroids_tsne = tsne.fit_transform(document_centroids)
 
 # Create DataFrame for Plotly
 df = pd.DataFrame({'X': centroids_tsne[:, 0], 'Y': centroids_tsne[:, 1],
-                   'Cluster': cluster_labels, 'Abstract': documents, "DOI":documents_doi})
+                   'Cluster': cluster_labels, 'Abstract': documents, "DOI":documents_doi,"title":documents_title})
 
 
 
