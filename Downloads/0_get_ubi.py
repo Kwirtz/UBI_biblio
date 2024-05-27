@@ -3,10 +3,10 @@ import pymongo
 
 
 Client = pymongo.MongoClient("mongodb://localhost:27017")
-db = Client["openAlex_20230920"]
+db = Client["openAlex20240517"]
 collection = db["works"]
 db_new = Client["UBI"]
-collection_eco = db_new["works_UBI"]
+collection_eco = db_new["works_UBI_20240517"]
 docs = collection.find()
 
 

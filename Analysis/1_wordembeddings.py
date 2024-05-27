@@ -1,3 +1,4 @@
+#%% init
 import tqdm
 import pymongo
 import webbrowser
@@ -60,7 +61,7 @@ filtered_tokenized_documents = [[word for word in doc if word in filtered_words]
 model = Word2Vec(sentences=filtered_tokenized_documents, vector_size=100, window=5, min_count=1, workers=4)
 
 # Save the trained model
-model.save("word2vec_model.model")
+model.save("Data/word2vec_model.model")
 
 # Get word vectors and words
 words = list(model.wv.key_to_index.keys())
@@ -84,7 +85,7 @@ for doc in filtered_tokenized_documents:
 
 # Convert the list of centroids to a numpy array
 document_centroids = np.array(document_centroids)
-
+0
 # Cluster documents using KMeans
 k = 5  # You can change the number of clusters as needed
 kmeans = KMeans(n_clusters=k, random_state= 12345)
@@ -113,7 +114,7 @@ df = pd.DataFrame({'X': centroids_tsne[:, 0], 'Y': centroids_tsne[:, 1],
 fig = px.scatter(df, x='X', y='Y', color='Cluster', hover_data=['DOI'], title='t-SNE Visualization of Document Centroids')
 
 # Save the interactive plot as an HTML file
-fig.write_html("Results/Figures/document_centroids_visualization.html")
+fig.write_html("Results/Figures/TSNE_visualization.html")
 
 
 df.to_csv("Data/doc_centroid.csv",index=False)
@@ -146,3 +147,7 @@ fig.update_traces(text='')
 
 # Save the interactive plot as an HTML file
 fig.write_html("Results/Figures/word_embeddings_visualization.html")
+
+
+
+# %%
