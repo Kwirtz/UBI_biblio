@@ -74,7 +74,7 @@ columns = ['country_name',"country", 'year', 'n_total', 'n_solo_country', 'n_sol
 df_sorted = df_sorted.reindex(columns=columns)
 
 
-df_sorted.to_csv("Data/national_output.csv")
+df_sorted.to_csv("Data/national_output.csv",index=False)
 
 
 #%% International Output
