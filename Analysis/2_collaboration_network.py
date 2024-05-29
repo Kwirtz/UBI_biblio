@@ -74,7 +74,7 @@ df
 
 #%% spin-glass
 
-communities = g.community_spinglass(gamma=1.5, spins=20)
+communities = g.community_spinglass(gamma=1.2, spins=20)
 
 node_names = []
 community_memberships = []
@@ -96,23 +96,3 @@ merged_df = merged_df.drop(columns=["Node"])
 merged_df.to_csv("Data/national_output.csv",index=False)
 
 
-# Test
-
-X = np.array([
-    [1, 0],
-    [1, 0],
-    [0, 1],
-    [0, 1]
-])
-
-Y = np.array([
-    [1, 0],
-    [0, 1],
-    [1, 0],
-    [0, 1]
-])
-
-R = np.dot(X.T, Y) / 4
-
-print("Joint Probability Matrix R:")
-print(R)

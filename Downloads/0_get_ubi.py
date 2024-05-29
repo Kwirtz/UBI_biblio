@@ -9,9 +9,10 @@ db_new = Client["UBI"]
 collection_eco = db_new["works_UBI_SHS_20240517"]
 docs = collection.find()
 
-# UBI keywords = ["basic income"]
+# UBI 
+#keywords = ["economics"]
 # SHS 
-keywords = ["philosophy"," sociology", "history"," geography","psychology","economics","political science","art","business"]
+keywords = ["philosophy"," sociology", "history"," geography","psychology","economics","political science","art","business", "environmental science"]
 
 
 
