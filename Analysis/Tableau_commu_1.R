@@ -108,4 +108,3 @@ colnames(citation_trigram)[1:2] <- c("Community", "10 most distinctive groups of
 
 stargazer(citation_trigram, summary = FALSE, rownames = FALSE)
 
-sink("C:/Users/Eva Jacob/Documents/Github/UBI_biblio/Results/Table/table.txt")
