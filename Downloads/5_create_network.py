@@ -9,7 +9,7 @@ from collections import defaultdict
 
 client = pymongo.MongoClient("mongodb://localhost:27017")
 db = client['UBI']
-collection = db['works_UBI']
+collection = db['works_UBI_20240517']
 
 #%% National Output
 
