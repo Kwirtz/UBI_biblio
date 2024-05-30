@@ -10,7 +10,7 @@ journal_pub = defaultdict(lambda:defaultdict(int))
 # MongoDB connection
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
-collection = db["works_UBI"]
+collection = db["works_UBI_20240517"]
 
 test = []
 

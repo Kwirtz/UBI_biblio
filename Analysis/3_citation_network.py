@@ -218,6 +218,7 @@ df['text'] = df['title'] #+ ' ' + df['abstract']
 def preprocess(text):
     stop_words = set(stopwords.words('english'))
     #stop_words |= {"basic","income","universal","ubi","unconditional"}
+    stop_words |= {"basic"}
     tokens = nltk.word_tokenize(text.lower())
     tokens = [word for word in tokens if word.isalpha() and word not in stop_words]
     stemmed_tokens = [stemmer.stem(word) for word in tokens]
@@ -276,28 +277,44 @@ df_top10 = pd.DataFrame(data, columns = ["id_sample", "n_sample", "share_sample"
 def get_title(id_):
     return collection.find_one({"id":id_})["title"]
 
+def get_authors_year(id_):
+    doc = collection.find_one({"id":id_})
+    year = doc["publication_year"]
+    text = ""
+    if len(doc["authorships"]) > 2:
+        text += doc["authorships"][0]["author"]["display_name"] +" et al. ({})".format(year)
+    elif len(doc["authorships"]) == 2:
+        text += doc["authorships"][0]["author"]["display_name"] +" et "+ doc["authorships"][1]["author"]["display_name"]+" ({})".format(year)
+    elif len(doc["authorships"]) == 1:
+        text += doc["authorships"][0]["author"]["display_name"] +" ({})".format(year)
+    return text
+
 df_top10['title_sample'] = df_top10['id_sample'].apply(get_title)
 df_top10['title_global'] = df_top10['id_global'].apply(get_title)
-
-column_order = ['community', 'id_sample', "n_sample", "share_sample", 'title_sample',
-                'id_global',"n_global", "share_global", 'title_global', 'author_sample',"tf_idf_term1","tf_idf_term2","tf_idf_term3"]
+df_top10['bib_sample'] = df_top10['id_sample'].apply(get_authors_year)
+df_top10['bib_global'] = df_top10['id_global'].apply(get_authors_year)
+    
+column_order = ['community', 'id_sample', "n_sample", "share_sample", 'title_sample', 'bib_sample',
+                'id_global',"n_global", "share_global", 'title_global','bib_global',
+                'author_sample',"tf_idf_term1","tf_idf_term2","tf_idf_term3"]
 df_top10 = df_top10[column_order]
 
-df_top10.to_csv("Data/citation_network_top10.csv",index=False)
 
 #%% Add level 0 info
 
 db_concept = client['openAlex20240517']
-collection_concept = db['concepts']
+collection_concept = db_concept['concepts']
 
 lvl0 = []
-commu2discipline = {i:{j:0 for j in lvl0} for i in commu2papers}
-n_papers = {i:0 for i in commu2papers}
+
 
 docs = collection_concept.find()
 for doc in tqdm.tqdm(docs):
     if doc["level"] == 0:
         lvl0.append(doc["display_name"])
+
+commu2discipline = {i:{j:0 for j in lvl0} for i in commu2papers}
+n_papers = {i:0 for i in commu2papers}
 
 for commu in commu2papers:
     for paper in commu2papers[commu]:
@@ -319,8 +336,14 @@ for community, disciplines in commu2discipline.items():
         data.append({
             "community": community,
             "discipline": discipline,
-            "number_of_papers": count,
-            "share_of_papers": share
+            "n_discipline": count,
+            "share_discipline": share
         })
 
-df = pd.DataFrame(data)
+df_discipline = pd.DataFrame(data)
+
+df_top10["discipline"] = df_discipline["discipline"]
+df_top10["n_discipline"] = df_discipline["n_discipline"]
+df_top10["share_discipline"] = df_discipline["share_discipline"]
+
+df_top10.to_csv("Data/table1.csv", index = False)
