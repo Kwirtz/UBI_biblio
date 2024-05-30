@@ -25,7 +25,7 @@ if (num_columns >= 4) {
   stop("Le dataframe 'citation_modified' doit avoir au moins 4 colonnes.")
 }
 
-stargazer_table <- stargazer(citation_modified, type = 'text',
+stargazer_table <- stargazer(citation_modified, summary = FALSE, rownames = FALSE, type = 'text',
                              out = "C:/Users/Eva Jacob/Documents/Github/UBI_biblio/Results/Table/Table.txt")
 
 
