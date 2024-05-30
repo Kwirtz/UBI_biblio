@@ -74,7 +74,7 @@ df
 
 #%% spin-glass
 
-communities = g.community_spinglass(gamma=1.2, spins=20)
+communities = g.community_spinglass(gamma=1.5, spins=20)
 
 node_names = []
 community_memberships = []
