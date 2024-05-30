@@ -1,18 +1,19 @@
 import tqdm
 import pymongo
-
+from datetime import datetime
 
 Client = pymongo.MongoClient("mongodb://localhost:27017")
-db = Client["UBI"]
-collection = db["works_UBI_20240517"]
-db_new = Client["UBI"]
-collection_eco = db_new["works_UBI_SHS_20240517"]
+db = Client["openAlex20240517"]
+collection = db["works"]
+db_new = Client["openAlex20240517"]
+collection_eco = db_new["works_SHS"]
 docs = collection.find()
+
 
 # UBI 
 #keywords = ["economics"]
 # SHS 
-keywords = ["philosophy"," sociology", "history"," geography","psychology","economics","political science","art","business", "environmental science"]
+keywords = ["philosophy"," sociology", "history"," geography","psychology","economics","political science","art","business"]
 
 
 
@@ -52,13 +53,31 @@ def check_for_dups(db_name, collection_name):
     ids = []
     for doc in tqdm.tqdm(docs):
         ids.append(doc["id"])
-    if len(ids) == len(list(set(ids))):
+    if len(ids) != len(list(set(ids))):
         print("WOUAH WATCH OUT")
     else:
         print("RAS")
     return ids
 
 test = check_for_dups(db_name = "UBI", collection_name = "works_UBI_20240517")
+
+def delete_dups(db_name, collection_name):
+    Client = pymongo.MongoClient("mongodb://localhost:27017")
+    db = Client[db_name]
+    collection = db[collection_name]
+    docs = collection.find({})
+    ids = []
+    for doc in tqdm.tqdm(docs):
+        ids.append(doc["id"])
+    for id_ in ids:
+        docs = list(collection.find({"id":id_}))
+        if len(docs) > 1:
+            docs.sort(key=lambda x: datetime.fromisoformat(x['updated_date']), reverse=True)
+            # Keep the most recent document and delete the rest
+            for doc_to_delete in docs[1:]:
+                collection.delete_one({"_id": doc_to_delete["_id"]})
+
+delete_dups(db_name = "UBI", collection_name = "works_UBI_20240517")
 
 """
 n = 0
