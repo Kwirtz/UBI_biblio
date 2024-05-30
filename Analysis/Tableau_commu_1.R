@@ -26,7 +26,7 @@ if (num_columns >= 4) {
 }
 
 stargazer_table_authors_references <- stargazer(citation_modified, summary = FALSE, rownames = FALSE, type = 'text',
-                             out = "C:/Users/Eva Jacob/Documents/Github/UBI_biblio/Results/Table/Table.txt")
+                             out = "C:/Users/Eva Jacob/Documents/Github/UBI_biblio/Results/Table/Table_authors_references.txt")
 
 
 
