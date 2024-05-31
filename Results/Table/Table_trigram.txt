@@ -1,65 +1,11 @@
 
-====================================================================================================
-Community    Disciplines                   Most Cited References                 Most Cited Authors 
-----------------------------------------------------------------------------------------------------
-0             Economics                   Karl Widerquist (2013)                Philippe Van Parijs 
-0         Political science                 Stuart White (1997)                   Karl Widerquist   
-0             Sociology                     Brian Barry (1996)                     Simon Birnbaum   
-0         Computer science                 Carole Pateman (2004)                Jürgen De Wispelaere
-0            Engineering                   Simon Birnbaum (2012)                    Stuart White    
-0            Mathematics                   Philip Pettit (2008)                   Erik Olín Wright  
-0            Philosophy                   Erik Olín Wright (2006)                 Matthew Johnson   
-0              Biology                                                              Guy Standing    
-0             Business                  Yannick Vanderborght (2013)               Elliott Johnson   
-0             Chemistry                 Philippe Van Parijs (2004)                 Carole Pateman   
-1             Economics                   Karl Widerquist (2005)                  Karl Widerquist   
-1         Political science             Philippe Van Parijs (2004)                  Guy Standing    
-1         Computer science              Sarath Davala et al. (2015)             Philippe Van Parijs 
-1             Sociology                   Karl Widerquist (2018)                Jürgen De Wispelaere
-1            Mathematics    José Antonio Noguera et Jürgen De Wispelaere (2006)    Malcolm Torry    
-1             Business                 Richard Gilbert et al. (2018)               Sarath Davala    
-1            Engineering                    Guy Standing (2017)                   Renana Jhabvala   
-1            Philosophy                   Rigmar Osterkamp (2013)               Soumya Kapoor Mehta 
-1              Biology         David Calnitsky et Jonathan P. Latner (2017)       Hamid Tabatabai   
-1            Psychology                    Malcolm Torry (2016)                   David Calnitsky   
-2             Economics                 Ugo Gentilini et al. (2019)                Hilary Hoynes    
-2         Political science       Rema Hanna et Benjamin A. Olken (2018)          Jesse Rothstein   
-2         Computer science        Hilary Hoynes et Jesse Rothstein (2019)         Abhijit Banerjee  
-2            Mathematics              Abhijit Banerjee et al. (2019)                Paul Niehaus    
-2             Sociology           James Browne et Herwig Immervoll (2017)           Tavneet Suri    
-2            Philosophy           Hilary Hoynes et Jesse Rothstein (2019)          Ugo Gentilini    
-2             Business                Abhijit Banerjee et al. (2019)               Margaret Grosh   
-2            Engineering       Maitreesh Ghatak et François Maniquet (2019)        Ruslan Yemtsov   
-2             Medicine                  Isabel Ortiz et al. (2018)               Iamele P. Rigolini 
-2             Geography     Philippe Van Parijs et Yannick Vanderborght (2019)       Rema Hanna     
-3             Economics                 Philippe Van Parijs (1992)              Philippe Van Parijs 
-3         Political science             Philippe Van Parijs (2004)              Jürgen De Wispelaere
-3             Sociology                 Philippe Van Parijs (2013)                Lindsay Stirton   
-3         Computer science                 Ingrid Robeyns (2001)                    Guy Standing    
-3            Mathematics                    Ailsa McKay (2001)                    Karl Widerquist   
-3            Engineering                   Almaz Zelleke (2008)                    Ingrid Robeyns   
-3            Philosophy                     Louise Haagh (2011)                     Ailsa McKay     
-3             Business                    Karl Widerquist (2005)                    Louise Haagh    
-3            Psychology       Jürgen De Wispelaere et Lindsay Stirton (2004)       Carole Pateman   
-3              Biology                  Yannick Vanderborght (2013)                 Bill Jordan     
-4             Economics                    A. B. Atkinson (1996)                Philippe Van Parijs 
-4         Political science             Philippe Van Parijs (1995)                  Guy Standing    
-4             Sociology                    Samuel Bowles (1992)                   Karl Widerquist   
-4            Engineering                Philippe Van Parijs (2004)                 A. B. Atkinson   
-4            Philosophy                   Daniel Raventós (2007)                   Bruce Ackerman   
-4            Mathematics               Bruce Ackerman et al. (2006)                 Anne Alstott    
-4         Computer science       Rodney Haddow et Tony Fitzpatrick (2001)          Samuel Bowles    
-4             Business                      Tony Walter (1989)                    Daniel Raventós   
-4              Biology             Chris Clark et C. J. Kavanagh (1996)           Tony Fitzpatrick  
-4             Chemistry                                                              Loek Groot     
-5             Economics         Femke Roosma et W.J.H. van Oorschot (2019)      Jürgen De Wispelaere
-5         Political science                 Guy Standing (2017)                     Femke Roosma    
-5             Sociology         Ann–Helén Bay et Axel West Pedersen (2006)      Philippe Van Parijs 
-5         Computer science        Zachary Parolin et Linus Siöland (2019)          Johanna Perkiö   
-5            Engineering      Jürgen De Wispelaere et Lindsay Stirton (2004)        Guy Standing    
-5            Philosophy                      Soomi Lee (2018)                     Karl Widerquist   
-5            Mathematics                Daniel Nettle et al. (2021)               Lindsay Stirton   
-5            Psychology     Isabelle Stadelmann‐Steffen et Clau Dermont (2019)  Yannick Vanderborght
-5             Business                  Philippe Van Parijs (2004)              W.J.H. van Oorschot 
-5             Geography                 Yannick Vanderborght (2006)                  Joe Chrisp     
-----------------------------------------------------------------------------------------------------
+======================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+Community                                                                                                                                                                                                                                                                                         20 most distinctive groups of three words                                                                                                                                                                                                                                                           
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0                      ecological effects income,socialist arguments income,social effects income,libertarian perspectives income,real freedom income,feasibility universal income,case universal income,egalitarianism limits income,income unemployment job,unemployment job scarcity,resource egalitarianism limits,negative income tax,income social justice,cost universal income,universal income public,defence participation income,need citizen income,income pedigree problems,exploitation labor income,fair reciprocity income                      
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1                                  need income experiments,income grant pilot,negative income tax,namibian income grant,market effects income,employment market effects,income tax experiments,ontario income pilot,standards income debate,income standards income,research education uk,education uk income,uk income debate,minimum income standards,cash transfers income,empirical research unconditional,research unconditional income,unconditional income europe,feasibility citizen income,alternative funding methods                                 
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2 universal income developing,income developing world,finnish income experiment,effects universal income,employment guaranteed income,universal income dynamic,income dynamic assessment,guaranteed employment guaranteed,universal income programs,idea universal income,fiscal distributional effects,universal income brazil,income brazil fiscal,distributional effects alternative,brazil fiscal distributional,effects alternative schemes,macroeconomic effects universal,integrate income employment,income employment support,countries theory practice
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3                                    gender effects income,income labor contract,policy welfare state,income policy welfare,income age inactivity,income economic variables,prospects income age,effects income economic,theory universal income,potential universal income,european welfare states,gender justice costs,justice costs lifestyles,income gender justice,income gendered division,case universal income,universal income new,social protection income,income european welfare,experiment policy implementation                                   
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4             machines technological unemployment,capital egalitarian toolkit,alternative income mechanisms,income security right,negative income tax,universal income welfare,income welfare state,lockean argument income,income economic integration,mesoeconomic approach income,targeting social assistance,income employment brazil,income make happen,crossroads way income,income globalization migration,income globalized economy,income italian tour,compensatory justice income,concept perspectives advocates,working work disincentive            
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5                    support universal income,ethics pandemic income,trade unions income,neither left right,implementing income australia,finnish income experiment,towards universal income,attitudes toward universal,toward universal income,pandemic increased support,increased support universal,alternative funding methods,rents australia source,introduction popular income,income experiments netherlands,income finnish context,need citizen income,inevitability universal income,merits universal income,popular support income                   
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
