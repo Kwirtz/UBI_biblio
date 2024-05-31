@@ -56,6 +56,8 @@ colnames(citation_gram)[1:2] <- c("Community", "10 most distinctive words")
 
 stargazer(citation_gram, summary = FALSE, rownames = FALSE)
 
+stargazer_table_gram <- stargazer(citation_modified, summary = FALSE, rownames = FALSE, type = 'text',
+                                                out = "C:/Users/Eva Jacob/Documents/Github/UBI_biblio/Results/Table/Table_gram.txt")
 
 
 #Table keywords: bigram
@@ -83,6 +85,8 @@ colnames(citation_bigram)[1:2] <- c("Community", "10 most distinctive groups of 
 
 stargazer(citation_bigram, summary = FALSE, rownames = FALSE)
 
+stargazer_table_bigram <- stargazer(citation_modified, summary = FALSE, rownames = FALSE, type = 'text',
+                                  out = "C:/Users/Eva Jacob/Documents/Github/UBI_biblio/Results/Table/Table_bigram.txt")
 
 
 #Table keywords: trigram
@@ -110,3 +114,5 @@ colnames(citation_trigram)[1:2] <- c("Community", "10 most distinctive groups of
 
 stargazer(citation_trigram, summary = FALSE, rownames = FALSE)
 
+stargazer_table_trigram <- stargazer(citation_modified, summary = FALSE, rownames = FALSE, type = 'text',
+                                  out = "C:/Users/Eva Jacob/Documents/Github/UBI_biblio/Results/Table/Table_trigram.txt")
