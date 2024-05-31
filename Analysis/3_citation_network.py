@@ -221,8 +221,8 @@ def preprocess(text):
     stop_words |= {"basic"}
     tokens = nltk.word_tokenize(text.lower())
     tokens = [word for word in tokens if word.isalpha() and word not in stop_words]
-    stemmed_tokens = [stemmer.stem(word) for word in tokens]
-    return ' '.join(stemmed_tokens)
+    #tokens = [stemmer.stem(word) for word in tokens]
+    return ' '.join(tokens)
 
 def tf_idf_gram(gram):
     # Apply preprocessing
@@ -242,7 +242,7 @@ def tf_idf_gram(gram):
     def get_key_terms(tfidf_df, community):
         community_df = tfidf_df[tfidf_df['modularity_class'] == community].drop(columns=['modularity_class'])
         mean_tfidf = community_df.mean(axis=0)
-        top_terms = mean_tfidf.sort_values(ascending=False).head(10)  # Get top 10 terms
+        top_terms = mean_tfidf.sort_values(ascending=False).head(20)  # Get top 10 terms
         return top_terms
     
     # Get key terms for each community
@@ -253,6 +253,19 @@ def tf_idf_gram(gram):
 key_terms1 = tf_idf_gram(1)
 key_terms2 = tf_idf_gram(2)
 key_terms3 = tf_idf_gram(3)
+
+#%%
+
+data = []
+
+for community in top_authors_per_community:
+    for key_term1, key_term2, key_term3 in zip(key_terms1[community].index,
+                                               key_terms2[community].index,
+                                               key_terms3[community].index):
+        data.append({ "community": community, "tf_idf_term1":key_term1,"tf_idf_term2":key_term2,"tf_idf_term3":key_term3})
+    
+df_tf_idf = pd.DataFrame(data, columns = ["community","tf_idf_term1", "tf_idf_term2", "tf_idf_term3"])
+df_tf_idf.to_csv("Data/tf_idf_20.csv", index = False)
 
 #%%
 

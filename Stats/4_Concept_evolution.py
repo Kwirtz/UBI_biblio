@@ -3,6 +3,7 @@
 import tqdm
 import pymongo
 import pandas as pd
+import matplotlib.pyplot as plt
 from collections import defaultdict
 
 # MongoDB connection
@@ -45,4 +46,23 @@ for doc in tqdm.tqdm(docs):
     for keyword in check:
         if keyword in text:
             year2keywords[year][keyword] += 1
-    
+
+# Convert the dictionary to a DataFrame
+df = pd.DataFrame.from_dict(year2keywords, orient='index').reset_index()
+
+# Rename the index column to 'year'
+df.rename(columns={'index': 'year'}, inplace=True)
+df_sorted = df.sort_values(by='year')
+
+# Plot each keyword over the years
+plt.figure(figsize=(14, 8))
+for keyword in check:
+    plt.plot(df_sorted['year'], df_sorted[keyword], marker='o', label=keyword)
+
+plt.title('Keyword Trends Over Years')
+plt.xlabel('Year')
+plt.ylabel('Frequency')
+plt.legend()
+plt.grid(True)
+plt.savefig('Results/Figures/keyword_trend.png', format='png')
+plt.show()
