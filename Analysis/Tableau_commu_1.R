@@ -29,11 +29,15 @@ stargazer_table_authors_references <- stargazer(citation_modified, summary = FAL
                              out = "C:/Users/Eva Jacob/Documents/Github/UBI_biblio/Results/Table/Table_authors_references.txt")
 
 
+##change df
 
+read.csv("C:\\Users\\Eva Jacob\\Documents\\Thèse\\Papier 3\\Data\\tf_idf_20.csv")
+
+citation <- read.csv("C:\\Users\\Eva Jacob\\Documents\\Thèse\\Papier 3\\Data\\tf_idf_20.csv")
 
 #Table keywords: gram
-citation_terms <- citation[, c(1, 13)]
-group_size <- 10
+citation_terms <- citation[, c(1:2)]
+group_size <- 20
 total_rows <- nrow(citation_terms)
 num_groups <- ceiling(total_rows / group_size)
 combine_rows <- function(df) {
@@ -52,17 +56,17 @@ for (i in 1:num_groups) {
 
 citation_gram <- do.call(rbind, combined_groups)
 
-colnames(citation_gram)[1:2] <- c("Community", "10 most distinctive words")
+colnames(citation_gram)[1:2] <- c("Community", "20 most distinctive words")
 
 stargazer(citation_gram, summary = FALSE, rownames = FALSE)
 
-stargazer_table_gram <- stargazer(citation_modified, summary = FALSE, rownames = FALSE, type = 'text',
+stargazer_table_gram <- stargazer(citation_gram, summary = FALSE, rownames = FALSE, type = 'text',
                                                 out = "C:/Users/Eva Jacob/Documents/Github/UBI_biblio/Results/Table/Table_gram.txt")
 
 
 #Table keywords: bigram
-citation_terms <- citation[, c(1, 14)]
-group_size <- 10
+citation_terms <- citation[, c(1, 3)]
+group_size <- 20
 total_rows <- nrow(citation_terms)
 num_groups <- ceiling(total_rows / group_size)
 combine_rows <- function(df) {
@@ -81,17 +85,17 @@ for (i in 1:num_groups) {
 
 citation_bigram <- do.call(rbind, combined_groups)
 
-colnames(citation_bigram)[1:2] <- c("Community", "10 most distinctive groups of two words")
+colnames(citation_bigram)[1:2] <- c("Community", "20 most distinctive groups of two words")
 
 stargazer(citation_bigram, summary = FALSE, rownames = FALSE)
 
-stargazer_table_bigram <- stargazer(citation_modified, summary = FALSE, rownames = FALSE, type = 'text',
+stargazer_table_bigram <- stargazer(citation_bigram, summary = FALSE, rownames = FALSE, type = 'text',
                                   out = "C:/Users/Eva Jacob/Documents/Github/UBI_biblio/Results/Table/Table_bigram.txt")
 
 
 #Table keywords: trigram
-citation_terms <- citation[, c(1, 15)]
-group_size <- 10
+citation_terms <- citation[, c(1, 4)]
+group_size <- 20
 total_rows <- nrow(citation_terms)
 num_groups <- ceiling(total_rows / group_size)
 combine_rows <- function(df) {
@@ -110,9 +114,9 @@ for (i in 1:num_groups) {
 
 citation_trigram <- do.call(rbind, combined_groups)
 
-colnames(citation_trigram)[1:2] <- c("Community", "10 most distinctive groups of three words")
+colnames(citation_trigram)[1:2] <- c("Community", "20 most distinctive groups of three words")
 
 stargazer(citation_trigram, summary = FALSE, rownames = FALSE)
 
-stargazer_table_trigram <- stargazer(citation_modified, summary = FALSE, rownames = FALSE, type = 'text',
+stargazer_table_trigram <- stargazer(citation_trigram, summary = FALSE, rownames = FALSE, type = 'text',
                                   out = "C:/Users/Eva Jacob/Documents/Github/UBI_biblio/Results/Table/Table_trigram.txt")
