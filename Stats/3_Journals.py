@@ -86,13 +86,28 @@ experimental_keywords = [
     "analysis", "sample", "sampling", "data collection", "experimental setup", "prototype",
     "implementation", "performance", "practical", "real-world", "field study", "case study",
     "survey", "questionnaire", "experimental results", "apparatus", "instrumentation", "laboratory", "clinical trial",
-    "in vitro", "in vivo", "pilot study", "experimentation", "empirical study"
+    "in vitro", "in vivo", "pilot study", "experimentation", "empirical study", "rct", "experience"
 ]
 
 
 docs = collection.find()
 for doc in tqdm.tqdm(docs):
-    
+    done = False
+    try:
+        title = doc["title"]
+    except:
+        title = ""
+    try:
+        abstract = doc["abstract"]
+    except:
+        abstract = ""
+    year = doc["publication_year"]
+    if not title:
+        title = ""
+    if not abstract:
+        abstract = ""
+    text = title + " " + abstract
+    text = text.lower()    
     if doc["locations"]:
         for location in doc["locations"]:
             journal = False
@@ -103,11 +118,17 @@ for doc in tqdm.tqdm(docs):
                 pass
             if journal:
                 try:
-                    journals.append(location["source"]["display_name"])
+                    if location["source"]["display_name"] in most_common_journals:
+                        if len([i for i in experimental_keywords if i in text]) > 0 and done == False:
+                            df_journals.at[location["source"]["display_name"],"n_expe"] += 1
+                            done = True
+                        elif done == False:
+                            df_journals.at[location["source"]["display_name"],"n_theo"] += 1
+                            done = True
                 except Exception as e:
                     print(str(e))
     
-
+df_journals["Journal"] = df_journals.index
 
 
 

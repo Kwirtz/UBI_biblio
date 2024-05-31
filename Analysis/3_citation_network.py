@@ -217,8 +217,8 @@ df['text'] = df['title'] #+ ' ' + df['abstract']
 # Preprocessing function
 def preprocess(text):
     stop_words = set(stopwords.words('english'))
-    #stop_words |= {"basic","income","universal","ubi","unconditional"}
-    stop_words |= {"basic"}
+    stop_words |= {"basic","income","universal","ubi","unconditional"}
+    #stop_words |= {"basic"}
     tokens = nltk.word_tokenize(text.lower())
     tokens = [word for word in tokens if word.isalpha() and word not in stop_words]
     #tokens = [stemmer.stem(word) for word in tokens]
