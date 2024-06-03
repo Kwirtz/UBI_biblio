@@ -10,7 +10,7 @@ from collections import defaultdict, Counter
 # MongoDB connection
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
-collection = db["works_UBI_20240517"]
+collection = db["works_UBI_global"]
 
 
 #%% Journal overtime
@@ -129,6 +129,6 @@ for doc in tqdm.tqdm(docs):
                     print(str(e))
     
 df_journals["Journal"] = df_journals.index
-
+df_journals.to_csv("Data/Fig2")
 
 

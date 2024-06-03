@@ -1,0 +1,182 @@
+---
+title: 'Figures'
+author: "Kevin Wirtz (kevin.wirtz@unistra.fr)"
+date: "Updated `r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_notebook:
+    code_folding: hide
+    df_print: paged
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+gc() #free up memrory and report the memory usage.
+graphics.off()
+
+Sys.setenv(LANG = "en") # For english language
+options(scipen = 5) # To deactivate annoying scientific number notation
+
+library(zoo)
+library(tidyverse) # Collection of all the good stuff like dplyr, ggplot2 ect.
+library(ggalluvial)
+library(cowplot)
+library(ggpubr)
+library(magick)
+library(magrittr)
+
+
+data_path = file.path("../Data") 
+result_path = file.path("../Results") 
+
+```
+
+# Fig2: Theo vs Expe
+```{r} 
+df <- read_csv(file.path(data_path, "Fig2.csv"))
+df$Journal <- sapply(str_split(df$Journal, "/"), function(x) x[length(x)])
+df$Journal <- str_wrap(df$Journal, width = 30)
+oma2 <- c(0.3,0,0,0.3)
+df_long <- df %>%
+  pivot_longer(cols = c(n_theo, n_expe), names_to = "Type", values_to = "Count")
+```
+```{r} 
+Fig2 <- ggplot(df_long, aes(x = Type, y = Count, fill = Type)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Journal, ncol = 4) +
+  scale_fill_manual(name = "Type",
+                    values = c("n_theo" = "#1f77b4", "n_expe" = "#fb7d07"),
+                    labels = c("Experimental", "Theoretical")) +
+  labs(x = "",
+       y = "Number of Publications",
+       fill = "Legend") +
+    theme(axis.text.x = element_blank(),  # Remove x-axis text
+        axis.ticks.x = element_blank(), # Remove x-axis ticks
+        axis.text.y = element_text(size = 10),
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(oma2, "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        legend.position = "top",
+        legend.text = element_text(size = 10),
+        strip.text = element_text(size = 8), # Reduce font size of facet labels
+        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
+
+
+Fig2
+
+pdf(file=file.path(result_path, "Figures/Fig2.pdf"), width=8, height=8, family="Helvetica", pointsize=6)
+Fig2
+dev.off()
+
+```
+
+```{r} 
+
+figa = ggplot(collapsed_df, aes(x = year)) + 
+  geom_line(size=1,aes(y = share_transition_roll, color='share_ai_transition')) + 
+  geom_line(size=1,aes(y = share_transition_non_ai_roll, color='share_non_ai_transition')) +
+  scale_color_manual(name = "Group",
+                     values = c( "share_ai_transition" = "#1f77b4", "share_non_ai_transition" = "black"),
+                     labels = c( "AI researchers","Non-AI researchers")) +
+  labs(x = "Year",
+         y = "Share of researchers leaving academia",
+         color = "Legend") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+      axis.text.y = element_text(size = 10),
+      axis.title.x = element_text(size = 10),
+      axis.title.y = element_text(size = 10),
+      panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+      plot.margin = unit(oma2, "cm"),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      legend.key=element_blank(),
+      legend.title=element_blank(),
+      legend.position="top",
+      legend.text=element_text(size = 10)) #+
+#  scale_y_continuous(
+#    name = "Share transition",
+#    sec.axis = sec_axis(~./3, name="Share Ind.")
+#  )
+
+figa
+
+
+pdf(file=file.path(result_path, "plots/Fig_intro_a.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+figa
+dev.off()
+
+```
+
+```{r} 
+
+figb = ggplot(collapsed_df, aes(x = year)) + 
+  geom_line(size=1,aes(y = share_company_roll, color='share_ai_transition')) + 
+  geom_line(size=1,aes(y = share_company_non_ai_roll, color='share_non_ai_transition')) +
+  scale_color_manual(name = "Group",
+                     values = c( "share_ai_transition" = "#1f77b4", "share_non_ai_transition" = "black"),
+                     labels = c( "AI researchers","Non-AI researchers")) +
+  labs(x = "Year",
+         y = "Share of researchers leaving academia to industry",
+         color = "Legend") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+      axis.text.y = element_text(size = 10),
+      axis.title.x = element_text(size = 10),
+      axis.title.y = element_text(size = 10),
+      panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+      plot.margin = unit(oma2, "cm"),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      legend.key=element_blank(),
+      legend.title=element_blank(),
+      legend.position="top",
+      legend.text=element_text(size = 10)) #+
+#  scale_y_continuous(
+#    name = "Share solo aut",
+#    sec.axis = sec_axis(~./3, name="Share Ind.")
+#  )
+
+figb
+
+
+pdf(file=file.path(result_path, "plots/Fig_intro_b.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+figb
+dev.off()
+
+```
+
+# Fig_intro: Assemble ####
+```{r} 
+
+
+fig_intro = ggdraw() +
+  draw_plot(figa, x=0, y=-0.1, width=1/2, height=1)+
+  draw_plot(figb, x=1/2, y=-0.1, width=1/2, height=1)+
+  draw_plot_label(label=c("A","B"),x=c(0, 0.5),y=c(0.9, 0.9), 
+                  size = 10) +
+theme(plot.margin = margin(0.1,0.1,2,0.1, "cm")) 
+
+fig_intro
+
+```
+
+```{r}
+pdf(file=file.path(result_path, "plots/Fig_intro.pdf"), width=10, height=5, family="Helvetica", pointsize=6)
+fig_intro
+dev.off()
+```
+
+
+

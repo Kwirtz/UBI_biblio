@@ -5,6 +5,7 @@ import nltk
 import pymongo
 import pandas as pd
 import igraph as ig
+from langdetect import detect
 from nltk.corpus import stopwords
 from collections import defaultdict, Counter
 from nltk.stem import PorterStemmer
@@ -20,16 +21,17 @@ stemmer = PorterStemmer()
 
 client = pymongo.MongoClient("mongodb://localhost:27017")
 db = client['UBI']
-collection = db['works_UBI_20240517']
+collection = db['works_UBI_global']
 
-
-#%% Get Citation network
 
 list_of_papers = []
 docs = collection.find()
 for doc in tqdm.tqdm(docs):
     list_of_papers.append(doc["id"])    
 
+
+
+#%% Get Citation network
 
 
 data = []
@@ -43,7 +45,7 @@ for doc in tqdm.tqdm(docs):
 df = pd.DataFrame(data,columns=["source","target"])
 
 
-g = ig.Graph.TupleList(df.itertuples(index=False))
+g = ig.Graph.TupleList(df.itertuples(index=False), directed=False)
 
 # Extract the largest connected component
 if not g.is_connected():
@@ -51,13 +53,15 @@ if not g.is_connected():
     g = components.giant()
 
 
+# Simplify the graph to remove multi-edges and self-loops
+g = g.simplify(multiple=True, loops=True)
 
-#communities = g.community_leiden(objective_function="modularity", resolution=0.3)
+communities = g.community_leiden(objective_function="modularity", resolution=0.3)
 #communities = g.community_spinglass(gamma=1.2)
 #communities = g.community_multilevel(resolution=0.205)
 #communities = g.community_infomap()
 #communities = g.community_edge_betweenness(clusters=6).as_clustering()
-communities = g.community_fastgreedy()
+#communities = g.community_fastgreedy()
 
 node_names = []
 community_memberships = []
@@ -198,12 +202,28 @@ for community, papers in most_cited_global.items():
 
 df = pd.read_csv("Data/modularity.csv")
 
+stop_words = ["full-text", "http", "doi", "not available for this content", "pdf", "url", "access", "vol"]
+
+def is_english(text):
+    try:
+        lang = detect(text)
+        return lang == 'en'
+    except:
+        return False
+
 documents = []
 for doc_id in df['Label']:
     doc = collection.find_one({'id': doc_id}, {'title': 1, 'abstract': 1})
     if "abstract" not in doc:
         doc["abstract"] = ""
+    else:
+        for word in stop_words:
+            if word in doc["abstract"].lower():
+                doc["abstract"] = ""
     if "title" not in doc:
+        doc["title"] = ""
+    if is_english(doc["title"]) == False:
+        doc["abstract"] = ""
         doc["title"] = ""
     documents.append(doc)
 
@@ -212,13 +232,14 @@ df['title'] = [doc['title'] for doc in documents]
 df['abstract'] = [doc['abstract'] for doc in documents]
 
 # Combine title and abstract
-df['text'] = df['title'] #+ ' ' + df['abstract']
+df['text'] = df['title'] + ' ' + df['abstract']
 
 # Preprocessing function
 def preprocess(text):
     stop_words = set(stopwords.words('english'))
     stop_words |= {"basic","income","universal","ubi","unconditional"}
     #stop_words |= {"basic"}
+    # Avoid fucking 
     tokens = nltk.word_tokenize(text.lower())
     tokens = [word for word in tokens if word.isalpha() and word not in stop_words]
     #tokens = [stemmer.stem(word) for word in tokens]
@@ -247,7 +268,7 @@ def tf_idf_gram(gram):
     
     # Get key terms for each community
     communities = df['modularity_class'].unique()
-    key_terms = {community: get_key_terms(tfidf_df, community) for community in communities}
+    key_terms = {community: get_key_terms(tfidf_df, community) for community in tqdm.tqdm(communities)}
     return key_terms
 
 key_terms1 = tf_idf_gram(1)
@@ -360,3 +381,12 @@ df_top10["n_discipline"] = df_discipline["n_discipline"]
 df_top10["share_discipline"] = df_discipline["share_discipline"]
 
 df_top10.to_csv("Data/table1.csv", index = False)
+
+"""
+{
+  "abstract": {
+    "$regex": "access page",
+    "$options": "i"
+  }
+}
+"""
