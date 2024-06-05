@@ -84,21 +84,6 @@ df = pd.DataFrame.from_dict(year2keywords, orient='index').reset_index()
 df.rename(columns={'index': 'year'}, inplace=True)
 df_sorted = df.sort_values(by='year')
 
-# Plot each keyword over the years
-plt.figure(figsize=(14, 8))
-for keyword in check1:
-    plt.plot(df_sorted.loc[(df_sorted["year"] > 1910) & (df_sorted["year"] < 1970), 'year'], 
-         df_sorted.loc[(df_sorted["year"] > 1910) & (df_sorted["year"] < 1970), keyword], 
-         marker='o', label=keyword)
-plt.title('Keyword Trends Over Years')
-plt.xlabel('Year')
-plt.ylabel('Frequency')
-plt.legend()
-plt.grid(True)
-plt.savefig('Results/Figures/keyword_trend.png', format='png')
-plt.show()
+df_sorted.to_csv("Data/Fig1.csv",index=False)
 
-
-df_sorted[df_sorted["year"]<2000]['year']
-doc = collection.find_one({"id":"https://openalex.org/W3123802184"})
 

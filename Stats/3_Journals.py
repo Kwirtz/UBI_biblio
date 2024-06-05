@@ -1,5 +1,6 @@
 #%% Init
 
+import re
 import tqdm
 import pymongo
 import pandas as pd
@@ -129,6 +130,18 @@ for doc in tqdm.tqdm(docs):
                     print(str(e))
     
 df_journals["Journal"] = df_journals.index
-df_journals.to_csv("Data/Fig2")
+def clean_text(text):
+    # Remove special characters
+    clean_text = re.sub(r'[^\x00-\x7F]+', '', text)
+    return clean_text
+
+
+df_journals['Journal'] = df_journals['Journal'].apply(clean_text)
+df_journals.drop(columns=["clean_Journal"],inplace=True)
+
+df_journals.to_csv("Data/Fig2.csv",index=False,encoding="utf-8")
+
+
+
 
 

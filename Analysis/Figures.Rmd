@@ -29,10 +29,151 @@ library(cowplot)
 library(ggpubr)
 library(magick)
 library(magrittr)
-
+library(gridExtra)
 
 data_path = file.path("../Data") 
 result_path = file.path("../Results") 
+
+```
+
+# Fig intro
+
+```{r} 
+df <- read_csv(file.path(data_path, "Fig_intro.csv"))
+oma2 <- c(0,0,0,0)
+df$share = df$Value2/df$Value1
+df$share_ma <- rollmean(df$share, k = 5, fill = NA, align = "center")
+
+```
+
+```{r} 
+oma2 <- c(0.3,0,0,0.3)
+
+colors <- c("UBI publications" = "#1f77b4", "share SHS" = "#ff7f0e")
+
+
+fig_intro = ggplot(df[df$year<=2020,], aes(x = year)) + 
+  geom_line(linewidth=1,aes(y = Value2, color='UBI_publications')) + 
+  geom_line(linewidth=1,aes(y = share_ma*6768480, color='UBI_share')) +
+  scale_color_manual(name = "Group",
+                     values = c( "UBI_publications" = "#1f77b4", "UBI_share" = "black"),
+                     labels = c( "UBI publications","Share UBI publications in SHS")) +
+  labs(x = "Year",
+         y = "Share",
+         color = "Legend",
+       title="Evolution of UBI related publications") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 6),
+      axis.text.y = element_text(size = 6),
+      axis.title.x = element_text(size = 6),
+      axis.title.y = element_text(size = 6),
+      panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+      plot.margin = unit(oma2, "cm"),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      plot.title = element_text(hjust = 0.5, size = 12),  
+      legend.key=element_blank(),
+      legend.title=element_blank(),
+      legend.position="top",
+      legend.text=element_text(size = 6)) +
+  scale_y_continuous(
+    name = "Publications",
+    sec.axis = sec_axis(~./6768480, name="Share")
+  )
+fig_intro
+pdf(file=file.path(result_path, "Figures/Fig_intro.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+fig_intro
+dev.off()
+```
+
+
+# Fig1: Concept evolution
+
+```{r} 
+df <- read_csv(file.path(data_path, "Fig1.csv"))
+oma2 <- c(0,0,0,0)
+df_long <- df %>%
+  pivot_longer(cols = everything()[-1], # exclude year column
+               names_to = "Variable",  # name for new column with variable names
+               values_to = "Value")
+
+first_period = c("state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income")
+second_period = c("negative income tax", "minimum income guarantee","minimum income", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
+"citizen’s basic income", "citizen’s income")
+third_period = c("helicopter money", "quantitative easing","unconditional basic income", "universal basic income","basic income")
+
+df_period1 <- df_long[df_long$Variable %in% first_period & df_long$year>1910 & df_long$year<1941 , ]
+df_period2 <- df_long[df_long$Variable %in% second_period & df_long$year>1960 & df_long$year<1971 , ]
+df_period3 <- df_long[df_long$Variable %in% third_period & df_long$year>2010 & df_long$year<2025 , ]
+
+```
+
+```{r} 
+# Create the individual plots
+Fig1_a <- ggplot(df_period1, aes(x = year, y = Value)) +
+  geom_line(aes(color = Variable), size = 0.75) +
+  labs(title = "Period 1", x = "year", y = "# Publications") +
+    theme(
+        axis.text.y = element_text(size = 10),
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(oma2, "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 6),
+        strip.text = element_text(size = 8), # Reduce font size of facet labels
+        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
+
+
+Fig1_b <- ggplot(df_period2, aes(x = year, y = Value)) +
+  geom_line(aes(color = Variable), size = 0.75) +
+  labs(title = "Period 2", x = "year", y = "# Publications") +
+    theme( # Remove x-axis ticks
+        axis.text.y = element_text(size = 10),
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(oma2, "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 6),
+        strip.text = element_text(size = 8), # Reduce font size of facet labels
+        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
+
+
+Fig1_c <- ggplot(df_period3, aes(x = year, y = Value)) +
+  geom_line(aes(color = Variable), size = 0.75) +
+  labs(title = "Period 3", x = "year", y = "# Publications") +
+    theme(
+        axis.text.y = element_text(size = 10),
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(oma2, "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        # Legend position with justification for top left corner
+        legend.justification = "left",  # Added justification
+        legend.text = element_text(size = 6),
+        strip.text = element_text(size = 8), # Reduce font size of facet labels
+        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
+
+
+# Arrange the plots in a 1x3 grid (1 row, 3 columns)
+
+pdf(file=file.path(result_path, "Figures/Fig1.pdf"), width=8, height=6, family="Helvetica", pointsize=6)
+grid.arrange(Fig1_a, Fig1_b, Fig1_c, nrow = 2,ncol=2, layout_matrix=rbind(c(1,1, 2,2), c(NA, 3, 3, NA)))
+dev.off()
 
 ```
 
@@ -41,7 +182,6 @@ result_path = file.path("../Results")
 df <- read_csv(file.path(data_path, "Fig2.csv"))
 df$Journal <- sapply(str_split(df$Journal, "/"), function(x) x[length(x)])
 df$Journal <- str_wrap(df$Journal, width = 30)
-oma2 <- c(0.3,0,0,0.3)
 df_long <- df %>%
   pivot_longer(cols = c(n_theo, n_expe), names_to = "Type", values_to = "Count")
 ```
@@ -157,26 +297,7 @@ dev.off()
 
 ```
 
-# Fig_intro: Assemble ####
-```{r} 
 
-
-fig_intro = ggdraw() +
-  draw_plot(figa, x=0, y=-0.1, width=1/2, height=1)+
-  draw_plot(figb, x=1/2, y=-0.1, width=1/2, height=1)+
-  draw_plot_label(label=c("A","B"),x=c(0, 0.5),y=c(0.9, 0.9), 
-                  size = 10) +
-theme(plot.margin = margin(0.1,0.1,2,0.1, "cm")) 
-
-fig_intro
-
-```
-
-```{r}
-pdf(file=file.path(result_path, "plots/Fig_intro.pdf"), width=10, height=5, family="Helvetica", pointsize=6)
-fig_intro
-dev.off()
-```
 
 
 

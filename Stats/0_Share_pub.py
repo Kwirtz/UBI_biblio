@@ -8,10 +8,10 @@ from collections import defaultdict
 # MongoDB connection
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
-collection = db["works_UBI_20240517"]
+collection = db["works_UBI_global"]
 
 db_OA = Client["openAlex20240517"]
-collection_OA = db_OA["works"]
+collection_OA = db_OA["works_SHS"]
 
 #%% get share evolution
 
@@ -23,7 +23,7 @@ for doc in tqdm.tqdm(docs):
     try:
         year = doc["publication_year"]
         if year != None:
-            if year >1900 and year <2025:
+            if year >1800 and year <2025:
                 year2n_pub[doc["publication_year"]] += 1
     except:
         pass
@@ -36,7 +36,7 @@ for doc in tqdm.tqdm(docs):
     try:
         year = doc["publication_year"]
         if year != None:
-            if year >1900 and year <2025:
+            if year >1800 and year <2025:
                 year2n_pub_ubi[doc["publication_year"]] += 1
     except:
         pass
@@ -50,4 +50,5 @@ df = pd.concat([df1, df2], axis=1)
 df1.index = df1.index.astype(str)
 df_sorted = df.sort_index()
 df_sorted = df_sorted.fillna(0)
-
+df_sorted["year"] = df_sorted.index
+df_sorted.to_csv("Data/Fig_intro.csv",index=False)
