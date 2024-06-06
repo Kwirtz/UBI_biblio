@@ -79,7 +79,7 @@ df
 
 #%% spin-glass
 
-communities = g.community_spinglass(gamma=0.8, spins=20)
+communities = g.community_spinglass(gamma=2, spins=20)
 
 node_names = []
 community_memberships = []
@@ -93,10 +93,11 @@ for idx, community in enumerate(communities):
 
 # Create DataFrame
 df = pd.DataFrame({"Node": node_names, "Community": community_memberships})
+df["Community"].value_counts()
 
 df_national = pd.read_csv("Data/city_output.csv")
 
-merged_df = df_national.merge(df, left_on="country", right_on="Node", how="inner")
+merged_df = df_national.merge(df, left_on="city", right_on="Node", how="inner")
 merged_df = merged_df.drop(columns=["Node"])
 merged_df.to_csv("Data/city_output.csv",index=False)
 

@@ -150,4 +150,4 @@ fig.write_html("Results/Figures/word_embeddings_visualization.html")
 
 
 
-# %%
+# %% Do the centroid of solo papers for cities, then do centroid for papers in collaboration
