@@ -1,4 +1,6 @@
+import re
 import tqdm
+import pymongo
 import novelpy
 
 #%% cooc
@@ -70,10 +72,58 @@ for focal_year in tqdm.tqdm(range(1950,2021)):
                                         focal_year = focal_year,
                                         time_window_cooc = 3,
                                         n_reutilisation = 1,
-                                        starting_year = 1995,
                                         density = True)
     Wang.get_indicator()
 
 
 
 #%% Disruptiveness Indicators
+
+client_name = 'mongodb://localhost:27017'
+db_name = 'UBI'
+collection_name = "works_UBI_global"
+
+Client = pymongo.MongoClient(client_name)
+db = Client[db_name]
+collection  = db[collection_name]
+
+docs = collection.find({},no_cursor_timeout=True)
+
+list_of_insertion = []
+for doc in tqdm.tqdm(docs):
+    refs = doc["referenced_works"]
+    refs_cleaned = [int(re.findall(r'\d+', i)[0]) for i in refs]
+    list_of_insertion.append(
+        pymongo.UpdateOne({"id_cleaned": doc["id_cleaned"]}, 
+                           {"$set":{"referenced_cleaned": refs_cleaned}})
+        )
+    if len(list_of_insertion) == 1000:
+        collection.bulk_write(list_of_insertion)
+        list_of_insertion = []
+collection.bulk_write(list_of_insertion)
+list_of_insertion = []
+
+clean = novelpy.utils.preprocess_disruptiveness.create_citation_network(client_name = 'mongodb://localhost:27017',
+                                                                        db_name = 'UBI',
+                                                                        collection_name = "works_UBI_global",
+                                                                        id_variable = "id_cleaned",
+                                                                        year_variable = "publication_year",
+                                                                        variable = "referenced_cleaned"
+                                                                        )
+clean.id2citedby()
+clean.update_db()
+
+for focal_year in tqdm.tqdm(range(1950,2021)):
+    disruptiveness = novelpy.Disruptiveness(
+        client_name = 'mongodb://localhost:27017',
+        db_name = 'UBI',
+        collection_name = 'works_UBI_global_cleaned',
+        focal_year = focal_year,
+        id_variable = 'id_cleaned',
+        variable = "citations",
+        refs_list_variable ='refs',
+        cits_list_variable = 'cited_by',
+        year_variable = 'publication_year')
+
+    disruptiveness.get_indicators()
+

@@ -297,7 +297,74 @@ dev.off()
 
 ```
 
+# Fig4: Creativity
+```{r} 
+df <- read_csv(file.path(data_path, "Fig_creativity.csv"))
+mean_df <- df %>%
+  group_by(year) %>%
+  summarise(across(starts_with("score_"):Depth, mean, na.rm = TRUE))
 
+
+# Reshape for score columns
+long_score <- mean_df %>%
+  select(year, starts_with("score")) %>%
+  pivot_longer(-year, names_to = "variable", values_to = "value")
+
+# Reshape for the remaining columns
+long_others <- mean_df %>%
+  select(year, DI1:Depth) %>%
+  pivot_longer(-year, names_to = "variable", values_to = "value")
+
+```
+
+```{r} 
+# Plot for score columns
+plot_scores <- ggplot(long_score, aes(x = year, y = value, color = variable)) +
+  geom_line(size = 1) +
+  labs(title = "Mean Scores per Year",
+       x = "Year",
+       y = "Mean Value") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+        axis.text.y = element_text(size = 10),
+        axis.title.x = element_text(size = 10),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(c(1, 1, 1, 1), "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        legend.position = "top",
+        legend.text = element_text(size = 10))
+
+plot_scores
+
+# Plot for other columns
+plot_others <- ggplot(long_others, aes(x = year, y = value, color = variable)) +
+  geom_line(size = 1) +
+  labs(title = "Mean Values of Other Columns per Year",
+       x = "Year",
+       y = "Mean Value") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+        axis.text.y = element_text(size = 10),
+        axis.title.x = element_text(size = 10),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(c(1, 1, 1, 1), "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        legend.position = "top",
+        legend.text = element_text(size = 10))
+
+plot_others
+
+```
 
 
 

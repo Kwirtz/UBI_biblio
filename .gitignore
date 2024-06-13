@@ -4,3 +4,4 @@ Data.zip
 *.pickle
 /Lit
 /Data/cooc
+/Data/score
