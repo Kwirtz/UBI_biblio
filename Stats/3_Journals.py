@@ -80,6 +80,15 @@ most_common_journals = [i[0] for i in most_common_journals]
 
 df_journals = pd.DataFrame(index = most_common_journals, columns = ["n_theo","n_expe"]).fillna(0)
 
+# Repeat dataframe for each year
+df_temp = df_journals.reset_index().rename(columns={'index': 'journal'})
+years = pd.DataFrame({'year': range(1900, 2021)})
+
+df_temp['key'] = 1
+years['key'] = 1
+df_expanded = pd.merge(df_temp, years, on='key').drop('key', axis=1)
+df_expanded = df_expanded[['journal', 'year', 'n_theo', 'n_expe']]
+
 
 experimental_keywords = [
     "experiment", "experimental", "measurement", "measured", "observation", "observed",
@@ -121,26 +130,31 @@ for doc in tqdm.tqdm(docs):
                 try:
                     if location["source"]["display_name"] in most_common_journals:
                         if len([i for i in experimental_keywords if i in text]) > 0 and done == False:
+                            condition = (df_expanded['journal'] == location["source"]["display_name"]) & (df_expanded['year'] == year)
+                            df_expanded.loc[condition, "n_expe"] += 1
                             df_journals.at[location["source"]["display_name"],"n_expe"] += 1
                             done = True
                         elif done == False:
+                            condition = (df_expanded['journal'] == location["source"]["display_name"]) & (df_expanded['year'] == year)
+                            df_expanded.loc[condition, "n_theo"] += 1
                             df_journals.at[location["source"]["display_name"],"n_theo"] += 1
                             done = True
                 except Exception as e:
                     print(str(e))
     
 df_journals["Journal"] = df_journals.index
+
 def clean_text(text):
     # Remove special characters
     clean_text = re.sub(r'[^\x00-\x7F]+', '', text)
+    clean_text = clean_text.split("/")[0]
     return clean_text
 
 
+df_expanded['journal'] = df_expanded['journal'].apply(clean_text)
+df_expanded.to_csv("Data/Fig2_ab.csv",index=False,encoding="utf-8")
 df_journals['Journal'] = df_journals['Journal'].apply(clean_text)
-df_journals.drop(columns=["clean_Journal"],inplace=True)
-
-df_journals.to_csv("Data/Fig2.csv",index=False,encoding="utf-8")
-
+df_journals.to_csv("Data/Fig2_b.csv",index=False,encoding="utf-8")
 
 
 

@@ -1,0 +1,128 @@
+---
+title: 'Figures'
+author: "Kevin Wirtz (kevin.wirtz@unistra.fr)"
+date: "Updated `r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_notebook:
+    code_folding: hide
+    df_print: paged
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+gc() #free up memrory and report the memory usage.
+graphics.off()
+
+Sys.setenv(LANG = "en") # For english language
+options(scipen = 5) # To deactivate annoying scientific number notation
+
+library(zoo)
+library(tidyverse) # Collection of all the good stuff like dplyr, ggplot2 ect.
+library(ggalluvial)
+library(cowplot)
+library(ggpubr)
+library(magick)
+library(magrittr)
+library(gridExtra)
+
+data_path = file.path("../Data") 
+result_path = file.path("../Results") 
+
+```
+
+# Fig intro
+
+```{r} 
+df <- read_csv(file.path(data_path, "Fig_intro.csv"))
+oma2 <- c(0,0,0,0)
+df$share_ubi = df$n_ubi_SHS/df$n_pub_SHS
+df$share_ubi_ma <- rollmean(df$share_ubi, k = 3, fill = NA, align = "center")
+df$share_ubi_eco = df$n_ubi_SHS_eco/df$n_pub_SHS_eco
+df$share_ubi_eco_ma <- rollmean(df$share_ubi_eco, k = 3, fill = NA, align = "center")
+
+```
+
+```{r} 
+oma2 <- c(0.3,0,0,0.3)
+
+colors <- c("UBI publications" = "#1f77b4", "share SHS" = "#ff7f0e")
+
+
+fig_intro_a = ggplot(df[df$year<=2020,], aes(x = year)) + 
+  geom_line(linewidth=1,aes(y = n_ubi_SHS, color='UBI_publications')) + 
+  geom_line(linewidth=1,aes(y = share_ubi_ma*6768480, color='UBI_share')) +
+  scale_color_manual(name = "Group",
+                     values = c( "UBI_publications" = "#1f77b4", "UBI_share" = "black"),
+                     labels = c( "UBI publications","Share UBI publications in SHS")) +
+  labs(x = "Year",
+         y = "Share",
+         color = "Legend",
+       title="Evolution of UBI related publications in SHS") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 6),
+      axis.text.y = element_text(size = 6),
+      axis.title.x = element_text(size = 6),
+      axis.title.y = element_text(size = 6),
+      panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+      plot.margin = unit(oma2, "cm"),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      plot.title = element_text(hjust = 0.5, size = 12),  
+      legend.key=element_blank(),
+      legend.title=element_blank(),
+      legend.position="top",
+      legend.text=element_text(size = 6)) +
+  scale_y_continuous(
+    name = "Publications",
+    sec.axis = sec_axis(~./6768480, name="Share")
+  )
+
+fig_intro_b = ggplot(df[df$year<=2020,], aes(x = year)) + 
+  geom_line(linewidth=1,aes(y = n_ubi_SHS_eco, color='UBI_publications')) + 
+  geom_line(linewidth=1,aes(y = share_ubi_eco_ma*6768480, color='UBI_share')) +
+  scale_color_manual(name = "Group",
+                     values = c( "UBI_publications" = "#1f77b4", "UBI_share" = "black"),
+                     labels = c( "UBI publications","Share UBI publications in Economics")) +
+  labs(x = "Year",
+         y = "Share",
+         color = "Legend",
+       title="Evolution of UBI related publications in Economics") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 6),
+      axis.text.y = element_text(size = 6),
+      axis.title.x = element_text(size = 6),
+      axis.title.y = element_text(size = 6),
+      panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+      plot.margin = unit(oma2, "cm"),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      plot.title = element_text(hjust = 0.5, size = 12),  
+      legend.key=element_blank(),
+      legend.title=element_blank(),
+      legend.position="top",
+      legend.text=element_text(size = 6)) +
+  scale_y_continuous(
+    name = "Publications",
+    sec.axis = sec_axis(~./6768480, name="Share")
+  )
+
+fig_intro_a
+fig_intro_b
+
+fig_intro = ggdraw() +
+  draw_plot(fig_intro_a, x=0, y=0, width=1/2, height=1)+
+  draw_plot(fig_intro_b, x=1/2, y=0, width=1/2, height=1)+
+  draw_plot_label(label=c("A","B"),x=c(0, 0.5),y=c(0.99, 0.99), 
+                  size = 10) +
+theme(plot.margin = margin(0.1,0.1,2,0.1, "cm")) 
+
+pdf(file=file.path(result_path, "Figures/Fig_intro.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+fig_intro
+dev.off()
+```

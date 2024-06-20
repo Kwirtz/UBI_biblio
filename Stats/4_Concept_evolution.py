@@ -11,21 +11,21 @@ from collections import defaultdict
 # MongoDB connection
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
-collection = db["works_UBI_global"]
+collection = db["works_UBI_gobu"]
 
 #%% Dynamic of keywords
 
 check = ["state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income",
          "negative income tax", "minimum income guarantee", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
-         "citizen’s basic income", "citizen’s income", "helicopter money", "quantitative easing",
+         "citizen’s basic income", "citizen’s income", 
          "unconditional basic income", "universal basic income", "guaranteed minimum income", "social dividend", "basic income guarantee"]
 
 
 # 1910-1940 1960-1970 2010 maintenant
-check1 = ["state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income"]
+check1 = ["state bonus", "minimum income", "national dividend", "social dividend", "social credit"]
 check2 = ["negative income tax", "minimum income guarantee","minimum income", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
 "citizen’s basic income", "citizen’s income"]
-check3 = ["helicopter money", "quantitative easing","unconditional basic income", "universal basic income","basic income"]
+check3 = ["unconditional basic income", "universal basic income","basic income","ubi"]
 
 year_list = [] 
 list_papers = []

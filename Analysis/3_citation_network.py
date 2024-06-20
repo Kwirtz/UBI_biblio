@@ -4,6 +4,7 @@ import tqdm
 import nltk
 import pymongo
 import pandas as pd
+import numpy as np
 import igraph as ig
 from langdetect import detect
 from nltk.corpus import stopwords
@@ -21,7 +22,7 @@ stemmer = PorterStemmer()
 
 client = pymongo.MongoClient("mongodb://localhost:27017")
 db = client['UBI']
-collection = db['works_UBI_global']
+collection = db['works_UBI_gobu']
 
 
 list_of_papers = []
@@ -56,12 +57,75 @@ if not g.is_connected():
 # Simplify the graph to remove multi-edges and self-loops
 g = g.simplify(multiple=True, loops=True)
 
-communities = g.community_leiden(objective_function="modularity", resolution=0.3)
-#communities = g.community_spinglass(gamma=1.2)
-#communities = g.community_multilevel(resolution=0.205)
+
+
+#%% testing spinglass
+def get_membership_matrices(graph, communities):
+    num_nodes = len(graph.vs)
+    num_communities = len(communities)
+    membership_matrix = np.zeros((num_nodes, num_communities))
+    n_community = 0
+    for community in communities:
+        for i, node in enumerate(graph.vs):
+            if i in community:
+                membership_matrix[i, n_community] = 1
+        n_community += 1 
+    
+    return membership_matrix
+
+def get_vi(X, Y):
+    # Function to compute VI score (same as before)
+    N = X.shape[0]  
+    p = np.sum(X, axis=0) / N  
+    q = np.sum(Y, axis=0) / N  
+    R = np.dot(X.T, Y) / N  
+    
+    VI = - R * (np.log(R / p[:, None]) + np.log((R / q[None, :])))
+    VI[np.isnan(VI)] = 0  
+    return np.sum(VI)  
+
+# Function to run Spin Glass algorithm and compute VI score for a given gamma
+def run_spin_glass_opti(graph, gamma, num_trials):
+    VIs = []
+    membership_matrices = []
+    for _ in range(num_trials):
+        # communities = graph.community_spinglass(gamma=gamma, spins=20)
+        communities = graph.community_leiden(objective_function="modularity", resolution=gamma)
+        membership_matrix = get_membership_matrices(graph, communities)
+        membership_matrices.append(membership_matrix)
+    for i, community1 in enumerate(membership_matrices):
+        for j, community2 in enumerate(membership_matrices):
+            VI = get_vi(community1, community2)
+            VIs.append(VI)
+    return np.mean(VIs)
+
+# Create the graph from your data
+# Example: g = ig.Graph.TupleList(aggregated_df.itertuples(index=False), edge_attrs=['weight'])
+
+# Define the range of gamma values to explore
+gamma_values = [0.01,0.05,0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9,
+                1.0, 1.1, 1.2, 1.3, 1.4, 1.5,1.6,1.7,1.8,1.9,
+                2.0,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3]
+num_trials = 50
+
+# Dictionary to store VI scores for each gamma
+data = []
+
+# Loop through each gamma value
+for gamma in tqdm.tqdm(gamma_values):
+    VI = run_spin_glass_opti(g, gamma, num_trials)
+    data.append({"VI": VI, "Gamma": gamma})
+
+df = pd.DataFrame(data, columns=["VI","Gamma"])
+df
+#%%
+
+#communities = g.community_leiden(objective_function="modularity", resolution=0.6)
+communities = g.community_spinglass(gamma=0.9)
+#communities = g.community_multilevel(resolution=0.4)
 #communities = g.community_infomap()
-#communities = g.community_edge_betweenness(clusters=6).as_clustering()
-#communities = g.community_fastgreedy()
+#communities = g.community_edge_betweenness(clusters=4).as_clustering()
+#communities = g.community_fastgreedy().as_clustering()
 
 node_names = []
 community_memberships = []
@@ -76,11 +140,21 @@ for idx, community in enumerate(communities):
 node2community = pd.DataFrame({"Node": node_names, "Community": community_memberships})
 node2community["Community"].value_counts()
 
+
+
 # Get the list of nodes
 node_list = [(v.index, v["name"]) for v in g.vs]
-df_nodes = pd.DataFrame(node_list, columns=["id", "label"])
-df_nodes = df_nodes.merge(node2community, left_on="label", right_on="Node", how="inner")
+df_nodes = pd.DataFrame(node_list, columns=["id", "Label"])
+df_nodes = df_nodes.merge(node2community, left_on="Label", right_on="Node", how="inner")
 df_nodes = df_nodes.drop(columns=["Node"])
+
+# Identify communities with frequency less than 100
+community_freq = df_nodes['Community'].value_counts()
+communities_to_replace = community_freq[community_freq < 100].index
+df_nodes.loc[df_nodes['Community'].isin(communities_to_replace), 'Community'] = max(df_nodes['Community']) + 1
+unique_communities = sorted(df_nodes['Community'].unique())
+community_mapping = {old_label: new_label for new_label, old_label in enumerate(unique_communities, start=1)}
+df_nodes['Community'] = df_nodes['Community'].map(community_mapping)
 
 # Get the edge list
 edge_list = g.get_edgelist()
@@ -96,7 +170,10 @@ df_nodes.to_csv("Data/Nodes_citations.csv",index=False)
 #%% get stats for communities
 
 df = pd.read_csv("Data/modularity.csv")
+df = df_nodes
+df["modularity_class"] = df["Community"]
 df = df.sort_values(by='modularity_class')
+
 papers2authors = defaultdict(list)
 
 docs = collection.find()
@@ -200,7 +277,6 @@ for community, papers in most_cited_global.items():
 
 #%% tf_idf of community
 
-df = pd.read_csv("Data/modularity.csv")
 
 stop_words = ["full-text", "http", "doi", "not available for this content", "pdf", "url", "access", "vol"]
 

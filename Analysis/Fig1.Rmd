@@ -1,0 +1,127 @@
+---
+title: 'Figures'
+author: "Kevin Wirtz (kevin.wirtz@unistra.fr)"
+date: "Updated `r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_notebook:
+    code_folding: hide
+    df_print: paged
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+gc() #free up memrory and report the memory usage.
+graphics.off()
+
+Sys.setenv(LANG = "en") # For english language
+options(scipen = 5) # To deactivate annoying scientific number notation
+
+library(zoo)
+library(tidyverse) # Collection of all the good stuff like dplyr, ggplot2 ect.
+library(ggalluvial)
+library(cowplot)
+library(ggpubr)
+library(magick)
+library(magrittr)
+library(gridExtra)
+
+data_path = file.path("../Data") 
+result_path = file.path("../Results") 
+
+```
+
+# Fig1: Concept evolution
+
+```{r} 
+df <- read_csv(file.path(data_path, "Fig1.csv"))
+oma2 <- c(0,0,0,0)
+df_long <- df %>%
+  pivot_longer(cols = everything()[-1], # exclude year column
+               names_to = "Variable",  # name for new column with variable names
+               values_to = "Value")
+
+first_period = c("state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income")
+second_period = c("negative income tax", "minimum income guarantee","minimum income", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
+"citizen’s basic income", "citizen’s income")
+third_period = c("unconditional basic income", "universal basic income","negative income tax", "guaranteed minimum income")
+
+df_period1 <- df_long[df_long$Variable %in% first_period & df_long$year>1910 & df_long$year<1941 , ]
+df_period2 <- df_long[df_long$Variable %in% second_period & df_long$year>1960 & df_long$year<1971 , ]
+df_period3 <- df_long[df_long$Variable %in% third_period & df_long$year>2010 & df_long$year<2025 , ]
+
+```
+
+```{r} 
+# Create the individual plots
+Fig1_a <- ggplot(df_period1, aes(x = year, y = Value)) +
+  geom_line(aes(color = Variable), size = 0.75) +
+  labs(title = "Period 1", x = "year", y = "# Publications") +
+    theme(
+        axis.text.y = element_text(size = 10),
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(oma2, "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 6),
+        strip.text = element_text(size = 8), # Reduce font size of facet labels
+        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
+
+
+Fig1_b <- ggplot(df_period2, aes(x = year, y = Value)) +
+  geom_line(aes(color = Variable), size = 0.75) +
+  labs(title = "Period 2", x = "year", y = "# Publications") +
+    theme( # Remove x-axis ticks
+        axis.text.y = element_text(size = 10),
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(oma2, "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 6),
+        strip.text = element_text(size = 8), # Reduce font size of facet labels
+        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
+
+
+Fig1_c <- ggplot(df_period3, aes(x = year, y = Value)) +
+  geom_line(aes(color = Variable), size = 0.75) +
+  labs(title = "Period 3", x = "year", y = "# Publications") +
+    theme(
+        axis.text.y = element_text(size = 10),
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(oma2, "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        # Legend position with justification for top left corner
+        legend.justification = "left",  # Added justification
+        legend.text = element_text(size = 6),
+        strip.text = element_text(size = 8), # Reduce font size of facet labels
+        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
+
+
+# Arrange the plots in a 1x3 grid (1 row, 3 columns)
+
+pdf(file=file.path(result_path, "Figures/Fig1.pdf"), width=8, height=6, family="Helvetica", pointsize=6)
+grid.arrange(Fig1_a, Fig1_b, Fig1_c, nrow = 2,ncol=2, layout_matrix=rbind(c(1,1, 2,2), c(NA, 3, 3, NA)))
+dev.off()
+
+```

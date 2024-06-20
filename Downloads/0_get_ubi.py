@@ -1,3 +1,4 @@
+import re
 import tqdm
 import pymongo
 from datetime import datetime
@@ -9,6 +10,12 @@ db_new = Client["openAlex20240517"]
 collection_eco = db_new["works_SHS"]
 
 
+def remove_special_characters(text):
+    # Define a regex pattern to match special characters
+    pattern = r'[^a-zA-Z0-9\s]'
+    # Substitute special characters with an empty string
+    cleaned_text = re.sub(pattern, '', text)
+    return cleaned_text
 
 # UBI 
 #keywords = ["economics"]
@@ -87,10 +94,9 @@ db_new = Client["UBI"]
 collection_eco = db_new["works_UBI_general"]
 
 
-keywords = ["state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income",
+keywords = ["state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income", " ubi ",
          "negative income tax", "minimum income guarantee", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
-         "citizen’s basic income", "citizen’s income", "helicopter money", "quantitative easing",
-         "unconditional basic income", "universal basic income", "negative income tax", "guaranteed minimum income", "social dividend", "basic income guarantee"]
+         "citizen’s basic income", "citizen’s income", "unconditional basic income", "universal basic income", "negative income tax", "guaranteed minimum income", "social dividend", "basic income guarantee"]
 
 
 def get_ubi_in_text(keywords):    
@@ -119,8 +125,9 @@ def get_ubi_in_text(keywords):
             title = ""
         if not abstract:
             abstract = ""
-        text = title + " " + abstract
-        text = text.lower()     
+        text = title #+ " " + abstract
+        text = text.lower()   
+        text = remove_special_characters(text)
 
         for keyword in keywords:
             if keyword in text:
@@ -138,6 +145,5 @@ def get_ubi_in_text(keywords):
     collection_eco.insert_many(list_of_insertion)
     list_of_insertion = []
 
-get_ubi(keywords)
-
+get_ubi_in_text(keywords)
 
