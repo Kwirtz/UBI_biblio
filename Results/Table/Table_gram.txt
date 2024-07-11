@@ -1,11 +1,9 @@
 
-==========================================================================================================================================================================================================================
-Community                                                                                                           20 most distinctive words                                                                             
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0  freedom,case,social,justice,cost,work,effects,state,ecological,ethics,debate,economic,real,sustainability,participation,egalitarianism,feasibility,liberal,unemployment,response 
-1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1        experiments,debate,social,research,pilot,policy,introduction,work,analysis,cash,canada,minimum,employment,guarantee,empirical,experiment,guaranteed,pilots,iran,need       
-2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2       welfare,developing,countries,effects,world,russia,economic,alternative,analysis,future,employment,policy,free,india,development,assessment,reform,new,programs,social       
-3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3              social,welfare,policy,gender,state,case,political,work,guarantee,prospects,justice,effects,feminist,politics,labor,south,reform,economy,potential,debate             
-4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4         guarantee,unemployment,social,work,welfare,right,freedom,capitalism,justice,security,case,versus,efficiency,employment,alternative,citizen,tax,economics,state,job        
-5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5 support,welfare,experiment,social,australia,pandemic,finnish,introduction,political,experiments,right,attitudes,framing,guarantee,policy,state,alternatives,finland,popular,public
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==========================================================================================================
+Community                                         10 most distinctive words                               
+----------------------------------------------------------------------------------------------------------
+1,1,1,1,1,1,1,1,1,1          social,tax,poverty,economic,work,theory,policy,welfare,labor,health          
+2,2,2,2,2,2,2,2,2,2 social,environmental,economy,energy,economic,new,growth,degrowth,sustainability,global
+3,3,3,3,3,3,3,3,3,3      social,welfare,policy,state,poverty,political,european,public,countries,new      
+4,4,4,4,4,4,4,4,4,4      health,tax,market,financial,study,analysis,economic,research,dividend,women      
+----------------------------------------------------------------------------------------------------------
