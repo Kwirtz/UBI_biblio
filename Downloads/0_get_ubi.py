@@ -1,3 +1,4 @@
+import re
 import tqdm
 import pymongo
 from datetime import datetime
@@ -9,6 +10,12 @@ db_new = Client["openAlex20240517"]
 collection_eco = db_new["works_SHS"]
 
 
+def remove_special_characters(text):
+    # Define a regex pattern to match special characters
+    pattern = r'[^a-zA-Z0-9\s]'
+    # Substitute special characters with an empty string
+    cleaned_text = re.sub(pattern, '', text)
+    return cleaned_text
 
 # UBI 
 #keywords = ["economics"]
@@ -59,7 +66,7 @@ def check_for_dups(db_name, collection_name):
         print("RAS")
     return ids
 
-test = check_for_dups(db_name = "UBI", collection_name = "works_UBI_20240517")
+test = check_for_dups(db_name = "UBI", collection_name = "works_UBI_global")
 
 def delete_dups(db_name, collection_name):
     Client = pymongo.MongoClient("mongodb://localhost:27017")
@@ -77,7 +84,7 @@ def delete_dups(db_name, collection_name):
             for doc_to_delete in docs[1:]:
                 collection.delete_one({"_id": doc_to_delete["_id"]})
 
-delete_dups(db_name = "UBI", collection_name = "works_UBI_20240517")
+delete_dups(db_name = "UBI", collection_name = "works_UBI_general")
 
 #%% 
 
@@ -87,7 +94,9 @@ db_new = Client["UBI"]
 collection_eco = db_new["works_UBI_general"]
 
 
-keywords = check = ["basic income", "unconditional basic income", "universal basic income", "negative income tax", "guaranteed minimum income", "social dividend", "basic income guarantee"]
+keywords = ["state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income", " ubi ",
+         "negative income tax", "minimum income guarantee", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
+         "citizen’s basic income", "citizen’s income", "unconditional basic income", "universal basic income", "negative income tax", "guaranteed minimum income", "social dividend", "basic income guarantee"]
 
 
 def get_ubi_in_text(keywords):    
@@ -116,8 +125,9 @@ def get_ubi_in_text(keywords):
             title = ""
         if not abstract:
             abstract = ""
-        text = title + " " + abstract
-        text = text.lower()     
+        text = title #+ " " + abstract
+        text = text.lower()   
+        text = remove_special_characters(text)
 
         for keyword in keywords:
             if keyword in text:
@@ -135,8 +145,5 @@ def get_ubi_in_text(keywords):
     collection_eco.insert_many(list_of_insertion)
     list_of_insertion = []
 
-get_ubi(keywords)
-
-
-
+get_ubi_in_text(keywords)
 

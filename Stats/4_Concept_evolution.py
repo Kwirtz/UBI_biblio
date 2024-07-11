@@ -11,28 +11,36 @@ from collections import defaultdict
 # MongoDB connection
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
-collection = db["works_UBI_20240517"]
+collection = db["works_UBI_gobu"]
 
 #%% Dynamic of keywords
 
 check = ["state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income",
          "negative income tax", "minimum income guarantee", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
-         "citizen’s basic income", "citizen’s income", "helicopter money", "quantitative easing",
-         "unconditional basic income", "universal basic income", "negative income tax", "guaranteed minimum income", "social dividend", "basic income guarantee"]
+         "citizen’s basic income", "citizen’s income", 
+         "unconditional basic income", "universal basic income", "guaranteed minimum income", "social dividend", "basic income guarantee"]
 
+
+# 1910-1940 1960-1970 2010 maintenant
+check1 = ["state bonus", "minimum income", "national dividend", "social dividend", "social credit"]
+check2 = ["negative income tax", "minimum income guarantee","minimum income", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
+"citizen’s basic income", "citizen’s income"]
+check3 = ["unconditional basic income", "universal basic income","basic income","ubi"]
 
 year_list = [] 
-
+list_papers = []
 docs = collection.find()
 for doc in tqdm.tqdm(docs):
+    list_papers.append(doc["id"])
     year = doc["publication_year"]
     if year:
         year_list.append(year)
 
 year2keywords = {i:{j:0 for j in check} for i in year_list}
 
-docs = collection.find()
-for doc in tqdm.tqdm(docs):
+
+for paper in tqdm.tqdm(list_papers):
+    doc = collection.find_one({"id":paper})
     year = doc["publication_year"]
     try:
         title = doc["title"]
@@ -46,9 +54,10 @@ for doc in tqdm.tqdm(docs):
         title = ""
     if not abstract:
         abstract = ""
-    text = title + " " + abstract
+    text = title + " " #+ abstract
     text = text.lower()
     full_gram = ""
+
     if doc["has_fulltext"]:
         doc_id = doc["id"].split("/")[-1]
         response = requests.get("https://api.openalex.org/works/{}/ngrams?mailto=kevin-w@hotmail.fr".format(doc_id))
@@ -75,21 +84,6 @@ df = pd.DataFrame.from_dict(year2keywords, orient='index').reset_index()
 df.rename(columns={'index': 'year'}, inplace=True)
 df_sorted = df.sort_values(by='year')
 
-# Plot each keyword over the years
-plt.figure(figsize=(14, 8))
-for keyword in check:
-    plt.plot(df_sorted.loc[(df_sorted["year"] > 1970) & (df_sorted["year"] < 2010), 'year'], 
-         df_sorted.loc[(df_sorted["year"] > 1970) & (df_sorted["year"] < 2010), keyword], 
-         marker='o', label=keyword)
-plt.title('Keyword Trends Over Years')
-plt.xlabel('Year')
-plt.ylabel('Frequency')
-plt.legend()
-plt.grid(True)
-plt.savefig('Results/Figures/keyword_trend.png', format='png')
-plt.show()
+df_sorted.to_csv("Data/Fig1.csv",index=False)
 
-
-df_sorted[df_sorted["year"]<2000]['year']
-doc = collection.find_one({"id":"https://openalex.org/W3123802184"})
 

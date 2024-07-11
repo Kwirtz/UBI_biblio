@@ -3,3 +3,5 @@ Data.zip
 *.json
 *.pickle
 /Lit
+/Data/cooc
+/Data/score

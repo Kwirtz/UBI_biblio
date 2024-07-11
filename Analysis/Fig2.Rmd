@@ -1,0 +1,144 @@
+---
+title: 'Figures'
+author: "Kevin Wirtz (kevin.wirtz@unistra.fr)"
+date: "Updated `r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_notebook:
+    code_folding: hide
+    df_print: paged
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+gc() #free up memrory and report the memory usage.
+graphics.off()
+
+Sys.setenv(LANG = "en") # For english language
+options(scipen = 5) # To deactivate annoying scientific number notation
+
+library(zoo)
+library(tidyverse) # Collection of all the good stuff like dplyr, ggplot2 ect.
+library(ggalluvial)
+library(cowplot)
+library(ggpubr)
+library(magick)
+library(magrittr)
+library(gridExtra)
+
+data_path = file.path("../Data") 
+result_path = file.path("../Results") 
+oma2 <- c(0,0,0,0)
+```
+
+# Fig2a: Theo vs Expe
+```{r} 
+df <- read_csv(file.path(data_path, "Fig2_a.csv"))
+df$expe_ma <- rollmean(df$expe, k = 3, fill = NA, align = "center")
+df$theo_ma <- rollmean(df$theoric, k = 3, fill = NA, align = "center")
+df$share_ma <- rollmean(df$share_expe, k = 3, fill = NA, align = "center")
+```
+
+
+```{r} 
+colors <- c("UBI publications" = "#1f77b4", "share SHS" = "#ff7f0e")
+
+Fig2_a <- ggplot(df[1900<= df$Year & df$Year <= 2025,], aes(x = Year)) +
+  geom_line(linewidth=1,aes(y = expe_ma, color='expe_publications')) + 
+  geom_line(linewidth=1,aes(y = share_ma*676, color='expe_share')) +
+  geom_line(linewidth=1,aes(y = theo_ma, color='theoric_publications')) +
+  scale_color_manual(name = "Group",
+                     values = c( "expe_publications" = "#1f77b4","expe_share"="#ff7f0e", "theoric_publications" = "black"),
+                     labels = c( "expe publications","Share expe","theoric publications")) +
+  labs(title = "Evolution of Experimental and Theoretical publications", x = "year", y = "# Publications") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 6),
+      axis.text.y = element_text(size = 6),
+      axis.title.x = element_text(size = 6),
+      axis.title.y = element_text(size = 6),
+      panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+      plot.margin = unit(oma2, "cm"),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      plot.title = element_text(hjust = 0.5, size = 12),  
+      legend.key=element_blank(),
+      legend.title=element_blank(),
+      legend.position="top",
+      legend.text=element_text(size = 6)) +
+  scale_y_continuous(
+    name = "Publications",
+    sec.axis = sec_axis(~./676, name="Share")
+  )
+
+Fig2_a
+
+pdf(file=file.path(result_path, "Figures/Fig2_a.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+Fig2_a
+dev.off()
+
+```
+
+# Fig2b: Theo vs Expe
+```{r} 
+df <- read_csv(file.path(data_path, "Fig2_b.csv"))
+df$Journal <- sapply(str_split(df$Journal, "/"), function(x) x[length(x)])
+df$Journal <- str_wrap(df$Journal, width = 30)
+df_long <- df %>%
+  pivot_longer(cols = c(n_theo, n_expe), names_to = "Type", values_to = "Count")
+```
+
+```{r} 
+Fig2_b <- ggplot(df_long, aes(x = Type, y = Count, fill = Type)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~Journal, ncol = 4) +
+  scale_fill_manual(name = "Type",
+                    values = c("n_theo" = "#1f77b4", "n_expe" = "#fb7d07"),
+                    labels = c("Experimental", "Theoretical")) +
+  labs(x = "",
+       y = "Number of Publications",
+       fill = "Legend") +
+    theme(axis.text.x = element_blank(),  # Remove x-axis text
+        axis.ticks.x = element_blank(), # Remove x-axis ticks
+        axis.text.y = element_text(size = 10),
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(oma2, "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        legend.position = "top",
+        legend.text = element_text(size = 10),
+        strip.text = element_text(size = 8), # Reduce font size of facet labels
+        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
+
+
+Fig2_b
+
+pdf(file=file.path(result_path, "Figures/Fig2_b.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+Fig2_b
+dev.off()
+
+```
+
+Fig2 assemble
+```{r} 
+fig2 = ggdraw() +
+  draw_plot(Fig2_a, x=0, y=0, width=0.30, height=1)+
+  draw_plot(Fig2_b, x=0.35, y=0, width=0.60, height=1)+
+  draw_plot_label(label=c("A","B"),x=c(0, 0.5),y=c(0.99, 0.99), 
+                  size = 10) +
+theme(plot.margin = margin(0.1,0.1,2,0.1, "cm")) 
+
+pdf(file=file.path(result_path, "Figures/Fig2.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+fig2
+dev.off()
+```
+
