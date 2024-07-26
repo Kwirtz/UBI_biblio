@@ -1,65 +1,45 @@
 
-====================================================================================================
-Community    Disciplines                   Most Cited References                 Most Cited Authors 
-----------------------------------------------------------------------------------------------------
-0             Economics                   Karl Widerquist (2013)                Philippe Van Parijs 
-0         Political science                 Stuart White (1997)                   Karl Widerquist   
-0             Sociology                     Brian Barry (1996)                     Simon Birnbaum   
-0         Computer science                 Carole Pateman (2004)                Jürgen De Wispelaere
-0            Engineering                   Simon Birnbaum (2012)                    Stuart White    
-0            Mathematics                   Philip Pettit (2008)                   Erik Olín Wright  
-0            Philosophy                   Erik Olín Wright (2006)                 Matthew Johnson   
-0              Biology                                                              Guy Standing    
-0             Business                  Yannick Vanderborght (2013)               Elliott Johnson   
-0             Chemistry                 Philippe Van Parijs (2004)                 Carole Pateman   
-1             Economics                   Karl Widerquist (2005)                  Karl Widerquist   
-1         Political science             Philippe Van Parijs (2004)                  Guy Standing    
-1         Computer science              Sarath Davala et al. (2015)             Philippe Van Parijs 
-1             Sociology                   Karl Widerquist (2018)                Jürgen De Wispelaere
-1            Mathematics    José Antonio Noguera et Jürgen De Wispelaere (2006)    Malcolm Torry    
-1             Business                 Richard Gilbert et al. (2018)               Sarath Davala    
-1            Engineering                    Guy Standing (2017)                   Renana Jhabvala   
-1            Philosophy                   Rigmar Osterkamp (2013)               Soumya Kapoor Mehta 
-1              Biology         David Calnitsky et Jonathan P. Latner (2017)       Hamid Tabatabai   
-1            Psychology                    Malcolm Torry (2016)                   David Calnitsky   
-2             Economics                 Ugo Gentilini et al. (2019)                Hilary Hoynes    
-2         Political science       Rema Hanna et Benjamin A. Olken (2018)          Jesse Rothstein   
-2         Computer science        Hilary Hoynes et Jesse Rothstein (2019)         Abhijit Banerjee  
-2            Mathematics              Abhijit Banerjee et al. (2019)                Paul Niehaus    
-2             Sociology           James Browne et Herwig Immervoll (2017)           Tavneet Suri    
-2            Philosophy           Hilary Hoynes et Jesse Rothstein (2019)          Ugo Gentilini    
-2             Business                Abhijit Banerjee et al. (2019)               Margaret Grosh   
-2            Engineering       Maitreesh Ghatak et François Maniquet (2019)        Ruslan Yemtsov   
-2             Medicine                  Isabel Ortiz et al. (2018)               Iamele P. Rigolini 
-2             Geography     Philippe Van Parijs et Yannick Vanderborght (2019)       Rema Hanna     
-3             Economics                 Philippe Van Parijs (1992)              Philippe Van Parijs 
-3         Political science             Philippe Van Parijs (2004)              Jürgen De Wispelaere
-3             Sociology                 Philippe Van Parijs (2013)                Lindsay Stirton   
-3         Computer science                 Ingrid Robeyns (2001)                    Guy Standing    
-3            Mathematics                    Ailsa McKay (2001)                    Karl Widerquist   
-3            Engineering                   Almaz Zelleke (2008)                    Ingrid Robeyns   
-3            Philosophy                     Louise Haagh (2011)                     Ailsa McKay     
-3             Business                    Karl Widerquist (2005)                    Louise Haagh    
-3            Psychology       Jürgen De Wispelaere et Lindsay Stirton (2004)       Carole Pateman   
-3              Biology                  Yannick Vanderborght (2013)                 Bill Jordan     
-4             Economics                    A. B. Atkinson (1996)                Philippe Van Parijs 
-4         Political science             Philippe Van Parijs (1995)                  Guy Standing    
-4             Sociology                    Samuel Bowles (1992)                   Karl Widerquist   
-4            Engineering                Philippe Van Parijs (2004)                 A. B. Atkinson   
-4            Philosophy                   Daniel Raventós (2007)                   Bruce Ackerman   
-4            Mathematics               Bruce Ackerman et al. (2006)                 Anne Alstott    
-4         Computer science       Rodney Haddow et Tony Fitzpatrick (2001)          Samuel Bowles    
-4             Business                      Tony Walter (1989)                    Daniel Raventós   
-4              Biology             Chris Clark et C. J. Kavanagh (1996)           Tony Fitzpatrick  
-4             Chemistry                                                              Loek Groot     
-5             Economics         Femke Roosma et W.J.H. van Oorschot (2019)      Jürgen De Wispelaere
-5         Political science                 Guy Standing (2017)                     Femke Roosma    
-5             Sociology         Ann–Helén Bay et Axel West Pedersen (2006)      Philippe Van Parijs 
-5         Computer science        Zachary Parolin et Linus Siöland (2019)          Johanna Perkiö   
-5            Engineering      Jürgen De Wispelaere et Lindsay Stirton (2004)        Guy Standing    
-5            Philosophy                      Soomi Lee (2018)                     Karl Widerquist   
-5            Mathematics                Daniel Nettle et al. (2021)               Lindsay Stirton   
-5            Psychology     Isabelle Stadelmann‐Steffen et Clau Dermont (2019)  Yannick Vanderborght
-5             Business                  Philippe Van Parijs (2004)              W.J.H. van Oorschot 
-5             Geography                 Yannick Vanderborght (2006)                  Joe Chrisp     
-----------------------------------------------------------------------------------------------------
+==============================================================================================================================================================================================================================
+Community                Most Cited References                                                                                       Most Cited Authors                                                                       
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1          Philippe Van Parijs et Yannick Vanderborght (2017)                                                                           Basic Income                                                                          
+1                      Philippe Van Parijs (1996)                                                             Real Freedom for All: What (If Anything) can Justify Capitalism?                                                
+1                      Philippe Van Parijs (2004)                                                           Basic Income: A Simple and Powerful Idea for the Twenty-First Century                                             
+1                        Karl Widerquist (2005)                                              A failure to communicate: what (if anything) can we learn from the negative income tax experiments?                              
+1                       James A. Mirrlees (1971)                                                                   An Exploration in the Theory of Optimum Income Taxation                                                    
+1                      Philippe Van Parijs (1992)                                                            Arguing for Basic Income: Ethical Foundations for a Radical Reform                                               
+1                      Anthony B. Atkinson (1996)                                                                            The Case for a Participation Income                                                              
+1                        Carole Pateman (2004)                                                                  Democratizing Citizenship: Some Advantages of a Basic Income                                                  
+1                        Karl Widerquist (2013)                                                                       Independence, Propertylessness, and Basic Income                                                        
+1                  Derek Hum et Wayne Simpson (1993)                                            Economic Response to a Guaranteed Annual Income: Experience from Canada and the United States                                 
+2                        Giorgos Kallis (2011)                                                                                     In defence of degrowth                                                                     
+2                   François Schneider et al. (2010)                            Crisis or opportunity? Economic degrowth for social equity and ecological sustainability. Introduction to this special issue                  
+2                     Giorgos Kallis et al. (2012)                                                                                The economics of degrowth                                                                   
+2                       Jan O. Andersson (2010)                                                                          Basic Income From an Ecological Perspective                                                          
+2          Philippe Van Parijs et Yannick Vanderborght (2017)                                                                           Basic Income                                                                          
+2                    Federico Demaria et al. (2013)                                                            What is Degrowth? From an Activist Slogan to a Social Movement                                                 
+2                      Joan Martínez-Alier (2009)                                                                          Socially Sustainable Economic De‐growth                                                            
+2                      Anthony B. Atkinson (1996)                                                                            The Case for a Participation Income                                                              
+2                           Ian Gough (2019)                                                                     Universal Basic Services: A Theoretical and Moral Framework                                                  
+2                     Ian McGimpsey et al. (2016)                                                                           Postcapitalism: a guide to our future                                                             
+3              Femke Roosma et W.J.H. van Oorschot (2019)                                 Public opinion on basic income: Mapping European support for a radical alternative for welfare provision                            
+3          Philippe Van Parijs et Yannick Vanderborght (2017)                                                                           Basic Income                                                                          
+3                        Kenneth Nelson (2011)                           Social Assistance and EU Poverty Thresholds 1990-2008. Are European Welfare Systems Providing Just and Fair Protection Against Low Income?           
+3                       Ian Gough et al. (1997)                                                                              Social Assistance in Oecd Countries                                                              
+3                      Thomas Bahle et al. (2011)                                                          The last safety net: A handbook of minimum income protection in Europe                                             
+3                   Jonathan Bradshaw et al. (2008)                                                               A minimum income standard for Britain : what people think                                                   
+3               Zachary Parolin et Linus Siöland (2019)                                                       Support for a universal basic income: A demand–capacity paradox?                                                
+3                      Philippe Van Parijs (2004)                                                           Basic Income: A Simple and Powerful Idea for the Twenty-First Century                                             
+3              Ann–Helén Bay et Axel West Pedersen (2006)                                                                      The Limits of Social Solidarity                                                                
+3                           Soomi Lee (2018)                                                        Attitudes Toward Universal Basic Income and Welfare State in Europe: A Research Note                                      
+4                  Ádám Sleisz et Dávid Raisz (2016)                                 Complex supply orders with ramping limitations and shadow pricing on the all-European day-ahead electricity market                       
+4                  Ádám Sleisz et Dávid Raisz (2015)                                             Efficient Formulation of Minimum Income Condition Orders on the All-European Power Exchange                                  
+4                      Ádám Sleisz et al. (2015)                                                         Challenges in the formulation of complex orders on European power exchanges                                          
+4                  Ádám Sleisz et Dávid Raisz (2014)                                                 Clearing algorithm for minimum income condition orders on European power exchanges                                       
+4                  Ádám Sleisz et Dávid Raisz (2017)                                              Integrated mathematical model for uniform purchase prices on multi-zonal power exchanges                                    
+4               Mehdi Madani et Mathieu Van Vyve (2018)                                             Revisiting minimum profit conditions in uniform price day-ahead electricity auctions                                      
+4             Moshe A. Milevsky et Steven E. Posner (2001)                              The Titanic Option: Valuation of the Guaranteed Minimum Death Benefit in Variable Annuities and Mutual Funds                          
+4                 Claymore Marshall Aiaa et al. (2010)                                                                Valuation of a Guaranteed Minimum Income Benefit                                                        
+4               Dimitris I. Chatzigiannis et al. (2016)                                                             European day-ahead electricity market clearing model                                                      
+4         Nikolaos E. Koltsaklis et Athanasios Dagoumas (2018) Incorporating unit commitment aspects to the European electricity markets algorithm: An optimization model for the joint clearing of energy and reserve markets
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
