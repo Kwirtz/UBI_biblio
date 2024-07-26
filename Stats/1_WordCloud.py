@@ -26,10 +26,13 @@ lemmatizer = WordNetLemmatizer()
 # MongoDB connection
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
-collection = db["works_UBI_gobu"]
+collection = db["works_UBI_gobu_2"]
+
 
 
 #%% Function to check if a text is in English
+
+
 
 def is_english(text):
     try:
@@ -57,6 +60,8 @@ def clear_text(text):
 #%% Function for word cloud
 
 stop_words = set(stopwords.words('english'))
+stop_words |= {"basic", "income"}
+
 take_not_journals = {"full-text", "http", "doi", "not available for this content", "pdf", "url", "access", "vol"}
 
 def wordcloud_OpenAlex(Concepts=True, Title=False, Abstract=False,
@@ -122,7 +127,7 @@ def wordcloud_OpenAlex(Concepts=True, Title=False, Abstract=False,
     plt.savefig("Results/Figures/wordcloud_{}_{}_{}.pdf".format(str(Gram),str(Title),str(Abstract)), format="pdf", dpi=300)
     return list_text
 
-test = wordcloud_OpenAlex(Gram=3,Concepts=False, Title=True, Abstract = True)
+test = wordcloud_OpenAlex(Gram=3,Concepts=False, Title=True, Abstract = False)
 
 #%% Total
 # Fetch keywords from MongoDB

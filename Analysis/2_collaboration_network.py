@@ -6,7 +6,7 @@ import pandas as pd
 import igraph as ig
 
 # Load the CSV file
-df = pd.read_csv('Data/city_collab_output.csv')
+df = pd.read_csv('Data/collab_output.csv')
 
 # Aggregate weights by summing them over the years
 aggregated_df = df.groupby(['source', 'target']).agg({'weight': 'sum'}).reset_index()
@@ -79,7 +79,7 @@ df
 
 #%% spin-glass
 
-communities = g.community_spinglass(gamma=2, spins=20)
+communities = g.community_spinglass(gamma=1.5, spins=20)
 
 node_names = []
 community_memberships = []
@@ -95,10 +95,10 @@ for idx, community in enumerate(communities):
 df = pd.DataFrame({"Node": node_names, "Community": community_memberships})
 df["Community"].value_counts()
 
-df_national = pd.read_csv("Data/city_output.csv")
+df_national = pd.read_csv("Data/national_output.csv")
 
-merged_df = df_national.merge(df, left_on="city", right_on="Node", how="inner")
+merged_df = df_national.merge(df, left_on="country", right_on="Node", how="inner")
 merged_df = merged_df.drop(columns=["Node"])
-merged_df.to_csv("Data/city_output.csv",index=False)
+merged_df.to_csv("Data/national_output.csv",index=False)
 
 

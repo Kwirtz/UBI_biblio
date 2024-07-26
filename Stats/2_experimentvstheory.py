@@ -13,7 +13,7 @@ lemmatizer = WordNetLemmatizer()
 # MongoDB connection
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
-collection = db["works_UBI_gobu"]
+collection = db["works_UBI_gobu_2"]
 
 def clear_text(text):
     # Remove leading and trailing spaces
@@ -31,17 +31,19 @@ def clear_text(text):
     cleaned_text = ' '.join(lemmatized_text.split())
     return cleaned_text 
 
-
+"""
 experimental_keywords = [
-    "experiment", "experimental", "measurement", "measured", "observation", "observed",
-    "empirical", "test", "testing", "simulation", "validation", "trial", "evaluation",
-    "analysis", "sample", "sampling", "data collection", "experimental setup", "prototype",
+    "experiment", "experimental", "simulation", "trial", "sample", "sampling", "data collection", "experimental setup", "prototype",
     "implementation", "performance", "practical", "real-world", "field study", "case study",
     "survey", "questionnaire", "experimental results", "apparatus", "instrumentation", "laboratory", "clinical trial",
     "in vitro", "in vivo", "pilot study", "experimentation", "empirical study", "rct", "experience"
 ]
+"""
 
-
+experimental_keywords = [
+    " experiment ", "simulation", "sample", "sampling", "experimental setup", "field study", "case study",
+    "survey", "questionnaire", "experimental results", "laboratory", "pilot study", "experimentation", "empirical study", "rct", "experience", "randomized controlled trial"
+]
 
 #%% get share evolution
 
@@ -49,6 +51,7 @@ year2expe = defaultdict(int)
 year2theory = defaultdict(int)
 docs = collection.find()
 for doc in tqdm.tqdm(docs):
+    year = doc["publication_year"]
     done = False
     try:
         title = doc["title"]
@@ -68,10 +71,12 @@ for doc in tqdm.tqdm(docs):
     for keyword in experimental_keywords:
         if keyword in clear_text(text):
             done = True
+            if year<1950:
+                print(doc["id"],clear_text(text),keyword)
     if done == True:
-        year2expe[doc["publication_year"]] += 1
+        year2expe[year] += 1
     else:
-        year2theory[doc["publication_year"]] += 1
+        year2theory[year] += 1
 
 
 df1 = pd.DataFrame.from_dict(year2expe, orient='index', columns=['expe'])

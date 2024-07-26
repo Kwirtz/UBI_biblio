@@ -39,27 +39,27 @@ oma2 <- c(0,0,0,0)
 # Fig2a: Theo vs Expe
 ```{r} 
 df <- read_csv(file.path(data_path, "Fig2_a.csv"))
-df$expe_ma <- rollmean(df$expe, k = 3, fill = NA, align = "center")
-df$theo_ma <- rollmean(df$theoric, k = 3, fill = NA, align = "center")
-df$share_ma <- rollmean(df$share_expe, k = 3, fill = NA, align = "center")
+df$expe_ma <- rollmean(df$expe, k = 5, fill = NA, align = "center")
+df$theo_ma <- rollmean(df$theoric, k = 5, fill = NA, align = "center")
+df$share_ma <- rollmean(df$share_expe, k = 5, fill = NA, align = "center")
 ```
 
 
 ```{r} 
 colors <- c("UBI publications" = "#1f77b4", "share SHS" = "#ff7f0e")
 
-Fig2_a <- ggplot(df[1900<= df$Year & df$Year <= 2025,], aes(x = Year)) +
+Fig2_a <- ggplot(df[1900<= df$Year & df$Year <= 2020,], aes(x = Year)) +
   geom_line(linewidth=1,aes(y = expe_ma, color='expe_publications')) + 
   geom_line(linewidth=1,aes(y = share_ma*676, color='expe_share')) +
   geom_line(linewidth=1,aes(y = theo_ma, color='theoric_publications')) +
   scale_color_manual(name = "Group",
                      values = c( "expe_publications" = "#1f77b4","expe_share"="#ff7f0e", "theoric_publications" = "black"),
-                     labels = c( "expe publications","Share expe","theoric publications")) +
-  labs(title = "Evolution of Experimental and Theoretical publications", x = "year", y = "# Publications") +
+                     labels = c( "Expe related publications","Share Expe","Theoric related publications")) +
+  labs(title = "", x = "year", y = "# Publications") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 6),
-      axis.text.y = element_text(size = 6),
-      axis.title.x = element_text(size = 6),
-      axis.title.y = element_text(size = 6),
+      axis.text.y = element_text(size = 8),
+      axis.title.x = element_text(size = 8),
+      axis.title.y = element_text(size = 8),
       panel.border = element_rect(colour = "black", fill=NA, size=0.75),
       plot.margin = unit(oma2, "cm"),
       panel.grid.major = element_blank(),
@@ -69,7 +69,7 @@ Fig2_a <- ggplot(df[1900<= df$Year & df$Year <= 2025,], aes(x = Year)) +
       legend.key=element_blank(),
       legend.title=element_blank(),
       legend.position="top",
-      legend.text=element_text(size = 6)) +
+      legend.text=element_text(size = 8)) +
   scale_y_continuous(
     name = "Publications",
     sec.axis = sec_axis(~./676, name="Share")

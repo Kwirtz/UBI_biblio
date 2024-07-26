@@ -11,7 +11,7 @@ from collections import defaultdict, Counter
 # MongoDB connection
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
-collection = db["works_UBI_global"]
+collection = db["works_UBI_gobu_2"]
 
 
 #%% Journal overtime
@@ -91,12 +91,8 @@ df_expanded = df_expanded[['journal', 'year', 'n_theo', 'n_expe']]
 
 
 experimental_keywords = [
-    "experiment", "experimental", "measurement", "measured", "observation", "observed",
-    "empirical", "test", "testing", "simulation", "validation", "trial", "evaluation",
-    "analysis", "sample", "sampling", "data collection", "experimental setup", "prototype",
-    "implementation", "performance", "practical", "real-world", "field study", "case study",
-    "survey", "questionnaire", "experimental results", "apparatus", "instrumentation", "laboratory", "clinical trial",
-    "in vitro", "in vivo", "pilot study", "experimentation", "empirical study", "rct", "experience"
+    " experiment ", "simulation", "sample", "sampling", "experimental setup", "field study", "case study",
+    "survey", "questionnaire", "experimental results", "laboratory", "pilot study", "experimentation", "empirical study", "rct", "experience", "randomized controlled trial"
 ]
 
 

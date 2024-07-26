@@ -63,11 +63,11 @@ fig_intro_a = ggplot(df[df$year<=2020,], aes(x = year)) +
   labs(x = "Year",
          y = "Share",
          color = "Legend",
-       title="Evolution of UBI related publications in SHS") +
+       title="") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 6),
-      axis.text.y = element_text(size = 6),
-      axis.title.x = element_text(size = 6),
-      axis.title.y = element_text(size = 6),
+      axis.text.y = element_text(size = 8),
+      axis.title.x = element_text(size = 8),
+      axis.title.y = element_text(size = 8),
       panel.border = element_rect(colour = "black", fill=NA, size=0.75),
       plot.margin = unit(oma2, "cm"),
       panel.grid.major = element_blank(),
@@ -77,7 +77,7 @@ fig_intro_a = ggplot(df[df$year<=2020,], aes(x = year)) +
       legend.key=element_blank(),
       legend.title=element_blank(),
       legend.position="top",
-      legend.text=element_text(size = 6)) +
+      legend.text=element_text(size = 8)) +
   scale_y_continuous(
     name = "Publications",
     sec.axis = sec_axis(~./6768480, name="Share")
@@ -85,18 +85,18 @@ fig_intro_a = ggplot(df[df$year<=2020,], aes(x = year)) +
 
 fig_intro_b = ggplot(df[df$year<=2020,], aes(x = year)) + 
   geom_line(linewidth=1,aes(y = n_ubi_SHS_eco, color='UBI_publications')) + 
-  geom_line(linewidth=1,aes(y = share_ubi_eco_ma*6768480, color='UBI_share')) +
+  geom_line(linewidth=1,aes(y = share_ubi_eco_ma*3384240, color='UBI_share')) +
   scale_color_manual(name = "Group",
                      values = c( "UBI_publications" = "#1f77b4", "UBI_share" = "black"),
                      labels = c( "UBI publications","Share UBI publications in Economics")) +
   labs(x = "Year",
          y = "Share",
          color = "Legend",
-       title="Evolution of UBI related publications in Economics") +
+       title="") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 6),
-      axis.text.y = element_text(size = 6),
-      axis.title.x = element_text(size = 6),
-      axis.title.y = element_text(size = 6),
+      axis.text.y = element_text(size = 8),
+      axis.title.x = element_text(size = 8),
+      axis.title.y = element_text(size = 8),
       panel.border = element_rect(colour = "black", fill=NA, size=0.75),
       plot.margin = unit(oma2, "cm"),
       panel.grid.major = element_blank(),
@@ -106,10 +106,10 @@ fig_intro_b = ggplot(df[df$year<=2020,], aes(x = year)) +
       legend.key=element_blank(),
       legend.title=element_blank(),
       legend.position="top",
-      legend.text=element_text(size = 6)) +
+      legend.text=element_text(size = 8)) +
   scale_y_continuous(
     name = "Publications",
-    sec.axis = sec_axis(~./6768480, name="Share")
+    sec.axis = sec_axis(~./3384240, name="Share")
   )
 
 fig_intro_a

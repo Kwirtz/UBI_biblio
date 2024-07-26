@@ -1,7 +1,6 @@
 import re
 import tqdm
 import pymongo
-from datetime import datetime
 
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["openAlex20240517"]
@@ -68,23 +67,7 @@ def check_for_dups(db_name, collection_name):
 
 test = check_for_dups(db_name = "UBI", collection_name = "works_UBI_global")
 
-def delete_dups(db_name, collection_name):
-    Client = pymongo.MongoClient("mongodb://localhost:27017")
-    db = Client[db_name]
-    collection = db[collection_name]
-    docs = collection.find({})
-    ids = []
-    for doc in tqdm.tqdm(docs):
-        ids.append(doc["id"])
-    for id_ in ids:
-        docs = list(collection.find({"id":id_}))
-        if len(docs) > 1:
-            docs.sort(key=lambda x: datetime.fromisoformat(x['updated_date']), reverse=True)
-            # Keep the most recent document and delete the rest
-            for doc_to_delete in docs[1:]:
-                collection.delete_one({"_id": doc_to_delete["_id"]})
 
-delete_dups(db_name = "UBI", collection_name = "works_UBI_general")
 
 #%% 
 
@@ -93,11 +76,12 @@ collection = db["works_SHS"]
 db_new = Client["UBI"]
 collection_eco = db_new["works_UBI_general"]
 
-
-keywords = ["state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income", " ubi ",
+keywords = ["state bonus", "national dividend", "social dividend", "basic minimum income", "basic income",
          "negative income tax", "minimum income guarantee", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
-         "citizen’s basic income", "citizen’s income", "unconditional basic income", "universal basic income", "negative income tax", "guaranteed minimum income", "social dividend", "basic income guarantee"]
+         "citizen’s basic income", "citizen’s income", 
+         "unconditional basic income", "universal basic income", "guaranteed minimum income", "social dividend", "basic income guarantee"]
 
+#keywords = ["basic income"]
 
 def get_ubi_in_text(keywords):    
     try:

@@ -27,4 +27,4 @@ def convert(client_name,db_name,collection_name,id_variable):
     list_of_insertion = []    
     
 if __name__ == "__main__":
-    convert(client_name,db_name,"works_UBI_global","id")
+    convert(client_name,db_name,"works_UBI_gobu_2","id")

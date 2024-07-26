@@ -32,7 +32,7 @@ library(magrittr)
 library(gridExtra)
 
 data_path = file.path("../Data") 
-result_path = file.path("../Results") 
+result_path = file.path("../Results/Figures") 
 
 ```
 
@@ -46,82 +46,113 @@ df_long <- df %>%
                names_to = "Variable",  # name for new column with variable names
                values_to = "Value")
 
-first_period = c("state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income")
-second_period = c("negative income tax", "minimum income guarantee","minimum income", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
-"citizen’s basic income", "citizen’s income")
-third_period = c("unconditional basic income", "universal basic income","negative income tax", "guaranteed minimum income")
+ first_period = c("state bonus", "national dividend", "social dividend", "minimum income", "social credit")
+second_period = c("negative income tax", "minimum income guarantee", "minimum income", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax", "citizen's wage",
+"citizen’s basic income", "citizen’s income", "state bonus", "national dividend", "social dividend", "minimum income", "social credit")
+third_period = c("unconditional basic income", "universal basic income", "negative income tax", "minimum income guarantee", "minimum income", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax", "citizen's wage",
+"citizen’s basic income", "citizen’s income", "state bonus", "national dividend", "social dividend", "minimum income", "social credit") 
 
-df_period1 <- df_long[df_long$Variable %in% first_period & df_long$year>1910 & df_long$year<1941 , ]
-df_period2 <- df_long[df_long$Variable %in% second_period & df_long$year>1960 & df_long$year<1971 , ]
-df_period3 <- df_long[df_long$Variable %in% third_period & df_long$year>2010 & df_long$year<2025 , ]
+# Assign periods
+df_long <- df_long %>%
+  mutate(Period = case_when(
+    Variable %in% first_period ~ "First Period",
+    Variable %in% second_period ~ "Second Period",
+    Variable %in% third_period ~ "Third Period",
+    TRUE ~ "Other"
+  ))
+
+# Filter out 'Other' period if needed
+df_long <- df_long %>%
+  filter(Period != "Other")
+
+df_summary <- df_long %>%
+  group_by(Period, year) %>%
+  summarise(Total_Value = sum(Value, na.rm = TRUE)) %>%
+  ungroup()
+
+# Summarize the data by period and year
+df_summary <- df_summary %>%
+  filter(year >= 1900 & year <= 2020) %>%
+  arrange(year) %>%
+  group_by(Period) %>%
+  mutate(Smoothed_Total_Value = rollmean(Total_Value, k = 15, fill = NA, align = "center")) %>%
+  ungroup() %>%
+  group_by(year) %>%
+  mutate(Total_Yearly_Value = sum(Smoothed_Total_Value, na.rm = TRUE),
+         Share = Smoothed_Total_Value / Total_Yearly_Value * 100) %>%
+  ungroup()
 
 ```
 
+
+
 ```{r} 
+df_long <- df_long %>%
+  group_by(Variable) %>%
+  mutate(rollmean_Value = rollmean(Value, k = 10, align = "right", fill = NA))
+
+# Function to create and save plots
+create_and_save_plot <- function(df, variable_name) {
+  # Filter data for the specific variable
+  df_variable <- df %>%
+    filter(Variable == variable_name)
+
+  # Create plot
+  plot <- ggplot(df_variable, aes(x = year, y = Value)) +
+    geom_line(size = 0.75) +
+    geom_line(aes(y = rollmean_Value), color = "blue", linetype = "dashed", size = 0.75) +
+    labs(title = paste("Publications by Period -", variable_name), x = "Year", y = "N_pubs") +
+    theme_minimal()
+
+  # Save plot to PDF
+  ggsave(paste0(result_path,paste0(variable_name, "_plot.pdf")), plot, width = 6, height = 4)
+}
+
+# Get unique variable names
+variable_names <- unique(df_long$Variable)
+
+# Iterate over each variable and create/save plot
+for (variable_name in variable_names) {
+  create_and_save_plot(df_long, variable_name)
+}
+
+```
+
+
+```{r} 
+
+custom_colors <- c("First Period" = "orange", "Second Period" = "black", "Third Period" = "#3357FF")
+
 # Create the individual plots
-Fig1_a <- ggplot(df_period1, aes(x = year, y = Value)) +
-  geom_line(aes(color = Variable), size = 0.75) +
-  labs(title = "Period 1", x = "year", y = "# Publications") +
-    theme(
-        axis.text.y = element_text(size = 10),
-        axis.title.x = element_blank(),
-        axis.title.y = element_text(size = 10),
-        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
-        plot.margin = unit(oma2, "cm"),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        legend.key = element_blank(),
-        legend.title = element_blank(),
-        legend.text = element_text(size = 6),
-        strip.text = element_text(size = 8), # Reduce font size of facet labels
-        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
-
-
-Fig1_b <- ggplot(df_period2, aes(x = year, y = Value)) +
-  geom_line(aes(color = Variable), size = 0.75) +
-  labs(title = "Period 2", x = "year", y = "# Publications") +
-    theme( # Remove x-axis ticks
-        axis.text.y = element_text(size = 10),
-        axis.title.x = element_blank(),
-        axis.title.y = element_text(size = 10),
-        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
-        plot.margin = unit(oma2, "cm"),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        legend.key = element_blank(),
-        legend.title = element_blank(),
-        legend.text = element_text(size = 6),
-        strip.text = element_text(size = 8), # Reduce font size of facet labels
-        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
-
-
-Fig1_c <- ggplot(df_period3, aes(x = year, y = Value)) +
-  geom_line(aes(color = Variable), size = 0.75) +
-  labs(title = "Period 3", x = "year", y = "# Publications") +
-    theme(
-        axis.text.y = element_text(size = 10),
-        axis.title.x = element_blank(),
-        axis.title.y = element_text(size = 10),
-        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
-        plot.margin = unit(oma2, "cm"),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        legend.key = element_blank(),
-        legend.title = element_blank(),
-        # Legend position with justification for top left corner
-        legend.justification = "left",  # Added justification
-        legend.text = element_text(size = 6),
-        strip.text = element_text(size = 8), # Reduce font size of facet labels
-        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
-
+Fig1_a <- ggplot(df_summary, aes(x = year, y = Share)) +
+  geom_line(linewidth=1,aes(color = Period)) +
+  labs(title = "", x = "Year", y = "Share of Publications (%)") +
+  scale_color_manual(values = custom_colors) + # Apply custom colors
+  theme(
+    axis.text.y = element_text(size = 10),
+    axis.title.x = element_blank(),
+    axis.title.y = element_text(size = 10),
+    panel.border = element_rect(colour = "black", fill = NA, size = 0.75),
+    plot.margin = unit(c(1, 1, 1, 1), "cm"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank(),
+    legend.key = element_blank(),
+    legend.title = element_blank(),
+    legend.text = element_text(size = 8),
+    legend.position="top",
+    strip.text = element_text(size = 8), # Reduce font size of facet labels
+    strip.text.x = element_text(margin = margin(b = 5, t = 5))
+  )
 
 # Arrange the plots in a 1x3 grid (1 row, 3 columns)
-
-pdf(file=file.path(result_path, "Figures/Fig1.pdf"), width=8, height=6, family="Helvetica", pointsize=6)
-grid.arrange(Fig1_a, Fig1_b, Fig1_c, nrow = 2,ncol=2, layout_matrix=rbind(c(1,1, 2,2), c(NA, 3, 3, NA)))
+Fig1_a
+pdf(file=file.path(result_path, "Fig1.pdf"), width=8, height=6, family="Helvetica", pointsize=6)
+#grid.arrange(Fig1_a, Fig1_b, Fig1_c, nrow = 2,ncol=2, layout_matrix=rbind(c(1,1, 2,2), c(NA, 3, 3, NA)))
+Fig1_a
 dev.off()
+
+
+
 
 ```

@@ -11,21 +11,15 @@ from collections import defaultdict
 # MongoDB connection
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
-collection = db["works_UBI_gobu"]
+collection = db["works_UBI_gobu_2"]
 
 #%% Dynamic of keywords
 
 check = ["state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income",
          "negative income tax", "minimum income guarantee", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
-         "citizen’s basic income", "citizen’s income", 
-         "unconditional basic income", "universal basic income", "guaranteed minimum income", "social dividend", "basic income guarantee"]
+         "citizen’s basic income", "citizen’s income", "social credit",
+         "unconditional basic income", "universal basic income", "guaranteed income", "social dividend", "basic income guarantee"]
 
-
-# 1910-1940 1960-1970 2010 maintenant
-check1 = ["state bonus", "minimum income", "national dividend", "social dividend", "social credit"]
-check2 = ["negative income tax", "minimum income guarantee","minimum income", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
-"citizen’s basic income", "citizen’s income"]
-check3 = ["unconditional basic income", "universal basic income","basic income","ubi"]
 
 year_list = [] 
 list_papers = []
@@ -86,4 +80,58 @@ df_sorted = df.sort_values(by='year')
 
 df_sorted.to_csv("Data/Fig1.csv",index=False)
 
+#%% Special Eva
+
+
+check = ["state bonus", "minimum income", "national dividend", "social dividend", "basic minimum income", "basic income",
+         "negative income tax", "minimum income guarantee", "guaranteed minimum income", "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
+         "citizen’s basic income", "citizen’s income", "social credit",
+         "unconditional basic income", "universal basic income", "guaranteed income", "social dividend", "basic income guarantee"]
+
+list_papers = []
+docs = collection.find()
+for doc in tqdm.tqdm(docs):
+    if doc["publication_year"] <= 1950:
+        list_papers.append(doc["id"])
+
+list_of_insertion = []
+
+
+for paper in tqdm.tqdm(list_papers):
+    doc = collection.find_one({"id":paper})
+    year = doc["publication_year"]
+    try:
+        title = doc["title"]
+    except:
+        title = ""
+    try:
+        abstract = doc["abstract"]
+    except:
+        abstract = ""
+    if not title:
+        title = ""
+    if not abstract:
+        abstract = ""
+    text = title + " " #+ abstract
+    text = text.lower()
+    full_gram = ""
+
+    if doc["has_fulltext"]:
+        doc_id = doc["id"].split("/")[-1]
+        response = requests.get("https://api.openalex.org/works/{}/ngrams?mailto=kevin-w@hotmail.fr".format(doc_id))
+        ngrams = json.loads(response.content)["ngrams"]
+        for gram in ngrams:
+            if gram['ngram_tokens']<4:
+                full_gram += gram["ngram"].lower() + " "
+    for keyword in check:
+        if keyword in text or keyword in full_gram:
+            list_of_insertion.append([doc["id"],keyword,year])
+            
+            
+            
+
+# Convert the dictionary to a DataFrame
+df = pd.DataFrame(list_of_insertion, columns=["id","keyword","year"])
+df = df.sort_values("year")
+df.to_csv("Data/special_Eva.csv",index=False)
 

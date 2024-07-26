@@ -8,7 +8,7 @@ from collections import defaultdict
 # MongoDB connection
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
-collection = db["works_UBI_gobu"]
+collection = db["works_UBI_gobu_2"]
 
 db_OA = Client["openAlex20240517"]
 collection_OA = db_OA["works_SHS"]
@@ -23,7 +23,7 @@ for doc in tqdm.tqdm(docs):
     try:
         year = doc["publication_year"]
         if year != None:
-            if year >1800 and year <2025:
+            if year >1900 and year <2021:
                 year2n_pub[doc["publication_year"]]["n_pub_SHS"] += 1
                 for concept in doc["concepts"]:
                     if concept["display_name"].lower() == "economics":
@@ -40,7 +40,7 @@ for doc in tqdm.tqdm(docs):
     try:
         year = doc["publication_year"]
         if year != None:
-            if year >1800 and year <2025:
+            if year >1900 and year <2021:
                 year2n_pub_ubi[doc["publication_year"]]["n_ubi_SHS"] += 1
                 for concept in doc["concepts"]:
                     if concept["display_name"].lower() == "economics":

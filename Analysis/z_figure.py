@@ -5,7 +5,7 @@ import pandas as pd
 
 client = pymongo.MongoClient("mongodb://localhost:27017")
 db = client['UBI']
-collection = db['works_UBI_global_cleaned']
+collection = db['works_UBI_gobu']
 
 
 docs = collection.find()

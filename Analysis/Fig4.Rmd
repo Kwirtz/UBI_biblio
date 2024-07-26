@@ -36,6 +36,57 @@ result_path = file.path("../Results")
 
 ```
 
+# Fig4: Creativity
+```{r} 
+df <- read_csv(file.path(data_path, "Fig_creativity.csv"))
+mean_df <- df %>%
+  group_by(year) %>%
+  summarise(across(starts_with("score_"), mean, na.rm = TRUE))
+
+mean_df <- mean_df %>%
+  mutate(across(starts_with("score_"), ~ rollmean(.x, 3, fill = NA, align = "right"), .names = "ma_{col}"))
+
+
+# Reshape for score columns
+grouped <- mean_df %>%
+  select(year, starts_with("ma_")) %>%
+  pivot_longer(-year, names_to = "variable", values_to = "value")
+
+# Calculate 3-point moving average for score columns
+grouped <- grouped %>%
+  mutate(across(starts_with("score"), ~ rollapply(.x, width = 3, FUN = mean, fill = NA, align = "center")))
+
+
+
+```
+```{r} 
+plot_scores <- ggplot(grouped[grouped$variable=="score_foster",], aes(x = year, y = value, color = variable)) +
+  geom_line(size = 1) +
+  labs(title = "Mean Scores per Year",
+       x = "Year",
+       y = "Mean Value") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+        axis.text.y = element_text(size = 10),
+        axis.title.x = element_text(size = 10),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(c(1, 1, 1, 1), "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        legend.position = "top",
+        legend.text = element_text(size = 10))
+
+plot_scores
+```
+
+
+
+
+
 
 
 # Fig4: Creativity
