@@ -1,607 +1,664 @@
-country_name,country,year,n_total,n_solo_country,n_solo_author,n_collab,Community_x,Community_y
-Argentina,AR,2012,1,0.0,0.0,1.0,3,3
-Argentina,AR,2013,1,0.0,1.0,0.0,3,3
-Argentina,AR,2014,1,0.0,0.0,1.0,3,3
-Argentina,AR,2016,1,0.0,1.0,0.0,3,3
-Argentina,AR,2018,1,0.0,0.0,1.0,3,3
-Argentina,AR,2022,1,0.0,1.0,0.0,3,3
-Argentina,AR,2024,1,0.0,1.0,0.0,3,3
-Austria,AT,1974,1,0.0,1.0,0.0,6,0
-Austria,AT,1984,1,1.0,0.0,0.0,6,0
-Austria,AT,2003,1,0.0,1.0,0.0,6,0
-Austria,AT,2011,1,0.0,0.0,1.0,6,0
-Austria,AT,2012,2,1.0,0.0,1.0,6,0
-Austria,AT,2015,1,0.0,1.0,0.0,6,0
-Austria,AT,2021,2,0.0,2.0,0.0,6,0
-Austria,AT,2022,3,1.0,2.0,0.0,6,0
-Austria,AT,2023,2,1.0,1.0,0.0,6,0
-Austria,AT,2024,1,0.0,1.0,0.0,6,0
-Australia,AU,1971,1,0.0,1.0,0.0,3,3
-Australia,AU,1977,1,0.0,1.0,0.0,3,3
-Australia,AU,1980,1,0.0,1.0,0.0,3,3
-Australia,AU,1981,1,0.0,1.0,0.0,3,3
-Australia,AU,1987,2,0.0,1.0,1.0,3,3
-Australia,AU,1989,1,1.0,0.0,0.0,3,3
-Australia,AU,1992,1,0.0,1.0,0.0,3,3
-Australia,AU,1997,3,1.0,1.0,1.0,3,3
-Australia,AU,1998,4,1.0,3.0,0.0,3,3
-Australia,AU,2000,3,2.0,1.0,0.0,3,3
-Australia,AU,2001,1,0.0,1.0,0.0,3,3
-Australia,AU,2003,1,1.0,0.0,0.0,3,3
-Australia,AU,2004,3,0.0,3.0,0.0,3,3
-Australia,AU,2005,4,0.0,3.0,1.0,3,3
-Australia,AU,2007,2,0.0,2.0,0.0,3,3
-Australia,AU,2008,1,0.0,1.0,0.0,3,3
-Australia,AU,2009,2,0.0,2.0,0.0,3,3
-Australia,AU,2012,1,0.0,1.0,0.0,3,3
-Australia,AU,2013,2,0.0,1.0,1.0,3,3
-Australia,AU,2015,1,0.0,1.0,0.0,3,3
-Australia,AU,2016,2,1.0,1.0,0.0,3,3
-Australia,AU,2017,3,1.0,2.0,0.0,3,3
-Australia,AU,2018,7,2.0,2.0,3.0,3,3
-Australia,AU,2019,22,6.0,15.0,1.0,3,3
-Australia,AU,2020,10,1.0,6.0,3.0,3,3
-Australia,AU,2021,5,1.0,3.0,1.0,3,3
-Australia,AU,2022,8,2.0,5.0,1.0,3,3
-Australia,AU,2023,10,4.0,4.0,2.0,3,3
-Australia,AU,2024,2,0.0,2.0,0.0,3,3
-Azerbaijan,AZ,2019,1,0.0,0.0,1.0,5,3
-Azerbaijan,AZ,2023,1,0.0,1.0,0.0,5,3
-Bosnia and Herzegovina,BA,2018,1,0.0,0.0,1.0,6,0
-Belgium,BE,1989,1,0.0,1.0,0.0,0,2
-Belgium,BE,1993,2,0.0,2.0,0.0,0,2
-Belgium,BE,1994,1,0.0,1.0,0.0,0,2
-Belgium,BE,1996,1,0.0,1.0,0.0,0,2
-Belgium,BE,1997,2,0.0,2.0,0.0,0,2
-Belgium,BE,1999,1,0.0,1.0,0.0,0,2
-Belgium,BE,2001,2,2.0,0.0,0.0,0,2
-Belgium,BE,2003,1,0.0,0.0,1.0,0,2
-Belgium,BE,2004,3,1.0,2.0,0.0,0,2
-Belgium,BE,2006,1,0.0,0.0,1.0,0,2
-Belgium,BE,2007,1,1.0,0.0,0.0,0,2
-Belgium,BE,2008,1,1.0,0.0,0.0,0,2
-Belgium,BE,2009,2,0.0,2.0,0.0,0,2
-Belgium,BE,2013,1,0.0,0.0,1.0,0,2
-Belgium,BE,2015,1,1.0,0.0,0.0,0,2
-Belgium,BE,2016,1,1.0,0.0,0.0,0,2
-Belgium,BE,2018,2,1.0,0.0,1.0,0,2
-Belgium,BE,2019,5,0.0,0.0,5.0,0,2
-Belgium,BE,2020,4,0.0,1.0,3.0,0,2
-Belgium,BE,2021,5,1.0,3.0,1.0,0,2
-Belgium,BE,2022,8,3.0,3.0,2.0,0,2
-Belgium,BE,2023,12,3.0,9.0,0.0,0,2
-Belgium,BE,2024,2,1.0,1.0,0.0,0,2
-Bulgaria,BG,2006,1,0.0,0.0,1.0,6,0
-Bulgaria,BG,2017,1,0.0,1.0,0.0,6,0
-Bulgaria,BG,2019,1,0.0,0.0,1.0,6,0
-Bulgaria,BG,2020,1,1.0,0.0,0.0,6,0
-Bulgaria,BG,2022,1,0.0,0.0,1.0,6,0
-Brazil,BR,1998,1,0.0,1.0,0.0,3,3
-Brazil,BR,2006,1,0.0,1.0,0.0,3,3
-Brazil,BR,2008,1,0.0,1.0,0.0,3,3
-Brazil,BR,2009,2,0.0,2.0,0.0,3,3
-Brazil,BR,2011,1,0.0,1.0,0.0,3,3
-Brazil,BR,2013,1,0.0,1.0,0.0,3,3
-Brazil,BR,2015,2,1.0,1.0,0.0,3,3
-Brazil,BR,2016,1,0.0,1.0,0.0,3,3
-Brazil,BR,2017,1,0.0,0.0,1.0,3,3
-Brazil,BR,2018,2,0.0,0.0,2.0,3,3
-Brazil,BR,2019,2,1.0,1.0,0.0,3,3
-Brazil,BR,2020,1,0.0,1.0,0.0,3,3
-Brazil,BR,2021,1,0.0,1.0,0.0,3,3
-Brazil,BR,2022,2,0.0,2.0,0.0,3,3
-Brazil,BR,2023,5,4.0,1.0,0.0,3,3
-Canada,CA,1947,1,0.0,1.0,0.0,5,3
-Canada,CA,1973,1,0.0,1.0,0.0,5,3
-Canada,CA,1975,1,0.0,1.0,0.0,5,3
-Canada,CA,1978,1,0.0,0.0,1.0,5,3
-Canada,CA,1979,1,1.0,0.0,0.0,5,3
-Canada,CA,1986,1,0.0,1.0,0.0,5,3
-Canada,CA,1991,1,0.0,1.0,0.0,5,3
-Canada,CA,1992,1,1.0,0.0,0.0,5,3
-Canada,CA,1993,1,1.0,0.0,0.0,5,3
-Canada,CA,1994,1,1.0,0.0,0.0,5,3
-Canada,CA,1995,1,1.0,0.0,0.0,5,3
-Canada,CA,1996,1,0.0,1.0,0.0,5,3
-Canada,CA,1998,1,0.0,1.0,0.0,5,3
-Canada,CA,2003,4,0.0,1.0,3.0,5,3
-Canada,CA,2004,4,1.0,2.0,1.0,5,3
-Canada,CA,2007,1,0.0,1.0,0.0,5,3
-Canada,CA,2008,2,0.0,1.0,1.0,5,3
-Canada,CA,2009,3,2.0,1.0,0.0,5,3
-Canada,CA,2010,1,0.0,1.0,0.0,5,3
-Canada,CA,2011,2,0.0,2.0,0.0,5,3
-Canada,CA,2012,5,0.0,0.0,5.0,5,3
-Canada,CA,2013,9,7.0,2.0,0.0,5,3
-Canada,CA,2014,8,3.0,2.0,3.0,5,3
-Canada,CA,2015,8,1.0,5.0,2.0,5,3
-Canada,CA,2016,2,2.0,0.0,0.0,5,3
-Canada,CA,2017,14,6.0,6.0,2.0,5,3
-Canada,CA,2018,15,6.0,6.0,3.0,5,3
-Canada,CA,2019,15,6.0,3.0,6.0,5,3
-Canada,CA,2020,18,9.0,6.0,3.0,5,3
-Canada,CA,2021,29,10.0,17.0,2.0,5,3
-Canada,CA,2022,4,0.0,1.0,3.0,5,3
-Canada,CA,2023,10,2.0,6.0,2.0,5,3
-Canada,CA,2024,4,3.0,0.0,1.0,5,3
-Switzerland,CH,1997,1,1.0,0.0,0.0,2,2
-Switzerland,CH,2007,1,1.0,0.0,0.0,2,2
-Switzerland,CH,2008,2,0.0,1.0,1.0,2,2
-Switzerland,CH,2011,1,1.0,0.0,0.0,2,2
-Switzerland,CH,2012,1,0.0,1.0,0.0,2,2
-Switzerland,CH,2013,2,0.0,2.0,0.0,2,2
-Switzerland,CH,2014,2,0.0,2.0,0.0,2,2
-Switzerland,CH,2016,2,0.0,2.0,0.0,2,2
-Switzerland,CH,2017,2,0.0,2.0,0.0,2,2
-Switzerland,CH,2018,2,0.0,1.0,1.0,2,2
-Switzerland,CH,2019,4,1.0,3.0,0.0,2,2
-Switzerland,CH,2020,2,0.0,1.0,1.0,2,2
-Switzerland,CH,2021,3,0.0,2.0,1.0,2,2
-Switzerland,CH,2022,3,0.0,1.0,2.0,2,2
-Switzerland,CH,2023,2,0.0,0.0,2.0,2,2
-Chile,CL,2003,1,0.0,1.0,0.0,2,2
-Chile,CL,2007,1,1.0,0.0,0.0,2,2
-Chile,CL,2012,1,0.0,0.0,1.0,2,2
-Chile,CL,2014,1,0.0,1.0,0.0,2,2
-Chile,CL,2015,1,0.0,1.0,0.0,2,2
-Chile,CL,2016,1,0.0,1.0,0.0,2,2
-Chile,CL,2019,1,0.0,1.0,0.0,2,2
-Chile,CL,2022,1,1.0,0.0,0.0,2,2
-Chile,CL,2023,4,0.0,1.0,3.0,2,2
-China,CN,2001,1,0.0,1.0,0.0,1,1
-China,CN,2002,2,0.0,2.0,0.0,1,1
-China,CN,2003,3,0.0,3.0,0.0,1,1
-China,CN,2004,1,0.0,1.0,0.0,1,1
-China,CN,2005,4,0.0,4.0,0.0,1,1
-China,CN,2006,7,0.0,6.0,1.0,1,1
-China,CN,2007,4,0.0,4.0,0.0,1,1
-China,CN,2008,2,0.0,2.0,0.0,1,1
-China,CN,2009,5,0.0,5.0,0.0,1,1
-China,CN,2010,3,0.0,3.0,0.0,1,1
-China,CN,2011,2,0.0,2.0,0.0,1,1
-China,CN,2013,1,0.0,1.0,0.0,1,1
-China,CN,2014,2,0.0,2.0,0.0,1,1
-China,CN,2015,1,0.0,1.0,0.0,1,1
-China,CN,2016,1,0.0,1.0,0.0,1,1
-China,CN,2018,4,1.0,2.0,1.0,1,1
-China,CN,2019,2,0.0,0.0,2.0,1,1
-China,CN,2020,1,0.0,1.0,0.0,1,1
-China,CN,2021,1,1.0,0.0,0.0,1,1
-China,CN,2022,2,0.0,2.0,0.0,1,1
-China,CN,2023,4,0.0,1.0,3.0,1,1
-Germany,DE,1989,1,0.0,1.0,0.0,6,0
-Germany,DE,1990,1,0.0,1.0,0.0,6,0
-Germany,DE,1997,2,2.0,0.0,0.0,6,0
-Germany,DE,1998,1,0.0,1.0,0.0,6,0
-Germany,DE,1999,6,1.0,4.0,1.0,6,0
-Germany,DE,2000,4,0.0,4.0,0.0,6,0
-Germany,DE,2001,2,2.0,0.0,0.0,6,0
-Germany,DE,2002,3,1.0,2.0,0.0,6,0
-Germany,DE,2003,2,0.0,1.0,1.0,6,0
-Germany,DE,2005,1,0.0,1.0,0.0,6,0
-Germany,DE,2006,5,1.0,3.0,1.0,6,0
-Germany,DE,2007,1,1.0,0.0,0.0,6,0
-Germany,DE,2008,4,3.0,1.0,0.0,6,0
-Germany,DE,2009,3,0.0,2.0,1.0,6,0
-Germany,DE,2010,3,1.0,1.0,1.0,6,0
-Germany,DE,2011,9,4.0,1.0,4.0,6,0
-Germany,DE,2012,4,1.0,0.0,3.0,6,0
-Germany,DE,2013,6,4.0,1.0,1.0,6,0
-Germany,DE,2014,8,4.0,4.0,0.0,6,0
-Germany,DE,2015,9,3.0,3.0,3.0,6,0
-Germany,DE,2016,11,0.0,11.0,0.0,6,0
-Germany,DE,2017,10,3.0,4.0,3.0,6,0
-Germany,DE,2018,15,2.0,11.0,2.0,6,0
-Germany,DE,2019,5,0.0,2.0,3.0,6,0
-Germany,DE,2020,8,0.0,3.0,5.0,6,0
-Germany,DE,2021,13,3.0,9.0,1.0,6,0
-Germany,DE,2022,10,3.0,3.0,4.0,6,0
-Germany,DE,2023,9,3.0,1.0,5.0,6,0
-Germany,DE,2024,3,1.0,1.0,1.0,6,0
-Denmark,DK,1999,1,1.0,0.0,0.0,0,2
-Denmark,DK,2003,1,0.0,1.0,0.0,0,2
-Denmark,DK,2004,1,0.0,1.0,0.0,0,2
-Denmark,DK,2006,1,0.0,1.0,0.0,0,2
-Denmark,DK,2007,1,0.0,1.0,0.0,0,2
-Denmark,DK,2008,2,0.0,1.0,1.0,0,2
-Denmark,DK,2012,1,1.0,0.0,0.0,0,2
-Denmark,DK,2013,2,0.0,1.0,1.0,0,2
-Denmark,DK,2018,1,0.0,0.0,1.0,0,2
-Denmark,DK,2019,1,0.0,0.0,1.0,0,2
-Denmark,DK,2022,2,1.0,1.0,0.0,0,2
-Egypt,EG,2020,1,0.0,0.0,1.0,4,1
-Spain,ES,1994,1,0.0,1.0,0.0,7,0
-Spain,ES,2000,1,0.0,1.0,0.0,7,0
-Spain,ES,2004,1,0.0,1.0,0.0,7,0
-Spain,ES,2007,1,1.0,0.0,0.0,7,0
-Spain,ES,2009,1,0.0,1.0,0.0,7,0
-Spain,ES,2010,2,2.0,0.0,0.0,7,0
-Spain,ES,2011,1,0.0,1.0,0.0,7,0
-Spain,ES,2012,5,4.0,1.0,0.0,7,0
-Spain,ES,2013,2,1.0,1.0,0.0,7,0
-Spain,ES,2014,3,3.0,0.0,0.0,7,0
-Spain,ES,2015,2,0.0,0.0,2.0,7,0
-Spain,ES,2016,3,0.0,2.0,1.0,7,0
-Spain,ES,2017,3,1.0,2.0,0.0,7,0
-Spain,ES,2018,3,1.0,2.0,0.0,7,0
-Spain,ES,2019,10,2.0,3.0,5.0,7,0
-Spain,ES,2020,7,4.0,2.0,1.0,7,0
-Spain,ES,2021,9,1.0,1.0,7.0,7,0
-Spain,ES,2022,2,0.0,0.0,2.0,7,0
-Spain,ES,2023,8,4.0,2.0,2.0,7,0
-Spain,ES,2024,3,2.0,1.0,0.0,7,0
-Ethiopia,ET,2022,1,0.0,0.0,1.0,6,0
-Finland,FI,1994,1,0.0,0.0,1.0,7,0
-Finland,FI,1997,1,0.0,1.0,0.0,7,0
-Finland,FI,1998,1,0.0,0.0,1.0,7,0
-Finland,FI,2009,1,1.0,0.0,0.0,7,0
-Finland,FI,2010,1,1.0,0.0,0.0,7,0
-Finland,FI,2013,2,1.0,1.0,0.0,7,0
-Finland,FI,2014,3,2.0,1.0,0.0,7,0
-Finland,FI,2016,7,1.0,4.0,2.0,7,0
-Finland,FI,2017,5,1.0,2.0,2.0,7,0
-Finland,FI,2018,7,2.0,3.0,2.0,7,0
-Finland,FI,2019,9,2.0,5.0,2.0,7,0
-Finland,FI,2020,8,1.0,1.0,6.0,7,0
-Finland,FI,2021,2,1.0,0.0,1.0,7,0
-Finland,FI,2022,5,2.0,1.0,2.0,7,0
-Finland,FI,2023,5,2.0,2.0,1.0,7,0
-France,FR,1973,1,0.0,1.0,0.0,7,0
-France,FR,2000,1,1.0,0.0,0.0,7,0
-France,FR,2002,1,0.0,1.0,0.0,7,0
-France,FR,2004,5,0.0,5.0,0.0,7,0
-France,FR,2005,2,0.0,1.0,1.0,7,0
-France,FR,2007,1,1.0,0.0,0.0,7,0
-France,FR,2008,2,1.0,0.0,1.0,7,0
-France,FR,2009,1,0.0,1.0,0.0,7,0
-France,FR,2010,4,0.0,3.0,1.0,7,0
-France,FR,2012,3,0.0,1.0,2.0,7,0
-France,FR,2013,3,0.0,0.0,3.0,7,0
-France,FR,2014,5,0.0,2.0,3.0,7,0
-France,FR,2015,2,0.0,1.0,1.0,7,0
-France,FR,2016,2,2.0,0.0,0.0,7,0
-France,FR,2017,6,4.0,0.0,2.0,7,0
-France,FR,2018,2,1.0,1.0,0.0,7,0
-France,FR,2019,7,1.0,1.0,5.0,7,0
-France,FR,2020,3,0.0,0.0,3.0,7,0
-France,FR,2021,3,1.0,2.0,0.0,7,0
-France,FR,2022,3,0.0,1.0,2.0,7,0
-France,FR,2023,4,0.0,1.0,3.0,7,0
-United Kingdom,GB,1936,1,0.0,1.0,0.0,2,2
-United Kingdom,GB,1975,1,0.0,1.0,0.0,2,2
-United Kingdom,GB,1976,2,0.0,1.0,1.0,2,2
-United Kingdom,GB,1978,2,0.0,2.0,0.0,2,2
-United Kingdom,GB,1984,2,1.0,1.0,0.0,2,2
-United Kingdom,GB,1986,1,0.0,1.0,0.0,2,2
-United Kingdom,GB,1987,2,0.0,2.0,0.0,2,2
-United Kingdom,GB,1988,3,0.0,3.0,0.0,2,2
-United Kingdom,GB,1989,2,0.0,2.0,0.0,2,2
-United Kingdom,GB,1990,1,0.0,1.0,0.0,2,2
-United Kingdom,GB,1991,2,0.0,2.0,0.0,2,2
-United Kingdom,GB,1992,1,0.0,1.0,0.0,2,2
-United Kingdom,GB,1993,1,0.0,1.0,0.0,2,2
-United Kingdom,GB,1994,3,1.0,1.0,1.0,2,2
-United Kingdom,GB,1996,10,1.0,8.0,1.0,2,2
-United Kingdom,GB,1997,3,0.0,2.0,1.0,2,2
-United Kingdom,GB,1998,5,1.0,3.0,1.0,2,2
-United Kingdom,GB,1999,12,1.0,10.0,1.0,2,2
-United Kingdom,GB,2000,4,0.0,4.0,0.0,2,2
-United Kingdom,GB,2001,6,1.0,5.0,0.0,2,2
-United Kingdom,GB,2002,4,1.0,3.0,0.0,2,2
-United Kingdom,GB,2003,5,0.0,2.0,3.0,2,2
-United Kingdom,GB,2004,6,0.0,4.0,2.0,2,2
-United Kingdom,GB,2005,11,1.0,8.0,2.0,2,2
-United Kingdom,GB,2006,3,0.0,2.0,1.0,2,2
-United Kingdom,GB,2007,2,0.0,1.0,1.0,2,2
-United Kingdom,GB,2008,6,1.0,3.0,2.0,2,2
-United Kingdom,GB,2009,1,0.0,0.0,1.0,2,2
-United Kingdom,GB,2010,8,2.0,5.0,1.0,2,2
-United Kingdom,GB,2011,10,1.0,6.0,3.0,2,2
-United Kingdom,GB,2012,17,1.0,10.0,6.0,2,2
-United Kingdom,GB,2013,10,0.0,7.0,3.0,2,2
-United Kingdom,GB,2014,5,0.0,5.0,0.0,2,2
-United Kingdom,GB,2015,12,1.0,8.0,3.0,2,2
-United Kingdom,GB,2016,14,1.0,11.0,2.0,2,2
-United Kingdom,GB,2017,22,6.0,16.0,0.0,2,2
-United Kingdom,GB,2018,25,4.0,15.0,6.0,2,2
-United Kingdom,GB,2019,31,4.0,15.0,12.0,2,2
-United Kingdom,GB,2020,26,3.0,18.0,5.0,2,2
-United Kingdom,GB,2021,32,6.0,18.0,8.0,2,2
-United Kingdom,GB,2022,31,2.0,20.0,9.0,2,2
-United Kingdom,GB,2023,29,9.0,10.0,10.0,2,2
-United Kingdom,GB,2024,6,3.0,2.0,1.0,2,2
-Ghana,GH,2021,1,0.0,0.0,1.0,5,1
-Ghana,GH,2022,1,0.0,0.0,1.0,5,1
-Greece,GR,2003,2,0.0,0.0,2.0,5,3
-Greece,GR,2005,1,0.0,1.0,0.0,5,3
-Greece,GR,2015,1,0.0,1.0,0.0,5,3
-Greece,GR,2017,1,0.0,1.0,0.0,5,3
-Greece,GR,2021,1,1.0,0.0,0.0,5,3
-Hong Kong,HK,1983,1,0.0,1.0,0.0,4,1
-Hong Kong,HK,1988,2,1.0,1.0,0.0,4,1
-Hong Kong,HK,1989,1,0.0,1.0,0.0,4,1
-Hong Kong,HK,1994,1,0.0,1.0,0.0,4,1
-Hong Kong,HK,1995,1,0.0,0.0,1.0,4,1
-Hong Kong,HK,2006,1,0.0,0.0,1.0,4,1
-Hong Kong,HK,2008,1,0.0,1.0,0.0,4,1
-Hong Kong,HK,2015,1,0.0,0.0,1.0,4,1
-Croatia,HR,2015,2,1.0,0.0,1.0,2,2
-Croatia,HR,2021,1,1.0,0.0,0.0,2,2
-Ireland,IE,1997,1,0.0,0.0,1.0,0,2
-Ireland,IE,2004,1,0.0,0.0,1.0,0,2
-Ireland,IE,2006,1,0.0,0.0,1.0,0,2
-Ireland,IE,2007,1,0.0,0.0,1.0,0,2
-Ireland,IE,2010,1,0.0,0.0,1.0,0,2
-Ireland,IE,2012,1,0.0,0.0,1.0,0,2
-Ireland,IE,2013,1,1.0,0.0,0.0,0,2
-Ireland,IE,2014,1,0.0,1.0,0.0,0,2
-Ireland,IE,2015,1,0.0,0.0,1.0,0,2
-Ireland,IE,2016,1,0.0,1.0,0.0,0,2
-Ireland,IE,2018,1,0.0,1.0,0.0,0,2
-Ireland,IE,2021,3,1.0,1.0,1.0,0,2
-Ireland,IE,2022,2,0.0,1.0,1.0,0,2
-Ireland,IE,2023,2,1.0,1.0,0.0,0,2
-Ireland,IE,2024,2,0.0,1.0,1.0,0,2
-Israel,IL,1976,1,1.0,0.0,0.0,2,2
-Israel,IL,1987,1,0.0,0.0,1.0,2,2
-Israel,IL,2000,1,1.0,0.0,0.0,2,2
-Israel,IL,2008,1,1.0,0.0,0.0,2,2
-Israel,IL,2010,1,0.0,1.0,0.0,2,2
-Israel,IL,2011,1,0.0,1.0,0.0,2,2
-Israel,IL,2012,1,0.0,0.0,1.0,2,2
-Israel,IL,2014,1,0.0,1.0,0.0,2,2
-Israel,IL,2020,2,2.0,0.0,0.0,2,2
-Israel,IL,2022,1,0.0,0.0,1.0,2,2
-India,IN,2012,1,0.0,0.0,1.0,4,1
-India,IN,2015,2,1.0,1.0,0.0,4,1
-India,IN,2016,1,0.0,1.0,0.0,4,1
-India,IN,2017,12,0.0,12.0,0.0,4,1
-India,IN,2018,2,0.0,1.0,1.0,4,1
-India,IN,2019,1,0.0,1.0,0.0,4,1
-India,IN,2020,3,1.0,2.0,0.0,4,1
-India,IN,2021,3,0.0,1.0,2.0,4,1
-India,IN,2023,4,1.0,2.0,1.0,4,1
-Iceland,IS,2020,1,0.0,0.0,1.0,7,0
-Italy,IT,1985,1,0.0,1.0,0.0,6,0
-Italy,IT,1990,1,0.0,1.0,0.0,6,0
-Italy,IT,1999,2,1.0,0.0,1.0,6,0
-Italy,IT,2001,1,1.0,0.0,0.0,6,0
-Italy,IT,2002,1,1.0,0.0,0.0,6,0
-Italy,IT,2004,1,0.0,0.0,1.0,6,0
-Italy,IT,2006,1,0.0,1.0,0.0,6,0
-Italy,IT,2007,2,1.0,1.0,0.0,6,0
-Italy,IT,2008,1,1.0,0.0,0.0,6,0
-Italy,IT,2009,5,1.0,4.0,0.0,6,0
-Italy,IT,2010,4,0.0,1.0,3.0,6,0
-Italy,IT,2011,3,0.0,3.0,0.0,6,0
-Italy,IT,2012,2,1.0,0.0,1.0,6,0
-Italy,IT,2013,2,0.0,1.0,1.0,6,0
-Italy,IT,2014,2,1.0,1.0,0.0,6,0
-Italy,IT,2015,2,0.0,2.0,0.0,6,0
-Italy,IT,2016,1,0.0,1.0,0.0,6,0
-Italy,IT,2017,3,1.0,2.0,0.0,6,0
-Italy,IT,2018,5,1.0,1.0,3.0,6,0
-Italy,IT,2019,3,1.0,0.0,2.0,6,0
-Italy,IT,2020,2,1.0,0.0,1.0,6,0
-Italy,IT,2021,4,1.0,3.0,0.0,6,0
-Italy,IT,2022,3,0.0,1.0,2.0,6,0
-Italy,IT,2023,1,0.0,1.0,0.0,6,0
-Japan,JP,1987,1,1.0,0.0,0.0,3,3
-Japan,JP,1988,1,0.0,1.0,0.0,3,3
-Japan,JP,1997,1,0.0,0.0,1.0,3,3
-Japan,JP,2017,2,0.0,1.0,1.0,3,3
-Japan,JP,2018,5,1.0,3.0,1.0,3,3
-Japan,JP,2019,3,0.0,2.0,1.0,3,3
-Japan,JP,2020,1,1.0,0.0,0.0,3,3
-Japan,JP,2021,3,0.0,2.0,1.0,3,3
-Japan,JP,2022,2,0.0,2.0,0.0,3,3
-Japan,JP,2023,5,2.0,1.0,2.0,3,3
-"Korea, Republic of",KR,2006,1,0.0,0.0,1.0,4,1
-"Korea, Republic of",KR,2012,1,0.0,1.0,0.0,4,1
-"Korea, Republic of",KR,2015,1,0.0,1.0,0.0,4,1
-"Korea, Republic of",KR,2019,2,0.0,1.0,1.0,4,1
-"Korea, Republic of",KR,2020,2,2.0,0.0,0.0,4,1
-"Korea, Republic of",KR,2021,3,1.0,2.0,0.0,4,1
-"Korea, Republic of",KR,2022,1,1.0,0.0,0.0,4,1
-"Korea, Republic of",KR,2023,11,1.0,9.0,1.0,4,1
-"Korea, Republic of",KR,2024,1,0.0,0.0,1.0,4,1
-Kuwait,KW,1986,1,0.0,0.0,1.0,4,1
-Sri Lanka,LK,2023,1,0.0,0.0,1.0,5,3
-Luxembourg,LU,2017,1,1.0,0.0,0.0,6,0
-Luxembourg,LU,2018,2,0.0,0.0,2.0,6,0
-Luxembourg,LU,2020,1,0.0,1.0,0.0,6,0
-Latvia,LV,2014,1,1.0,0.0,0.0,5,2
-Latvia,LV,2021,1,0.0,0.0,1.0,5,2
-Latvia,LV,2022,1,0.0,0.0,1.0,5,2
-Latvia,LV,2023,1,0.0,1.0,0.0,5,2
-North Macedonia,MK,2013,1,0.0,0.0,1.0,4,1
-North Macedonia,MK,2020,1,0.0,1.0,0.0,4,1
-Macao,MO,2011,1,0.0,0.0,1.0,1,1
-Macao,MO,2014,1,0.0,0.0,1.0,1,1
-Malaysia,MY,2018,1,1.0,0.0,0.0,1,1
-Malaysia,MY,2023,1,0.0,0.0,1.0,1,1
-Netherlands,NL,1988,1,0.0,0.0,1.0,0,2
-Netherlands,NL,1991,1,0.0,0.0,1.0,0,2
-Netherlands,NL,1993,1,0.0,1.0,0.0,0,2
-Netherlands,NL,1994,1,1.0,0.0,0.0,0,2
-Netherlands,NL,1995,1,0.0,1.0,0.0,0,2
-Netherlands,NL,1996,5,2.0,3.0,0.0,0,2
-Netherlands,NL,1997,6,1.0,5.0,0.0,0,2
-Netherlands,NL,1998,3,0.0,3.0,0.0,0,2
-Netherlands,NL,2000,2,0.0,2.0,0.0,0,2
-Netherlands,NL,2003,3,0.0,3.0,0.0,0,2
-Netherlands,NL,2004,10,0.0,10.0,0.0,0,2
-Netherlands,NL,2006,1,0.0,1.0,0.0,0,2
-Netherlands,NL,2010,1,0.0,1.0,0.0,0,2
-Netherlands,NL,2013,1,0.0,0.0,1.0,0,2
-Netherlands,NL,2014,3,0.0,3.0,0.0,0,2
-Netherlands,NL,2015,1,0.0,0.0,1.0,0,2
-Netherlands,NL,2016,2,1.0,1.0,0.0,0,2
-Netherlands,NL,2017,5,0.0,3.0,2.0,0,2
-Netherlands,NL,2018,2,1.0,0.0,1.0,0,2
-Netherlands,NL,2019,10,4.0,3.0,3.0,0,2
-Netherlands,NL,2020,3,1.0,0.0,2.0,0,2
-Netherlands,NL,2021,1,1.0,0.0,0.0,0,2
-Netherlands,NL,2022,6,3.0,2.0,1.0,0,2
-Netherlands,NL,2023,6,4.0,0.0,2.0,0,2
-Norway,NO,1999,2,0.0,1.0,1.0,1,1
-Norway,NO,2004,1,0.0,0.0,1.0,1,1
-Norway,NO,2010,3,0.0,2.0,1.0,1,1
-Norway,NO,2011,1,0.0,0.0,1.0,1,1
-Norway,NO,2013,1,0.0,0.0,1.0,1,1
-Norway,NO,2014,1,0.0,0.0,1.0,1,1
-Norway,NO,2015,1,1.0,0.0,0.0,1,1
-Norway,NO,2017,3,0.0,2.0,1.0,1,1
-Norway,NO,2018,1,0.0,0.0,1.0,1,1
-Norway,NO,2020,1,0.0,1.0,0.0,1,1
-Norway,NO,2021,1,0.0,0.0,1.0,1,1
-Norway,NO,2023,1,0.0,1.0,0.0,1,1
-New Zealand,NZ,1993,1,0.0,1.0,0.0,5,3
-New Zealand,NZ,1999,1,1.0,0.0,0.0,5,3
-New Zealand,NZ,2007,1,0.0,1.0,0.0,5,3
-New Zealand,NZ,2010,1,1.0,0.0,0.0,5,3
-New Zealand,NZ,2013,1,0.0,0.0,1.0,5,3
-New Zealand,NZ,2015,1,0.0,0.0,1.0,5,3
-New Zealand,NZ,2016,5,1.0,4.0,0.0,5,3
-New Zealand,NZ,2017,2,0.0,2.0,0.0,5,3
-New Zealand,NZ,2020,1,0.0,0.0,1.0,5,3
-New Zealand,NZ,2021,1,1.0,0.0,0.0,5,3
-Poland,PL,2011,2,0.0,0.0,2.0,6,0
-Poland,PL,2012,1,0.0,0.0,1.0,6,0
-Poland,PL,2014,2,0.0,2.0,0.0,6,0
-Poland,PL,2016,1,0.0,0.0,1.0,6,0
-Poland,PL,2017,4,0.0,4.0,0.0,6,0
-Poland,PL,2018,1,0.0,1.0,0.0,6,0
-Poland,PL,2019,2,0.0,2.0,0.0,6,0
-Poland,PL,2020,3,0.0,3.0,0.0,6,0
-Poland,PL,2021,4,1.0,2.0,1.0,6,0
-Poland,PL,2022,5,0.0,0.0,5.0,6,0
-Poland,PL,2023,3,1.0,1.0,1.0,6,0
-Portugal,PT,2017,1,0.0,1.0,0.0,7,0
-Portugal,PT,2018,1,0.0,0.0,1.0,7,0
-Portugal,PT,2019,1,0.0,1.0,0.0,7,0
-Portugal,PT,2020,2,1.0,1.0,0.0,7,0
-Portugal,PT,2021,11,3.0,1.0,7.0,7,0
-Portugal,PT,2022,2,1.0,0.0,1.0,7,0
-Paraguay,PY,2019,1,0.0,0.0,1.0,7,0
-Qatar,QA,2013,2,0.0,2.0,0.0,2,1
-Qatar,QA,2017,1,0.0,1.0,0.0,2,1
-Qatar,QA,2018,13,0.0,13.0,0.0,2,1
-Qatar,QA,2019,2,0.0,2.0,0.0,2,1
-Qatar,QA,2021,1,0.0,0.0,1.0,2,1
-Qatar,QA,2023,2,0.0,2.0,0.0,2,1
-Qatar,QA,2024,2,0.0,1.0,1.0,2,1
-Russian Federation,RU,1977,1,1.0,0.0,0.0,4,1
-Russian Federation,RU,2016,1,0.0,0.0,1.0,4,1
-Russian Federation,RU,2019,6,3.0,3.0,0.0,4,1
-Russian Federation,RU,2020,14,5.0,9.0,0.0,4,1
-Russian Federation,RU,2021,7,2.0,4.0,1.0,4,1
-Russian Federation,RU,2022,6,3.0,3.0,0.0,4,1
-Russian Federation,RU,2023,7,1.0,5.0,1.0,4,1
-Sweden,SE,1995,1,0.0,1.0,0.0,0,3
-Sweden,SE,1997,1,0.0,0.0,1.0,0,3
-Sweden,SE,2000,1,0.0,1.0,0.0,0,3
-Sweden,SE,2003,1,1.0,0.0,0.0,0,3
-Sweden,SE,2004,1,0.0,1.0,0.0,0,3
-Sweden,SE,2005,1,0.0,1.0,0.0,0,3
-Sweden,SE,2006,1,0.0,0.0,1.0,0,3
-Sweden,SE,2010,1,0.0,1.0,0.0,0,3
-Sweden,SE,2011,2,0.0,2.0,0.0,0,3
-Sweden,SE,2012,1,0.0,1.0,0.0,0,3
-Sweden,SE,2013,1,0.0,1.0,0.0,0,3
-Sweden,SE,2014,1,1.0,0.0,0.0,0,3
-Sweden,SE,2015,1,0.0,1.0,0.0,0,3
-Sweden,SE,2016,2,0.0,1.0,1.0,0,3
-Sweden,SE,2017,3,0.0,3.0,0.0,0,3
-Sweden,SE,2018,3,0.0,0.0,3.0,0,3
-Sweden,SE,2019,5,0.0,2.0,3.0,0,3
-Sweden,SE,2020,3,1.0,0.0,2.0,0,3
-Sweden,SE,2021,1,0.0,1.0,0.0,0,3
-Sweden,SE,2022,1,0.0,0.0,1.0,0,3
-Sweden,SE,2023,2,1.0,1.0,0.0,0,3
-Sweden,SE,2024,2,0.0,1.0,1.0,0,3
-Slovenia,SI,2014,1,1.0,0.0,0.0,6,0
-Slovenia,SI,2015,1,0.0,1.0,0.0,6,0
-Slovenia,SI,2017,1,0.0,1.0,0.0,6,0
-Slovenia,SI,2019,1,0.0,1.0,0.0,6,0
-Slovenia,SI,2020,1,0.0,0.0,1.0,6,0
-Slovenia,SI,2021,1,0.0,1.0,0.0,6,0
-Slovenia,SI,2022,1,1.0,0.0,0.0,6,0
-Slovakia,SK,2018,1,0.0,0.0,1.0,6,0
-Slovakia,SK,2022,1,0.0,0.0,1.0,6,0
-Trinidad and Tobago,TT,2018,1,0.0,0.0,1.0,3,3
-"Taiwan, Province of China",TW,2022,1,0.0,0.0,1.0,2,2
-United States,US,1917,1,0.0,1.0,0.0,4,1
-United States,US,1936,1,0.0,1.0,0.0,4,1
-United States,US,1950,1,0.0,1.0,0.0,4,1
-United States,US,1968,1,0.0,1.0,0.0,4,1
-United States,US,1970,1,0.0,1.0,0.0,4,1
-United States,US,1971,1,0.0,1.0,0.0,4,1
-United States,US,1973,2,0.0,2.0,0.0,4,1
-United States,US,1974,1,0.0,1.0,0.0,4,1
-United States,US,1975,2,0.0,2.0,0.0,4,1
-United States,US,1976,3,1.0,1.0,1.0,4,1
-United States,US,1977,5,1.0,4.0,0.0,4,1
-United States,US,1978,4,1.0,2.0,1.0,4,1
-United States,US,1979,3,1.0,2.0,0.0,4,1
-United States,US,1980,4,1.0,3.0,0.0,4,1
-United States,US,1981,3,2.0,1.0,0.0,4,1
-United States,US,1982,1,0.0,1.0,0.0,4,1
-United States,US,1983,3,0.0,3.0,0.0,4,1
-United States,US,1984,1,0.0,1.0,0.0,4,1
-United States,US,1985,2,0.0,2.0,0.0,4,1
-United States,US,1986,7,3.0,3.0,1.0,4,1
-United States,US,1987,3,0.0,1.0,2.0,4,1
-United States,US,1988,3,0.0,2.0,1.0,4,1
-United States,US,1990,2,0.0,2.0,0.0,4,1
-United States,US,1991,1,0.0,0.0,1.0,4,1
-United States,US,1992,2,1.0,1.0,0.0,4,1
-United States,US,1993,5,2.0,3.0,0.0,4,1
-United States,US,1994,3,1.0,1.0,1.0,4,1
-United States,US,1995,6,2.0,3.0,1.0,4,1
-United States,US,1996,4,2.0,1.0,1.0,4,1
-United States,US,1997,4,0.0,3.0,1.0,4,1
-United States,US,1998,8,1.0,6.0,1.0,4,1
-United States,US,1999,7,2.0,5.0,0.0,4,1
-United States,US,2000,3,1.0,2.0,0.0,4,1
-United States,US,2001,2,0.0,2.0,0.0,4,1
-United States,US,2002,8,1.0,6.0,1.0,4,1
-United States,US,2003,11,1.0,8.0,2.0,4,1
-United States,US,2004,9,1.0,8.0,0.0,4,1
-United States,US,2005,13,2.0,9.0,2.0,4,1
-United States,US,2006,9,2.0,6.0,1.0,4,1
-United States,US,2007,12,0.0,12.0,0.0,4,1
-United States,US,2008,11,4.0,6.0,1.0,4,1
-United States,US,2009,10,3.0,7.0,0.0,4,1
-United States,US,2010,16,2.0,12.0,2.0,4,1
-United States,US,2011,14,2.0,10.0,2.0,4,1
-United States,US,2012,15,5.0,9.0,1.0,4,1
-United States,US,2013,14,4.0,9.0,1.0,4,1
-United States,US,2014,13,1.0,7.0,5.0,4,1
-United States,US,2015,9,2.0,7.0,0.0,4,1
-United States,US,2016,15,4.0,9.0,2.0,4,1
-United States,US,2017,27,5.0,17.0,5.0,4,1
-United States,US,2018,48,20.0,23.0,5.0,4,1
-United States,US,2019,33,7.0,18.0,8.0,4,1
-United States,US,2020,36,16.0,16.0,4.0,4,1
-United States,US,2021,32,11.0,14.0,7.0,4,1
-United States,US,2022,17,2.0,9.0,6.0,4,1
-United States,US,2023,19,10.0,5.0,4.0,4,1
-United States,US,2024,4,1.0,2.0,1.0,4,1
-South Africa,ZA,2000,1,0.0,1.0,0.0,7,1
-South Africa,ZA,2001,1,0.0,1.0,0.0,7,1
-South Africa,ZA,2002,2,0.0,1.0,1.0,7,1
-South Africa,ZA,2003,1,0.0,1.0,0.0,7,1
-South Africa,ZA,2004,1,0.0,1.0,0.0,7,1
-South Africa,ZA,2005,1,0.0,1.0,0.0,7,1
-South Africa,ZA,2006,1,1.0,0.0,0.0,7,1
-South Africa,ZA,2007,1,0.0,1.0,0.0,7,1
-South Africa,ZA,2008,1,0.0,1.0,0.0,7,1
-South Africa,ZA,2013,1,0.0,1.0,0.0,7,1
-South Africa,ZA,2015,1,0.0,1.0,0.0,7,1
-South Africa,ZA,2017,1,0.0,1.0,0.0,7,1
-South Africa,ZA,2019,1,1.0,0.0,0.0,7,1
-South Africa,ZA,2020,4,0.0,3.0,1.0,7,1
-South Africa,ZA,2021,4,1.0,2.0,1.0,7,1
-South Africa,ZA,2022,1,1.0,0.0,0.0,7,1
-South Africa,ZA,2023,1,1.0,0.0,0.0,7,1
+country_name,country,year,n_total,n_solo_country,n_solo_author,n_collab
+Albania,AL,2020,1,1.0,0.0,0.0
+Argentina,AR,2012,1,0.0,0.0,1.0
+Argentina,AR,2013,1,0.0,1.0,0.0
+Argentina,AR,2014,1,0.0,0.0,1.0
+Argentina,AR,2016,1,0.0,1.0,0.0
+Argentina,AR,2018,1,0.0,0.0,1.0
+Argentina,AR,2022,1,0.0,1.0,0.0
+Argentina,AR,2024,1,0.0,1.0,0.0
+Austria,AT,1974,1,0.0,1.0,0.0
+Austria,AT,1984,1,1.0,0.0,0.0
+Austria,AT,2003,1,0.0,1.0,0.0
+Austria,AT,2011,1,0.0,0.0,1.0
+Austria,AT,2012,2,1.0,0.0,1.0
+Austria,AT,2015,1,0.0,1.0,0.0
+Austria,AT,2021,2,0.0,2.0,0.0
+Austria,AT,2022,3,1.0,2.0,0.0
+Austria,AT,2023,2,1.0,1.0,0.0
+Austria,AT,2024,1,0.0,1.0,0.0
+Australia,AU,1971,1,0.0,1.0,0.0
+Australia,AU,1977,1,0.0,1.0,0.0
+Australia,AU,1980,1,0.0,1.0,0.0
+Australia,AU,1981,1,0.0,1.0,0.0
+Australia,AU,1987,2,0.0,1.0,1.0
+Australia,AU,1989,1,1.0,0.0,0.0
+Australia,AU,1992,1,0.0,1.0,0.0
+Australia,AU,1997,3,1.0,1.0,1.0
+Australia,AU,1998,4,1.0,3.0,0.0
+Australia,AU,2000,3,2.0,1.0,0.0
+Australia,AU,2001,1,0.0,1.0,0.0
+Australia,AU,2003,1,1.0,0.0,0.0
+Australia,AU,2004,3,0.0,3.0,0.0
+Australia,AU,2005,4,0.0,3.0,1.0
+Australia,AU,2007,2,0.0,2.0,0.0
+Australia,AU,2008,1,0.0,1.0,0.0
+Australia,AU,2009,2,0.0,2.0,0.0
+Australia,AU,2012,1,0.0,1.0,0.0
+Australia,AU,2013,2,0.0,1.0,1.0
+Australia,AU,2015,1,0.0,1.0,0.0
+Australia,AU,2016,2,1.0,1.0,0.0
+Australia,AU,2017,3,1.0,2.0,0.0
+Australia,AU,2018,7,2.0,2.0,3.0
+Australia,AU,2019,22,6.0,15.0,1.0
+Australia,AU,2020,10,1.0,6.0,3.0
+Australia,AU,2021,5,1.0,3.0,1.0
+Australia,AU,2022,8,2.0,5.0,1.0
+Australia,AU,2023,10,4.0,4.0,2.0
+Australia,AU,2024,2,0.0,2.0,0.0
+Azerbaijan,AZ,2019,1,0.0,0.0,1.0
+Azerbaijan,AZ,2023,1,0.0,1.0,0.0
+Bosnia and Herzegovina,BA,2018,1,0.0,0.0,1.0
+Bangladesh,BD,2006,1,0.0,1.0,0.0
+Belgium,BE,1989,1,0.0,1.0,0.0
+Belgium,BE,1993,2,0.0,2.0,0.0
+Belgium,BE,1994,1,0.0,1.0,0.0
+Belgium,BE,1996,1,0.0,1.0,0.0
+Belgium,BE,1997,2,0.0,2.0,0.0
+Belgium,BE,1999,1,0.0,1.0,0.0
+Belgium,BE,2001,2,2.0,0.0,0.0
+Belgium,BE,2003,1,0.0,0.0,1.0
+Belgium,BE,2004,3,1.0,2.0,0.0
+Belgium,BE,2006,1,0.0,0.0,1.0
+Belgium,BE,2007,1,1.0,0.0,0.0
+Belgium,BE,2008,1,1.0,0.0,0.0
+Belgium,BE,2009,2,0.0,2.0,0.0
+Belgium,BE,2013,1,0.0,0.0,1.0
+Belgium,BE,2015,1,1.0,0.0,0.0
+Belgium,BE,2016,1,1.0,0.0,0.0
+Belgium,BE,2018,2,1.0,0.0,1.0
+Belgium,BE,2019,5,0.0,0.0,5.0
+Belgium,BE,2020,4,0.0,1.0,3.0
+Belgium,BE,2021,5,1.0,3.0,1.0
+Belgium,BE,2022,8,3.0,3.0,2.0
+Belgium,BE,2023,12,3.0,9.0,0.0
+Belgium,BE,2024,2,1.0,1.0,0.0
+Bulgaria,BG,2006,1,0.0,0.0,1.0
+Bulgaria,BG,2017,1,0.0,1.0,0.0
+Bulgaria,BG,2019,1,0.0,0.0,1.0
+Bulgaria,BG,2020,1,1.0,0.0,0.0
+Bulgaria,BG,2022,1,0.0,0.0,1.0
+Brazil,BR,1998,1,0.0,1.0,0.0
+Brazil,BR,2006,1,0.0,1.0,0.0
+Brazil,BR,2008,1,0.0,1.0,0.0
+Brazil,BR,2009,2,0.0,2.0,0.0
+Brazil,BR,2011,1,0.0,1.0,0.0
+Brazil,BR,2013,1,0.0,1.0,0.0
+Brazil,BR,2015,2,1.0,1.0,0.0
+Brazil,BR,2016,1,0.0,1.0,0.0
+Brazil,BR,2017,1,0.0,0.0,1.0
+Brazil,BR,2018,2,0.0,0.0,2.0
+Brazil,BR,2019,2,1.0,1.0,0.0
+Brazil,BR,2020,1,0.0,1.0,0.0
+Brazil,BR,2021,1,0.0,1.0,0.0
+Brazil,BR,2022,2,0.0,2.0,0.0
+Brazil,BR,2023,5,4.0,1.0,0.0
+Canada,CA,1947,1,0.0,1.0,0.0
+Canada,CA,1973,1,0.0,1.0,0.0
+Canada,CA,1975,1,0.0,1.0,0.0
+Canada,CA,1978,1,0.0,0.0,1.0
+Canada,CA,1979,1,1.0,0.0,0.0
+Canada,CA,1986,1,0.0,1.0,0.0
+Canada,CA,1991,1,0.0,1.0,0.0
+Canada,CA,1992,1,1.0,0.0,0.0
+Canada,CA,1993,1,1.0,0.0,0.0
+Canada,CA,1994,1,1.0,0.0,0.0
+Canada,CA,1995,1,1.0,0.0,0.0
+Canada,CA,1996,1,0.0,1.0,0.0
+Canada,CA,1998,1,0.0,1.0,0.0
+Canada,CA,2003,4,0.0,1.0,3.0
+Canada,CA,2004,4,1.0,2.0,1.0
+Canada,CA,2007,1,0.0,1.0,0.0
+Canada,CA,2008,2,0.0,1.0,1.0
+Canada,CA,2009,3,2.0,1.0,0.0
+Canada,CA,2010,1,0.0,1.0,0.0
+Canada,CA,2011,2,0.0,2.0,0.0
+Canada,CA,2012,5,0.0,0.0,5.0
+Canada,CA,2013,9,7.0,2.0,0.0
+Canada,CA,2014,8,3.0,2.0,3.0
+Canada,CA,2015,8,1.0,5.0,2.0
+Canada,CA,2016,2,2.0,0.0,0.0
+Canada,CA,2017,14,6.0,6.0,2.0
+Canada,CA,2018,15,6.0,6.0,3.0
+Canada,CA,2019,15,6.0,3.0,6.0
+Canada,CA,2020,18,9.0,6.0,3.0
+Canada,CA,2021,29,10.0,17.0,2.0
+Canada,CA,2022,4,0.0,1.0,3.0
+Canada,CA,2023,10,2.0,6.0,2.0
+Canada,CA,2024,4,3.0,0.0,1.0
+Switzerland,CH,1997,1,1.0,0.0,0.0
+Switzerland,CH,2007,1,1.0,0.0,0.0
+Switzerland,CH,2008,2,0.0,1.0,1.0
+Switzerland,CH,2011,1,1.0,0.0,0.0
+Switzerland,CH,2012,1,0.0,1.0,0.0
+Switzerland,CH,2013,2,0.0,2.0,0.0
+Switzerland,CH,2014,2,0.0,2.0,0.0
+Switzerland,CH,2016,2,0.0,2.0,0.0
+Switzerland,CH,2017,2,0.0,2.0,0.0
+Switzerland,CH,2018,2,0.0,1.0,1.0
+Switzerland,CH,2019,4,1.0,3.0,0.0
+Switzerland,CH,2020,2,0.0,1.0,1.0
+Switzerland,CH,2021,3,0.0,2.0,1.0
+Switzerland,CH,2022,3,0.0,1.0,2.0
+Switzerland,CH,2023,2,0.0,0.0,2.0
+Côte d'Ivoire,CI,1970,1,0.0,1.0,0.0
+Côte d'Ivoire,CI,2018,1,1.0,0.0,0.0
+Chile,CL,2003,1,0.0,1.0,0.0
+Chile,CL,2007,1,1.0,0.0,0.0
+Chile,CL,2012,1,0.0,0.0,1.0
+Chile,CL,2014,1,0.0,1.0,0.0
+Chile,CL,2015,1,0.0,1.0,0.0
+Chile,CL,2016,1,0.0,1.0,0.0
+Chile,CL,2019,1,0.0,1.0,0.0
+Chile,CL,2022,1,1.0,0.0,0.0
+Chile,CL,2023,4,0.0,1.0,3.0
+Cameroon,CM,2023,1,0.0,1.0,0.0
+China,CN,2001,1,0.0,1.0,0.0
+China,CN,2002,2,0.0,2.0,0.0
+China,CN,2003,3,0.0,3.0,0.0
+China,CN,2004,1,0.0,1.0,0.0
+China,CN,2005,4,0.0,4.0,0.0
+China,CN,2006,7,0.0,6.0,1.0
+China,CN,2007,4,0.0,4.0,0.0
+China,CN,2008,2,0.0,2.0,0.0
+China,CN,2009,5,0.0,5.0,0.0
+China,CN,2010,3,0.0,3.0,0.0
+China,CN,2011,2,0.0,2.0,0.0
+China,CN,2013,1,0.0,1.0,0.0
+China,CN,2014,2,0.0,2.0,0.0
+China,CN,2015,1,0.0,1.0,0.0
+China,CN,2016,1,0.0,1.0,0.0
+China,CN,2018,4,1.0,2.0,1.0
+China,CN,2019,2,0.0,0.0,2.0
+China,CN,2020,1,0.0,1.0,0.0
+China,CN,2021,1,1.0,0.0,0.0
+China,CN,2022,2,0.0,2.0,0.0
+China,CN,2023,4,0.0,1.0,3.0
+Colombia,CO,2005,1,0.0,1.0,0.0
+Colombia,CO,2006,1,0.0,1.0,0.0
+Colombia,CO,2022,1,0.0,1.0,0.0
+Czechia,CZ,2003,1,1.0,0.0,0.0
+Czechia,CZ,2012,1,0.0,1.0,0.0
+Czechia,CZ,2014,1,0.0,1.0,0.0
+Czechia,CZ,2015,2,1.0,1.0,0.0
+Czechia,CZ,2017,1,0.0,1.0,0.0
+Czechia,CZ,2018,4,1.0,3.0,0.0
+Czechia,CZ,2022,1,0.0,1.0,0.0
+Germany,DE,1989,1,0.0,1.0,0.0
+Germany,DE,1990,1,0.0,1.0,0.0
+Germany,DE,1997,2,2.0,0.0,0.0
+Germany,DE,1998,1,0.0,1.0,0.0
+Germany,DE,1999,6,1.0,4.0,1.0
+Germany,DE,2000,4,0.0,4.0,0.0
+Germany,DE,2001,2,2.0,0.0,0.0
+Germany,DE,2002,3,1.0,2.0,0.0
+Germany,DE,2003,2,0.0,1.0,1.0
+Germany,DE,2005,1,0.0,1.0,0.0
+Germany,DE,2006,5,1.0,3.0,1.0
+Germany,DE,2007,1,1.0,0.0,0.0
+Germany,DE,2008,4,3.0,1.0,0.0
+Germany,DE,2009,3,0.0,2.0,1.0
+Germany,DE,2010,3,1.0,1.0,1.0
+Germany,DE,2011,9,4.0,1.0,4.0
+Germany,DE,2012,4,1.0,0.0,3.0
+Germany,DE,2013,6,4.0,1.0,1.0
+Germany,DE,2014,8,4.0,4.0,0.0
+Germany,DE,2015,9,3.0,3.0,3.0
+Germany,DE,2016,11,0.0,11.0,0.0
+Germany,DE,2017,10,3.0,4.0,3.0
+Germany,DE,2018,15,2.0,11.0,2.0
+Germany,DE,2019,5,0.0,2.0,3.0
+Germany,DE,2020,8,0.0,3.0,5.0
+Germany,DE,2021,13,3.0,9.0,1.0
+Germany,DE,2022,10,3.0,3.0,4.0
+Germany,DE,2023,9,3.0,1.0,5.0
+Germany,DE,2024,3,1.0,1.0,1.0
+Denmark,DK,1999,1,1.0,0.0,0.0
+Denmark,DK,2003,1,0.0,1.0,0.0
+Denmark,DK,2004,1,0.0,1.0,0.0
+Denmark,DK,2006,1,0.0,1.0,0.0
+Denmark,DK,2007,1,0.0,1.0,0.0
+Denmark,DK,2008,2,0.0,1.0,1.0
+Denmark,DK,2012,1,1.0,0.0,0.0
+Denmark,DK,2013,2,0.0,1.0,1.0
+Denmark,DK,2018,1,0.0,0.0,1.0
+Denmark,DK,2019,1,0.0,0.0,1.0
+Denmark,DK,2022,2,1.0,1.0,0.0
+Ecuador,EC,2022,1,1.0,0.0,0.0
+Estonia,EE,2016,1,0.0,1.0,0.0
+Egypt,EG,2020,1,0.0,0.0,1.0
+Spain,ES,1994,1,0.0,1.0,0.0
+Spain,ES,2000,1,0.0,1.0,0.0
+Spain,ES,2004,1,0.0,1.0,0.0
+Spain,ES,2007,1,1.0,0.0,0.0
+Spain,ES,2009,1,0.0,1.0,0.0
+Spain,ES,2010,2,2.0,0.0,0.0
+Spain,ES,2011,1,0.0,1.0,0.0
+Spain,ES,2012,5,4.0,1.0,0.0
+Spain,ES,2013,2,1.0,1.0,0.0
+Spain,ES,2014,3,3.0,0.0,0.0
+Spain,ES,2015,2,0.0,0.0,2.0
+Spain,ES,2016,3,0.0,2.0,1.0
+Spain,ES,2017,3,1.0,2.0,0.0
+Spain,ES,2018,3,1.0,2.0,0.0
+Spain,ES,2019,10,2.0,3.0,5.0
+Spain,ES,2020,7,4.0,2.0,1.0
+Spain,ES,2021,9,1.0,1.0,7.0
+Spain,ES,2022,2,0.0,0.0,2.0
+Spain,ES,2023,8,4.0,2.0,2.0
+Spain,ES,2024,3,2.0,1.0,0.0
+Ethiopia,ET,2022,1,0.0,0.0,1.0
+Finland,FI,1994,1,0.0,0.0,1.0
+Finland,FI,1997,1,0.0,1.0,0.0
+Finland,FI,1998,1,0.0,0.0,1.0
+Finland,FI,2009,1,1.0,0.0,0.0
+Finland,FI,2010,1,1.0,0.0,0.0
+Finland,FI,2013,2,1.0,1.0,0.0
+Finland,FI,2014,3,2.0,1.0,0.0
+Finland,FI,2016,7,1.0,4.0,2.0
+Finland,FI,2017,5,1.0,2.0,2.0
+Finland,FI,2018,7,2.0,3.0,2.0
+Finland,FI,2019,9,2.0,5.0,2.0
+Finland,FI,2020,8,1.0,1.0,6.0
+Finland,FI,2021,2,1.0,0.0,1.0
+Finland,FI,2022,5,2.0,1.0,2.0
+Finland,FI,2023,5,2.0,2.0,1.0
+France,FR,1973,1,0.0,1.0,0.0
+France,FR,2000,1,1.0,0.0,0.0
+France,FR,2002,1,0.0,1.0,0.0
+France,FR,2004,5,0.0,5.0,0.0
+France,FR,2005,2,0.0,1.0,1.0
+France,FR,2007,1,1.0,0.0,0.0
+France,FR,2008,2,1.0,0.0,1.0
+France,FR,2009,1,0.0,1.0,0.0
+France,FR,2010,4,0.0,3.0,1.0
+France,FR,2012,3,0.0,1.0,2.0
+France,FR,2013,3,0.0,0.0,3.0
+France,FR,2014,5,0.0,2.0,3.0
+France,FR,2015,2,0.0,1.0,1.0
+France,FR,2016,2,2.0,0.0,0.0
+France,FR,2017,6,4.0,0.0,2.0
+France,FR,2018,2,1.0,1.0,0.0
+France,FR,2019,7,1.0,1.0,5.0
+France,FR,2020,3,0.0,0.0,3.0
+France,FR,2021,3,1.0,2.0,0.0
+France,FR,2022,3,0.0,1.0,2.0
+France,FR,2023,4,0.0,1.0,3.0
+United Kingdom,GB,1936,1,0.0,1.0,0.0
+United Kingdom,GB,1975,1,0.0,1.0,0.0
+United Kingdom,GB,1976,2,0.0,1.0,1.0
+United Kingdom,GB,1978,2,0.0,2.0,0.0
+United Kingdom,GB,1984,2,1.0,1.0,0.0
+United Kingdom,GB,1986,1,0.0,1.0,0.0
+United Kingdom,GB,1987,2,0.0,2.0,0.0
+United Kingdom,GB,1988,3,0.0,3.0,0.0
+United Kingdom,GB,1989,2,0.0,2.0,0.0
+United Kingdom,GB,1990,1,0.0,1.0,0.0
+United Kingdom,GB,1991,2,0.0,2.0,0.0
+United Kingdom,GB,1992,1,0.0,1.0,0.0
+United Kingdom,GB,1993,1,0.0,1.0,0.0
+United Kingdom,GB,1994,3,1.0,1.0,1.0
+United Kingdom,GB,1996,10,1.0,8.0,1.0
+United Kingdom,GB,1997,3,0.0,2.0,1.0
+United Kingdom,GB,1998,5,1.0,3.0,1.0
+United Kingdom,GB,1999,12,1.0,10.0,1.0
+United Kingdom,GB,2000,4,0.0,4.0,0.0
+United Kingdom,GB,2001,6,1.0,5.0,0.0
+United Kingdom,GB,2002,4,1.0,3.0,0.0
+United Kingdom,GB,2003,5,0.0,2.0,3.0
+United Kingdom,GB,2004,6,0.0,4.0,2.0
+United Kingdom,GB,2005,11,1.0,8.0,2.0
+United Kingdom,GB,2006,3,0.0,2.0,1.0
+United Kingdom,GB,2007,2,0.0,1.0,1.0
+United Kingdom,GB,2008,6,1.0,3.0,2.0
+United Kingdom,GB,2009,1,0.0,0.0,1.0
+United Kingdom,GB,2010,8,2.0,5.0,1.0
+United Kingdom,GB,2011,10,1.0,6.0,3.0
+United Kingdom,GB,2012,17,1.0,10.0,6.0
+United Kingdom,GB,2013,10,0.0,7.0,3.0
+United Kingdom,GB,2014,5,0.0,5.0,0.0
+United Kingdom,GB,2015,12,1.0,8.0,3.0
+United Kingdom,GB,2016,14,1.0,11.0,2.0
+United Kingdom,GB,2017,22,6.0,16.0,0.0
+United Kingdom,GB,2018,25,4.0,15.0,6.0
+United Kingdom,GB,2019,31,4.0,15.0,12.0
+United Kingdom,GB,2020,26,3.0,18.0,5.0
+United Kingdom,GB,2021,32,6.0,18.0,8.0
+United Kingdom,GB,2022,31,2.0,20.0,9.0
+United Kingdom,GB,2023,29,9.0,10.0,10.0
+United Kingdom,GB,2024,6,3.0,2.0,1.0
+Georgia,GE,2017,1,0.0,1.0,0.0
+Ghana,GH,2021,1,0.0,0.0,1.0
+Ghana,GH,2022,1,0.0,0.0,1.0
+Greece,GR,2003,2,0.0,0.0,2.0
+Greece,GR,2005,1,0.0,1.0,0.0
+Greece,GR,2015,1,0.0,1.0,0.0
+Greece,GR,2017,1,0.0,1.0,0.0
+Greece,GR,2021,1,1.0,0.0,0.0
+Hong Kong,HK,1983,1,0.0,1.0,0.0
+Hong Kong,HK,1988,2,1.0,1.0,0.0
+Hong Kong,HK,1989,1,0.0,1.0,0.0
+Hong Kong,HK,1994,1,0.0,1.0,0.0
+Hong Kong,HK,1995,1,0.0,0.0,1.0
+Hong Kong,HK,2006,1,0.0,0.0,1.0
+Hong Kong,HK,2008,1,0.0,1.0,0.0
+Hong Kong,HK,2015,1,0.0,0.0,1.0
+Croatia,HR,2015,2,1.0,0.0,1.0
+Croatia,HR,2021,1,1.0,0.0,0.0
+Hungary,HU,2018,2,1.0,1.0,0.0
+Hungary,HU,2019,1,1.0,0.0,0.0
+Hungary,HU,2021,1,0.0,1.0,0.0
+Hungary,HU,2022,2,1.0,1.0,0.0
+Indonesia,ID,2020,2,0.0,2.0,0.0
+Indonesia,ID,2021,3,0.0,3.0,0.0
+Indonesia,ID,2022,1,1.0,0.0,0.0
+Indonesia,ID,2023,1,1.0,0.0,0.0
+Ireland,IE,1997,1,0.0,0.0,1.0
+Ireland,IE,2004,1,0.0,0.0,1.0
+Ireland,IE,2006,1,0.0,0.0,1.0
+Ireland,IE,2007,1,0.0,0.0,1.0
+Ireland,IE,2010,1,0.0,0.0,1.0
+Ireland,IE,2012,1,0.0,0.0,1.0
+Ireland,IE,2013,1,1.0,0.0,0.0
+Ireland,IE,2014,1,0.0,1.0,0.0
+Ireland,IE,2015,1,0.0,0.0,1.0
+Ireland,IE,2016,1,0.0,1.0,0.0
+Ireland,IE,2018,1,0.0,1.0,0.0
+Ireland,IE,2021,3,1.0,1.0,1.0
+Ireland,IE,2022,2,0.0,1.0,1.0
+Ireland,IE,2023,2,1.0,1.0,0.0
+Ireland,IE,2024,2,0.0,1.0,1.0
+Israel,IL,1976,1,1.0,0.0,0.0
+Israel,IL,1987,1,0.0,0.0,1.0
+Israel,IL,2000,1,1.0,0.0,0.0
+Israel,IL,2008,1,1.0,0.0,0.0
+Israel,IL,2010,1,0.0,1.0,0.0
+Israel,IL,2011,1,0.0,1.0,0.0
+Israel,IL,2012,1,0.0,0.0,1.0
+Israel,IL,2014,1,0.0,1.0,0.0
+Israel,IL,2020,2,2.0,0.0,0.0
+Israel,IL,2022,1,0.0,0.0,1.0
+India,IN,2012,1,0.0,0.0,1.0
+India,IN,2015,2,1.0,1.0,0.0
+India,IN,2016,1,0.0,1.0,0.0
+India,IN,2017,12,0.0,12.0,0.0
+India,IN,2018,2,0.0,1.0,1.0
+India,IN,2019,1,0.0,1.0,0.0
+India,IN,2020,3,1.0,2.0,0.0
+India,IN,2021,3,0.0,1.0,2.0
+India,IN,2023,4,1.0,2.0,1.0
+Iceland,IS,2020,1,0.0,0.0,1.0
+Italy,IT,1985,1,0.0,1.0,0.0
+Italy,IT,1990,1,0.0,1.0,0.0
+Italy,IT,1999,2,1.0,0.0,1.0
+Italy,IT,2001,1,1.0,0.0,0.0
+Italy,IT,2002,1,1.0,0.0,0.0
+Italy,IT,2004,1,0.0,0.0,1.0
+Italy,IT,2006,1,0.0,1.0,0.0
+Italy,IT,2007,2,1.0,1.0,0.0
+Italy,IT,2008,1,1.0,0.0,0.0
+Italy,IT,2009,5,1.0,4.0,0.0
+Italy,IT,2010,4,0.0,1.0,3.0
+Italy,IT,2011,3,0.0,3.0,0.0
+Italy,IT,2012,2,1.0,0.0,1.0
+Italy,IT,2013,2,0.0,1.0,1.0
+Italy,IT,2014,2,1.0,1.0,0.0
+Italy,IT,2015,2,0.0,2.0,0.0
+Italy,IT,2016,1,0.0,1.0,0.0
+Italy,IT,2017,3,1.0,2.0,0.0
+Italy,IT,2018,5,1.0,1.0,3.0
+Italy,IT,2019,3,1.0,0.0,2.0
+Italy,IT,2020,2,1.0,0.0,1.0
+Italy,IT,2021,4,1.0,3.0,0.0
+Italy,IT,2022,3,0.0,1.0,2.0
+Italy,IT,2023,1,0.0,1.0,0.0
+Japan,JP,1987,1,1.0,0.0,0.0
+Japan,JP,1988,1,0.0,1.0,0.0
+Japan,JP,1997,1,0.0,0.0,1.0
+Japan,JP,2017,2,0.0,1.0,1.0
+Japan,JP,2018,5,1.0,3.0,1.0
+Japan,JP,2019,3,0.0,2.0,1.0
+Japan,JP,2020,1,1.0,0.0,0.0
+Japan,JP,2021,3,0.0,2.0,1.0
+Japan,JP,2022,2,0.0,2.0,0.0
+Japan,JP,2023,5,2.0,1.0,2.0
+Kenya,KE,2019,1,0.0,1.0,0.0
+Cambodia,KH,2018,1,0.0,1.0,0.0
+"Korea, Republic of",KR,2006,1,0.0,0.0,1.0
+"Korea, Republic of",KR,2012,1,0.0,1.0,0.0
+"Korea, Republic of",KR,2015,1,0.0,1.0,0.0
+"Korea, Republic of",KR,2019,2,0.0,1.0,1.0
+"Korea, Republic of",KR,2020,2,2.0,0.0,0.0
+"Korea, Republic of",KR,2021,3,1.0,2.0,0.0
+"Korea, Republic of",KR,2022,1,1.0,0.0,0.0
+"Korea, Republic of",KR,2023,11,1.0,9.0,1.0
+"Korea, Republic of",KR,2024,1,0.0,0.0,1.0
+Kuwait,KW,1986,1,0.0,0.0,1.0
+Sri Lanka,LK,2023,1,0.0,0.0,1.0
+Lithuania,LT,2015,1,0.0,1.0,0.0
+Lithuania,LT,2016,1,1.0,0.0,0.0
+Luxembourg,LU,2017,1,1.0,0.0,0.0
+Luxembourg,LU,2018,2,0.0,0.0,2.0
+Luxembourg,LU,2020,1,0.0,1.0,0.0
+Latvia,LV,2014,1,1.0,0.0,0.0
+Latvia,LV,2021,1,0.0,0.0,1.0
+Latvia,LV,2022,1,0.0,0.0,1.0
+Latvia,LV,2023,1,0.0,1.0,0.0
+North Macedonia,MK,2013,1,0.0,0.0,1.0
+North Macedonia,MK,2020,1,0.0,1.0,0.0
+Macao,MO,2011,1,0.0,0.0,1.0
+Macao,MO,2014,1,0.0,0.0,1.0
+Mexico,MX,2019,1,1.0,0.0,0.0
+Mexico,MX,2020,1,0.0,1.0,0.0
+Mexico,MX,2022,2,1.0,1.0,0.0
+Mexico,MX,2024,1,0.0,1.0,0.0
+Malaysia,MY,2018,1,1.0,0.0,0.0
+Malaysia,MY,2023,1,0.0,0.0,1.0
+Netherlands,NL,1988,1,0.0,0.0,1.0
+Netherlands,NL,1991,1,0.0,0.0,1.0
+Netherlands,NL,1993,1,0.0,1.0,0.0
+Netherlands,NL,1994,1,1.0,0.0,0.0
+Netherlands,NL,1995,1,0.0,1.0,0.0
+Netherlands,NL,1996,5,2.0,3.0,0.0
+Netherlands,NL,1997,6,1.0,5.0,0.0
+Netherlands,NL,1998,3,0.0,3.0,0.0
+Netherlands,NL,2000,2,0.0,2.0,0.0
+Netherlands,NL,2003,3,0.0,3.0,0.0
+Netherlands,NL,2004,10,0.0,10.0,0.0
+Netherlands,NL,2006,1,0.0,1.0,0.0
+Netherlands,NL,2010,1,0.0,1.0,0.0
+Netherlands,NL,2013,1,0.0,0.0,1.0
+Netherlands,NL,2014,3,0.0,3.0,0.0
+Netherlands,NL,2015,1,0.0,0.0,1.0
+Netherlands,NL,2016,2,1.0,1.0,0.0
+Netherlands,NL,2017,5,0.0,3.0,2.0
+Netherlands,NL,2018,2,1.0,0.0,1.0
+Netherlands,NL,2019,10,4.0,3.0,3.0
+Netherlands,NL,2020,3,1.0,0.0,2.0
+Netherlands,NL,2021,1,1.0,0.0,0.0
+Netherlands,NL,2022,6,3.0,2.0,1.0
+Netherlands,NL,2023,6,4.0,0.0,2.0
+Norway,NO,1999,2,0.0,1.0,1.0
+Norway,NO,2004,1,0.0,0.0,1.0
+Norway,NO,2010,3,0.0,2.0,1.0
+Norway,NO,2011,1,0.0,0.0,1.0
+Norway,NO,2013,1,0.0,0.0,1.0
+Norway,NO,2014,1,0.0,0.0,1.0
+Norway,NO,2015,1,1.0,0.0,0.0
+Norway,NO,2017,3,0.0,2.0,1.0
+Norway,NO,2018,1,0.0,0.0,1.0
+Norway,NO,2020,1,0.0,1.0,0.0
+Norway,NO,2021,1,0.0,0.0,1.0
+Norway,NO,2023,1,0.0,1.0,0.0
+New Zealand,NZ,1993,1,0.0,1.0,0.0
+New Zealand,NZ,1999,1,1.0,0.0,0.0
+New Zealand,NZ,2007,1,0.0,1.0,0.0
+New Zealand,NZ,2010,1,1.0,0.0,0.0
+New Zealand,NZ,2013,1,0.0,0.0,1.0
+New Zealand,NZ,2015,1,0.0,0.0,1.0
+New Zealand,NZ,2016,5,1.0,4.0,0.0
+New Zealand,NZ,2017,2,0.0,2.0,0.0
+New Zealand,NZ,2020,1,0.0,0.0,1.0
+New Zealand,NZ,2021,1,1.0,0.0,0.0
+Peru,PE,2018,1,0.0,1.0,0.0
+Philippines,PH,1967,1,1.0,0.0,0.0
+Philippines,PH,2005,1,0.0,1.0,0.0
+Philippines,PH,2014,1,0.0,1.0,0.0
+Poland,PL,2011,2,0.0,0.0,2.0
+Poland,PL,2012,1,0.0,0.0,1.0
+Poland,PL,2014,2,0.0,2.0,0.0
+Poland,PL,2016,1,0.0,0.0,1.0
+Poland,PL,2017,4,0.0,4.0,0.0
+Poland,PL,2018,1,0.0,1.0,0.0
+Poland,PL,2019,2,0.0,2.0,0.0
+Poland,PL,2020,3,0.0,3.0,0.0
+Poland,PL,2021,4,1.0,2.0,1.0
+Poland,PL,2022,5,0.0,0.0,5.0
+Poland,PL,2023,3,1.0,1.0,1.0
+Portugal,PT,2017,1,0.0,1.0,0.0
+Portugal,PT,2018,1,0.0,0.0,1.0
+Portugal,PT,2019,1,0.0,1.0,0.0
+Portugal,PT,2020,2,1.0,1.0,0.0
+Portugal,PT,2021,11,3.0,1.0,7.0
+Portugal,PT,2022,2,1.0,0.0,1.0
+Paraguay,PY,2019,1,0.0,0.0,1.0
+Qatar,QA,2013,2,0.0,2.0,0.0
+Qatar,QA,2017,1,0.0,1.0,0.0
+Qatar,QA,2018,13,0.0,13.0,0.0
+Qatar,QA,2019,2,0.0,2.0,0.0
+Qatar,QA,2021,1,0.0,0.0,1.0
+Qatar,QA,2023,2,0.0,2.0,0.0
+Qatar,QA,2024,2,0.0,1.0,1.0
+Romania,RO,2018,1,0.0,1.0,0.0
+Serbia,RS,2023,1,0.0,1.0,0.0
+Russian Federation,RU,1977,1,1.0,0.0,0.0
+Russian Federation,RU,2016,1,0.0,0.0,1.0
+Russian Federation,RU,2019,6,3.0,3.0,0.0
+Russian Federation,RU,2020,14,5.0,9.0,0.0
+Russian Federation,RU,2021,7,2.0,4.0,1.0
+Russian Federation,RU,2022,6,3.0,3.0,0.0
+Russian Federation,RU,2023,7,1.0,5.0,1.0
+Sweden,SE,1995,1,0.0,1.0,0.0
+Sweden,SE,1997,1,0.0,0.0,1.0
+Sweden,SE,2000,1,0.0,1.0,0.0
+Sweden,SE,2003,1,1.0,0.0,0.0
+Sweden,SE,2004,1,0.0,1.0,0.0
+Sweden,SE,2005,1,0.0,1.0,0.0
+Sweden,SE,2006,1,0.0,0.0,1.0
+Sweden,SE,2010,1,0.0,1.0,0.0
+Sweden,SE,2011,2,0.0,2.0,0.0
+Sweden,SE,2012,1,0.0,1.0,0.0
+Sweden,SE,2013,1,0.0,1.0,0.0
+Sweden,SE,2014,1,1.0,0.0,0.0
+Sweden,SE,2015,1,0.0,1.0,0.0
+Sweden,SE,2016,2,0.0,1.0,1.0
+Sweden,SE,2017,3,0.0,3.0,0.0
+Sweden,SE,2018,3,0.0,0.0,3.0
+Sweden,SE,2019,5,0.0,2.0,3.0
+Sweden,SE,2020,3,1.0,0.0,2.0
+Sweden,SE,2021,1,0.0,1.0,0.0
+Sweden,SE,2022,1,0.0,0.0,1.0
+Sweden,SE,2023,2,1.0,1.0,0.0
+Sweden,SE,2024,2,0.0,1.0,1.0
+Slovenia,SI,2014,1,1.0,0.0,0.0
+Slovenia,SI,2015,1,0.0,1.0,0.0
+Slovenia,SI,2017,1,0.0,1.0,0.0
+Slovenia,SI,2019,1,0.0,1.0,0.0
+Slovenia,SI,2020,1,0.0,0.0,1.0
+Slovenia,SI,2021,1,0.0,1.0,0.0
+Slovenia,SI,2022,1,1.0,0.0,0.0
+Slovakia,SK,2018,1,0.0,0.0,1.0
+Slovakia,SK,2022,1,0.0,0.0,1.0
+Tajikistan,TJ,2021,1,0.0,1.0,0.0
+Türkiye,TR,2012,1,1.0,0.0,0.0
+Türkiye,TR,2019,2,0.0,2.0,0.0
+Türkiye,TR,2020,1,1.0,0.0,0.0
+Türkiye,TR,2021,1,1.0,0.0,0.0
+Türkiye,TR,2022,1,1.0,0.0,0.0
+Türkiye,TR,2024,1,1.0,0.0,0.0
+Trinidad and Tobago,TT,2018,1,0.0,0.0,1.0
+"Taiwan, Province of China",TW,2022,1,0.0,0.0,1.0
+Ukraine,UA,2016,1,0.0,1.0,0.0
+Ukraine,UA,2018,1,1.0,0.0,0.0
+Ukraine,UA,2019,2,1.0,1.0,0.0
+Ukraine,UA,2020,2,2.0,0.0,0.0
+Ukraine,UA,2022,1,1.0,0.0,0.0
+Uganda,UG,2024,1,0.0,1.0,0.0
+United States,US,1917,1,0.0,1.0,0.0
+United States,US,1936,1,0.0,1.0,0.0
+United States,US,1950,1,0.0,1.0,0.0
+United States,US,1968,1,0.0,1.0,0.0
+United States,US,1970,1,0.0,1.0,0.0
+United States,US,1971,1,0.0,1.0,0.0
+United States,US,1973,2,0.0,2.0,0.0
+United States,US,1974,1,0.0,1.0,0.0
+United States,US,1975,2,0.0,2.0,0.0
+United States,US,1976,3,1.0,1.0,1.0
+United States,US,1977,5,1.0,4.0,0.0
+United States,US,1978,4,1.0,2.0,1.0
+United States,US,1979,3,1.0,2.0,0.0
+United States,US,1980,4,1.0,3.0,0.0
+United States,US,1981,3,2.0,1.0,0.0
+United States,US,1982,1,0.0,1.0,0.0
+United States,US,1983,3,0.0,3.0,0.0
+United States,US,1984,1,0.0,1.0,0.0
+United States,US,1985,2,0.0,2.0,0.0
+United States,US,1986,7,3.0,3.0,1.0
+United States,US,1987,3,0.0,1.0,2.0
+United States,US,1988,3,0.0,2.0,1.0
+United States,US,1990,2,0.0,2.0,0.0
+United States,US,1991,1,0.0,0.0,1.0
+United States,US,1992,2,1.0,1.0,0.0
+United States,US,1993,5,2.0,3.0,0.0
+United States,US,1994,3,1.0,1.0,1.0
+United States,US,1995,6,2.0,3.0,1.0
+United States,US,1996,4,2.0,1.0,1.0
+United States,US,1997,4,0.0,3.0,1.0
+United States,US,1998,8,1.0,6.0,1.0
+United States,US,1999,7,2.0,5.0,0.0
+United States,US,2000,3,1.0,2.0,0.0
+United States,US,2001,2,0.0,2.0,0.0
+United States,US,2002,8,1.0,6.0,1.0
+United States,US,2003,11,1.0,8.0,2.0
+United States,US,2004,9,1.0,8.0,0.0
+United States,US,2005,13,2.0,9.0,2.0
+United States,US,2006,9,2.0,6.0,1.0
+United States,US,2007,12,0.0,12.0,0.0
+United States,US,2008,11,4.0,6.0,1.0
+United States,US,2009,10,3.0,7.0,0.0
+United States,US,2010,16,2.0,12.0,2.0
+United States,US,2011,14,2.0,10.0,2.0
+United States,US,2012,15,5.0,9.0,1.0
+United States,US,2013,14,4.0,9.0,1.0
+United States,US,2014,13,1.0,7.0,5.0
+United States,US,2015,9,2.0,7.0,0.0
+United States,US,2016,15,4.0,9.0,2.0
+United States,US,2017,27,5.0,17.0,5.0
+United States,US,2018,48,20.0,23.0,5.0
+United States,US,2019,33,7.0,18.0,8.0
+United States,US,2020,36,16.0,16.0,4.0
+United States,US,2021,32,11.0,14.0,7.0
+United States,US,2022,17,2.0,9.0,6.0
+United States,US,2023,19,10.0,5.0,4.0
+United States,US,2024,4,1.0,2.0,1.0
+Uruguay,UY,2006,1,0.0,1.0,0.0
+Uruguay,UY,2020,1,0.0,1.0,0.0
+Uruguay,UY,2023,1,0.0,1.0,0.0
+"Venezuela, Bolivarian Republic of",VE,2020,1,0.0,1.0,0.0
+South Africa,ZA,2000,1,0.0,1.0,0.0
+South Africa,ZA,2001,1,0.0,1.0,0.0
+South Africa,ZA,2002,2,0.0,1.0,1.0
+South Africa,ZA,2003,1,0.0,1.0,0.0
+South Africa,ZA,2004,1,0.0,1.0,0.0
+South Africa,ZA,2005,1,0.0,1.0,0.0
+South Africa,ZA,2006,1,1.0,0.0,0.0
+South Africa,ZA,2007,1,0.0,1.0,0.0
+South Africa,ZA,2008,1,0.0,1.0,0.0
+South Africa,ZA,2013,1,0.0,1.0,0.0
+South Africa,ZA,2015,1,0.0,1.0,0.0
+South Africa,ZA,2017,1,0.0,1.0,0.0
+South Africa,ZA,2019,1,1.0,0.0,0.0
+South Africa,ZA,2020,4,0.0,3.0,1.0
+South Africa,ZA,2021,4,1.0,2.0,1.0
+South Africa,ZA,2022,1,1.0,0.0,0.0
+South Africa,ZA,2023,1,1.0,0.0,0.0

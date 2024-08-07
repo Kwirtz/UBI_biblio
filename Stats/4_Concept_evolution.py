@@ -20,6 +20,8 @@ check = ["state bonus", "minimum income", "national dividend", "social dividend"
          "citizen’s basic income", "citizen’s income", "social credit",
          "unconditional basic income", "universal basic income", "guaranteed income", "social dividend", "basic income guarantee"]
 
+check = ["basic income", "negative income tax","minimum income"]
+check_together = ["minimum income guarantee","guaranteed minimum income"]
 
 year_list = [] 
 list_papers = []
@@ -30,7 +32,7 @@ for doc in tqdm.tqdm(docs):
     if year:
         year_list.append(year)
 
-year2keywords = {i:{j:0 for j in check} for i in year_list}
+year2keywords = {i:{j:0 for j in check+check_together} for i in year_list}
 
 
 for paper in tqdm.tqdm(list_papers):
@@ -48,7 +50,7 @@ for paper in tqdm.tqdm(list_papers):
         title = ""
     if not abstract:
         abstract = ""
-    text = title + " " #+ abstract
+    text = title + " " + abstract
     text = text.lower()
     full_gram = ""
 
@@ -67,6 +69,17 @@ for paper in tqdm.tqdm(list_papers):
         if keyword in full_gram and done == False:
             year2keywords[year][keyword] += 1
             done = True
+    done_together = False
+    
+    
+    for keyword in check_together:
+        if keyword in text and done == False:
+            year2keywords[year][keyword] += 1
+            done = True
+        if keyword in full_gram and done == False:
+            year2keywords[year][keyword] += 1
+            done = True
+        
 
             
             

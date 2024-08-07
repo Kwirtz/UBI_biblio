@@ -45,6 +45,8 @@ df$share_ubi = df$n_ubi_SHS/df$n_pub_SHS
 df$share_ubi_ma <- rollmean(df$share_ubi, k = 3, fill = NA, align = "center")
 df$share_ubi_eco = df$n_ubi_SHS_eco/df$n_pub_SHS_eco
 df$share_ubi_eco_ma <- rollmean(df$share_ubi_eco, k = 3, fill = NA, align = "center")
+df = df %>%
+  filter(year >= 1960 & year <= 2020) 
 
 ```
 
@@ -122,7 +124,7 @@ fig_intro = ggdraw() +
                   size = 10) +
 theme(plot.margin = margin(0.1,0.1,2,0.1, "cm")) 
 
-pdf(file=file.path(result_path, "Figures/Fig_intro.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+pdf(file=file.path(result_path, "Figures/Fig_intro.pdf"), width=8, height=5, family="Helvetica", pointsize=10)
 fig_intro
 dev.off()
 ```

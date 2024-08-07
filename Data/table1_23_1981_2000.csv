@@ -1,0 +1,76 @@
+community,discipline,n_discipline,share_discipline,author_most_used,title_most_used_ref,bib_most_used_ref,id_most_used_ref,n_most_used_ref,share_most_used_ref
+1,Law,784,0.7069431920649234,Philippe Van Parijs,"Basic Income: Freedom from Poverty, Freedom to Work",Tony Walter (1989),https://openalex.org/W3142606906,9.0,0.06293706293706294
+1,Market economy,456,0.41118124436429215,Tony Walter,On the Currency of Egalitarian Justice,G. A. Cohen (1989),https://openalex.org/W1970380565,9.0,0.06293706293706294
+1,Public economics,368,0.3318304779080252,G. A. Cohen,Basic Income as a Basis for Small Business,Bart Nooteboom (1987),https://openalex.org/W2080887626,6.0,0.04195804195804196
+1,Economic growth,258,0.23264201983769162,Robert J. van der Veen,A capitalist road to communism,Robert J. van der Veen et Philippe Van Parijs (1986),https://openalex.org/W2112303931,6.0,0.04195804195804196
+1,Law and economics,245,0.22091974752028856,Bart Nooteboom,Arguing for Basic Income: Ethical Foundations for a Radical Reform,Philippe Van Parijs (1992),https://openalex.org/W2168139370,6.0,0.04195804195804196
+1,Labour economics,214,0.19296663660955815,Erik Olín Wright,Real Freedom for All: What (If Anything) can Justify Capitalism?,Philippe Van Parijs (1996),https://openalex.org/W2325247757,6.0,0.04195804195804196
+1,Mechanical engineering,168,0.151487826871055,Richard J. Arneson,Why something like socialism is necessary for the transition to something like communism,Erik Olín Wright (1986),https://openalex.org/W1970863805,5.0,0.03496503496503497
+1,Positive economics,155,0.13976555455365194,Stuart White,The Second Marriage of Justice and Efficiency,Philippe Van Parijs (1990),https://openalex.org/W2003199800,5.0,0.03496503496503497
+1,Finance,152,0.13706041478809738,Samuel Bowles,Is Socialism Dead? A Comment on Market Socialism and Basic Income Capitalism,Richard J. Arneson (1992),https://openalex.org/W2059579990,5.0,0.03496503496503497
+1,Political economy,146,0.13165013525698827,J. E. Meade,On the Economic Theory of Socialism: Part One,Oskar Lange (1936),https://openalex.org/W4251950452,5.0,0.03496503496503497
+1,Epistemology,128,0.11541929666366095,John E. Roemer,Why Surfers Should Be Fed: The Liberal Case for an Unconditional Basic Income,Philippe Van Parijs (2017),https://openalex.org/W1921013935,5.0,0.03496503496503497
+1,Development economics,124,0.11181244364292155,Bert Hamminga,"Liberal Equality, Exploitation, and the Case for an Unconditional Basic Income",Stuart White (1997),https://openalex.org/W2017475875,4.0,0.027972027972027972
+1,Mathematical analysis,113,0.1018935978358882,Brian Barry,Is income security possible in a capitalist economy?,Samuel Bowles (1992),https://openalex.org/W1585794985,4.0,0.027972027972027972
+1,Linguistics,101,0.09107303877366997,Guy Standing,"Full Employment, New Technologies and the Distribution of Income",J. E. Meade (1984),https://openalex.org/W2000121503,4.0,0.027972027972027972
+1,Archaeology,101,0.09107303877366997,Samuel Brittan,THE SOCIAL DIVIDEND UNDER MARKET SOCIALISM,James A. Yunker (1977),https://openalex.org/W2036191695,4.0,0.027972027972027972
+2,Market economy,239,0.5584112149532711,Philippe Van Parijs,"Professor Friedman, meet Lady Rhys-Williams: NIT vs. CIT",Jonathan R. Kesselman et Irwin Garfinkel (1978),https://openalex.org/W2066344131,8.0,0.037914691943127965
+2,Law,201,0.4696261682242991,Peter Saunders,Public economics in action: the basic income/flat tax proposal,,https://openalex.org/W1489554691,7.0,0.03317535545023697
+2,Public economics,200,0.4672897196261682,Anthony B. Atkinson,"The economics of “tagging” as applied to the optimal income tax, welfare programs, and manpower planning",George A. Akerlof (1984),https://openalex.org/W2498877053,6.0,0.02843601895734597
+2,Labour economics,178,0.4158878504672897,George A. Akerlof,The Effect of Taxation on Labor Supply: Evaluating the Gary Negative Income Tax Experiment,Gary Burtless et Jerry A. Hausman (1978),https://openalex.org/W1996567072,6.0,0.02843601895734597
+2,Economic growth,125,0.29205607476635514,Robert A. Moffitt,The Trade-Off between Equality and Efficiency,Edgar K. Browning et William R. Johnson (1984),https://openalex.org/W2087275534,5.0,0.023696682464454975
+2,Microeconomics,83,0.1939252336448598,Tim Callan,GUARANTEED MINIMUM INCOME REVISITED: PARADISE LOST OR GUIDING LIGHT?,Peter Saunders (1988),https://openalex.org/W2072162605,5.0,0.023696682464454975
+2,Mechanical engineering,81,0.18925233644859812,Edgar K. Browning,"Beveridge, the national minimum and its future in a European context",Anthony B. Atkinson (1996),https://openalex.org/W1854582648,4.0,0.018957345971563982
+2,Mathematical analysis,80,0.18691588785046728,William R. Johnson,Freedom and Security: An Introduction to the Basic Income Debate,Rodney Haddow et Tony Fitzpatrick (2001),https://openalex.org/W580935276,4.0,0.018957345971563982
+2,Macroeconomics,77,0.17990654205607476,Cathal O’Donoghue,The reform of social security,Charles Carter et al. (1985),https://openalex.org/W1988301953,4.0,0.018957345971563982
+2,Finance,66,0.1542056074766355,Richard Blundell,Capitalism and Freedom,Milton Friedman (1962),https://openalex.org/W1559924327,4.0,0.018957345971563982
+2,Demographic economics,51,0.1191588785046729,Charles Carter,A problem with the negative income tax,Robert A. Moffitt (1985),https://openalex.org/W1963980522,4.0,0.018957345971563982
+2,Development economics,43,0.10046728971962617,John Pinder,Incomes and the Welfare State: Essays on Britain and Europe,Anthony B. Atkinson (2011),https://openalex.org/W1599468060,3.0,0.014218009478672985
+2,Law and economics,42,0.09813084112149532,Barbara N. Rodgers,The Impossibility of a Paretian Liberal,Amartya Sen (1970),https://openalex.org/W1993313925,3.0,0.014218009478672985
+2,Linguistics,37,0.08644859813084112,Thomas Wilson,Labour Supply and Progressive Taxes,Terence Wales et Alan D. Woodland (1979),https://openalex.org/W2019651065,3.0,0.014218009478672985
+2,Econometrics,35,0.08177570093457943,Samuel Brittan,Planning and the Price Mechanism,J. E. Meade (1949),https://openalex.org/W2067593863,3.0,0.014218009478672985
+3,Market economy,368,0.4717948717948718,Philip K. Robins,A Reanalyis of Marital Stability in the Seattle-Denver Income-Maintenance Experiment,Glen G. Cain et Douglas Wissoker (1990),https://openalex.org/W2057601716,5.0,0.05434782608695652
+3,Law,325,0.4166666666666667,Glen G. Cain,A Comparison of the Labor Supply Findings from the Four Negative Income Tax Experiments,Philip K. Robins (1985),https://openalex.org/W1520279335,4.0,0.043478260869565216
+3,Public economics,320,0.41025641025641024,Douglas Wissoker,The Effects of Negative Income Tax Programs on Marital Dissolution,Lyle P. Groeneveld et al. (1980),https://openalex.org/W1590929411,4.0,0.043478260869565216
+3,Economic growth,259,0.33205128205128204,Michael T. Hannan,A Reassessment of the Effect of Income Maintenance on Marital Dissolution in the Seattle-Denver Experiment,Michael T. Hannan et Nancy Brandon Tuma (1990),https://openalex.org/W2023822810,4.0,0.043478260869565216
+3,Labour economics,205,0.26282051282051283,Nancy Brandon Tuma,The estimation of labor supply models using experimental data,Michael C. Keeley et al. (1978),https://openalex.org/W2059825689,4.0,0.043478260869565216
+3,Finance,163,0.20897435897435898,Gary Burtless,An Overview of the Labor-Supply Results,Albert Rees (1974),https://openalex.org/W2253346401,3.0,0.03260869565217391
+3,Demographic economics,129,0.16538461538461538,Derek Hum,Attrition Bias in Experimental and Panel Data: The Gary Income Maintenance Experiment,Jerry A. Hausman et David A. Wise (1979),https://openalex.org/W2061127918,3.0,0.03260869565217391
+3,Mechanical engineering,113,0.14487179487179488,Orley Ashenfelter,The Effect of Taxation on Labor Supply: Evaluating the Gary Negative Income Tax Experiment,Gary Burtless et Jerry A. Hausman (1978),https://openalex.org/W1996567072,3.0,0.03260869565217391
+3,Macroeconomics,105,0.1346153846153846,Saud A. Choudhry,The Effects of a Negative Income Tax on School Performance: Results of an Experiment,Rebecca Maynard et Richard J. Murnane (1979),https://openalex.org/W1502701254,2.0,0.021739130434782608
+3,Development economics,105,0.1346153846153846,Ravi Kanbur,"An Overview of the Results on Consumption, Health, and Social Behavior",William J. Baumöl (1974),https://openalex.org/W238011861,2.0,0.021739130434782608
+3,Mathematical analysis,90,0.11538461538461539,Richard W. West,Income and Independence Effects on Marital Dissolution: Results from the Seattle and Denver Income-Maintenance Experiments,Michael T. Hannan et al. (1978),https://openalex.org/W2009289919,2.0,0.021739130434782608
+3,Microeconomics,85,0.10897435897435898,Mark Plant,Canada's Social Security Review 1973-75: The Central Issues,Andrew Johnson (1975),https://openalex.org/W2071209679,2.0,0.021739130434782608
+3,Linguistics,69,0.08846153846153847,Assar Lindbeck,Canada's Social Security Review,Robert P. Doyle (1978),https://openalex.org/W2287026289,2.0,0.021739130434782608
+3,Demography,62,0.07948717948717948,Michael Keen,"Income, Work and Marital Dissolution: Canadian Experimental Evidence",Derek Hum et Saud A. Choudhry (1992),https://openalex.org/W2287844010,2.0,0.021739130434782608
+3,Archaeology,61,0.0782051282051282,Matti Tuomala,The Politics of a Guaranteed Income,Henry J. Aaron et Daniel Patrick Moynihan (1973),https://openalex.org/W2796971543,2.0,0.021739130434782608
+4,Law,159,0.6824034334763949,Georg Vobruba,Redistribution of work and income in the crisis: Actors' problems of working time reduction and a guaranteed basic income,Georg Vobruba (1990),https://openalex.org/W1975804246,2.0,1.0
+4,Market economy,94,0.4034334763948498,,,,,,
+4,Economic growth,86,0.36909871244635195,,,,,,
+4,Ecology,73,0.3133047210300429,,,,,,
+4,Public economics,57,0.2446351931330472,,,,,,
+4,Development economics,51,0.21888412017167383,,,,,,
+4,Mechanical engineering,45,0.19313304721030042,,,,,,
+4,Finance,41,0.1759656652360515,,,,,,
+4,Political economy,35,0.15021459227467812,,,,,,
+4,Economic system,33,0.14163090128755365,,,,,,
+4,Social science,31,0.13304721030042918,,,,,,
+4,Linguistics,28,0.12017167381974249,,,,,,
+4,Labour economics,28,0.12017167381974249,,,,,,
+4,Macroeconomics,25,0.1072961373390558,,,,,,
+4,Mathematical analysis,24,0.10300429184549356,,,,,,
+5,Market economy,37,0.5522388059701493,,,,,,
+5,Labour economics,35,0.5223880597014925,,,,,,
+5,Law,34,0.5074626865671642,,,,,,
+5,Demographic economics,23,0.34328358208955223,,,,,,
+5,Economic growth,18,0.26865671641791045,,,,,,
+5,Public economics,18,0.26865671641791045,,,,,,
+5,Archaeology,14,0.208955223880597,,,,,,
+5,Macroeconomics,14,0.208955223880597,,,,,,
+5,Accounting,11,0.16417910447761194,,,,,,
+5,Mechanical engineering,10,0.14925373134328357,,,,,,
+5,Finance,9,0.13432835820895522,,,,,,
+5,Development economics,7,0.1044776119402985,,,,,,
+5,Epistemology,6,0.08955223880597014,,,,,,
+5,Algorithm,6,0.08955223880597014,,,,,,
+5,Political economy,6,0.08955223880597014,,,,,,

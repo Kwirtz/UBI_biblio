@@ -1,0 +1,106 @@
+---
+title: 'Figures'
+author: "Kevin Wirtz (kevin.wirtz@unistra.fr)"
+date: "Updated `r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_notebook:
+    code_folding: hide
+    df_print: paged
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+gc() #free up memrory and report the memory usage.
+graphics.off()
+
+Sys.setenv(LANG = "en") # For english language
+options(scipen = 5) # To deactivate annoying scientific number notation
+
+library(zoo)
+library(tidyverse) # Collection of all the good stuff like dplyr, ggplot2 ect.
+library(ggalluvial)
+library(cowplot)
+library(ggpubr)
+library(magick)
+library(magrittr)
+library(gridExtra)
+
+data_path = file.path("../Data") 
+result_path = file.path("../Results/Figures") 
+
+```
+
+# Fig1: Concept evolution
+
+```{r} 
+df <- read_csv(file.path(data_path, "Fig_commu_evolution.csv"))
+oma2 <- c(0,0,0,0)
+
+df <- df %>%
+  mutate(across(`community_1`:`community_5`, ~ rollmean(., 5, fill = NA, align = "center")))
+
+df_long <- df %>%
+  pivot_longer(
+    cols = starts_with("community_"),
+    names_to = "community",
+    values_to = "value"
+  )
+
+```
+
+
+
+```{r} 
+
+# Define the custom colors for each community
+custom_colors <- c("community_1" = "#ff7e35",
+                   "community_2" = "#f381e7",
+                   "community_3" = "#00c4ed",
+                   "community_4" = "#5cc032",
+                   "community_5" = "gray")
+
+# Update the community labels
+community_labels <- c("community_1" = "Social justice",
+                      "community_2" = "Tax/Labor supply",
+                      "community_3" = "Experiment",
+                      "community_4" = "Degrowth",
+                      "community_5" = "Others")
+
+# Create the individual plot
+Fig1_a <- ggplot(df_long, aes(x = year, y = value)) +
+  geom_line(linewidth=1, aes(color = community)) +
+  labs(title = "", x = "Year", y = "Share of Publications (%)") +
+  scale_color_manual(values = custom_colors, labels = community_labels) + # Apply custom colors and labels
+  theme(
+    axis.text.y = element_text(size = 10),
+    axis.title.x = element_blank(),
+    axis.title.y = element_text(size = 10),
+    panel.border = element_rect(colour = "black", fill = NA, size = 0.75),
+    plot.margin = unit(c(1, 1, 1, 1), "cm"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank(),
+    legend.key = element_blank(),
+    legend.title = element_blank(),
+    legend.text = element_text(size = 8),
+    legend.position = "top",
+    strip.text = element_text(size = 8), # Reduce font size of facet labels
+    strip.text.x = element_text(margin = margin(b = 5, t = 5))
+  )
+
+
+Fig1_a
+pdf(file=file.path(result_path, "Fig_commu_evolution.pdf"), width=8, height=6, family="Helvetica", pointsize=10)
+Fig1_a
+dev.off()
+
+
+
+
+```

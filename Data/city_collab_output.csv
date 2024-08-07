@@ -1,43 +1,43 @@
 ,source,target,weight,year
 1090,Aalborg,Copenhagen,1,1999
 1442,Aarhus,Utrecht,1,2018
-1161,Accra,East Lansing,1,2021
-1162,Accra,Chicago,1,2021
+1161,Accra,Chicago,1,2021
+1162,Accra,East Lansing,1,2021
 1163,Accra,Montreal,1,2022
-1105,Akron,Beijing,1,2023
-1106,Akron,Washington,1,2023
-1107,Akron,New Orleans,1,2023
-864,Albany,Cambridge,1,2010
-865,Albany,San Francisco,1,2010
-862,Albany,Albany,1,2021
-863,Albany,Nashville,1,2021
+1110,Akron,Beijing,1,2023
+1111,Akron,Washington,1,2023
+1112,Akron,New Orleans,1,2023
+863,Albany,Cambridge,1,2010
+864,Albany,San Francisco,1,2010
+861,Albany,Albany,1,2021
+862,Albany,Nashville,1,2021
 390,Amherst Center,Cambridge,1,2020
 391,Amherst Center,Amherst Center,1,2021
 392,Amherst Center,Pretoria,1,2021
-393,Amherst Center,Johannesburg,1,2021
+393,Amherst Center,Helsinki,1,2021
 394,Amherst Center,Stellenbosch,1,2021
-395,Amherst Center,Helsinki,1,2021
+395,Amherst Center,Johannesburg,1,2021
 85,Amsterdam,Utrecht,1,1997
-86,Amsterdam,Antwerp,1,2013
-87,Amsterdam,Leuven,1,2013
-88,Amsterdam,Barcelona,1,2019
-89,Amsterdam,Vancouver,1,2019
-90,Amsterdam,Wageningen,1,2023
+86,Amsterdam,Leuven,1,2013
+87,Amsterdam,Antwerp,1,2013
+88,Amsterdam,Vancouver,1,2019
+89,Amsterdam,Barcelona,1,2019
+90,Amsterdam,Brisbane,1,2023
 91,Amsterdam,Edinburgh,1,2023
-92,Amsterdam,Brisbane,1,2023
-93,Amsterdam,Oxford,1,2023
-94,Amsterdam,Sheffield,1,2023
-21,Ann Arbor,Dearborn,1,2013
-473,Antwerp,Birmingham,1,2003
-474,Antwerp,Coventry,1,2006
-469,Antwerp,Leuven,1,2013
-470,Antwerp,Amsterdam,1,2013
-471,Antwerp,Antwerp,1,2013
-472,Antwerp,New York,2,2019
+92,Amsterdam,Wageningen,1,2023
+93,Amsterdam,Sheffield,1,2023
+94,Amsterdam,Oxford,1,2023
+20,Ann Arbor,Dearborn,1,2013
+464,Antwerp,Birmingham,1,2003
+465,Antwerp,Coventry,1,2006
+460,Antwerp,Leuven,1,2013
+461,Antwerp,Antwerp,1,2013
+462,Antwerp,Amsterdam,1,2013
+463,Antwerp,New York,2,2019
 35,Armidale,Sydney,1,2000
 1254,Arrasate / Mondragón,Barcelona,1,2024
-665,Asunción,Ciudad Real,1,2019
-666,Asunción,Madrid,1,2019
+665,Asunción,Madrid,1,2019
+666,Asunción,Ciudad Real,1,2019
 1187,Athens,Hamilton,2,2003
 1335,Atlanta,Boone,1,2023
 1336,Atlanta,Atlanta,1,2023
@@ -45,9 +45,9 @@
 1362,Auburn,Fort Worth,1,2021
 1359,Auburn,Duluth,1,2023
 1360,Auburn,Fort Worth,1,2023
-351,Auckland,Sydney,1,2013
-350,Auckland,Waterloo,1,2015
-349,Auckland,Richmond,1,2020
+350,Auckland,Sydney,1,2013
+349,Auckland,Waterloo,1,2015
+348,Auckland,Richmond,1,2020
 537,Augsburg,Toulouse,1,2015
 538,Augsburg,Hamburg,1,2018
 1113,Aveiro,Evora,1,2020
@@ -55,29 +55,29 @@
 1216,Azusa,Houston,1,2020
 1347,Baku,London,1,2019
 1139,Baltimore,Coral Gables,1,1986
-1137,Baltimore,Washington D.C.,1,1999
-1138,Baltimore,Washington,1,1999
+1137,Baltimore,Washington,1,1999
+1138,Baltimore,Washington D.C.,1,1999
 1140,Baltimore,Washington,1,2014
 1136,Baltimore,New York,1,2017
 1135,Baltimore,Melbourne,1,2018
 1415,Bamberg,Sofia,1,2022
-730,Barcelona,Cerdanyola del Vallès,1,2014
-735,Barcelona,Montreal,1,2015
-731,Barcelona,Poznan,1,2016
-723,Barcelona,Thiverval-Grignon,1,2019
-724,Barcelona,Vancouver,2,2019
-725,Barcelona,Amsterdam,1,2019
-726,Barcelona,Tampere,1,2019
-727,Barcelona,Helsinki,1,2020
-728,Barcelona,Bath,1,2020
-719,Barcelona,Braga,7,2021
-732,Barcelona,Helsinki,1,2022
-733,Barcelona,Oxford,1,2022
-734,Barcelona,Braga,1,2022
-720,Barcelona,Wroclaw,1,2023
-721,Barcelona,Barcelona,2,2023
-722,Barcelona,Girona,1,2023
-729,Barcelona,Arrasate / Mondragón,1,2024
+734,Barcelona,Cerdanyola del Vallès,1,2014
+739,Barcelona,Montreal,1,2015
+735,Barcelona,Poznan,1,2016
+727,Barcelona,Thiverval-Grignon,1,2019
+728,Barcelona,Vancouver,2,2019
+729,Barcelona,Amsterdam,1,2019
+730,Barcelona,Tampere,1,2019
+731,Barcelona,Helsinki,1,2020
+732,Barcelona,Bath,1,2020
+723,Barcelona,Braga,7,2021
+736,Barcelona,Helsinki,1,2022
+737,Barcelona,Oxford,1,2022
+738,Barcelona,Braga,1,2022
+724,Barcelona,Wroclaw,1,2023
+725,Barcelona,Barcelona,2,2023
+726,Barcelona,Girona,1,2023
+733,Barcelona,Arrasate / Mondragón,1,2024
 787,Bath,Geneva,1,2008
 788,Bath,Copenhagen,1,2008
 786,Bath,Oxford,1,2016
@@ -97,115 +97,115 @@
 775,Bath,Freiburg im Breisgau,1,2023
 780,Bath,Dublin,1,2024
 781,Bath,Bath,1,2024
-1304,Beersheba,Rehovot,1,2020
-710,Beijing,Washington D.C.,1,2006
-711,Beijing,Washington,1,2006
-709,Beijing,Oslo,1,2018
-704,Beijing,Southampton,1,2023
-705,Beijing,Stony Brook,1,2023
-706,Beijing,New Orleans,1,2023
-707,Beijing,Akron,1,2023
+1306,Beersheba,Rehovot,1,2020
+712,Beijing,Washington,1,2006
+713,Beijing,Washington D.C.,1,2006
+711,Beijing,Oslo,1,2018
+706,Beijing,Stony Brook,1,2023
+707,Beijing,Southampton,1,2023
 708,Beijing,Washington,1,2023
-1371,Bergamo,Pavia,1,2008
+709,Beijing,New Orleans,1,2023
+710,Beijing,Akron,1,2023
+1372,Bergamo,Pavia,1,2008
 1342,Bergen,Leiden,1,2017
 1343,Bergen,Rotterdam,1,2017
 648,Berkeley,Davis,1,1992
-644,Berkeley,Malden,1,2010
-645,Berkeley,Cambridge,1,2010
+644,Berkeley,Cambridge,1,2010
+645,Berkeley,Malden,1,2010
 646,Berkeley,Cambridge,2,2016
 647,Berkeley,Glasgow,1,2016
 639,Berkeley,Evanston,1,2019
 640,Berkeley,Shatin,1,2019
 641,Berkeley,Columbus,1,2019
-642,Berkeley,Berkeley,1,2019
-643,Berkeley,Paris,1,2019
-832,Berlin,Frankfurt am Main,1,2002
-818,Berlin,Bonn,1,2008
-819,Berlin,Nuremberg,1,2008
-821,Berlin,Speyer,1,2014
-822,Berlin,Koblenz,1,2014
-823,Berlin,Kiel,1,2014
-824,Berlin,Berlin,1,2014
-825,Berlin,Wiesbaden,1,2014
-815,Berlin,Frankfurt (Oder),1,2015
-816,Berlin,Berlin,1,2015
-817,Berlin,Mannheim,1,2015
-813,Berlin,Nuremberg,1,2017
-820,Berlin,Paris,1,2019
-826,Berlin,Oxford,1,2020
-814,Berlin,Bochum,3,2023
-827,Berlin,Magdeburg,1,2024
-828,Berlin,Vallendar,1,2024
-829,Berlin,Leipzig,1,2024
-830,Berlin,Erding,1,2024
-831,Berlin,Berlin,1,2024
+642,Berkeley,Paris,1,2019
+643,Berkeley,Berkeley,1,2019
+824,Berlin,Frankfurt am Main,1,2002
+810,Berlin,Bonn,1,2008
+811,Berlin,Nuremberg,1,2008
+813,Berlin,Wiesbaden,1,2014
+814,Berlin,Berlin,1,2014
+815,Berlin,Speyer,1,2014
+816,Berlin,Kiel,1,2014
+817,Berlin,Koblenz,1,2014
+807,Berlin,Frankfurt (Oder),1,2015
+808,Berlin,Mannheim,1,2015
+809,Berlin,Berlin,1,2015
+805,Berlin,Nuremberg,1,2017
+812,Berlin,Paris,1,2019
+818,Berlin,Oxford,1,2020
+806,Berlin,Bochum,3,2023
+819,Berlin,Vallendar,1,2024
+820,Berlin,Berlin,1,2024
+821,Berlin,Leipzig,1,2024
+822,Berlin,Erding,1,2024
+823,Berlin,Magdeburg,1,2024
 963,Bern,Zurich,1,2019
 1172,Birmingham,Antwerp,1,2003
-1072,Blacksburg,Bloomsburg,1,2018
-1073,Blacksburg,Cambridge,1,2019
-1074,Blacksburg,Syracuse,1,2019
-1307,Bloomington,Canberra,1,2018
-1308,Bloomington,Brighton,1,2018
-1309,Bloomington,Montreal,1,2018
-1310,Bloomington,Teresina,1,2018
-1311,Bloomington,Stockholm,1,2018
-1312,Bloomington,Saint Augustine,1,2018
-1313,Bloomington,Tokyo,1,2018
-1314,Bloomington,Córdoba,1,2018
-1071,Bloomsburg,Blacksburg,1,2018
+1071,Blacksburg,Bloomsburg,1,2018
+1072,Blacksburg,Cambridge,1,2019
+1073,Blacksburg,Syracuse,1,2019
+1323,Bloomington,Tokyo,1,2018
+1324,Bloomington,Teresina,1,2018
+1325,Bloomington,Stockholm,1,2018
+1326,Bloomington,Brighton,1,2018
+1327,Bloomington,Canberra,1,2018
+1328,Bloomington,Saint Augustine,1,2018
+1329,Bloomington,Montreal,1,2018
+1330,Bloomington,Córdoba,1,2018
+1074,Bloomsburg,Blacksburg,1,2018
 929,Bochum,Berlin,3,2023
 240,Bodø,Coral Gables,1,2011
 241,Bodø,Macao,1,2011
 238,Bodø,Coral Gables,1,2014
 239,Bodø,Macao,1,2014
-1277,Bologna,Modena,1,2002
-1278,Bologna,Bologna,1,2002
-219,Bonn,London,1,1999
-220,Bonn,Québec,1,2003
-223,Bonn,Munich,1,2006
-224,Bonn,Sofia,1,2006
-221,Bonn,Nuremberg,1,2008
-222,Bonn,Berlin,1,2008
-225,Bonn,Turin,1,2010
-214,Bonn,St Andrews,2,2011
-215,Bonn,Warsaw,2,2011
-216,Bonn,Klagenfurt,1,2011
-213,Bonn,Turin,1,2012
-217,Bonn,Bonn,1,2013
-218,Bonn,Marseille,1,2013
-226,Bonn,Paris,1,2020
-227,Bonn,Waterloo,1,2024
+1277,Bologna,Bologna,1,2002
+1278,Bologna,Modena,1,2002
+208,Bonn,London,1,1999
+209,Bonn,Québec,1,2003
+212,Bonn,Sofia,1,2006
+213,Bonn,Munich,1,2006
+210,Bonn,Berlin,1,2008
+211,Bonn,Nuremberg,1,2008
+214,Bonn,Turin,1,2010
+203,Bonn,St Andrews,2,2011
+204,Bonn,Warsaw,2,2011
+205,Bonn,Klagenfurt,1,2011
+202,Bonn,Turin,1,2012
+206,Bonn,Marseille,1,2013
+207,Bonn,Bonn,1,2013
+215,Bonn,Paris,1,2020
+216,Bonn,Waterloo,1,2024
 494,Boone,Winnipeg,1,2019
 495,Boone,Atlanta,1,2023
 496,Boone,St Louis,1,2023
 497,Boone,Urbana,1,2023
-498,Boone,Greensboro,1,2023
-499,Boone,Boone,1,2023
+498,Boone,Boone,1,2023
+499,Boone,Greensboro,1,2023
 992,Boston,Rotterdam,1,1988
 994,Boston,Hong Kong,1,1995
 991,Boston,Cambridge,1,2008
 993,Boston,Cambridge,1,2018
-736,Braga,Braga,7,2021
-737,Braga,Barcelona,7,2021
-738,Braga,Braga,1,2022
-739,Braga,Barcelona,1,2022
-1174,Brasília,Teresina,1,2015
-19,Bratislava,Sarajevo,1,2018
-16,Bratislava,Tübingen,1,2022
-17,Bratislava,Warsaw,1,2022
-18,Bratislava,Florence,1,2022
+719,Braga,Barcelona,7,2021
+720,Braga,Braga,7,2021
+721,Braga,Barcelona,1,2022
+722,Braga,Braga,1,2022
+1183,Brasília,Teresina,1,2015
+13,Bratislava,Sarajevo,1,2018
+10,Bratislava,Florence,1,2022
+11,Bratislava,Warsaw,1,2022
+12,Bratislava,Tübingen,1,2022
 1075,Bremen,Winnipeg,1,2017
 1053,Brighton,Tampere,1,2016
 1056,Brighton,Montreal,1,2018
-1057,Brighton,Teresina,1,2018
-1058,Brighton,Stockholm,1,2018
-1059,Brighton,Saint Augustine,1,2018
-1060,Brighton,Tokyo,1,2018
-1061,Brighton,Bloomington,1,2018
-1062,Brighton,Córdoba,1,2018
-1063,Brighton,Canberra,1,2018
-1054,Brighton,Brighton,1,2024
-1055,Brighton,London,1,2024
+1057,Brighton,Bloomington,1,2018
+1058,Brighton,Córdoba,1,2018
+1059,Brighton,Tokyo,1,2018
+1060,Brighton,Teresina,1,2018
+1061,Brighton,Stockholm,1,2018
+1062,Brighton,Canberra,1,2018
+1063,Brighton,Saint Augustine,1,2018
+1054,Brighton,London,1,2024
+1055,Brighton,Brighton,1,2024
 840,Brisbane,Melbourne,1,2019
 841,Brisbane,Sydney,1,2019
 842,Brisbane,Sunshine Coast,1,2019
@@ -215,8 +215,8 @@
 833,Brisbane,Sydney,1,2023
 834,Brisbane,Bath,1,2023
 835,Brisbane,Amsterdam,1,2023
-836,Brisbane,Wageningen,1,2023
-837,Brisbane,Edinburgh,1,2023
+836,Brisbane,Edinburgh,1,2023
+837,Brisbane,Wageningen,1,2023
 838,Brisbane,Oxford,1,2023
 839,Brisbane,Sheffield,1,2023
 1124,Bristol,Bath,1,2017
@@ -224,24 +224,24 @@
 1123,Bristol,Milton Keynes,1,2019
 910,Brussels,Louvain-la-Neuve,1,2001
 905,Brussels,Louvain-la-Neuve,1,2016
-906,Brussels,Liège,1,2016
-907,Brussels,Namur,1,2016
-908,Brussels,Ghent,1,2016
+906,Brussels,Ghent,1,2016
+907,Brussels,Liège,1,2016
+908,Brussels,Namur,1,2016
 909,Brussels,Maastricht,1,2020
 903,Brussels,Cambridge,1,2021
 904,Brussels,Louvain-la-Neuve,1,2021
 911,Brussels,Louvain-la-Neuve,1,2022
-912,Brussels,Liège,1,2022
-913,Brussels,Namur,1,2022
-914,Brussels,Ghent,1,2022
+912,Brussels,Ghent,1,2022
+913,Brussels,Liège,1,2022
+914,Brussels,Namur,1,2022
 1392,Buenos Aires,San Antonio,1,2014
 860,Burlington,Denver,1,2005
-1047,Burnaby,Calgary,2,2020
-1048,Burnaby,Vancouver,2,2020
-1045,Burnaby,Calgary,1,2021
-1046,Burnaby,Vancouver,1,2021
+1047,Burnaby,Vancouver,2,2020
+1048,Burnaby,Calgary,2,2020
+1045,Burnaby,Vancouver,1,2021
+1046,Burnaby,Calgary,1,2021
 1395,Burwood,Melbourne,1,2017
-1296,Cairo,Worcester,1,2020
+1297,Cairo,Worcester,1,2020
 541,Calgary,Marseille,1,2008
 549,Calgary,Leicester,1,2012
 547,Calgary,Lethbridge,1,2016
@@ -257,55 +257,55 @@
 344,Cambridge,Washington D.C.,1,2006
 332,Cambridge,Boston,1,2008
 321,Cambridge,Paris,1,2010
-322,Cambridge,Malden,1,2010
-323,Cambridge,Berkeley,1,2010
+322,Cambridge,Berkeley,1,2010
+323,Cambridge,Malden,1,2010
 324,Cambridge,Albany,1,2010
 325,Cambridge,San Francisco,1,2010
 326,Cambridge,London,1,2010
 330,Cambridge,New Haven,1,2013
 345,Cambridge,Washington D.C.,1,2015
 331,Cambridge,Berkeley,2,2016
-338,Cambridge,Exeter,1,2018
-339,Cambridge,Washington,1,2018
-340,Cambridge,London,1,2018
-341,Cambridge,Delhi,1,2018
-342,Cambridge,Cambridge,1,2018
+338,Cambridge,Delhi,1,2018
+339,Cambridge,Exeter,1,2018
+340,Cambridge,Cambridge,1,2018
+341,Cambridge,Washington,1,2018
+342,Cambridge,London,1,2018
 343,Cambridge,Boston,1,2018
 334,Cambridge,Cambridge,2,2019
 335,Cambridge,San Diego,1,2019
 336,Cambridge,Syracuse,1,2019
 337,Cambridge,Blacksburg,1,2019
 327,Cambridge,Amherst Center,1,2020
-328,Cambridge,New York,2,2020
-329,Cambridge,Cambridge,1,2020
+328,Cambridge,Cambridge,1,2020
+329,Cambridge,New York,2,2020
 317,Cambridge,Lancaster,1,2021
 318,Cambridge,Newcastle upon Tyne,1,2021
-319,Cambridge,Brussels,1,2021
-320,Cambridge,Cambridge,1,2021
-297,Canberra,Melbourne,1,1998
-298,Canberra,Canberra,1,1998
-301,Canberra,Saint Augustine,1,2018
-302,Canberra,Tokyo,1,2018
-303,Canberra,Bloomington,1,2018
-304,Canberra,Córdoba,1,2018
-305,Canberra,Canberra,1,2018
-306,Canberra,Brighton,1,2018
-307,Canberra,Montreal,1,2018
-308,Canberra,Teresina,1,2018
-309,Canberra,Stockholm,1,2018
+319,Cambridge,Cambridge,1,2021
+320,Cambridge,Brussels,1,2021
+297,Canberra,Canberra,1,1998
+298,Canberra,Melbourne,1,1998
+301,Canberra,Bloomington,1,2018
+302,Canberra,Córdoba,1,2018
+303,Canberra,Tokyo,1,2018
+304,Canberra,Teresina,1,2018
+305,Canberra,Brighton,1,2018
+306,Canberra,Stockholm,1,2018
+307,Canberra,Canberra,1,2018
+308,Canberra,Saint Augustine,1,2018
+309,Canberra,Montreal,1,2018
 300,Canberra,Sydney,1,2020
 299,Canberra,London,1,2021
 310,Canberra,Brisbane,1,2022
 635,Cardiff,Paris,1,2013
-633,Cardiff,Kongsberg,1,2021
-634,Cardiff,Exeter,1,2021
+633,Cardiff,Exeter,1,2021
+634,Cardiff,Kongsberg,1,2021
 636,Cardiff,Milton Keynes,1,2023
 346,Carlow,York,1,2012
 347,Carlow,Maastricht,1,2015
 1200,Celje,Koper,1,2022
 1189,Cerdanyola del Vallès,Barcelona,1,2014
 1188,Cerdanyola del Vallès,London,1,2019
-1007,Cergy-Pontoise,Coventry,1,2022
+1005,Cergy-Pontoise,Coventry,1,2022
 997,Chapel Hill,Rondebosch,1,2002
 998,Chapel Hill,Chapel Hill,1,2017
 999,Chapel Hill,Stanford,1,2017
@@ -315,10 +315,10 @@
 1157,Chicago,San Diego,1,2019
 1155,Chicago,Accra,1,2021
 1156,Chicago,East Lansing,1,2021
-663,Ciudad Real,Madrid,1,2019
-664,Ciudad Real,Asunción,1,2019
-960,Clermont-Ferrand,Nanterre,1,2021
-961,Clermont-Ferrand,Clermont-Ferrand,1,2021
+663,Ciudad Real,Asunción,1,2019
+664,Ciudad Real,Madrid,1,2019
+960,Clermont-Ferrand,Clermont-Ferrand,1,2021
+961,Clermont-Ferrand,Nanterre,1,2021
 962,Clermont-Ferrand,Marseille,1,2021
 527,Colchester,Stanford,1,1976
 523,Colchester,Tampere,1,1994
@@ -332,49 +332,49 @@
 530,Colchester,Glasgow,1,2024
 531,Colchester,Colchester,1,2024
 1044,Cologne,Colchester,1,2009
-1424,Columbus,Berkeley,1,2019
-1425,Columbus,Shatin,1,2019
+1422,Columbus,Shatin,1,2019
+1423,Columbus,Berkeley,1,2019
 30,Copenhagen,Aalborg,1,1999
-33,Copenhagen,Geneva,1,2008
-34,Copenhagen,Bath,1,2008
+33,Copenhagen,Bath,1,2008
+34,Copenhagen,Geneva,1,2008
 29,Copenhagen,Lund,1,2019
-31,Copenhagen,Roskilde,1,2022
-32,Copenhagen,Copenhagen,1,2022
-234,Coral Gables,Baltimore,1,1986
-235,Coral Gables,Menlo Park,1,1986
-236,Coral Gables,Bodø,1,2011
-237,Coral Gables,Macao,1,2011
-232,Coral Gables,Bodø,1,2014
-233,Coral Gables,Macao,1,2014
-1006,Coventry,Antwerp,1,2006
-1005,Coventry,Cergy-Pontoise,1,2022
-1115,Covilha,Aveiro,1,2020
-1116,Covilha,Evora,1,2020
-1300,Curitiba,Ponta Grossa,1,2023
-1301,Curitiba,Pato Branco,1,2023
-1315,Córdoba,Brighton,1,2018
-1316,Córdoba,Canberra,1,2018
-1317,Córdoba,Montreal,1,2018
-1318,Córdoba,Teresina,1,2018
-1319,Córdoba,Stockholm,1,2018
-1320,Córdoba,Saint Augustine,1,2018
-1321,Córdoba,Tokyo,1,2018
-1322,Córdoba,Bloomington,1,2018
+31,Copenhagen,Copenhagen,1,2022
+32,Copenhagen,Roskilde,1,2022
+230,Coral Gables,Baltimore,1,1986
+231,Coral Gables,Menlo Park,1,1986
+232,Coral Gables,Bodø,1,2011
+233,Coral Gables,Macao,1,2011
+228,Coral Gables,Bodø,1,2014
+229,Coral Gables,Macao,1,2014
+1007,Coventry,Antwerp,1,2006
+1006,Coventry,Cergy-Pontoise,1,2022
+1117,Covilha,Evora,1,2020
+1118,Covilha,Aveiro,1,2020
+1298,Curitiba,Pato Branco,1,2023
+1299,Curitiba,Ponta Grossa,1,2023
+1307,Córdoba,Montreal,1,2018
+1308,Córdoba,Bloomington,1,2018
+1309,Córdoba,Tokyo,1,2018
+1310,Córdoba,Teresina,1,2018
+1311,Córdoba,Stockholm,1,2018
+1312,Córdoba,Brighton,1,2018
+1313,Córdoba,Canberra,1,2018
+1314,Córdoba,Saint Augustine,1,2018
 1257,Davis,Berkeley,1,1992
 1256,Davis,Evanston,1,2012
-20,Dearborn,Ann Arbor,1,2013
-1141,Delhi,London,1,2018
-1142,Delhi,Cambridge,1,2018
-1143,Delhi,Exeter,1,2018
-1144,Delhi,Washington,1,2018
+21,Dearborn,Ann Arbor,1,2013
+1141,Delhi,Cambridge,1,2018
+1142,Delhi,Washington,1,2018
+1143,Delhi,London,1,2018
+1144,Delhi,Exeter,1,2018
 859,Denver,New Brunswick,1,2003
 855,Denver,Burlington,1,2005
-856,Denver,Knoxville,1,2020
+856,Denver,Washington,1,2020
 857,Denver,Philadelphia,1,2020
-858,Denver,Washington,1,2020
-66,Dire Dawa,Padua,1,2022
-1409,Dnipro,Lviv,1,2018
-1410,Dnipro,Cherkasy,1,2018
+858,Denver,Knoxville,1,2020
+67,Dire Dawa,Padua,1,2022
+1413,Dnipro,Lviv,1,2018
+1414,Dnipro,Cherkasy,1,2018
 1333,Doha,London,1,2021
 1332,Doha,La Verne,1,2024
 1294,Dortmund,Leipzig,1,2021
@@ -384,70 +384,70 @@
 360,Dublin,Norwich,1,2007
 361,Dublin,Glasgow,1,2022
 362,Dublin,Bath,1,2024
-1365,Duluth,Fort Worth,1,2021
-1366,Duluth,Auburn,1,2021
-1363,Duluth,Fort Worth,1,2023
-1364,Duluth,Auburn,1,2023
-1377,Durban,Durban,1,2022
-1378,Durban,Pretoria,1,2022
+1365,Duluth,Auburn,1,2021
+1366,Duluth,Fort Worth,1,2021
+1363,Duluth,Auburn,1,2023
+1364,Duluth,Fort Worth,1,2023
+1377,Durban,Pretoria,1,2022
+1378,Durban,Durban,1,2022
 662,Durham,Stony Brook,1,2012
-660,Durham,Tempe,1,2023
-661,Durham,Madrid,1,2023
+660,Durham,Madrid,1,2023
+661,Durham,Tempe,1,2023
 1160,East Lansing,Urbana,1,1998
-1158,East Lansing,Accra,1,2021
-1159,East Lansing,Chicago,1,2021
+1158,East Lansing,Chicago,1,2021
+1159,East Lansing,Accra,1,2021
 277,Edinburgh,Stockholm,1,2018
 278,Edinburgh,Glasgow,1,2018
 279,Edinburgh,Glenrothes,1,2021
 280,Edinburgh,Edinburgh,1,2021
 270,Edinburgh,Prince George,1,2023
-271,Edinburgh,Amsterdam,1,2023
-272,Edinburgh,Wageningen,1,2023
-273,Edinburgh,Edinburgh,1,2023
-274,Edinburgh,Brisbane,1,2023
-275,Edinburgh,Oxford,1,2023
-276,Edinburgh,Sheffield,1,2023
-397,Edmonton,Edmonton,1,2009
-398,Edmonton,Toronto,1,2009
-399,Edmonton,Vancouver,1,2009
-403,Edmonton,Talence,1,2012
-404,Edmonton,Villejuif,1,2012
-400,Edmonton,Edmonton,1,2017
-401,Edmonton,London,1,2017
-402,Edmonton,Lethbridge,1,2017
-396,Edmonton,London,1,2021
-1383,Erding,Magdeburg,1,2024
-1384,Erding,Vallendar,1,2024
-1385,Erding,Leipzig,1,2024
-1386,Erding,Berlin,1,2024
-1103,Erlangen,Nuremberg,1,2013
-1104,Erlangen,Konstanz,1,2013
+271,Edinburgh,Sheffield,1,2023
+272,Edinburgh,Amsterdam,1,2023
+273,Edinburgh,Brisbane,1,2023
+274,Edinburgh,Edinburgh,1,2023
+275,Edinburgh,Wageningen,1,2023
+276,Edinburgh,Oxford,1,2023
+446,Edmonton,Edmonton,1,2009
+447,Edmonton,Vancouver,1,2009
+448,Edmonton,Toronto,1,2009
+452,Edmonton,Villejuif,1,2012
+453,Edmonton,Talence,1,2012
+449,Edmonton,Edmonton,1,2017
+450,Edmonton,London,1,2017
+451,Edmonton,Lethbridge,1,2017
+445,Edmonton,London,1,2021
+1379,Erding,Leipzig,1,2024
+1380,Erding,Magdeburg,1,2024
+1381,Erding,Vallendar,1,2024
+1382,Erding,Berlin,1,2024
+1103,Erlangen,Konstanz,1,2013
+1104,Erlangen,Nuremberg,1,2013
 1249,Esch-sur-Alzette,Turin,2,2018
-1337,Espoo,Reykjavik,1,2020
-1338,Espoo,Espoo,1,2020
+1339,Espoo,Reykjavik,1,2020
+1340,Espoo,Espoo,1,2020
 638,Evanston,Davis,1,2012
 637,Evanston,Berkeley,1,2019
-1117,Evora,Aveiro,1,2020
-1118,Evora,Covilha,1,2020
-627,Exeter,Delhi,1,2018
-628,Exeter,Cambridge,1,2018
-629,Exeter,Washington,1,2018
-630,Exeter,London,1,2018
+1115,Evora,Aveiro,1,2020
+1116,Evora,Covilha,1,2020
+627,Exeter,Cambridge,1,2018
+628,Exeter,Washington,1,2018
+629,Exeter,London,1,2018
+630,Exeter,Delhi,1,2018
 624,Exeter,Exeter,1,2021
 625,Exeter,Cardiff,1,2021
 626,Exeter,Kongsberg,1,2021
-927,Fairfax,Lubbock,1,2012
-928,Fairfax,Skopje,1,2013
+926,Fairfax,Lubbock,1,2012
+927,Fairfax,Skopje,1,2013
 1210,Fitzroy,Melbourne,1,2005
 1211,Fitzroy,London,1,2005
 1209,Fitzroy,Melbourne,1,2019
-13,Florence,Warsaw,1,2022
 14,Florence,Bratislava,1,2022
-15,Florence,Tübingen,1,2022
-1369,Fort Worth,Auburn,1,2021
-1370,Fort Worth,Duluth,1,2021
-1367,Fort Worth,Auburn,1,2023
-1368,Fort Worth,Duluth,1,2023
+15,Florence,Warsaw,1,2022
+16,Florence,Tübingen,1,2022
+1369,Fort Worth,Duluth,1,2021
+1370,Fort Worth,Auburn,1,2021
+1367,Fort Worth,Duluth,1,2023
+1368,Fort Worth,Auburn,1,2023
 1217,Frankfurt (Oder),Berlin,1,2015
 1416,Frankfurt am Main,Berlin,1,2002
 1417,Frankfurt am Main,Toronto,1,2018
@@ -458,49 +458,49 @@
 896,Freiburg im Breisgau,Valdivia,2,2023
 897,Freiburg im Breisgau,Bath,1,2023
 1259,Galway,Turin,1,2010
-1419,Gatineau,Le Havre,1,2012
-73,Geneva,Copenhagen,1,2008
-74,Geneva,Bath,1,2008
+1418,Gatineau,Le Havre,1,2012
+73,Geneva,Bath,1,2008
+74,Geneva,Copenhagen,1,2008
 72,Geneva,Manchester,1,2018
-68,Geneva,Geneva,1,2021
-69,Geneva,Maynooth,1,2021
+68,Geneva,Maynooth,1,2021
+69,Geneva,Geneva,1,2021
 70,Geneva,Santiago,1,2023
 71,Geneva,Geneva,1,2023
-1026,Ghent,Leuven,1,2004
-1022,Ghent,Liège,1,2016
-1023,Ghent,Namur,1,2016
-1024,Ghent,Brussels,1,2016
-1025,Ghent,Louvain-la-Neuve,1,2016
-1027,Ghent,Liège,1,2022
-1028,Ghent,Namur,1,2022
-1029,Ghent,Brussels,1,2022
-1030,Ghent,Louvain-la-Neuve,1,2022
+1039,Ghent,Leuven,1,2004
+1035,Ghent,Louvain-la-Neuve,1,2016
+1036,Ghent,Liège,1,2016
+1037,Ghent,Brussels,1,2016
+1038,Ghent,Namur,1,2016
+1040,Ghent,Louvain-la-Neuve,1,2022
+1041,Ghent,Liège,1,2022
+1042,Ghent,Brussels,1,2022
+1043,Ghent,Namur,1,2022
 1429,Girona,Barcelona,1,2023
 201,Glasgow,Berkeley,1,2016
 199,Glasgow,Glasgow,1,2018
 200,Glasgow,Edinburgh,1,2018
-195,Glasgow,Livingston,1,2020
-196,Glasgow,Glasgow,1,2020
-197,Glasgow,Manchester,1,2021
-198,Glasgow,Glasgow,1,2021
+195,Glasgow,Glasgow,1,2020
+196,Glasgow,Livingston,1,2020
+197,Glasgow,Glasgow,1,2021
+198,Glasgow,Manchester,1,2021
 186,Glasgow,Perth,1,2022
 187,Glasgow,Ottawa,1,2022
 188,Glasgow,Dublin,1,2022
 189,Glasgow,Glasgow,3,2023
 190,Glasgow,Colchester,2,2023
 191,Glasgow,Manchester,1,2023
-192,Glasgow,Manchester,1,2024
-193,Glasgow,Glasgow,2,2024
+192,Glasgow,Glasgow,2,2024
+193,Glasgow,Manchester,1,2024
 194,Glasgow,Colchester,1,2024
 1146,Glenrothes,Edinburgh,1,2021
-1396,Gongju,Seoul,1,2024
-1397,Gongju,Vaxjo,1,2024
+1398,Gongju,Vaxjo,1,2024
+1399,Gongju,Seoul,1,2024
 1427,Gothenburg,Lund,1,2023
 1051,Great Barrington,Warsaw,1,2021
 1052,Great Barrington,Warsaw,4,2022
-1403,Greensboro,Boone,1,2023
-1404,Greensboro,St Louis,1,2023
-1405,Greensboro,Urbana,1,2023
+1403,Greensboro,St Louis,1,2023
+1404,Greensboro,Urbana,1,2023
+1405,Greensboro,Boone,1,2023
 513,Grenoble,Grenoble,1,2019
 514,Grenoble,Saint-Martin-d'Hères,1,2019
 1133,Hamburg,Augsburg,1,2018
@@ -511,75 +511,75 @@
 519,Hamilton,Toronto,1,2020
 515,Hamilton,Toronto,2,2021
 518,Hamilton,Princeton,1,2022
-1084,Harrisonburg,Milwaukee,1,2020
-1085,Harrisonburg,Saint Charles,1,2020
-1086,Harrisonburg,Sheboygan,1,2020
+1081,Harrisonburg,Sheboygan,1,2020
+1082,Harrisonburg,Saint Charles,1,2020
+1083,Harrisonburg,Milwaukee,1,2020
 1448,Hatfield,Los Angeles,1,2019
 1449,Hatfield,Seoul,1,2019
 977,Heidelberg,London,1,2020
-243,Helsinki,Siuntio,1,2014
-259,Helsinki,Tampere,1,2017
-260,Helsinki,Helsinki,1,2017
-261,Helsinki,Ithaca,1,2017
-247,Helsinki,Sydney,1,2018
-248,Helsinki,Tampere,2,2019
-249,Helsinki,Bath,1,2019
-250,Helsinki,Helsinki,1,2020
-251,Helsinki,Paris,1,2020
-252,Helsinki,Kiel,1,2020
-253,Helsinki,Barcelona,1,2020
-254,Helsinki,Bath,1,2020
-255,Helsinki,Stellenbosch,1,2021
-256,Helsinki,Amherst Center,1,2021
-257,Helsinki,Pretoria,1,2021
-258,Helsinki,Johannesburg,1,2021
-262,Helsinki,Barcelona,1,2022
-263,Helsinki,Oxford,1,2022
-264,Helsinki,Turku,1,2022
-265,Helsinki,Munich,1,2022
-244,Helsinki,Tampere,1,2023
-245,Helsinki,Freiburg im Breisgau,1,2023
-246,Helsinki,Turku,1,2023
-1445,Hermosillo,San Nicolás de los Garza,1,2022
-1446,Hermosillo,Hermosillo,1,2022
-694,Herzliya,Tel Aviv,1,2022
-695,Herzliya,London,1,2022
-696,Herzliya,Zurich,1,2022
+247,Helsinki,Siuntio,1,2014
+263,Helsinki,Ithaca,1,2017
+264,Helsinki,Tampere,1,2017
+265,Helsinki,Helsinki,1,2017
+251,Helsinki,Sydney,1,2018
+252,Helsinki,Tampere,2,2019
+253,Helsinki,Bath,1,2019
+254,Helsinki,Paris,1,2020
+255,Helsinki,Helsinki,1,2020
+256,Helsinki,Kiel,1,2020
+257,Helsinki,Barcelona,1,2020
+258,Helsinki,Bath,1,2020
+259,Helsinki,Amherst Center,1,2021
+260,Helsinki,Pretoria,1,2021
+261,Helsinki,Stellenbosch,1,2021
+262,Helsinki,Johannesburg,1,2021
+266,Helsinki,Barcelona,1,2022
+267,Helsinki,Oxford,1,2022
+268,Helsinki,Munich,1,2022
+269,Helsinki,Turku,1,2022
+248,Helsinki,Freiburg im Breisgau,1,2023
+249,Helsinki,Tampere,1,2023
+250,Helsinki,Turku,1,2023
+1444,Hermosillo,San Nicolás de los Garza,1,2022
+1445,Hermosillo,Hermosillo,1,2022
+700,Herzliya,Zurich,1,2022
+701,Herzliya,London,1,2022
+702,Herzliya,Tel Aviv,1,2022
 752,Hong Kong,Boston,1,1995
 751,Hong Kong,Seoul,1,2006
 753,Hong Kong,Madrid,1,2015
 1215,Houston,Azusa,1,2020
-1280,Innsbruck,Innsbruck,1,2012
-1281,Innsbruck,Vienna,1,2012
-1282,Innsbruck,Linz,1,2012
-924,Irkutsk,Irkutsk,1,2023
-925,Irkutsk,Shillong,1,2023
+1283,Innsbruck,Vienna,1,2012
+1284,Innsbruck,Innsbruck,1,2012
+1285,Innsbruck,Linz,1,2012
+924,Irkutsk,Shillong,1,2023
+925,Irkutsk,Irkutsk,1,2023
 1358,Irvine,Washington,1,2024
-1353,Istanbul,Panderma,1,2020
-951,Ithaca,Jyvaskyla,1,1998
-952,Ithaca,Tampere,1,1998
-953,Ithaca,London,1,1998
-954,Ithaca,Paris,1,2005
-955,Ithaca,Washington,1,2005
+1352,Istanbul,Panderma,1,2020
+951,Ithaca,Tampere,1,1998
+952,Ithaca,London,1,1998
+953,Ithaca,Jyvaskyla,1,1998
+954,Ithaca,Washington,1,2005
+955,Ithaca,Paris,1,2005
 956,Ithaca,Tampere,1,2017
 957,Ithaca,Helsinki,1,2017
 1102,Jaffna,Toronto,1,2023
 1171,Jena,Lund,1,2022
-1234,Johannesburg,Amherst Center,1,2021
-1235,Johannesburg,Pretoria,1,2021
-1236,Johannesburg,Stellenbosch,1,2021
-1237,Johannesburg,Helsinki,1,2021
+1245,Johannesburg,Amherst Center,1,2021
+1246,Johannesburg,Pretoria,1,2021
+1247,Johannesburg,Helsinki,1,2021
+1248,Johannesburg,Stellenbosch,1,2021
 766,Jyvaskyla,Tampere,1,1998
-767,Jyvaskyla,London,1,1998
-768,Jyvaskyla,Ithaca,1,1998
+767,Jyvaskyla,Ithaca,1,1998
+768,Jyvaskyla,London,1,1998
 765,Jyvaskyla,Tampere,1,2018
 1255,Kansas City,New York,1,2005
 1430,Kenilworth,Pisa,1,2019
 1431,Kenilworth,Lille,1,2019
-1203,Kiel,Wiesbaden,1,2014
-1204,Kiel,Speyer,1,2014
+1203,Kiel,Koblenz,1,2014
+1204,Kiel,Wiesbaden,1,2014
 1205,Kiel,Berlin,1,2014
-1206,Kiel,Koblenz,1,2014
+1206,Kiel,Speyer,1,2014
 1202,Kiel,Helsinki,1,2020
 848,Kingston,Hamilton,1,2018
 849,Kingston,Toronto,2,2018
@@ -588,19 +588,19 @@
 852,Kingston,Winnipeg,1,2024
 853,Kingston,Kingston,1,2024
 854,Kingston,Victoria,1,2024
-1127,Klagenfurt,Warsaw,1,2011
-1128,Klagenfurt,Bonn,1,2011
-1125,Klagenfurt,Vienna,1,2012
-1126,Klagenfurt,Warsaw,1,2012
-980,Knoxville,Washington,1,2020
-981,Knoxville,Philadelphia,1,2020
-982,Knoxville,Denver,1,2020
-1269,Koblenz,Speyer,1,2014
-1270,Koblenz,Kiel,1,2014
-1271,Koblenz,Berlin,1,2014
-1272,Koblenz,Wiesbaden,1,2014
-631,Kongsberg,Cardiff,1,2021
-632,Kongsberg,Exeter,1,2021
+1131,Klagenfurt,Warsaw,1,2011
+1132,Klagenfurt,Bonn,1,2011
+1129,Klagenfurt,Vienna,1,2012
+1130,Klagenfurt,Warsaw,1,2012
+988,Knoxville,Washington,1,2020
+989,Knoxville,Philadelphia,1,2020
+990,Knoxville,Denver,1,2020
+1273,Koblenz,Kiel,1,2014
+1274,Koblenz,Wiesbaden,1,2014
+1275,Koblenz,Berlin,1,2014
+1276,Koblenz,Speyer,1,2014
+631,Kongsberg,Exeter,1,2021
+632,Kongsberg,Cardiff,1,2021
 533,Konstanz,Nuremberg,1,2013
 534,Konstanz,Erlangen,1,2013
 532,Konstanz,Munich,2,2014
@@ -608,184 +608,184 @@
 1201,Koper,Celje,1,2022
 996,Kuwait City,Orlando,1,1986
 1199,Kyoto,Tsukuba,1,2018
-1195,Kyoto,London,1,2019
-1196,Kyoto,Shanghai,1,2019
+1195,Kyoto,Shanghai,1,2019
+1196,Kyoto,London,1,2019
 1197,Kyoto,Putrajaya,1,2023
 1198,Kyoto,Shanghai,1,2023
-846,La Plata,Washington D.C.,1,2012
-847,La Plata,La Plata,1,2012
+846,La Plata,La Plata,1,2012
+847,La Plata,Washington D.C.,1,2012
 1331,La Verne,Doha,1,2024
-311,Lancaster,Cambridge,1,2021
+311,Lancaster,Newcastle upon Tyne,1,2021
 312,Lancaster,Lancaster,1,2021
-313,Lancaster,Newcastle upon Tyne,1,2021
+313,Lancaster,Cambridge,1,2021
 314,Lancaster,Salisbury,1,2021
 315,Lancaster,Towson,1,2021
 316,Lancaster,London,1,2022
-389,Lausanne,Marseille,1,2023
-1418,Le Havre,Gatineau,1,2012
+379,Lausanne,Marseille,1,2023
+1419,Le Havre,Gatineau,1,2012
 1148,Leeds,Lund,1,2019
 1147,Leeds,Bath,1,2022
-560,Leicester,Mannheim,1,2012
-561,Leicester,Potsdam,1,2012
-562,Leicester,Calgary,1,2012
-558,Leicester,San Diego,1,2021
-559,Leicester,New York,1,2021
+552,Leicester,Mannheim,1,2012
+553,Leicester,Potsdam,1,2012
+554,Leicester,Calgary,1,2012
+550,Leicester,New York,1,2021
+551,Leicester,San Diego,1,2021
 1344,Leiden,Bergen,1,2017
 1345,Leiden,Rotterdam,1,2017
 944,Leipzig,Tokyo,1,2017
 945,Leipzig,Dortmund,1,2021
-946,Leipzig,Vallendar,1,2024
-947,Leipzig,Leipzig,1,2024
-948,Leipzig,Erding,1,2024
-949,Leipzig,Berlin,1,2024
-950,Leipzig,Magdeburg,1,2024
+946,Leipzig,Magdeburg,1,2024
+947,Leipzig,Vallendar,1,2024
+948,Leipzig,Berlin,1,2024
+949,Leipzig,Leipzig,1,2024
+950,Leipzig,Erding,1,2024
 1289,Lethbridge,Calgary,1,2016
-1286,Lethbridge,Edmonton,1,2017
-1287,Lethbridge,London,1,2017
-1288,Lethbridge,Lethbridge,1,2017
-468,Leuven,Ghent,1,2004
-460,Leuven,Amsterdam,1,2013
-461,Leuven,Antwerp,1,2013
-465,Leuven,Tilburg,1,2019
-462,Leuven,Leuven,2,2020
-463,Leuven,Tilburg,1,2020
-464,Leuven,Bath,1,2020
-466,Leuven,Leuven,1,2022
-467,Leuven,Tilburg,1,2022
-1184,León,Valladolid,1,2020
+1286,Lethbridge,London,1,2017
+1287,Lethbridge,Lethbridge,1,2017
+1288,Lethbridge,Edmonton,1,2017
+474,Leuven,Ghent,1,2004
+466,Leuven,Antwerp,1,2013
+467,Leuven,Amsterdam,1,2013
+471,Leuven,Tilburg,1,2019
+468,Leuven,Tilburg,1,2020
+469,Leuven,Leuven,2,2020
+470,Leuven,Bath,1,2020
+472,Leuven,Tilburg,1,2022
+473,Leuven,Leuven,1,2022
+1186,León,Valladolid,1,2020
 1443,Lier,Louvain-la-Neuve,1,2007
-1232,Lille,Pisa,1,2019
-1233,Lille,Kenilworth,1,2019
-1230,Lille,Pisa,1,2020
-1231,Lille,West Point,1,2020
+1232,Lille,Kenilworth,1,2019
+1233,Lille,Pisa,1,2019
+1230,Lille,West Point,1,2020
+1231,Lille,Pisa,1,2020
 1049,Linköping,Waterloo,1,2020
-1283,Linz,Innsbruck,1,2012
-1284,Linz,Linz,1,2012
-1285,Linz,Vienna,1,2012
+1280,Linz,Innsbruck,1,2012
+1281,Linz,Linz,1,2012
+1282,Linz,Vienna,1,2012
 1261,Lisbon,Mainz,1,2018
 703,Lismore,Melbourne,1,2018
-101,Liverpool,York,2,2023
-102,Liverpool,Liverpool,1,2023
-103,Liverpool,Newcastle upon Tyne,2,2023
-104,Liverpool,Rotterdam,1,2023
-105,Liverpool,London,1,2023
+95,Liverpool,York,2,2023
+96,Liverpool,Liverpool,1,2023
+97,Liverpool,Newcastle upon Tyne,2,2023
+98,Liverpool,Rotterdam,1,2023
+99,Liverpool,London,1,2023
 1173,Livingston,Glasgow,1,2020
-1031,Liège,Liège,1,2016
-1032,Liège,Namur,1,2016
-1033,Liège,Brussels,1,2016
-1034,Liège,Ghent,1,2016
-1035,Liège,Louvain-la-Neuve,1,2016
-1036,Liège,Lund,1,2018
-1037,Liège,Louvain-la-Neuve,1,2018
-1038,Liège,Liège,1,2018
-1039,Liège,Liège,1,2022
-1040,Liège,Namur,1,2022
-1041,Liège,Brussels,1,2022
-1042,Liège,Ghent,1,2022
-1043,Liège,Louvain-la-Neuve,1,2022
+1022,Liège,Louvain-la-Neuve,1,2016
+1023,Liège,Ghent,1,2016
+1024,Liège,Liège,1,2016
+1025,Liège,Brussels,1,2016
+1026,Liège,Namur,1,2016
+1027,Liège,Louvain-la-Neuve,1,2018
+1028,Liège,Lund,1,2018
+1029,Liège,Liège,1,2018
+1030,Liège,Louvain-la-Neuve,1,2022
+1031,Liège,Ghent,1,2022
+1032,Liège,Liège,1,2022
+1033,Liège,Brussels,1,2022
+1034,Liège,Namur,1,2022
 1263,Ljubljana,Hamburg,1,2020
 1264,Ljubljana,Ljubljana,1,2020
-452,London,Philadelphia,1,1996
-422,London,Jyvaskyla,1,1998
-423,London,Tampere,1,1998
-424,London,Ithaca,1,1998
-427,London,Bonn,1,1999
-428,London,Newcastle-under-Lyme,1,1999
-443,London,Fitzroy,1,2005
-444,London,Melbourne,1,2005
-449,London,Cambridge,1,2010
-453,London,Morristown,1,2011
-450,London,London,1,2012
-451,London,Colchester,1,2012
-409,London,Munich,2,2015
-410,London,Rijeka,1,2015
-447,London,Lethbridge,1,2017
-448,London,Edmonton,1,2017
-438,London,Exeter,1,2018
-439,London,Washington,1,2018
-440,London,Delhi,1,2018
-441,London,Cambridge,1,2018
-442,London,Stanford,1,2018
-429,London,Louvain-la-Neuve,2,2019
-430,London,Cerdanyola del Vallès,1,2019
-431,London,Shanghai,1,2019
-432,London,Kyoto,1,2019
-433,London,Paris,1,2019
-434,London,Vancouver,1,2019
-435,London,San Diego,1,2019
-436,London,Baku,1,2019
-437,London,Freiburg im Breisgau,1,2019
-425,London,Heidelberg,1,2020
-426,London,California,1,2020
-405,London,Edmonton,1,2021
-406,London,Philadelphia,1,2021
-407,London,Canberra,1,2021
-408,London,Doha,1,2021
-411,London,Tel Aviv,1,2022
-412,London,Herzliya,1,2022
-413,London,Zurich,1,2022
-414,London,London,1,2022
-415,London,Lancaster,1,2022
-416,London,New York,1,2022
-417,London,Liverpool,1,2023
-418,London,York,1,2023
-419,London,Newcastle upon Tyne,1,2023
-420,London,Paris,1,2023
-421,London,Mannheim,1,2023
-445,London,Brighton,1,2024
-446,London,London,1,2024
-76,Los Angeles,Santa Monica,1,2018
-77,Los Angeles,Los Angeles,1,2018
-79,Los Angeles,Seoul,1,2019
+443,London,Philadelphia,1,1996
+413,London,Ithaca,1,1998
+414,London,Tampere,1,1998
+415,London,Jyvaskyla,1,1998
+418,London,Bonn,1,1999
+419,London,Newcastle-under-Lyme,1,1999
+434,London,Fitzroy,1,2005
+435,London,Melbourne,1,2005
+440,London,Cambridge,1,2010
+444,London,Morristown,1,2011
+441,London,Colchester,1,2012
+442,London,London,1,2012
+400,London,Munich,2,2015
+401,London,Rijeka,1,2015
+438,London,Lethbridge,1,2017
+439,London,Edmonton,1,2017
+429,London,Delhi,1,2018
+430,London,Exeter,1,2018
+431,London,Cambridge,1,2018
+432,London,Washington,1,2018
+433,London,Stanford,1,2018
+420,London,Louvain-la-Neuve,2,2019
+421,London,Cerdanyola del Vallès,1,2019
+422,London,Shanghai,1,2019
+423,London,Kyoto,1,2019
+424,London,Paris,1,2019
+425,London,Vancouver,1,2019
+426,London,San Diego,1,2019
+427,London,Baku,1,2019
+428,London,Freiburg im Breisgau,1,2019
+416,London,Heidelberg,1,2020
+417,London,California,1,2020
+396,London,Edmonton,1,2021
+397,London,Philadelphia,1,2021
+398,London,Canberra,1,2021
+399,London,Doha,1,2021
+402,London,Tel Aviv,1,2022
+403,London,Herzliya,1,2022
+404,London,Zurich,1,2022
+405,London,Lancaster,1,2022
+406,London,London,1,2022
+407,London,New York,1,2022
+408,London,Liverpool,1,2023
+409,London,Newcastle upon Tyne,1,2023
+410,London,York,1,2023
+411,London,Paris,1,2023
+412,London,Mannheim,1,2023
+436,London,Brighton,1,2024
+437,London,London,1,2024
+77,Los Angeles,Santa Monica,1,2018
+78,Los Angeles,Los Angeles,1,2018
 80,Los Angeles,Hatfield,1,2019
-78,Los Angeles,Winnipeg,1,2020
+81,Los Angeles,Seoul,1,2019
+79,Los Angeles,Winnipeg,1,2020
 803,Louvain-la-Neuve,Brussels,1,2001
 804,Louvain-la-Neuve,Lier,1,2007
-794,Louvain-la-Neuve,Liège,1,2016
-795,Louvain-la-Neuve,Namur,1,2016
+794,Louvain-la-Neuve,Ghent,1,2016
+795,Louvain-la-Neuve,Liège,1,2016
 796,Louvain-la-Neuve,Brussels,1,2016
-797,Louvain-la-Neuve,Ghent,1,2016
+797,Louvain-la-Neuve,Namur,1,2016
 800,Louvain-la-Neuve,Lund,1,2018
-801,Louvain-la-Neuve,Louvain-la-Neuve,1,2018
-802,Louvain-la-Neuve,Liège,1,2018
+801,Louvain-la-Neuve,Liège,1,2018
+802,Louvain-la-Neuve,Louvain-la-Neuve,1,2018
 798,Louvain-la-Neuve,London,2,2019
 799,Louvain-la-Neuve,Brussels,1,2021
 789,Louvain-la-Neuve,Bath,1,2022
-790,Louvain-la-Neuve,Liège,1,2022
-791,Louvain-la-Neuve,Namur,1,2022
+790,Louvain-la-Neuve,Ghent,1,2022
+791,Louvain-la-Neuve,Liège,1,2022
 792,Louvain-la-Neuve,Brussels,1,2022
-793,Louvain-la-Neuve,Ghent,1,2022
-926,Lubbock,Fairfax,1,2012
-24,Lund,Liège,1,2018
-25,Lund,Louvain-la-Neuve,1,2018
+793,Louvain-la-Neuve,Namur,1,2022
+928,Lubbock,Fairfax,1,2012
+24,Lund,Louvain-la-Neuve,1,2018
+25,Lund,Liège,1,2018
 22,Lund,Copenhagen,1,2019
 23,Lund,Leeds,1,2019
-26,Lund,Lund,1,2022
-27,Lund,Jena,1,2022
+26,Lund,Jena,1,2022
+27,Lund,Lund,1,2022
 28,Lund,Gothenburg,1,2023
-1413,Lviv,Cherkasy,1,2018
-1414,Lviv,Dnipro,1,2018
+1409,Lviv,Cherkasy,1,2018
+1410,Lviv,Dnipro,1,2018
 1119,Maastricht,Carlow,1,2015
 1120,Maastricht,Vechta,1,2017
 1121,Maastricht,Brussels,1,2020
-230,Macao,Coral Gables,1,2011
-231,Macao,Bodø,1,2011
-228,Macao,Coral Gables,1,2014
-229,Macao,Bodø,1,2014
+236,Macao,Bodø,1,2011
+237,Macao,Coral Gables,1,2011
+234,Macao,Bodø,1,2014
+235,Macao,Coral Gables,1,2014
 976,Madison,Vancouver,1,1978
 655,Madrid,Palma,1,2007
 656,Madrid,Madrid,1,2007
 657,Madrid,Hong Kong,1,2015
-651,Madrid,Ciudad Real,1,2019
-652,Madrid,Asunción,1,2019
+651,Madrid,Asunción,1,2019
+652,Madrid,Ciudad Real,1,2019
 653,Madrid,Palma,1,2020
 654,Madrid,Madrid,1,2020
-649,Madrid,Durham,1,2023
-650,Madrid,Tempe,1,2023
-1379,Magdeburg,Vallendar,1,2024
-1380,Magdeburg,Leipzig,1,2024
-1381,Magdeburg,Erding,1,2024
-1382,Magdeburg,Berlin,1,2024
+649,Madrid,Tempe,1,2023
+650,Madrid,Durham,1,2023
+1387,Magdeburg,Vallendar,1,2024
+1388,Magdeburg,Berlin,1,2024
+1389,Magdeburg,Leipzig,1,2024
+1390,Magdeburg,Erding,1,2024
 1260,Mainz,Lisbon,1,2018
 900,Malden,Cambridge,1,2010
 901,Malden,Berkeley,1,2010
@@ -797,45 +797,45 @@
 1065,Manchester,Glasgow,1,2024
 64,Mannheim,Pforzheim,1,2006
 59,Mannheim,Munich,1,2007
-57,Mannheim,Siegen,1,2010
-58,Mannheim,Mannheim,1,2010
+57,Mannheim,Mannheim,1,2010
+58,Mannheim,Siegen,1,2010
 60,Mannheim,Potsdam,1,2012
 61,Mannheim,Leicester,1,2012
 62,Mannheim,Berlin,1,2015
 63,Mannheim,London,1,2023
-381,Marseille,Calgary,1,2008
-382,Marseille,Bonn,1,2013
-385,Marseille,Montreal,2,2014
-386,Marseille,St Louis,2,2014
-387,Marseille,Montreal,1,2017
-388,Marseille,St Louis,1,2017
-383,Marseille,Nanterre,1,2021
-384,Marseille,Clermont-Ferrand,1,2021
-379,Marseille,Lausanne,1,2023
+382,Marseille,Calgary,1,2008
+383,Marseille,Bonn,1,2013
+386,Marseille,Montreal,2,2014
+387,Marseille,St Louis,2,2014
+388,Marseille,Montreal,1,2017
+389,Marseille,St Louis,1,2017
+384,Marseille,Nanterre,1,2021
+385,Marseille,Clermont-Ferrand,1,2021
 380,Marseille,Marseille,1,2023
+381,Marseille,Lausanne,1,2023
 75,Maynooth,Geneva,1,2021
-291,Melbourne,Sydney,1,1987
-292,Melbourne,Waltham,1,1987
+291,Melbourne,Waltham,1,1987
+292,Melbourne,Sydney,1,1987
 282,Melbourne,Canberra,1,1998
 283,Melbourne,Melbourne,1,1998
-293,Melbourne,London,1,2005
-294,Melbourne,Fitzroy,1,2005
+293,Melbourne,Fitzroy,1,2005
+294,Melbourne,London,1,2005
 295,Melbourne,Burwood,1,2017
-284,Melbourne,Melbourne,1,2018
-285,Melbourne,Lismore,1,2018
+284,Melbourne,Lismore,1,2018
+285,Melbourne,Melbourne,1,2018
 286,Melbourne,Baltimore,1,2018
 287,Melbourne,Oxford,1,2019
-288,Melbourne,Melbourne,2,2019
-289,Melbourne,Brisbane,1,2019
+288,Melbourne,Brisbane,1,2019
+289,Melbourne,Melbourne,2,2019
 290,Melbourne,Fitzroy,1,2019
 296,Melbourne,Sydney,1,2023
 1407,Menlo Park,Washington D.C.,1,1981
 1406,Menlo Park,Coral Gables,1,1986
 1207,Milton Keynes,Bristol,1,2019
 1208,Milton Keynes,Cardiff,1,2023
-1078,Milwaukee,Sheboygan,1,2020
-1079,Milwaukee,Saint Charles,1,2020
-1080,Milwaukee,Harrisonburg,1,2020
+1084,Milwaukee,Saint Charles,1,2020
+1085,Milwaukee,Sheboygan,1,2020
+1086,Milwaukee,Harrisonburg,1,2020
 1402,Minneapolis,Tokyo,1,1997
 1279,Modena,Bologna,1,2002
 918,Moncalieri,Oslo,1,2010
@@ -843,66 +843,66 @@
 587,Montreal,Norwich,1,2004
 569,Montreal,Sheffield,2,2012
 570,Montreal,Québec,1,2013
-571,Montreal,Marseille,2,2014
-572,Montreal,St Louis,3,2014
+571,Montreal,St Louis,3,2014
+572,Montreal,Marseille,2,2014
 573,Montreal,Villejuif,1,2014
 588,Montreal,Barcelona,1,2015
-574,Montreal,Marseille,1,2017
-575,Montreal,St Louis,1,2017
-576,Montreal,Córdoba,1,2018
-577,Montreal,Brighton,1,2018
-578,Montreal,Canberra,1,2018
-579,Montreal,Teresina,1,2018
-580,Montreal,Stockholm,1,2018
+574,Montreal,St Louis,1,2017
+575,Montreal,Marseille,1,2017
+576,Montreal,Tokyo,1,2018
+577,Montreal,Teresina,1,2018
+578,Montreal,Stockholm,1,2018
+579,Montreal,Brighton,1,2018
+580,Montreal,Canberra,1,2018
 581,Montreal,Saint Augustine,1,2018
-582,Montreal,Tokyo,1,2018
-583,Montreal,Bloomington,1,2018
+582,Montreal,Bloomington,1,2018
+583,Montreal,Córdoba,1,2018
 584,Montreal,Rio de Janeiro,1,2018
 585,Montreal,Winnipeg,1,2018
 586,Montreal,Accra,1,2022
 1447,Morristown,London,1,2011
-475,Moscow,Washington D.C.,1,2016
-476,Moscow,Moscow,1,2016
-477,Moscow,Moscow,1,2021
-478,Moscow,Freiburg im Breisgau,1,2021
-919,Mountain View,Newcastle upon Tyne,1,2023
-920,Mountain View,Paris,1,2023
-921,Mountain View,Mountain View,1,2023
+475,Moscow,Moscow,1,2016
+476,Moscow,Washington D.C.,1,2016
+477,Moscow,Freiburg im Breisgau,1,2021
+478,Moscow,Moscow,1,2021
+919,Mountain View,Mountain View,1,2023
+920,Mountain View,Newcastle upon Tyne,1,2023
+921,Mountain View,Paris,1,2023
 1357,Mumbai,Norwich,1,2021
-176,Munich,Sofia,1,2006
-177,Munich,Bonn,1,2006
-175,Munich,Mannheim,1,2007
-173,Munich,Munich,1,2011
-174,Munich,Nuremberg,1,2011
-170,Munich,Tel Aviv,1,2012
-172,Munich,Konstanz,2,2014
-171,Munich,London,2,2015
-178,Munich,Turku,1,2022
-179,Munich,Helsinki,1,2022
+169,Munich,Sofia,1,2006
+170,Munich,Bonn,1,2006
+168,Munich,Mannheim,1,2007
+166,Munich,Nuremberg,1,2011
+167,Munich,Munich,1,2011
+163,Munich,Tel Aviv,1,2012
+165,Munich,Konstanz,2,2014
+164,Munich,London,2,2015
+171,Munich,Helsinki,1,2022
+172,Munich,Turku,1,2022
 1262,Nagaoka,Tokyo,2,2023
-1013,Namur,Liège,1,2016
-1014,Namur,Brussels,1,2016
-1015,Namur,Ghent,1,2016
+1013,Namur,Ghent,1,2016
+1014,Namur,Liège,1,2016
+1015,Namur,Brussels,1,2016
 1016,Namur,Louvain-la-Neuve,1,2016
-1017,Namur,Liège,1,2022
-1018,Namur,Namur,1,2022
+1017,Namur,Ghent,1,2022
+1018,Namur,Liège,1,2022
 1019,Namur,Brussels,1,2022
-1020,Namur,Ghent,1,2022
+1020,Namur,Namur,1,2022
 1021,Namur,Louvain-la-Neuve,1,2022
 958,Nanterre,Clermont-Ferrand,1,2021
 959,Nanterre,Marseille,1,2021
-861,Nashville,Albany,1,2021
+865,Nashville,Albany,1,2021
 1145,New Brunswick,Denver,1,2003
-688,New Delhi,Oxford,1,2012
-689,New Delhi,Santiago,1,2012
-690,New Delhi,Tokyo,1,2021
+670,New Delhi,Santiago,1,2012
+671,New Delhi,Oxford,1,2012
+672,New Delhi,Tokyo,1,2021
 915,New Haven,Cambridge,1,2013
 916,New Haven,New Orleans,1,2022
-1112,New Orleans,New Haven,1,2022
+1109,New Orleans,New Haven,1,2022
+1105,New Orleans,Beijing,1,2023
+1106,New Orleans,Washington,1,2023
+1107,New Orleans,New Orleans,1,2023
 1108,New Orleans,Akron,1,2023
-1109,New Orleans,Washington,1,2023
-1110,New Orleans,Beijing,1,2023
-1111,New Orleans,New Orleans,1,2023
 134,New York,Kansas City,1,2005
 125,New York,St Louis,1,2009
 131,New York,Williamstown,1,2012
@@ -913,22 +913,22 @@
 126,New York,Antwerp,2,2019
 129,New York,Princeton,1,2020
 130,New York,Cambridge,2,2020
-127,New York,Leicester,1,2021
-128,New York,San Diego,1,2021
-135,New York,New York,1,2022
-136,New York,London,1,2022
+127,New York,San Diego,1,2021
+128,New York,Leicester,1,2021
+135,New York,London,1,2022
+136,New York,New York,1,2022
 137,New York,San Diego,1,2023
-121,Newcastle upon Tyne,Lancaster,1,2021
-122,Newcastle upon Tyne,Cambridge,1,2021
-123,Newcastle upon Tyne,Paris,1,2022
-124,Newcastle upon Tyne,Newcastle upon Tyne,1,2022
-114,Newcastle upon Tyne,Newcastle upon Tyne,3,2023
-115,Newcastle upon Tyne,Rotterdam,1,2023
+121,Newcastle upon Tyne,Cambridge,1,2021
+122,Newcastle upon Tyne,Lancaster,1,2021
+123,Newcastle upon Tyne,Newcastle upon Tyne,1,2022
+124,Newcastle upon Tyne,Paris,1,2022
+114,Newcastle upon Tyne,Rotterdam,1,2023
+115,Newcastle upon Tyne,Liverpool,2,2023
 116,Newcastle upon Tyne,York,3,2023
-117,Newcastle upon Tyne,Liverpool,2,2023
+117,Newcastle upon Tyne,Newcastle upon Tyne,3,2023
 118,Newcastle upon Tyne,London,1,2023
-119,Newcastle upon Tyne,Paris,1,2023
-120,Newcastle upon Tyne,Mountain View,1,2023
+119,Newcastle upon Tyne,Mountain View,1,2023
+120,Newcastle upon Tyne,Paris,1,2023
 1408,Newcastle-under-Lyme,London,1,1999
 1152,Norman,Norman,1,2018
 1153,Norman,Tallahassee,1,2018
@@ -939,54 +939,54 @@
 355,Norwich,Norwich,1,2021
 356,Norwich,Mumbai,1,2021
 1070,Nottingham,Washington,2,2003
-811,Nuremberg,Berlin,1,2008
-812,Nuremberg,Bonn,1,2008
-810,Nuremberg,Munich,1,2011
-807,Nuremberg,Nuremberg,1,2013
-808,Nuremberg,Erlangen,1,2013
-809,Nuremberg,Konstanz,1,2013
-805,Nuremberg,Nuremberg,1,2017
-806,Nuremberg,Berlin,1,2017
+831,Nuremberg,Berlin,1,2008
+832,Nuremberg,Bonn,1,2008
+830,Nuremberg,Munich,1,2011
+827,Nuremberg,Konstanz,1,2013
+828,Nuremberg,Nuremberg,1,2013
+829,Nuremberg,Erlangen,1,2013
+825,Nuremberg,Nuremberg,1,2017
+826,Nuremberg,Berlin,1,2017
 1426,Oakland,Siuntio,1,2017
 1292,Odense,Oxford,1,2013
 995,Orlando,Kuwait City,1,1986
 1334,Osaka,Seoul,1,2023
 540,Oshawa,Toronto,1,2018
-458,Oslo,Turin,1,1999
-459,Oslo,Oslo,1,1999
+458,Oslo,Oslo,1,1999
+459,Oslo,Turin,1,1999
 455,Oslo,Turin,1,2004
 456,Oslo,Moncalieri,1,2010
 454,Oslo,Turin,1,2013
 457,Oslo,Beijing,1,2018
-183,Ottawa,Riga,1,2021
-180,Ottawa,Perth,1,2022
-181,Ottawa,Ottawa,1,2022
-182,Ottawa,Glasgow,1,2022
-679,Oxford,Stony Brook,1,2005
-680,Oxford,West Long Branch,1,2005
-670,Oxford,New Delhi,1,2012
-671,Oxford,Santiago,1,2012
-676,Oxford,Odense,1,2013
-681,Oxford,Bath,1,2016
-674,Oxford,Melbourne,1,2019
-675,Oxford,York,1,2019
-672,Oxford,Zurich,1,2020
-673,Oxford,Berlin,1,2020
-677,Oxford,Barcelona,1,2022
-678,Oxford,Helsinki,1,2022
-682,Oxford,Amsterdam,1,2023
-683,Oxford,Wageningen,1,2023
-684,Oxford,Edinburgh,1,2023
-685,Oxford,Brisbane,1,2023
-686,Oxford,Oxford,1,2023
-687,Oxford,Sheffield,1,2023
-67,Padua,Dire Dawa,1,2022
+185,Ottawa,Riga,1,2021
+182,Ottawa,Perth,1,2022
+183,Ottawa,Glasgow,1,2022
+184,Ottawa,Ottawa,1,2022
+682,Oxford,West Long Branch,1,2005
+683,Oxford,Stony Brook,1,2005
+673,Oxford,New Delhi,1,2012
+674,Oxford,Santiago,1,2012
+679,Oxford,Odense,1,2013
+684,Oxford,Bath,1,2016
+677,Oxford,Melbourne,1,2019
+678,Oxford,York,1,2019
+675,Oxford,Zurich,1,2020
+676,Oxford,Berlin,1,2020
+680,Oxford,Barcelona,1,2022
+681,Oxford,Helsinki,1,2022
+685,Oxford,Sheffield,1,2023
+686,Oxford,Wageningen,1,2023
+687,Oxford,Oxford,1,2023
+688,Oxford,Amsterdam,1,2023
+689,Oxford,Brisbane,1,2023
+690,Oxford,Edinburgh,1,2023
+66,Padua,Dire Dawa,1,2022
 691,Palaiseau,Paris,1,2007
 693,Palma,Madrid,1,2007
 692,Palma,Madrid,1,2020
-1352,Panderma,Istanbul,1,2020
-373,Paris,Washington,1,2005
-374,Paris,Ithaca,1,2005
+1353,Panderma,Istanbul,1,2020
+373,Paris,Ithaca,1,2005
+374,Paris,Washington,1,2005
 364,Paris,Palaiseau,1,2007
 363,Paris,Cambridge,1,2010
 371,Paris,Cardiff,1,2013
@@ -999,152 +999,152 @@
 370,Paris,Bonn,1,2020
 378,Paris,Newcastle upon Tyne,1,2022
 365,Paris,London,1,2023
-366,Paris,Newcastle upon Tyne,1,2023
-367,Paris,Mountain View,1,2023
-1298,Pato Branco,Curitiba,1,2023
-1299,Pato Branco,Ponta Grossa,1,2023
-1372,Pavia,Bergamo,1,2008
-184,Perth,Ottawa,1,2022
-185,Perth,Glasgow,1,2022
+366,Paris,Mountain View,1,2023
+367,Paris,Newcastle upon Tyne,1,2023
+1300,Pato Branco,Curitiba,1,2023
+1301,Pato Branco,Ponta Grossa,1,2023
+1371,Pavia,Bergamo,1,2008
+180,Perth,Ottawa,1,2022
+181,Perth,Glasgow,1,2022
 1250,Peterborough,Winnipeg,1,1992
 1251,Peterborough,Winnipeg,1,1995
 1428,Pforzheim,Mannheim,1,2006
-990,Philadelphia,Tel Aviv,1,1987
-988,Philadelphia,Philadelphia,1,1996
-989,Philadelphia,London,1,1996
-987,Philadelphia,Chicago,3,2018
-983,Philadelphia,Knoxville,1,2020
-984,Philadelphia,Denver,1,2020
-985,Philadelphia,Washington,1,2020
-986,Philadelphia,London,1,2021
+987,Philadelphia,Tel Aviv,1,1987
+985,Philadelphia,Philadelphia,1,1996
+986,Philadelphia,London,1,1996
+984,Philadelphia,Chicago,3,2018
+980,Philadelphia,Knoxville,1,2020
+981,Philadelphia,Washington,1,2020
+982,Philadelphia,Denver,1,2020
+983,Philadelphia,London,1,2021
 1228,Pisa,Lille,1,2019
 1229,Pisa,Kenilworth,1,2019
 1226,Pisa,Lille,1,2020
 1227,Pisa,West Point,1,2020
-1302,Ponta Grossa,Pato Branco,1,2023
-1303,Ponta Grossa,Curitiba,1,2023
-1290,Potsdam,Mannheim,1,2012
-1291,Potsdam,Leicester,1,2012
+1302,Ponta Grossa,Curitiba,1,2023
+1303,Ponta Grossa,Pato Branco,1,2023
+1290,Potsdam,Leicester,1,2012
+1291,Potsdam,Mannheim,1,2012
 1293,Poznan,Barcelona,1,2016
-1248,Pretoria,Brisbane,1,2020
-1242,Pretoria,Helsinki,1,2021
-1243,Pretoria,Amherst Center,1,2021
-1244,Pretoria,Johannesburg,1,2021
-1245,Pretoria,Stellenbosch,1,2021
-1246,Pretoria,Durban,1,2022
-1247,Pretoria,Pretoria,1,2022
+1240,Pretoria,Brisbane,1,2020
+1234,Pretoria,Stellenbosch,1,2021
+1235,Pretoria,Johannesburg,1,2021
+1236,Pretoria,Amherst Center,1,2021
+1237,Pretoria,Helsinki,1,2021
+1238,Pretoria,Pretoria,1,2022
+1239,Pretoria,Durban,1,2022
 281,Prince George,Edinburgh,1,2023
 742,Princeton,California,1,1995
 743,Princeton,San Diego,1,2018
 741,Princeton,New York,1,2020
 744,Princeton,Hamilton,1,2022
-1095,Providence,Rio de Janeiro,1,2017
+1092,Providence,Rio de Janeiro,1,2017
 1213,Putrajaya,Shanghai,1,2023
 1214,Putrajaya,Kyoto,1,2023
-1001,Québec,Québec,1,2003
-1002,Québec,Bonn,1,2003
+1001,Québec,Bonn,1,2003
+1002,Québec,Québec,1,2003
 1003,Québec,Québec,1,2013
 1004,Québec,Montreal,1,2013
 1346,Reading,Paris,1,2013
-1432,Redmond,New York,1,2018
-1433,Redmond,Redmond,1,2018
-1434,Redmond,Stanford,1,2018
-1305,Rehovot,Beersheba,1,2020
-1306,Rehovot,Rehovot,1,2020
-1339,Reykjavik,Espoo,1,2020
-1340,Reykjavik,Reykjavik,1,2020
-348,Richmond,Auckland,1,2020
+1432,Redmond,Redmond,1,2018
+1433,Redmond,Stanford,1,2018
+1434,Redmond,New York,1,2018
+1304,Rehovot,Beersheba,1,2020
+1305,Rehovot,Rehovot,1,2020
+1337,Reykjavik,Reykjavik,1,2020
+1338,Reykjavik,Espoo,1,2020
+351,Richmond,Auckland,1,2020
 1253,Riga,Ottawa,1,2021
 1252,Riga,Bath,1,2022
 539,Rijeka,London,1,2015
-1092,Rio de Janeiro,Providence,1,2017
-1093,Rio de Janeiro,Winnipeg,1,2018
+1093,Rio de Janeiro,Providence,1,2017
 1094,Rio de Janeiro,Montreal,1,2018
+1095,Rio de Janeiro,Winnipeg,1,2018
 150,Rome,Washington D.C.,1,2018
 149,Rome,Toronto,1,2019
 1000,Rondebosch,Chapel Hill,1,2002
 1091,Roskilde,Copenhagen,1,2022
-109,Rotterdam,Rotterdam,1,1988
-110,Rotterdam,Boston,1,1988
-113,Rotterdam,Washington D.C.,1,1991
-111,Rotterdam,Leiden,1,2017
-112,Rotterdam,Bergen,1,2017
-106,Rotterdam,Newcastle upon Tyne,1,2023
-107,Rotterdam,York,1,2023
-108,Rotterdam,Liverpool,1,2023
-1323,Saint Augustine,Tokyo,1,2018
-1324,Saint Augustine,Bloomington,1,2018
-1325,Saint Augustine,Córdoba,1,2018
-1326,Saint Augustine,Canberra,1,2018
-1327,Saint Augustine,Brighton,1,2018
-1328,Saint Augustine,Montreal,1,2018
-1329,Saint Augustine,Teresina,1,2018
-1330,Saint Augustine,Stockholm,1,2018
-1081,Saint Charles,Sheboygan,1,2020
-1082,Saint Charles,Milwaukee,1,2020
-1083,Saint Charles,Harrisonburg,1,2020
+103,Rotterdam,Boston,1,1988
+104,Rotterdam,Rotterdam,1,1988
+107,Rotterdam,Washington D.C.,1,1991
+105,Rotterdam,Leiden,1,2017
+106,Rotterdam,Bergen,1,2017
+100,Rotterdam,York,1,2023
+101,Rotterdam,Newcastle upon Tyne,1,2023
+102,Rotterdam,Liverpool,1,2023
+1315,Saint Augustine,Tokyo,1,2018
+1316,Saint Augustine,Teresina,1,2018
+1317,Saint Augustine,Stockholm,1,2018
+1318,Saint Augustine,Brighton,1,2018
+1319,Saint Augustine,Canberra,1,2018
+1320,Saint Augustine,Montreal,1,2018
+1321,Saint Augustine,Bloomington,1,2018
+1322,Saint Augustine,Córdoba,1,2018
+1078,Saint Charles,Milwaukee,1,2020
+1079,Saint Charles,Sheboygan,1,2020
+1080,Saint Charles,Harrisonburg,1,2020
 1400,Saint Paul,Washington,1,1993
 512,Saint-Martin-d'Hères,Grenoble,1,2019
 1220,Salisbury,Lancaster,1,2021
 1221,Salisbury,Towson,1,2021
 1391,San Antonio,Buenos Aires,1,2014
-556,San Diego,New York,1,2017
-552,San Diego,Princeton,1,2018
-553,San Diego,Cambridge,1,2019
-554,San Diego,Chicago,1,2019
-555,San Diego,London,1,2019
-550,San Diego,New York,1,2021
-551,San Diego,Leicester,1,2021
-557,San Diego,New York,1,2023
-1164,San Francisco,Cambridge,1,2010
-1165,San Francisco,Albany,1,2010
-1444,San Nicolás de los Garza,Hermosillo,1,2022
-81,Santa Monica,Los Angeles,1,2018
+561,San Diego,New York,1,2017
+557,San Diego,Princeton,1,2018
+558,San Diego,Cambridge,1,2019
+559,San Diego,Chicago,1,2019
+560,San Diego,London,1,2019
+555,San Diego,Leicester,1,2021
+556,San Diego,New York,1,2021
+562,San Diego,New York,1,2023
+1164,San Francisco,Albany,1,2010
+1165,San Francisco,Cambridge,1,2010
+1446,San Nicolás de los Garza,Hermosillo,1,2022
+76,Santa Monica,Los Angeles,1,2018
 667,Santiago,New Delhi,1,2012
 668,Santiago,Oxford,1,2012
 669,Santiago,Geneva,1,2023
 1212,Sarajevo,Bratislava,1,2018
 754,Seoul,Hong Kong,1,2006
-760,Seoul,Hatfield,1,2019
-761,Seoul,Los Angeles,1,2019
-755,Seoul,Seoul,1,2023
-756,Seoul,Suwon,1,2023
+760,Seoul,Los Angeles,1,2019
+761,Seoul,Hatfield,1,2019
+755,Seoul,Suwon,1,2023
+756,Seoul,Seoul,1,2023
 757,Seoul,Osaka,1,2023
-758,Seoul,Vaxjo,1,2024
-759,Seoul,Gongju,1,2024
+758,Seoul,Gongju,1,2024
+759,Seoul,Vaxjo,1,2024
 1191,Shanghai,London,1,2019
 1192,Shanghai,Kyoto,1,2019
-1193,Shanghai,Kyoto,1,2023
-1194,Shanghai,Putrajaya,1,2023
-1422,Shatin,Berkeley,1,2019
-1423,Shatin,Columbus,1,2019
-1087,Sheboygan,Milwaukee,1,2020
-1088,Sheboygan,Saint Charles,1,2020
-1089,Sheboygan,Harrisonburg,1,2020
+1193,Shanghai,Putrajaya,1,2023
+1194,Shanghai,Kyoto,1,2023
+1424,Shatin,Columbus,1,2019
+1425,Shatin,Berkeley,1,2019
+1087,Sheboygan,Harrisonburg,1,2020
+1088,Sheboygan,Milwaukee,1,2020
+1089,Sheboygan,Saint Charles,1,2020
 563,Sheffield,Montreal,2,2012
 564,Sheffield,Amsterdam,1,2023
-565,Sheffield,Wageningen,1,2023
-566,Sheffield,Brisbane,1,2023
-567,Sheffield,Oxford,1,2023
-568,Sheffield,Edinburgh,1,2023
+565,Sheffield,Brisbane,1,2023
+566,Sheffield,Edinburgh,1,2023
+567,Sheffield,Wageningen,1,2023
+568,Sheffield,Oxford,1,2023
 923,Shillong,Irkutsk,1,2023
 65,Siegen,Mannheim,1,2010
-268,Siuntio,Turku,1,2010
-266,Siuntio,Helsinki,1,2014
-269,Siuntio,Oakland,1,2017
-267,Siuntio,Turku,1,2020
+245,Siuntio,Turku,1,2010
+243,Siuntio,Helsinki,1,2014
+246,Siuntio,Oakland,1,2017
+244,Siuntio,Turku,1,2020
 1050,Skopje,Fairfax,1,2013
-1168,Sofia,Munich,1,2006
-1169,Sofia,Bonn,1,2006
+1168,Sofia,Bonn,1,2006
+1169,Sofia,Munich,1,2006
 1166,Sofia,Sofia,1,2019
 1167,Sofia,Konstanz,1,2019
 1170,Sofia,Bamberg,1,2022
-717,Southampton,Beijing,1,2023
-718,Southampton,Stony Brook,1,2023
-1265,Speyer,Kiel,1,2014
-1266,Speyer,Berlin,1,2014
-1267,Speyer,Wiesbaden,1,2014
-1268,Speyer,Koblenz,1,2014
+704,Southampton,Stony Brook,1,2023
+705,Southampton,Beijing,1,2023
+1269,Speyer,Wiesbaden,1,2014
+1270,Speyer,Berlin,1,2014
+1271,Speyer,Kiel,1,2014
+1272,Speyer,Koblenz,1,2014
 511,St Andrews,Bonn,2,2011
 140,St Louis,New York,1,2009
 141,St Louis,Montreal,3,2014
@@ -1153,48 +1153,48 @@
 144,St Louis,Montreal,1,2017
 145,St Louis,Marseille,1,2017
 146,St Louis,Greensboro,1,2023
-147,St Louis,Boone,1,2023
-148,St Louis,Urbana,1,2023
+147,St Louis,Urbana,1,2023
+148,St Louis,Boone,1,2023
 1097,Stanford,Colchester,1,1976
 1096,Stanford,Chapel Hill,1,2017
-1098,Stanford,Redmond,1,2018
+1098,Stanford,Stanford,1,2018
 1099,Stanford,New York,1,2018
-1100,Stanford,Stanford,1,2018
+1100,Stanford,Redmond,1,2018
 1101,Stanford,London,1,2018
-1238,Stellenbosch,Amherst Center,1,2021
-1239,Stellenbosch,Pretoria,1,2021
-1240,Stellenbosch,Johannesburg,1,2021
-1241,Stellenbosch,Helsinki,1,2021
-610,Stockholm,Sundsvall,1,2003
-609,Stockholm,Tampere,1,2016
-611,Stockholm,Edinburgh,1,2018
-612,Stockholm,Saint Augustine,1,2018
-613,Stockholm,Tokyo,1,2018
-614,Stockholm,Bloomington,1,2018
-615,Stockholm,Córdoba,1,2018
-616,Stockholm,Canberra,1,2018
-617,Stockholm,Brighton,1,2018
-618,Stockholm,Montreal,1,2018
-619,Stockholm,Teresina,1,2018
-620,Stockholm,Utrecht,1,2019
-621,Stockholm,Stockholm,1,2019
-622,Stockholm,Uppsala,1,2020
-623,Stockholm,Stockholm,1,2020
-715,Stony Brook,Oxford,1,2005
-716,Stony Brook,West Long Branch,1,2005
-714,Stony Brook,Durham,1,2012
-712,Stony Brook,Southampton,1,2023
-713,Stony Brook,Beijing,1,2023
+1241,Stellenbosch,Pretoria,1,2021
+1242,Stellenbosch,Helsinki,1,2021
+1243,Stellenbosch,Johannesburg,1,2021
+1244,Stellenbosch,Amherst Center,1,2021
+590,Stockholm,Sundsvall,1,2003
+589,Stockholm,Tampere,1,2016
+591,Stockholm,Edinburgh,1,2018
+592,Stockholm,Saint Augustine,1,2018
+593,Stockholm,Montreal,1,2018
+594,Stockholm,Bloomington,1,2018
+595,Stockholm,Córdoba,1,2018
+596,Stockholm,Tokyo,1,2018
+597,Stockholm,Teresina,1,2018
+598,Stockholm,Brighton,1,2018
+599,Stockholm,Canberra,1,2018
+600,Stockholm,Stockholm,1,2019
+601,Stockholm,Utrecht,1,2019
+602,Stockholm,Uppsala,1,2020
+603,Stockholm,Stockholm,1,2020
+717,Stony Brook,Oxford,1,2005
+718,Stony Brook,West Long Branch,1,2005
+716,Stony Brook,Durham,1,2012
+714,Stony Brook,Southampton,1,2023
+715,Stony Brook,Beijing,1,2023
 740,Sundsvall,Stockholm,1,2003
 1401,Sunshine Coast,Brisbane,1,2019
 1258,Suwon,Seoul,1,2023
 1393,Swindon,Colchester,1,2017
 1394,Swindon,Swindon,1,2017
-45,Sydney,Melbourne,1,1987
-46,Sydney,Waltham,1,1987
+45,Sydney,Waltham,1,1987
+46,Sydney,Melbourne,1,1987
 47,Sydney,Uppsala,1,1997
-36,Sydney,Sydney,1,2000
-37,Sydney,Armidale,1,2000
+36,Sydney,Armidale,1,2000
+37,Sydney,Sydney,1,2000
 49,Sydney,Auckland,1,2013
 50,Sydney,Sydney,1,2013
 44,Sydney,Helsinki,1,2018
@@ -1208,72 +1208,72 @@
 1420,Syracuse,Cambridge,1,2019
 1421,Syracuse,Blacksburg,1,2019
 1295,Taipei,Zurich,1,2022
-1440,Talence,Edmonton,1,2012
-1441,Talence,Villejuif,1,2012
+1440,Talence,Villejuif,1,2012
+1441,Talence,Edmonton,1,2012
 1150,Tallahassee,Norman,1,2018
 1149,Tallahassee,Norman,1,2020
-596,Tampere,Colchester,1,1994
-597,Tampere,Washington,1,1994
-598,Tampere,Ithaca,1,1998
-599,Tampere,London,1,1998
-600,Tampere,Jyvaskyla,1,1998
-589,Tampere,Stockholm,1,2016
-590,Tampere,Brighton,1,2016
-607,Tampere,Ithaca,1,2017
-608,Tampere,Helsinki,1,2017
-591,Tampere,Jyvaskyla,1,2018
-592,Tampere,Bath,1,2018
-593,Tampere,Tampere,1,2018
-601,Tampere,Helsinki,2,2019
-602,Tampere,Tampere,1,2019
-603,Tampere,Bath,1,2019
-604,Tampere,Vancouver,1,2019
-605,Tampere,Barcelona,1,2019
-606,Tampere,Uppsala,1,2020
-594,Tampere,Freiburg im Breisgau,1,2023
-595,Tampere,Helsinki,1,2023
-168,Tel Aviv,Tel Aviv,1,1987
-169,Tel Aviv,Philadelphia,1,1987
-163,Tel Aviv,Munich,1,2012
-164,Tel Aviv,Tel Aviv,1,2012
-165,Tel Aviv,Zurich,1,2022
-166,Tel Aviv,Herzliya,1,2022
-167,Tel Aviv,London,1,2022
+611,Tampere,Colchester,1,1994
+612,Tampere,Washington,1,1994
+613,Tampere,Ithaca,1,1998
+614,Tampere,London,1,1998
+615,Tampere,Jyvaskyla,1,1998
+604,Tampere,Stockholm,1,2016
+605,Tampere,Brighton,1,2016
+622,Tampere,Ithaca,1,2017
+623,Tampere,Helsinki,1,2017
+606,Tampere,Jyvaskyla,1,2018
+607,Tampere,Tampere,1,2018
+608,Tampere,Bath,1,2018
+616,Tampere,Helsinki,2,2019
+617,Tampere,Tampere,1,2019
+618,Tampere,Bath,1,2019
+619,Tampere,Vancouver,1,2019
+620,Tampere,Barcelona,1,2019
+621,Tampere,Uppsala,1,2020
+609,Tampere,Freiburg im Breisgau,1,2023
+610,Tampere,Helsinki,1,2023
+178,Tel Aviv,Tel Aviv,1,1987
+179,Tel Aviv,Philadelphia,1,1987
+173,Tel Aviv,Munich,1,2012
+174,Tel Aviv,Tel Aviv,1,2012
+175,Tel Aviv,Zurich,1,2022
+176,Tel Aviv,London,1,2022
+177,Tel Aviv,Herzliya,1,2022
 658,Tempe,Durham,1,2023
 659,Tempe,Madrid,1,2023
-1175,Teresina,Brasília,1,2015
-1176,Teresina,Córdoba,1,2018
-1177,Teresina,Canberra,1,2018
-1178,Teresina,Brighton,1,2018
-1179,Teresina,Montreal,1,2018
+1174,Teresina,Brasília,1,2015
+1175,Teresina,Montreal,1,2018
+1176,Teresina,Bloomington,1,2018
+1177,Teresina,Córdoba,1,2018
+1178,Teresina,Tokyo,1,2018
+1179,Teresina,Brighton,1,2018
 1180,Teresina,Stockholm,1,2018
-1181,Teresina,Tokyo,1,2018
+1181,Teresina,Canberra,1,2018
 1182,Teresina,Saint Augustine,1,2018
-1183,Teresina,Bloomington,1,2018
 922,Thiverval-Grignon,Barcelona,1,2019
 747,Tilburg,Leuven,1,2019
-745,Tilburg,Leuven,1,2020
-746,Tilburg,Tilburg,1,2020
+745,Tilburg,Tilburg,1,2020
+746,Tilburg,Leuven,1,2020
 748,Tilburg,Leuven,1,2022
 942,Tokyo,Tokyo,1,1997
 943,Tokyo,Minneapolis,1,1997
 930,Tokyo,Leipzig,1,2017
-934,Tokyo,Saint Augustine,1,2018
-935,Tokyo,Bloomington,1,2018
-936,Tokyo,Córdoba,1,2018
-937,Tokyo,Canberra,1,2018
-938,Tokyo,Brighton,1,2018
-939,Tokyo,Montreal,1,2018
+934,Tokyo,Canberra,1,2018
+935,Tokyo,Saint Augustine,1,2018
+936,Tokyo,Montreal,1,2018
+937,Tokyo,Stockholm,1,2018
+938,Tokyo,Bloomington,1,2018
+939,Tokyo,Córdoba,1,2018
 940,Tokyo,Teresina,1,2018
-941,Tokyo,Stockholm,1,2018
+941,Tokyo,Brighton,1,2018
 931,Tokyo,New Delhi,1,2021
 932,Tokyo,Tokyo,1,2021
 933,Tokyo,Nagaoka,2,2023
-160,Toronto,Edmonton,1,2009
+160,Toronto,Vancouver,1,2009
 161,Toronto,Toronto,1,2009
-162,Toronto,Vancouver,1,2009
-153,Toronto,Oshawa,1,2018
-154,Toronto,Toronto,2,2018
+162,Toronto,Edmonton,1,2009
+153,Toronto,Toronto,2,2018
+154,Toronto,Oshawa,1,2018
 155,Toronto,Hamilton,1,2018
 156,Toronto,Kingston,2,2018
 157,Toronto,Frankfurt am Main,1,2018
@@ -1285,45 +1285,45 @@
 1218,Towson,Salisbury,1,2021
 1219,Towson,Lancaster,1,2021
 1354,Tsukuba,Kyoto,1,2018
-212,Turin,Oslo,1,1999
-204,Turin,Oslo,1,2004
-205,Turin,Turin,1,2004
-209,Turin,Turin,2,2010
-210,Turin,Galway,1,2010
-211,Turin,Bonn,1,2010
-202,Turin,Bonn,1,2012
-203,Turin,Oslo,1,2013
-206,Turin,Moncalieri,1,2017
-207,Turin,Turin,1,2017
-208,Turin,Esch-sur-Alzette,2,2018
+227,Turin,Oslo,1,1999
+219,Turin,Oslo,1,2004
+220,Turin,Turin,1,2004
+224,Turin,Galway,1,2010
+225,Turin,Turin,2,2010
+226,Turin,Bonn,1,2010
+217,Turin,Bonn,1,2012
+218,Turin,Oslo,1,2013
+221,Turin,Turin,1,2017
+222,Turin,Moncalieri,1,2017
+223,Turin,Esch-sur-Alzette,2,2018
 53,Turku,Siuntio,1,2010
 51,Turku,Sydney,1,2020
 52,Turku,Siuntio,1,2020
 55,Turku,Munich,1,2022
 56,Turku,Helsinki,1,2022
 54,Turku,Helsinki,1,2023
-0,Tübingen,Warsaw,1,2022
-1,Tübingen,Bratislava,1,2022
-2,Tübingen,Florence,1,2022
-1076,Umeå,Dublin,1,2006
-1077,Umeå,Umeå,1,2006
+17,Tübingen,Bratislava,1,2022
+18,Tübingen,Florence,1,2022
+19,Tübingen,Warsaw,1,2022
+1076,Umeå,Umeå,1,2006
+1077,Umeå,Dublin,1,2006
 1012,Uppsala,Sydney,1,1997
 1010,Uppsala,Tampere,1,2020
 1011,Uppsala,Stockholm,1,2020
 1373,Urbana,East Lansing,1,1998
 1374,Urbana,St Louis,1,2023
-1375,Urbana,Greensboro,1,2023
-1376,Urbana,Boone,1,2023
+1375,Urbana,Boone,1,2023
+1376,Urbana,Greensboro,1,2023
 82,Utrecht,Amsterdam,1,1997
 84,Utrecht,Aarhus,1,2018
 83,Utrecht,Stockholm,1,2019
 1341,Valdivia,Freiburg im Breisgau,2,2023
+1184,Valladolid,Valladolid,1,2020
 1185,Valladolid,León,1,2020
-1186,Valladolid,Valladolid,1,2020
-1387,Vallendar,Leipzig,1,2024
-1388,Vallendar,Erding,1,2024
-1389,Vallendar,Berlin,1,2024
-1390,Vallendar,Magdeburg,1,2024
+1383,Vallendar,Magdeburg,1,2024
+1384,Vallendar,Berlin,1,2024
+1385,Vallendar,Leipzig,1,2024
+1386,Vallendar,Erding,1,2024
 964,Vancouver,Madison,1,1978
 967,Vancouver,Winnipeg,1,2009
 968,Vancouver,Toronto,1,2009
@@ -1332,40 +1332,40 @@
 971,Vancouver,Barcelona,2,2019
 972,Vancouver,London,1,2019
 973,Vancouver,Tampere,1,2019
-974,Vancouver,Calgary,2,2020
-975,Vancouver,Burnaby,2,2020
-965,Vancouver,Calgary,1,2021
-966,Vancouver,Burnaby,1,2021
-1398,Vaxjo,Seoul,1,2024
-1399,Vaxjo,Gongju,1,2024
+974,Vancouver,Burnaby,2,2020
+975,Vancouver,Calgary,2,2020
+965,Vancouver,Burnaby,1,2021
+966,Vancouver,Calgary,1,2021
+1396,Vaxjo,Gongju,1,2024
+1397,Vaxjo,Seoul,1,2024
 1190,Vechta,Maastricht,1,2017
 978,Victoria,Winnipeg,2,2024
 979,Victoria,Kingston,1,2024
-1129,Vienna,Klagenfurt,1,2012
-1130,Vienna,Warsaw,1,2012
-1131,Vienna,Linz,1,2012
-1132,Vienna,Innsbruck,1,2012
+1125,Vienna,Warsaw,1,2012
+1126,Vienna,Klagenfurt,1,2012
+1127,Vienna,Linz,1,2012
+1128,Vienna,Innsbruck,1,2012
 1350,Villejuif,Talence,1,2012
 1351,Villejuif,Edmonton,1,2012
 1348,Villejuif,Montreal,1,2014
 1349,Villejuif,St Louis,1,2014
-1435,Wageningen,Brisbane,1,2023
-1436,Wageningen,Oxford,1,2023
+1435,Wageningen,Amsterdam,1,2023
+1436,Wageningen,Brisbane,1,2023
 1437,Wageningen,Edinburgh,1,2023
-1438,Wageningen,Sheffield,1,2023
-1439,Wageningen,Amsterdam,1,2023
-1008,Waltham,Melbourne,1,1987
-1009,Waltham,Sydney,1,1987
-10,Warsaw,Bonn,2,2011
-11,Warsaw,Klagenfurt,1,2011
-12,Warsaw,Warsaw,1,2011
-8,Warsaw,Klagenfurt,1,2012
-9,Warsaw,Vienna,1,2012
-7,Warsaw,Great Barrington,1,2021
-3,Warsaw,Florence,1,2022
-4,Warsaw,Tübingen,1,2022
-5,Warsaw,Bratislava,1,2022
-6,Warsaw,Great Barrington,4,2022
+1438,Wageningen,Oxford,1,2023
+1439,Wageningen,Sheffield,1,2023
+1008,Waltham,Sydney,1,1987
+1009,Waltham,Melbourne,1,1987
+7,Warsaw,Bonn,2,2011
+8,Warsaw,Klagenfurt,1,2011
+9,Warsaw,Warsaw,1,2011
+5,Warsaw,Vienna,1,2012
+6,Warsaw,Klagenfurt,1,2012
+4,Warsaw,Great Barrington,1,2021
+0,Warsaw,Florence,1,2022
+1,Warsaw,Tübingen,1,2022
+2,Warsaw,Bratislava,1,2022
+3,Warsaw,Great Barrington,4,2022
 886,Washington,Wellesley,1,1986
 893,Washington,Saint Paul,1,1993
 872,Washington,Tampere,1,1994
@@ -1373,33 +1373,33 @@
 887,Washington,Washington D.C.,1,1999
 888,Washington,Baltimore,1,1999
 878,Washington,Nottingham,2,2003
-884,Washington,Paris,1,2005
-885,Washington,Ithaca,1,2005
-889,Washington,Washington D.C.,1,2006
-890,Washington,Beijing,1,2006
+884,Washington,Ithaca,1,2005
+885,Washington,Paris,1,2005
+889,Washington,Beijing,1,2006
+890,Washington,Washington D.C.,1,2006
 891,Washington,Baltimore,1,2014
 874,Washington,Paris,1,2017
 866,Washington,Washington,1,2018
 867,Washington,Washington D.C.,1,2018
-868,Washington,London,1,2018
-869,Washington,Delhi,1,2018
-870,Washington,Cambridge,1,2018
+868,Washington,Cambridge,1,2018
+869,Washington,London,1,2018
+870,Washington,Delhi,1,2018
 871,Washington,Exeter,1,2018
 875,Washington,Philadelphia,1,2020
-876,Washington,Knoxville,1,2020
-877,Washington,Denver,1,2020
+876,Washington,Denver,1,2020
+877,Washington,Knoxville,1,2020
 883,Washington,Washington D.C.,1,2021
-879,Washington,Akron,1,2023
+879,Washington,Beijing,1,2023
 880,Washington,Washington,1,2023
-881,Washington,Beijing,1,2023
-882,Washington,New Orleans,1,2023
+881,Washington,New Orleans,1,2023
+882,Washington,Akron,1,2023
 892,Washington,Irvine,1,2024
 492,Washington D.C.,Menlo Park,1,1981
 491,Washington D.C.,Rotterdam,1,1991
-486,Washington D.C.,Washington,1,1999
-487,Washington D.C.,Baltimore,1,1999
-488,Washington D.C.,Washington,1,2006
-489,Washington D.C.,Beijing,1,2006
+486,Washington D.C.,Baltimore,1,1999
+487,Washington D.C.,Washington,1,1999
+488,Washington D.C.,Beijing,1,2006
+489,Washington D.C.,Washington,1,2006
 490,Washington D.C.,Cambridge,1,2006
 483,Washington D.C.,Manchester,1,2008
 484,Washington D.C.,Wellesley,1,2008
@@ -1418,34 +1418,34 @@
 1356,West Long Branch,Oxford,1,2005
 1224,West Point,Pisa,1,2020
 1225,West Point,Lille,1,2020
-1273,Wiesbaden,Speyer,1,2014
-1274,Wiesbaden,Koblenz,1,2014
-1275,Wiesbaden,Kiel,1,2014
-1276,Wiesbaden,Berlin,1,2014
+1265,Wiesbaden,Berlin,1,2014
+1266,Wiesbaden,Speyer,1,2014
+1267,Wiesbaden,Kiel,1,2014
+1268,Wiesbaden,Koblenz,1,2014
 902,Williamstown,New York,1,2012
 507,Winnipeg,Peterborough,1,1992
 510,Winnipeg,Peterborough,1,1995
 506,Winnipeg,Vancouver,1,2009
 505,Winnipeg,Bremen,1,2017
-508,Winnipeg,Montreal,1,2018
-509,Winnipeg,Rio de Janeiro,1,2018
+508,Winnipeg,Rio de Janeiro,1,2018
+509,Winnipeg,Montreal,1,2018
 500,Winnipeg,Boone,1,2019
 503,Winnipeg,Los Angeles,1,2020
 504,Winnipeg,Kingston,1,2021
 501,Winnipeg,Victoria,2,2024
 502,Winnipeg,Kingston,1,2024
 242,Wollongong,Sydney,1,2023
-1297,Worcester,Cairo,1,2020
+1296,Worcester,Cairo,1,2020
 769,Wroclaw,Barcelona,1,2023
-99,York,Carlow,1,2012
-100,York,Oxford,1,2019
-95,York,Rotterdam,1,2023
-96,York,Liverpool,2,2023
-97,York,Newcastle upon Tyne,3,2023
-98,York,London,1,2023
-702,Zurich,Bern,1,2019
-701,Zurich,Oxford,1,2020
-697,Zurich,Herzliya,1,2022
-698,Zurich,London,1,2022
-699,Zurich,Tel Aviv,1,2022
-700,Zurich,Taipei,1,2022
+112,York,Carlow,1,2012
+113,York,Oxford,1,2019
+108,York,Liverpool,2,2023
+109,York,Rotterdam,1,2023
+110,York,Newcastle upon Tyne,3,2023
+111,York,London,1,2023
+699,Zurich,Bern,1,2019
+698,Zurich,Oxford,1,2020
+694,Zurich,London,1,2022
+695,Zurich,Herzliya,1,2022
+696,Zurich,Tel Aviv,1,2022
+697,Zurich,Taipei,1,2022

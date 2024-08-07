@@ -32,7 +32,7 @@ library(magrittr)
 library(gridExtra)
 
 data_path = file.path("../Data") 
-result_path = file.path("../Results") 
+result_path = file.path("../Results/Figures/") 
 oma2 <- c(0,0,0,0)
 ```
 
@@ -48,18 +48,18 @@ df$share_ma <- rollmean(df$share_expe, k = 5, fill = NA, align = "center")
 ```{r} 
 colors <- c("UBI publications" = "#1f77b4", "share SHS" = "#ff7f0e")
 
-Fig2_a <- ggplot(df[1900<= df$Year & df$Year <= 2020,], aes(x = Year)) +
+Fig2_a <- ggplot(df[1960<= df$Year & df$Year <= 2020,], aes(x = Year)) +
   geom_line(linewidth=1,aes(y = expe_ma, color='expe_publications')) + 
   geom_line(linewidth=1,aes(y = share_ma*676, color='expe_share')) +
   geom_line(linewidth=1,aes(y = theo_ma, color='theoric_publications')) +
   scale_color_manual(name = "Group",
                      values = c( "expe_publications" = "#1f77b4","expe_share"="#ff7f0e", "theoric_publications" = "black"),
                      labels = c( "Expe related publications","Share Expe","Theoric related publications")) +
-  labs(title = "", x = "year", y = "# Publications") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 6),
-      axis.text.y = element_text(size = 8),
-      axis.title.x = element_text(size = 8),
-      axis.title.y = element_text(size = 8),
+  labs(title = "", x = "", y = "# Publications") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+      axis.text.y = element_text(size = 10),
+      axis.title.x = element_text(size = 10),
+      axis.title.y = element_text(size = 10),
       panel.border = element_rect(colour = "black", fill=NA, size=0.75),
       plot.margin = unit(oma2, "cm"),
       panel.grid.major = element_blank(),
@@ -69,7 +69,7 @@ Fig2_a <- ggplot(df[1900<= df$Year & df$Year <= 2020,], aes(x = Year)) +
       legend.key=element_blank(),
       legend.title=element_blank(),
       legend.position="top",
-      legend.text=element_text(size = 8)) +
+      legend.text=element_text(size = 10)) +
   scale_y_continuous(
     name = "Publications",
     sec.axis = sec_axis(~./676, name="Share")
@@ -77,7 +77,7 @@ Fig2_a <- ggplot(df[1900<= df$Year & df$Year <= 2020,], aes(x = Year)) +
 
 Fig2_a
 
-pdf(file=file.path(result_path, "Figures/Fig2_a.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+pdf(file=file.path(result_path, "Fig2_a.pdf"), width=8, height=5, family="Helvetica", pointsize=10)
 Fig2_a
 dev.off()
 
@@ -85,27 +85,48 @@ dev.off()
 
 # Fig2b: Theo vs Expe
 ```{r} 
+# Read the CSV file
 df <- read_csv(file.path(data_path, "Fig2_b.csv"))
+
+# Process the 'Journal' column
 df$Journal <- sapply(str_split(df$Journal, "/"), function(x) x[length(x)])
 df$Journal <- str_wrap(df$Journal, width = 30)
+
+# Transform the data to long format
 df_long <- df %>%
   pivot_longer(cols = c(n_theo, n_expe), names_to = "Type", values_to = "Count")
+
+# Calculate the total count for each journal
+journal_totals <- df_long %>%
+  group_by(Journal) %>%
+  summarize(TotalCount = sum(Count))
+
+# Select the top 10 journals based on the total count
+top_journals <- journal_totals %>%
+  top_n(10, TotalCount) %>%
+  arrange(desc(TotalCount))
+
+# Filter the long-format data to include only the top 10 journals
+df_long_top10 <- df_long %>%
+  filter(Journal %in% top_journals$Journal)
+
+# Reorder the 'Journal' factor based on the total counts
+df_long_top10$Journal <- factor(df_long_top10$Journal, levels = top_journals$Journal)
+
+
 ```
 
+
 ```{r} 
-Fig2_b <- ggplot(df_long, aes(x = Type, y = Count, fill = Type)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  facet_wrap(~Journal, ncol = 4) +
-  scale_fill_manual(name = "Type",
-                    values = c("n_theo" = "#1f77b4", "n_expe" = "#fb7d07"),
+Fig2_b <- ggplot(df_long_top10, aes(x = Journal, y = Count, fill = Type)) +
+  geom_bar(stat = "identity", position = "stack") +
+  theme(axis.text.x = element_text(angle = 50, hjust = 1)) +
+  labs(title = "", x = "", y = "Count") +
+  scale_fill_manual(values = c("n_theo" = "#1f77b4", "n_expe" = "#fb7d07"),
                     labels = c("Experimental", "Theoretical")) +
-  labs(x = "",
-       y = "Number of Publications",
-       fill = "Legend") +
-    theme(axis.text.x = element_blank(),  # Remove x-axis text
+    theme(axis.text.x = element_text(angle = 50, hjust = 1),
         axis.ticks.x = element_blank(), # Remove x-axis ticks
         axis.text.y = element_text(size = 10),
-        axis.title.x = element_blank(),
         axis.title.y = element_text(size = 10),
         panel.border = element_rect(colour = "black", fill=NA, size=0.75),
         plot.margin = unit(oma2, "cm"),
@@ -116,14 +137,75 @@ Fig2_b <- ggplot(df_long, aes(x = Type, y = Count, fill = Type)) +
         legend.title = element_blank(),
         legend.position = "top",
         legend.text = element_text(size = 10),
-        strip.text = element_text(size = 8), # Reduce font size of facet labels
+        strip.text = element_text(size = 10), # Reduce font size of facet labels
         strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
 
 
 Fig2_b
 
-pdf(file=file.path(result_path, "Figures/Fig2_b.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+pdf(file=file.path(result_path, "Fig2_b.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
 Fig2_b
+dev.off()
+
+```
+```{r} 
+# Read the CSV file
+df <- read_csv(file.path(data_path, "Fig2_c.csv"))
+
+# Process the 'Journal' column
+df$Journal <- sapply(str_split(df$Journal, "/"), function(x) x[length(x)])
+df$Journal <- str_wrap(df$Journal, width = 30)
+
+# Transform the data to long format
+df_long <- df %>%
+  pivot_longer(cols = c(n_theo, n_expe), names_to = "Type", values_to = "Count")
+
+# Calculate the total count for each journal
+journal_totals <- df_long %>%
+  group_by(Journal) %>%
+  summarize(TotalCount = sum(Count))
+
+# Select the top 10 journals based on the total count
+top_journals <- journal_totals %>%
+  top_n(10, TotalCount) %>%
+  arrange(desc(TotalCount))
+
+# Filter the long-format data to include only the top 10 journals
+df_long_top10 <- df_long %>%
+  filter(Journal %in% top_journals$Journal)
+
+# Reorder the 'Journal' factor based on the total counts
+df_long_top10$Journal <- factor(df_long_top10$Journal, levels = top_journals$Journal)
+```
+
+```{r} 
+Fig2_c <- ggplot(df_long_top10, aes(x = Journal, y = Count, fill = Type)) +
+  geom_bar(stat = "identity", position = "stack") +
+  theme(axis.text.x = element_text(angle = 50, hjust = 1)) +
+  labs(title = "", x = "", y = "Count") +
+  scale_fill_manual(values = c("n_theo" = "#1f77b4", "n_expe" = "#fb7d07"),
+                    labels = c("Experimental", "Theoretical")) +
+    theme(axis.text.x = element_text(angle = 50, hjust = 1),
+        axis.ticks.x = element_blank(), # Remove x-axis ticks
+        axis.text.y = element_text(size = 10),
+        axis.title.y = element_text(size = 10),
+        panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+        plot.margin = unit(oma2, "cm"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        legend.position = "top",
+        legend.text = element_text(size = 10),
+        strip.text = element_text(size = 10), # Reduce font size of facet labels
+        strip.text.x = element_text(margin = margin(b = 5, t = 5))) 
+
+
+Fig2_c
+
+pdf(file=file.path(result_path, "Fig2_c.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+Fig2_c
 dev.off()
 
 ```
@@ -131,13 +213,17 @@ dev.off()
 Fig2 assemble
 ```{r} 
 fig2 = ggdraw() +
-  draw_plot(Fig2_a, x=0, y=0, width=0.30, height=1)+
-  draw_plot(Fig2_b, x=0.35, y=0, width=0.60, height=1)+
-  draw_plot_label(label=c("A","B"),x=c(0, 0.5),y=c(0.99, 0.99), 
+  draw_plot(Fig2_a, x = 0, y = 0.5, width = 1, height = 0.5) + # Top plot
+  draw_plot(Fig2_b, x = 0, y = 0, width = 0.5, height = 0.5) + # Bottom left plot
+  draw_plot(Fig2_c, x = 0.5, y = 0, width = 0.5, height = 0.5) + # Bottom right plot
+  draw_plot_label(label = c("A", "B", "C"), 
+                  x = c(0, 0, 0.5), 
+                  y = c(1, 0.5, 0.5), 
                   size = 10) +
-theme(plot.margin = margin(0.1,0.1,2,0.1, "cm")) 
+  theme(plot.margin = margin(0.3, 0.3, 0.4, 0.3, "cm")) 
 
-pdf(file=file.path(result_path, "Figures/Fig2.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+fig2
+pdf(file = file.path(result_path, "Fig2.pdf"), width = 12, height = 12, family = "Helvetica", pointsize = 12)
 fig2
 dev.off()
 ```

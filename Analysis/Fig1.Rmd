@@ -42,6 +42,70 @@ result_path = file.path("../Results/Figures")
 df <- read_csv(file.path(data_path, "Fig1.csv"))
 oma2 <- c(0,0,0,0)
 df_long <- df %>%
+  filter(year >= 1950 & year <= 2020) %>%
+  pivot_longer(cols = everything()[-1], # exclude year column
+               names_to = "Variable",  # name for new column with variable names
+               values_to = "Value")
+
+# Function to calculate 5-year moving average
+moving_average <- function(x) {
+  rollapply(x, width = 5, FUN = mean, align = "center", fill = NA)
+}
+
+# Apply the moving average to each variable
+df_long <- df_long %>%
+  group_by(Variable) %>%
+  mutate(MA_Value = moving_average(Value))
+
+```
+
+```{r} 
+
+custom_colors <- c("First Period" = "orange", "Second Period" = "black", "Third Period" = "#3357FF")
+
+# Create the individual plots
+Fig1_a <- ggplot(df_long, aes(x = year, y = MA_Value, color = Variable)) +
+  geom_line(linewidth=1) +
+  labs(title = "",
+       x = "Year",
+       y = "Number of Publications",
+       color = "Variable") +
+  theme(
+    axis.text.y = element_text(size = 10),
+    axis.title.x = element_blank(),
+    axis.title.y = element_text(size = 10),
+    panel.border = element_rect(colour = "black", fill = NA, size = 0.75),
+    plot.margin = unit(c(1, 1, 1, 1), "cm"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank(),
+    legend.key = element_blank(),
+    legend.title = element_blank(),
+    legend.text = element_text(size = 8),
+    legend.position="top",
+    strip.text = element_text(size = 8), # Reduce font size of facet labels
+    strip.text.x = element_text(margin = margin(b = 5, t = 5))
+  )
+
+# Arrange the plots in a 1x3 grid (1 row, 3 columns)
+Fig1_a
+pdf(file=file.path(result_path, "Fig1.pdf"), width=8, height=6, family="Helvetica", pointsize=6)
+#grid.arrange(Fig1_a, Fig1_b, Fig1_c, nrow = 2,ncol=2, layout_matrix=rbind(c(1,1, 2,2), c(NA, 3, 3, NA)))
+Fig1_a
+dev.off()
+
+
+
+
+```
+
+
+
+
+```{r} 
+df <- read_csv(file.path(data_path, "Fig1.csv"))
+oma2 <- c(0,0,0,0)
+df_long <- df %>%
   pivot_longer(cols = everything()[-1], # exclude year column
                names_to = "Variable",  # name for new column with variable names
                values_to = "Value")

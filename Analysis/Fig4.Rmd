@@ -44,7 +44,7 @@ mean_df <- df %>%
   summarise(across(starts_with("score_"), mean, na.rm = TRUE))
 
 mean_df <- mean_df %>%
-  mutate(across(starts_with("score_"), ~ rollmean(.x, 3, fill = NA, align = "right"), .names = "ma_{col}"))
+  mutate(across(starts_with("score_"), ~ rollmean(.x, 5, fill = NA, align = "right"), .names = "ma_{col}"))
 
 
 # Reshape for score columns
@@ -60,7 +60,7 @@ grouped <- grouped %>%
 
 ```
 ```{r} 
-plot_scores <- ggplot(grouped[grouped$variable=="score_foster",], aes(x = year, y = value, color = variable)) +
+plot_scores <- ggplot(grouped[grouped$variable=="ma_score_foster",], aes(x = year, y = value, color = variable)) +
   geom_line(size = 1) +
   labs(title = "Mean Scores per Year",
        x = "Year",

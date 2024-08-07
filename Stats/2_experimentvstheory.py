@@ -41,9 +41,17 @@ experimental_keywords = [
 """
 
 experimental_keywords = [
-    " experiment ", "simulation", "sample", "sampling", "experimental setup", "field study", "case study",
+    " experiment ", "simulation", "sample", "sampling", "experimental setup", "field study", "case study", "pilot",
     "survey", "questionnaire", "experimental results", "laboratory", "pilot study", "experimentation", "empirical study", "rct", "experience", "randomized controlled trial"
 ]
+
+experimental_keywords = [
+    "experiment", "simulation", "sample", "sampling", "field study", "case study", 
+    "survey", "questionnaire", "laboratory", "pilot study", "experimentation", "empirical study", "rct", "experience", "randomized controlled trial",
+    "evaluating","setting","scenario", "pilot", "design"
+]
+
+
 
 #%% get share evolution
 
@@ -69,10 +77,11 @@ for doc in tqdm.tqdm(docs):
     text = title + " " + abstract
     text = text.lower()    
     for keyword in experimental_keywords:
-        if keyword in clear_text(text):
-            done = True
-            if year<1950:
-                print(doc["id"],clear_text(text),keyword)
+        for word in clear_text(text).split(" "):
+            if keyword == word:
+                done = True
+                if year<1950:
+                    print(doc["id"],clear_text(text),keyword)
     if done == True:
         year2expe[year] += 1
     else:

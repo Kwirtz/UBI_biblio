@@ -3,6 +3,7 @@ import tqdm
 import pymongo
 import novelpy
 
+
 #%% cooc
 
 concept_cooc = novelpy.utils.cooc_utils.create_cooc(
@@ -89,7 +90,7 @@ for focal_year in tqdm.tqdm(range(1950,2021)):
 
 client_name = 'mongodb://localhost:27017'
 db_name = 'UBI'
-collection_name = "works_UBI_gobu"
+collection_name = "works_UBI_gobu_2"
 
 Client = pymongo.MongoClient(client_name)
 db = Client[db_name]
@@ -113,7 +114,7 @@ list_of_insertion = []
 
 clean = novelpy.utils.preprocess_disruptiveness.create_citation_network(client_name = 'mongodb://localhost:27017',
                                                                         db_name = 'UBI',
-                                                                        collection_name = "works_UBI_gobu",
+                                                                        collection_name = "works_UBI_gobu_2",
                                                                         id_variable = "id_cleaned",
                                                                         year_variable = "publication_year",
                                                                         variable = "referenced_cleaned"
@@ -126,7 +127,7 @@ for focal_year in tqdm.tqdm(range(1950,2021)):
         disruptiveness = novelpy.Disruptiveness(
             client_name = 'mongodb://localhost:27017',
             db_name = 'UBI',
-            collection_name = 'works_UBI_gobu_cleaned',
+            collection_name = 'works_UBI_gobu_2_cleaned',
             focal_year = focal_year,
             id_variable = 'id_cleaned',
             variable = "citations",
