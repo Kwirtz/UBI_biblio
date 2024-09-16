@@ -1,0 +1,54 @@
+country_name,n_total,n_solo_country,n_solo_author,n_collab,country,Community,unique_authors
+Argentina,7,0.0,4.0,3.0,AR,3,8
+Australia,105,24.0,66.0,15.0,AU,3,104
+Austria,15,4.0,9.0,2.0,AT,2,23
+Azerbaijan,2,0.0,1.0,1.0,AZ,3,2
+Belgium,60,16.0,29.0,15.0,BE,0,53
+Bosnia and Herzegovina,1,0.0,0.0,1.0,BA,2,1
+Brazil,24,6.0,15.0,3.0,BR,3,31
+Bulgaria,5,1.0,1.0,3.0,BG,2,6
+Canada,171,63.0,70.0,38.0,CA,3,166
+Chile,12,2.0,6.0,4.0,CL,0,13
+China,53,2.0,44.0,7.0,CN,1,52
+Croatia,3,2.0,0.0,1.0,HR,0,6
+Denmark,14,3.0,7.0,4.0,DK,0,16
+Egypt,1,0.0,0.0,1.0,EG,1,1
+Ethiopia,1,0.0,0.0,1.0,ET,2,1
+Finland,58,17.0,21.0,20.0,FI,2,55
+France,61,12.0,22.0,27.0,FR,2,63
+Germany,159,43.0,76.0,40.0,DE,2,186
+Ghana,2,0.0,0.0,2.0,GH,1,3
+Greece,6,1.0,3.0,2.0,GR,3,8
+Hong Kong,9,1.0,5.0,3.0,HK,1,8
+Iceland,1,0.0,0.0,1.0,IS,2,3
+India,29,3.0,21.0,5.0,IN,1,37
+Ireland,20,3.0,7.0,10.0,IE,0,19
+Israel,11,5.0,3.0,3.0,IL,0,23
+Italy,53,13.0,25.0,15.0,IT,2,67
+Japan,24,5.0,12.0,7.0,JP,3,26
+"Korea, Republic of",23,5.0,14.0,4.0,KR,1,32
+Kuwait,1,0.0,0.0,1.0,KW,1,1
+Latvia,4,1.0,1.0,2.0,LV,0,6
+Luxembourg,4,1.0,1.0,2.0,LU,2,4
+Macao,2,0.0,0.0,2.0,MO,1,1
+Malaysia,2,1.0,0.0,1.0,MY,1,6
+Netherlands,76,19.0,42.0,15.0,NL,0,87
+New Zealand,15,4.0,8.0,3.0,NZ,3,20
+North Macedonia,2,0.0,1.0,1.0,MK,1,2
+Norway,17,1.0,7.0,9.0,NO,1,14
+Paraguay,1,0.0,0.0,1.0,PY,2,1
+Poland,28,2.0,15.0,11.0,PL,2,20
+Portugal,18,5.0,4.0,9.0,PT,2,14
+Qatar,23,0.0,21.0,2.0,QA,0,3
+Russian Federation,42,15.0,24.0,3.0,RU,1,50
+Slovakia,2,0.0,0.0,2.0,SK,2,2
+Slovenia,7,2.0,4.0,1.0,SI,2,10
+South Africa,24,5.0,16.0,3.0,ZA,1,32
+Spain,68,26.0,22.0,20.0,ES,2,92
+Sri Lanka,1,0.0,0.0,1.0,LK,3,1
+Sweden,36,4.0,19.0,13.0,SE,3,44
+Switzerland,30,4.0,18.0,8.0,CH,0,42
+"Taiwan, Province of China",1,0.0,0.0,1.0,TW,0,1
+Trinidad and Tobago,1,0.0,0.0,1.0,TT,3,1
+United Kingdom,380,52.0,241.0,87.0,GB,0,357
+United States,495,128.0,295.0,72.0,US,1,536

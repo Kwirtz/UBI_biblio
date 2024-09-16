@@ -115,6 +115,7 @@ def get_ubi_in_text(keywords):
 
         for keyword in keywords:
             if keyword in text:
+                print(keyword)
                 n += 1
         
         if n > 0 :

@@ -3,6 +3,7 @@
 import tqdm
 import nltk
 import string
+import pickle
 import pymongo
 import pandas as pd
 from langdetect import detect
@@ -27,7 +28,6 @@ lemmatizer = WordNetLemmatizer()
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
 collection = db["works_UBI_gobu_2"]
-
 
 
 #%% Function to check if a text is in English
@@ -61,14 +61,36 @@ def clear_text(text):
 
 stop_words = set(stopwords.words('english'))
 stop_words |= {"basic", "income"}
-
+stop_words |= {"universal"}
 take_not_journals = {"full-text", "http", "doi", "not available for this content", "pdf", "url", "access", "vol"}
 
 def wordcloud_OpenAlex(Concepts=True, Title=False, Abstract=False,
-                       Gram = 1, Stop_words=stop_words, query = {}, only_en=True, Years=None):
+                       Gram = 1, Stop_words=stop_words, query = {}, only_en=True, start_year = 1900,
+                       end_year = 2024, Years=None, commu=None):
+    if commu:
+        with open('Data/commu2papers.pkl', 'rb') as f:
+            commu2papers = pickle.load(f)
+        list_ids = commu2papers[commu]
+        query = {
+            'publication_year': {
+                '$gte': start_year,
+                '$lte': end_year
+            },
+            'id': {
+                '$in': list_ids
+            }
+        }
+    else:
+        query = {
+            'publication_year': {
+                '$gte': start_year,
+                '$lte': end_year
+            }
+        }
+
     docs = collection.find(query)
     list_text = []
-
+    
     for doc in tqdm.tqdm(docs):
         if only_en and is_english(doc["title"]) == False:
             continue
@@ -124,10 +146,10 @@ def wordcloud_OpenAlex(Concepts=True, Title=False, Abstract=False,
     plt.figure(figsize=(10, 5))
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
-    plt.savefig("Results/Figures/wordcloud_{}_{}_{}.pdf".format(str(Gram),str(Title),str(Abstract)), format="pdf", dpi=300)
+    plt.savefig("Results/Figures/wordcloud_{}_{}_{}_commu{}.pdf".format(str(Gram),str(Title),str(Abstract),str(commu)), format="pdf", dpi=300)
     return list_text
 
-test = wordcloud_OpenAlex(Gram=3,Concepts=False, Title=True, Abstract = False)
+test = wordcloud_OpenAlex(Gram=3,Concepts=False, Title=True, Abstract = False,commu=5)
 
 #%% Total
 # Fetch keywords from MongoDB

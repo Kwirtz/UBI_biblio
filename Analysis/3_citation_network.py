@@ -40,13 +40,23 @@ docs = collection.find()
 for doc in tqdm.tqdm(docs):
     list_of_papers.append(doc["id"])    
 
+start_year = 1900
+end_year = 2024
 
+query = {
+    'publication_year': {
+        '$gte': start_year,
+        '$lte': end_year
+    }
+}
+
+query = {}
 
 #%% Get Citation network
 
 
 data = []
-docs = collection.find()
+docs = collection.find(query)
 for doc in tqdm.tqdm(docs):
     if doc["publication_year"] > 1900:
         if doc["referenced_works"]:
@@ -208,7 +218,7 @@ for i in tqdm.tqdm(range(23,24)):
         
     
     # Get the top 10 authors for each community
-    top_authors_per_community = get_top_authors(commu2cited_authors, top_n=15)
+    top_authors_per_community = get_top_authors(commu2cited_authors, top_n=20)
     
     
     # Top 10 most used pqper per commu in our sample
@@ -220,7 +230,7 @@ for i in tqdm.tqdm(range(23,24)):
             if paper in list_papers_ubi:
                 commu2papers_UBI_only[commu].append(paper)
     
-    top_cited_per_community_sample = get_top_authors(commu2papers_UBI_only, top_n=15)
+    top_cited_per_community_sample = get_top_authors(commu2papers_UBI_only, top_n=20)
     
     
     #%% Global Top 10 most cited paper per commu in OpenAlex
@@ -243,7 +253,7 @@ for i in tqdm.tqdm(range(23,24)):
         # Sort papers by number of citations in descending order
         sorted_papers = sorted(papers.items(), key=lambda item: item[1], reverse=True)
         total_citations = sum(paper[1] for paper in papers.items())
-        top_papers = sorted_papers[:15]
+        top_papers = sorted_papers[:20]
         
         # Calculate the share for each top paper
         top_papers_with_share = [(paper_id, count, count / total_citations) for paper_id, count in top_papers]
@@ -275,7 +285,7 @@ for i in tqdm.tqdm(range(23,24)):
         # Sort papers by number of citations in descending order
         sorted_papers = sorted(papers.items(), key=lambda item: item[1], reverse=True)
         total_citations = sum(paper[1] for paper in papers.items())
-        top_papers = sorted_papers[:15]
+        top_papers = sorted_papers[:20]
         
         # Calculate the share for each top paper
         top_papers_with_share = [(paper_id, count, count / total_citations) for paper_id, count in top_papers]
@@ -376,7 +386,7 @@ for i in tqdm.tqdm(range(23,24)):
             community_df = tfidf_df[tfidf_df['modularity_class'] == community].drop(columns=['modularity_class'])
             mean_tfidf = community_df.mean(axis=0)
             # Remove the terms that are in the exclude_words list
-            filter_out_substrings = ["basic", "income", "universal", "ubi", "unconditional", "state bonus", "minimum income", 
+            filter_out_substrings = ["welfare","social","policy","economic","basic", "income", "universal", "ubi", "unconditional", "state bonus", "minimum income", 
                              "national dividend", "social dividend", "basic minimum income", "basic income",
                              "negative income tax", "minimum income guarantee", "guaranteed minimum income", 
                              "basic income guarantee", "demogrant", "guaranteed income", "credit income tax",
@@ -465,7 +475,7 @@ for i in tqdm.tqdm(range(23,24)):
     
     docs = collection_concept.find()
     for doc in tqdm.tqdm(docs):
-        if doc["level"] == 1:
+        if doc["level"] == 0:
             lvl1.append(doc["display_name"])
     
     commu2discipline = {i:{j:0 for j in lvl1} for i in commu2papers}
@@ -637,7 +647,7 @@ for i in tqdm.tqdm(range(23,24)):
     #%% Commu yearly publications
     # Define the year range
     start_year = 1960
-    end_year = 2020
+    end_year = 2022
     
     query = {
         'publication_year': {
@@ -646,7 +656,7 @@ for i in tqdm.tqdm(range(23,24)):
         }
     }
 
-    df_year_comm = pd.DataFrame(0, index=range(1960,2021),columns=[f'community_{col}' for col in df['modularity_class'].unique()])
+    df_year_comm = pd.DataFrame(0, index=range(1960,2023),columns=[f'community_{col}' for col in df['modularity_class'].unique()])
     for doc in tqdm.tqdm(collection.find(query)):
         for community, papers in commu2papers.items():
             if doc["id"] in papers:

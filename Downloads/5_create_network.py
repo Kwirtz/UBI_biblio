@@ -11,6 +11,16 @@ client = pymongo.MongoClient("mongodb://localhost:27017")
 db = client['UBI']
 collection = db['works_UBI_gobu_2']
 
+start_year = 1900
+end_year = 2024
+
+query = {
+    'publication_year': {
+        '$gte': start_year,
+        '$lte': end_year
+    }
+}
+
 #%% inst2info
 
 inst2info = defaultdict(dict)
@@ -29,9 +39,11 @@ for doc in tqdm.tqdm(docs):
 #%% National Output
 
 country_output = defaultdict(lambda:defaultdict(lambda:defaultdict(int)))
+country_authors = defaultdict(lambda:defaultdict(list))
 df = pd.DataFrame(columns=["country","year","n_total","n_solo_country","n_solo_author","n_collab"])
 
-docs = collection.find()
+n = 0
+docs = collection.find(query)
 for doc in tqdm.tqdm(docs):
     country_list = []
     authors = doc["authorships"]
@@ -39,11 +51,13 @@ for doc in tqdm.tqdm(docs):
     for author in authors:
         try:
             country = author["institutions"][0]["country_code"]
+            country_authors[country][year].append(author["author"]["id"])
             if country != None:
                 country_list.append(country)
         except Exception as e:
             pass
     if len(authors) == len(country_list):
+        n += 1 
         if len(country_list) == 1:
             index = country_output[country_list[0]][year]
             index["n_total"] += 1
@@ -64,6 +78,10 @@ for country, years in country_output.items():
     for year, values in years.items():
         record = {"country": country, "year": year}
         record.update(values)
+        temp = []
+        for y in country_authors[country]:
+            temp += country_authors[country][y]
+        record["unique_authors"] =  len(list(set(temp)))
         records.append(record)
 
 # Convert the list of dictionaries to a DataFrame
@@ -85,7 +103,7 @@ def get_country_name(code):
 
 # Apply the function to create a new column with country names
 df_sorted['country_name'] = df_sorted['country'].apply(get_country_name)
-columns = ['country_name',"country", 'year', 'n_total', 'n_solo_country', 'n_solo_author', 'n_collab']
+columns = ['country_name',"country", 'year', 'n_total', 'n_solo_country', 'n_solo_author', 'n_collab',"unique_authors"]
 df_sorted = df_sorted.reindex(columns=columns)
 
 
@@ -95,7 +113,7 @@ df_sorted.to_csv("Data/national_output.csv",index=False)
 #%% International Output
 
 
-docs = collection.find()
+docs = collection.find(query)
 
 country_inter_output = defaultdict(lambda:defaultdict(lambda:defaultdict(int)))
 n = 0
@@ -137,7 +155,7 @@ df_sorted.to_csv("Data/collab_output.csv")
 city_output = defaultdict(lambda:defaultdict(lambda:defaultdict(int)))
 df = pd.DataFrame(columns=["city","year","n_total","n_solo_country","n_solo_author","n_collab"])
 
-docs = collection.find()
+docs = collection.find(query)
 for doc in tqdm.tqdm(docs):
     city_list = []
     authors = doc["authorships"]
@@ -203,7 +221,7 @@ df_cleaned.to_csv("Data/city_output.csv",index=False)
 
 #%% Inter-city output
 
-docs = collection.find()
+docs = collection.find(query)
 
 country_inter_output = defaultdict(lambda:defaultdict(lambda:defaultdict(int)))
 n = 0

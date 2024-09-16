@@ -20,8 +20,8 @@ check = ["state bonus", "minimum income", "national dividend", "social dividend"
          "citizen’s basic income", "citizen’s income", "social credit",
          "unconditional basic income", "universal basic income", "guaranteed income", "social dividend", "basic income guarantee"]
 
-check = ["basic income", "negative income tax","minimum income"]
-check_together = ["minimum income guarantee","guaranteed minimum income"]
+check = ["ubi"]
+check_together = ["unconditional basic income","negative income tax"]
 
 year_list = [] 
 list_papers = []
@@ -53,7 +53,7 @@ for paper in tqdm.tqdm(list_papers):
     text = title + " " + abstract
     text = text.lower()
     full_gram = ""
-
+    """
     if doc["has_fulltext"]:
         doc_id = doc["id"].split("/")[-1]
         response = requests.get("https://api.openalex.org/works/{}/ngrams?mailto=kevin-w@hotmail.fr".format(doc_id))
@@ -61,25 +61,34 @@ for paper in tqdm.tqdm(list_papers):
         for gram in ngrams:
             if gram['ngram_tokens']<4:
                 full_gram += gram["ngram"].lower() + " "
+    """
     for keyword in check:
         done = False
-        if keyword in text and done == False:
+        if keyword in text.split(" ") and done == False:
             year2keywords[year][keyword] += 1
             done = True
         if keyword in full_gram and done == False:
             year2keywords[year][keyword] += 1
             done = True
+    
+    
     done_together = False
-    
-    
     for keyword in check_together:
-        if keyword in text and done == False:
-            year2keywords[year][keyword] += 1
-            done = True
-        if keyword in full_gram and done == False:
-            year2keywords[year][keyword] += 1
-            done = True
-        
+        if keyword != "negative income tax":
+            if keyword in text and done_together == False:
+                year2keywords[year][keyword] += 1
+                done_together = True
+            if keyword in full_gram and done_together == False:
+                year2keywords[year][keyword] += 1
+                done_together = True
+        else:
+            if keyword in text and done_together == False and done == False:
+                year2keywords[year][keyword] += 1
+                done_together = True
+            if keyword in full_gram and done_together == False and done == False:
+                year2keywords[year][keyword] += 1
+                done_together = True
+            
 
             
             

@@ -10,6 +10,9 @@ from nltk.tokenize import word_tokenize
 
 lemmatizer = WordNetLemmatizer()
 
+
+
+
 # MongoDB connection
 Client = pymongo.MongoClient("mongodb://localhost:27017")
 db = Client["UBI"]
@@ -46,7 +49,7 @@ experimental_keywords = [
 ]
 
 experimental_keywords = [
-    "experiment", "simulation", "sample", "sampling", "field study", "case study", 
+    "experiment", "sample", "sampling", "field study", "case study", 
     "survey", "questionnaire", "laboratory", "pilot study", "experimentation", "empirical study", "rct", "experience", "randomized controlled trial",
     "evaluating","setting","scenario", "pilot", "design"
 ]

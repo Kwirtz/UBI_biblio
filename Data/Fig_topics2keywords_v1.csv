@@ -1,0 +1,134 @@
+year,definition,communities_1,communities_2,communities_3,communities_4,communities_5
+1966,negative income tax,0,0,1,0,0
+1967,negative income tax,1,1,2,0,0
+1968,minimum income guarantee,0,0,1,0,0
+1968,negative income tax,0,2,3,0,0
+1969,basic income,0,0,1,1,0
+1969,negative income tax,0,0,1,0,0
+1970,basic income,1,0,0,0,0
+1970,minimum income guarantee,0,1,0,0,0
+1970,negative income tax,0,2,1,0,0
+1971,negative income tax,1,2,1,0,0
+1972,minimum income guarantee,0,1,0,0,0
+1972,negative income tax,0,1,2,0,0
+1973,negative income tax,2,4,3,0,0
+1974,minimum income guarantee,0,0,1,0,0
+1974,negative income tax,1,1,8,1,0
+1975,basic income,1,0,0,0,0
+1975,minimum income guarantee,0,0,2,0,0
+1975,negative income tax,2,2,4,0,0
+1976,minimum income guarantee,0,1,0,0,0
+1976,negative income tax,0,2,4,0,0
+1977,negative income tax,1,2,7,1,0
+1978,basic income,0,0,1,0,0
+1978,negative income tax,0,4,7,0,0
+1979,negative income tax,1,2,15,0,0
+1980,basic income,0,0,1,0,0
+1980,negative income tax,0,1,15,0,0
+1981,negative income tax,0,0,4,0,0
+1982,basic income,1,0,0,0,0
+1982,negative income tax,0,0,2,0,0
+1983,negative income tax,0,0,4,0,0
+1984,basic income,0,0,1,0,0
+1984,negative income tax,1,4,0,0,0
+1985,minimum income guarantee,0,1,0,0,0
+1985,negative income tax,0,4,1,0,0
+1986,basic income,3,0,2,0,0
+1986,negative income tax,1,1,6,0,0
+1987,basic income,1,2,0,0,0
+1987,minimum income guarantee,1,1,1,0,0
+1987,negative income tax,1,4,1,0,0
+1988,basic income,2,2,2,0,1
+1988,negative income tax,1,1,4,0,0
+1989,basic income,2,3,2,0,0
+1989,negative income tax,0,1,0,0,0
+1990,basic income,3,3,1,1,0
+1990,minimum income guarantee,0,2,0,0,0
+1990,negative income tax,1,3,4,1,0
+1991,basic income,1,5,3,0,0
+1991,negative income tax,0,1,2,0,0
+1992,basic income,4,4,0,0,0
+1992,negative income tax,1,0,1,0,0
+1993,basic income,4,2,5,1,0
+1993,negative income tax,2,1,4,0,0
+1994,basic income,2,3,2,0,0
+1994,minimum income guarantee,0,1,1,0,0
+1994,negative income tax,0,0,3,0,0
+1995,basic income,7,5,2,1,0
+1995,minimum income guarantee,0,1,0,0,0
+1995,negative income tax,2,2,5,0,0
+1996,basic income,14,12,3,0,0
+1996,minimum income guarantee,0,4,0,0,0
+1996,negative income tax,1,4,3,0,0
+1997,basic income,18,10,2,1,0
+1997,minimum income guarantee,0,2,0,0,0
+1997,negative income tax,3,5,3,0,1
+1998,basic income,10,4,3,2,1
+1998,minimum income guarantee,0,1,1,0,0
+1998,negative income tax,4,4,1,0,0
+1999,basic income,17,8,4,1,1
+1999,minimum income guarantee,0,0,1,0,0
+1999,negative income tax,3,3,5,0,0
+2000,basic income,32,14,3,3,6
+2000,minimum income guarantee,2,1,0,0,0
+2000,negative income tax,4,2,0,0,0
+2001,basic income,17,6,2,3,0
+2001,minimum income guarantee,3,0,0,1,0
+2001,negative income tax,3,4,2,0,0
+2002,basic income,11,9,1,7,0
+2002,minimum income guarantee,1,1,0,0,0
+2002,negative income tax,1,5,4,2,1
+2003,basic income,21,12,6,6,0
+2003,minimum income guarantee,2,1,0,0,0
+2003,negative income tax,2,2,6,0,1
+2004,basic income,27,23,5,9,2
+2004,minimum income guarantee,0,2,1,1,0
+2004,negative income tax,3,5,3,1,0
+2005,basic income,24,17,10,7,1
+2005,minimum income guarantee,0,2,1,1,0
+2005,negative income tax,2,4,4,0,0
+2006,basic income,36,17,23,6,2
+2006,minimum income guarantee,2,0,2,0,0
+2006,negative income tax,2,5,5,0,1
+2007,basic income,19,15,7,9,0
+2007,minimum income guarantee,1,0,0,1,0
+2007,negative income tax,7,6,4,0,0
+2008,basic income,44,19,14,8,5
+2008,minimum income guarantee,1,0,0,1,0
+2008,negative income tax,9,5,2,0,0
+2009,basic income,30,11,8,3,1
+2009,minimum income guarantee,3,4,0,0,0
+2009,negative income tax,5,1,4,0,0
+2010,basic income,33,12,14,13,3
+2010,minimum income guarantee,1,0,0,0,0
+2010,negative income tax,5,3,9,1,1
+2011,basic income,40,11,15,3,5
+2011,minimum income guarantee,0,2,0,0,1
+2011,negative income tax,4,1,4,0,0
+2012,basic income,68,16,36,8,4
+2012,minimum income guarantee,3,2,1,0,0
+2012,negative income tax,14,2,5,1,0
+2013,basic income,51,14,19,9,7
+2013,minimum income guarantee,1,1,1,0,0
+2013,negative income tax,5,1,6,0,1
+2014,basic income,62,25,25,16,5
+2014,minimum income guarantee,0,1,0,0,0
+2014,negative income tax,5,2,6,0,0
+2015,basic income,58,13,31,10,2
+2015,minimum income guarantee,1,1,0,0,1
+2015,negative income tax,8,2,4,0,0
+2016,basic income,93,26,35,13,4
+2016,minimum income guarantee,1,0,3,0,0
+2016,negative income tax,13,3,6,2,0
+2017,basic income,140,47,92,29,9
+2017,minimum income guarantee,2,1,1,0,0
+2017,negative income tax,21,2,13,1,0
+2018,basic income,168,52,95,35,13
+2018,minimum income guarantee,3,0,0,0,0
+2018,negative income tax,17,7,12,3,0
+2019,basic income,176,56,121,38,6
+2019,minimum income guarantee,1,0,1,0,0
+2019,negative income tax,18,3,14,2,0
+2020,basic income,157,50,121,41,11
+2020,minimum income guarantee,0,1,1,0,0
+2020,negative income tax,2,0,6,1,1

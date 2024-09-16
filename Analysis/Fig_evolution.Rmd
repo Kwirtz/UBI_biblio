@@ -1,0 +1,263 @@
+---
+title: 'Figures'
+author: "Kevin Wirtz (kevin.wirtz@unistra.fr)"
+date: "Updated `r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_notebook:
+    code_folding: hide
+    df_print: paged
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+gc() #free up memrory and report the memory usage.
+graphics.off()
+
+Sys.setenv(LANG = "en") # For english language
+options(scipen = 5) # To deactivate annoying scientific number notation
+
+library(zoo)
+library(tidyverse) # Collection of all the good stuff like dplyr, ggplot2 ect.
+library(ggalluvial)
+library(cowplot)
+library(ggpubr)
+library(magick)
+library(magrittr)
+library(gridExtra)
+
+data_path = file.path("../Data") 
+result_path = file.path("../Results/Figures") 
+
+```
+
+# Fig1: Concept evolution
+
+```{r} 
+df <- read_csv(file.path(data_path, "Fig_commu_evolution.csv"))
+oma2 <- c(0,0,0,0)
+
+df <- df %>%
+  mutate(across(`community_1`:`community_5`, ~ rollmean(., 5, fill = NA, align = "center")))
+
+df_long <- df %>%
+  pivot_longer(
+    cols = starts_with("community_"),
+    names_to = "community",
+    values_to = "value"
+  )
+
+```
+
+
+
+```{r} 
+
+# Define the custom colors for each community
+custom_colors <- c("community_1" = "#ff7e35",
+                   "community_2" = "#f381e7",
+                   "community_3" = "#00c4ed",
+                   "community_4" = "#5cc032",
+                   "community_5" = "gray")
+
+# Update the community labels
+community_labels <- c("community_1" = "Social justice",
+                      "community_2" = "Tax/Labor supply",
+                      "community_3" = "Experiment",
+                      "community_4" = "Degrowth",
+                      "community_5" = "Others")
+
+# Create the individual plot
+Figa <- ggplot(df_long, aes(x = year, y = value)) +
+  geom_line(linewidth=1, aes(color = community)) +
+  labs(title = "", x = "", y = "Share of Publications (%)") +
+  scale_color_manual(values = custom_colors, labels = community_labels) + # Apply custom colors and labels
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+      axis.text.y = element_text(size = 10),
+      axis.title.x = element_text(size = 10),
+      axis.title.y = element_text(size = 10),
+      panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+      plot.margin = unit(oma2, "cm"),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      plot.title = element_text(hjust = 0.5, size = 12),  
+      legend.key=element_blank(),
+      legend.title=element_blank(),
+      legend.position="top",
+      legend.text=element_text(size = 10)) 
+
+
+Figa
+
+
+```
+
+```{r} 
+df <- read_csv(file.path(data_path, "Fig_topics2countries_evolution.csv"))
+oma2 <- c(0,0,0,0)
+
+df_long <- df %>%
+  pivot_longer(
+    cols = starts_with("countries_"),
+    names_to = "Countries",
+    values_to = "value"
+  )
+
+df_long <- df_long %>%
+  mutate(period = case_when(
+    year >= 1960 & year <= 1980 ~ "period1",
+    year >= 1981 & year <= 2000 ~ "period2",
+    year >= 2001 & year <= 2020 ~ "period3",
+    TRUE ~ NA_character_  # To handle any years outside the specified ranges
+  ))
+
+df_summarized <- df_long %>%
+  group_by(Topics, period, Countries) %>%
+  summarize(total_value = sum(value, na.rm = TRUE)) %>%
+  ungroup()
+
+# Calculate the share
+df_with_share <- df_summarized %>%
+  group_by(Countries,period) %>%
+  mutate(total_period_value = sum(total_value, na.rm = TRUE),
+         share = total_value / total_period_value) %>%
+  select(-total_period_value) %>%
+  ungroup()%>%
+  arrange(Topics, period, Countries)
+
+df_with_share$period <- factor(df_with_share$period, 
+                               levels = c("period1", "period2", "period3"), 
+                               labels = c("1960-1980", "1981-2000", "2001-2020"))
+
+country_labels <- c("countries_0" = "North Europe",
+                    "countries_1" = "USA-Africa-Asia",
+                    "countries_2" = "Western Europe",
+                    "countries_3" = "America and Pacific")
+
+# Replace country labels in the dataframe
+df_with_share$Countries <- factor(df_with_share$Countries, 
+                                  levels = names(country_labels), 
+                                  labels = country_labels)
+
+
+```
+
+```{r} 
+# Define the custom colors for each community
+custom_colors_topics <- c("community_1" = "#ff7e35",
+                   "community_2" = "#f381e7",
+                   "community_3" = "#00c4ed",
+                   "community_4" = "#5cc032",
+                   "community_5" = "gray")
+
+# Update the community labels
+topic_labels <- c("community_1" = "Social justice",
+                      "community_2" = "Tax/Labor supply",
+                      "community_3" = "Experiment",
+                      "community_4" = "Degrowth",
+                      "community_5" = "Others")
+
+Figb = ggplot(df_with_share, aes(x = Countries, y = share, fill = Topics)) +
+  geom_bar(stat = "identity", position = "stack") +
+  facet_wrap(~ period, labeller = labeller(period = function(x) {
+    return(c("1960-1980", "1981-2000", "2001-2020")[match(x, c("1960-1980", "1981-2000", "2001-2020"))])
+  })) +
+  labs(title = "",
+       x = "",
+       y = "Share",
+       fill = "Topics") +
+  scale_fill_manual(values = custom_colors_topics, labels = topic_labels) + # Apply custom colors and labels
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+      axis.text.y = element_text(size = 10),
+      axis.title.x = element_text(size = 10),
+      axis.title.y = element_text(size = 10),
+      plot.margin = unit(oma2, "cm"),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      plot.title = element_text(hjust = 0.5, size = 12),  
+      legend.key=element_blank(),
+      legend.title=element_blank(),,
+    legend.position = "right",
+    legend.text = element_text(size = 10)
+  )
+
+Figb
+
+
+```
+
+```{r} 
+df <- read_csv(file.path(data_path, "Fig2_a.csv"))
+df$expe_ma <- rollmean(df$expe, k = 5, fill = NA, align = "center")
+df$theo_ma <- rollmean(df$theoric, k = 5, fill = NA, align = "center")
+df$share_ma <- rollmean(df$share_expe, k = 5, fill = NA, align = "center")
+```
+
+```{r} 
+colors <- c("UBI publications" = "#1f77b4", "share SHS" = "#ff7f0e")
+
+Figc <- ggplot(df[1960<= df$Year & df$Year <= 2020,], aes(x = Year)) +
+  geom_line(linewidth=1,aes(y = expe_ma, color='expe_publications')) + 
+  geom_line(linewidth=1,aes(y = share_ma*676, color='expe_share')) +
+  geom_line(linewidth=1,aes(y = theo_ma, color='theoric_publications')) +
+  scale_color_manual(name = "Group",
+                     values = c( "expe_publications" = "#1f77b4","expe_share"="#ff7f0e", "theoric_publications" = "black"),
+                     labels = c( "Expe related publications","Share Expe","Theoric related publications")) +
+  labs(title = "", x = "", y = "# Publications") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+      axis.text.y = element_text(size = 10),
+      axis.title.x = element_text(size = 10),
+      axis.title.y = element_text(size = 10),
+      panel.border = element_rect(colour = "black", fill=NA, size=0.75),
+      plot.margin = unit(oma2, "cm"),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.background = element_blank(),
+      plot.title = element_text(hjust = 0.5, size = 12),  
+      legend.key=element_blank(),
+      legend.title=element_blank(),
+      legend.position="top",
+      legend.text=element_text(size = 10)) +
+  scale_y_continuous(
+    name = "Publications",
+    sec.axis = sec_axis(~./676, name="Share")
+  )
+
+Figc
+
+
+
+```
+
+
+```{r} 
+fig2 = ggdraw() +
+  # Top left plot
+  draw_plot(Figa, x = 0, y = 0.6, width = 0.45, height = 0.4) +  
+  # Top right plot
+  draw_plot(Figc, x = 0.55, y = 0.6, width = 0.45, height = 0.4) + 
+  # Bottom plot
+  draw_plot(Figb, x = 0.3, y = 0, width = 0.5, height = 0.6) + 
+  # Labels for each plot
+  draw_plot_label(label = c("A", "B", "C"), 
+                  x = c(0, 0.55, 0.3), 
+                  y = c(1, 1, 0.6), 
+                  size = 10) +
+  # Adjusting the margins
+  theme(plot.margin = margin(0.3, 0.3, 0.4, 0.3, "cm"))
+
+fig2
+pdf(file = file.path(result_path, "Fig_evolution.pdf"), width = 12, height = 8, family = "Helvetica", pointsize = 12)
+fig2
+dev.off()
+```
+

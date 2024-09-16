@@ -1,0 +1,79 @@
+---
+title: 'Figures'
+author: "Kevin Wirtz (kevin.wirtz@unistra.fr)"
+date: "Updated `r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_notebook:
+    code_folding: hide
+    df_print: paged
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+gc() #free up memrory and report the memory usage.
+graphics.off()
+
+Sys.setenv(LANG = "en") # For english language
+options(scipen = 5) # To deactivate annoying scientific number notation
+
+library(zoo)
+library(tidyverse) # Collection of all the good stuff like dplyr, ggplot2 ect.
+library(ggalluvial)
+library(cowplot)
+library(ggpubr)
+library(magick)
+library(magrittr)
+library(gridExtra)
+
+data_path = file.path("../Data") 
+result_path = file.path("../Results/Figures") 
+
+```
+
+# Fig1: Concept evolution
+
+```{r} 
+df <- read_csv(file.path(data_path, "commu2discipline.csv"))
+oma2 <- c(0,0,0,0)
+
+top_disciplines <- df %>%
+  count(discipline, sort = TRUE) %>%
+  top_n(10, n) %>%
+  pull(discipline)
+
+df_filtered <- df %>%
+  filter(discipline %in% top_disciplines) %>%
+  filter(commu ==1)
+
+df_long <- df_filtered %>%
+  group_by(commu,discipline) %>%
+  summarize(Total_value = sum(value))
+
+```
+
+```{r} 
+figd <- ggplot(data = df_long,
+       aes(axis1 = commu, axis2 = discipline, y = Total_value)) +
+  geom_alluvium(aes(fill = discipline)) +
+  geom_stratum(alpha=0.5) +
+  geom_text(stat = "stratum",
+            aes(label = after_stat(stratum)),
+            size= 3) +
+  scale_x_discrete(limits = c("Topics", "Discipline"),
+                   expand = c(0.15, 0.05)) +
+  theme_void()+
+  theme(legend.position = "none")
+
+figd
+
+pdf(file=file.path(result_path, "Fig_discipline.pdf"), width=8, height=5, family="Helvetica", pointsize=6)
+figd
+dev.off()
+
+```

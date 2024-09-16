@@ -13,6 +13,16 @@ from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 from collections import defaultdict, Counter
 
+start_year = 1960
+end_year = 2020
+
+query = {
+    'publication_year': {
+        '$gte': start_year,
+        '$lte': end_year
+    }
+}
+
 lemmatizer = WordNetLemmatizer()
 
 def clear_text(text):
@@ -85,7 +95,7 @@ for doc in tqdm.tqdm(docs):
         for location in doc["locations"]:
             journal = False
             try:
-                if location["source"]["type"] == "repository":
+                if location["source"]["type"] == "journal":
                     journal = True
             except:
                 pass
@@ -184,15 +194,16 @@ df_journals.to_csv("Data/Fig2_b.csv",index=False,encoding="utf-8")
 #%% 4x4 plot expe Journal
 
 experimental_keywords = [
-    "experiment", "simulation", "sample", "sampling", "field study", "case study", 
-    "survey", "questionnaire", "laboratory", "pilot study", "experimentation", "empirical study", "rct", "experience", "randomized controlled trial",
-    "evaluating","setting","scenario", "pilot", "design"
-]
+    "experiment", "sample", "sampling", "field study", "case study", 
+    "survey", "questionnaire", "laboratory", "pilot study", "experimentation", "empirical study", "rct", "experience", "randomized controlled trial", 
+    ]
+
+
 
 
 journals = []
 
-docs = collection.find()
+docs = collection.find(query)
 for doc in tqdm.tqdm(docs):
     done = False
     try:
@@ -207,9 +218,10 @@ for doc in tqdm.tqdm(docs):
         title = ""
     if not abstract:
         abstract = ""
-    text = title + " " + abstract
-    text = clear_text(text)     
-    if len([i for i in experimental_keywords if i in text]) > 0 and done == False:
+    text = title + " " + abstract 
+    text = text.lower()        
+    text = clear_text(text)    
+    if len([i for i in experimental_keywords if i in text.split(" ")]) == 0 and done == False:
         if doc["locations"]:
             for location in doc["locations"]:
                 journal = False
@@ -247,7 +259,7 @@ df_expanded = pd.merge(df_temp, years, on='key').drop('key', axis=1)
 df_expanded = df_expanded[['journal', 'year', 'n_theo', 'n_expe']]
 
 
-docs = collection.find()
+docs = collection.find(query)
 for doc in tqdm.tqdm(docs):
     done = False
     try:
@@ -262,9 +274,10 @@ for doc in tqdm.tqdm(docs):
     if not title:
         title = ""
     if not abstract:
-        abstract = ""
-    text = title + " " + abstract
-    text = text.lower()    
+        abstract = ""  
+    text = title + " " + abstract 
+    text = text.lower()        
+    text = clear_text(text)     
     if doc["locations"]:
         for location in doc["locations"]:
             journal = False
@@ -276,7 +289,7 @@ for doc in tqdm.tqdm(docs):
             if journal:
                 try:
                     if location["source"]["display_name"] in most_common_journals:
-                        if len([i for i in experimental_keywords if i in text.split(" ")]) > 0 and done == False:
+                        if len([i for i in experimental_keywords if i in text.split(" ")]) > 0 or len([i for i in experimental_keywords if i in location["source"]["display_name"].lower()]) > 0 and done == False:
                             condition = (df_expanded['journal'] == location["source"]["display_name"]) & (df_expanded['year'] == year)
                             df_expanded.loc[condition, "n_expe"] += 1
                             df_journals.at[location["source"]["display_name"],"n_expe"] += 1
@@ -306,15 +319,14 @@ df_journals.to_csv("Data/Fig2_b.csv",index=False,encoding="utf-8")
 #%% 4x4 plot expe repository
 
 experimental_keywords = [
-    "experiment", "simulation", "sample", "sampling", "field study", "case study", 
-    "survey", "questionnaire", "laboratory", "pilot study", "experimentation", "empirical study", "rct", "experience", "randomized controlled trial",
-    "evaluating","setting","scenario", "pilot", "design"
+    "experiment", "sample", "sampling", "field study", "case study", 
+    "survey", "questionnaire", "laboratory", "pilot study", "experimentation", "empirical study", "rct", "experience", "randomized controlled trial"
 ]
 
 
 journals = []
 
-docs = collection.find()
+docs = collection.find(query)
 for doc in tqdm.tqdm(docs):
     done = False
     try:
@@ -368,9 +380,10 @@ years['key'] = 1
 df_expanded = pd.merge(df_temp, years, on='key').drop('key', axis=1)
 df_expanded = df_expanded[['journal', 'year', 'n_theo', 'n_expe']]
 
-
-docs = collection.find()
+n_list = []
+docs = collection.find(query)
 for doc in tqdm.tqdm(docs):
+    n =0
     done = False
     try:
         title = doc["title"]
@@ -392,13 +405,14 @@ for doc in tqdm.tqdm(docs):
             journal = False
             try:
                 if location["source"]["type"] == "repository":
+                    n += 1
                     journal = True
             except:
                 pass
             if journal:
                 try:
                     if location["source"]["display_name"] in most_common_journals:
-                        if len([i for i in experimental_keywords if i in text.split(" ")]) > 0 and done == False:
+                        if len([i for i in experimental_keywords if i in text.split(" ")]) > 0  or len([i for i in experimental_keywords if i in location["source"]["display_name"].lower()]) > 0 and done == False:
                             condition = (df_expanded['journal'] == location["source"]["display_name"]) & (df_expanded['year'] == year)
                             df_expanded.loc[condition, "n_expe"] += 1
                             df_journals.at[location["source"]["display_name"],"n_expe"] += 1
@@ -412,7 +426,8 @@ for doc in tqdm.tqdm(docs):
                             done = True
                 except Exception as e:
                     print(str(e))
-    
+    n_list.append(n)
+  
 df_journals["Journal"] = df_journals.index
 
 def clean_text(text):

@@ -41,9 +41,11 @@ result_path = file.path("../Results/Figures")
 ```{r} 
 df <- read_csv(file.path(data_path, "Fig1.csv"))
 oma2 <- c(0,0,0,0)
+#df$`minimum income guarantee v2` = df$`minimum income guarantee`+df$`guaranteed minimum income`
 df_long <- df %>%
-  filter(year >= 1950 & year <= 2020) %>%
-  pivot_longer(cols = everything()[-1], # exclude year column
+  select(`basic income`, `year`) %>%
+  filter(year >= 1950 & year <= 2010) %>%
+  pivot_longer(cols = -year, # exclude year column
                names_to = "Variable",  # name for new column with variable names
                values_to = "Value")
 
@@ -93,8 +95,6 @@ pdf(file=file.path(result_path, "Fig1.pdf"), width=8, height=6, family="Helvetic
 #grid.arrange(Fig1_a, Fig1_b, Fig1_c, nrow = 2,ncol=2, layout_matrix=rbind(c(1,1, 2,2), c(NA, 3, 3, NA)))
 Fig1_a
 dev.off()
-
-
 
 
 ```

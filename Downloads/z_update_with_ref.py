@@ -198,6 +198,8 @@ for paper in tqdm.tqdm(list_papers):
     full_text = text +  " " + full_gram
     for keyword in check:
         if keyword in full_text:
+            if year < 1960:
+                print(doc["id"],keyword)
             n += 1 
     if n >0:
         list_insertion.append(doc)

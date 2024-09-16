@@ -1,0 +1,312 @@
+year,definition,communities_1,communities_2,communities_3,communities_4,communities_5
+1964,in kind,1,0,0,0,0
+1964,individual,1,0,1,0,0
+1965,individual,1,0,0,0,0
+1966,individual,0,0,1,0,0
+1966,universal,0,0,1,0,0
+1967,cash payment,0,0,1,0,0
+1967,in kind,0,1,0,0,0
+1967,individual,1,1,1,0,0
+1967,periodic,0,1,0,0,0
+1967,universal,1,1,0,0,0
+1968,cash payment,0,0,1,0,0
+1968,individual,0,2,3,0,0
+1968,universal,0,1,0,0,0
+1969,individual,0,0,2,1,0
+1969,regularly,0,0,1,0,0
+1970,individual,0,2,1,0,0
+1970,universal,1,0,0,0,0
+1971,cash payment,0,1,0,0,0
+1971,in kind,1,0,0,0,0
+1971,individual,1,1,1,0,0
+1971,regularly,0,0,1,0,0
+1971,unconditional,0,1,0,0,0
+1971,universal,1,2,1,0,0
+1972,individual,0,0,3,0,0
+1972,periodic,0,0,1,0,0
+1972,regularly,0,0,1,0,0
+1972,universal,0,0,1,0,0
+1973,cash payment,0,1,1,0,0
+1973,in kind,0,1,1,0,0
+1973,individual,2,2,2,0,0
+1973,periodic,1,0,1,0,0
+1973,unconditional,0,1,1,0,0
+1973,universal,1,2,3,0,0
+1974,cash payment,0,0,2,0,0
+1974,individual,1,1,7,0,0
+1974,periodic,0,0,2,0,0
+1974,regularly,0,0,1,0,0
+1974,unconditional,0,0,1,0,0
+1974,universal,0,0,2,0,0
+1975,cash payment,1,0,0,0,0
+1975,individual,3,2,5,1,1
+1975,periodic,1,0,2,1,0
+1975,universal,2,1,2,0,0
+1976,in kind,1,0,0,0,0
+1976,individual,1,4,3,0,0
+1976,universal,1,1,1,0,0
+1977,in kind,1,0,1,0,0
+1977,individual,4,3,5,1,0
+1977,periodic,2,0,0,0,0
+1977,regularly,1,1,0,0,0
+1977,universal,3,1,1,0,0
+1978,cash payment,0,0,1,0,0
+1978,individual,0,3,6,0,0
+1978,periodic,0,0,2,0,0
+1978,unconditional,0,1,0,0,0
+1978,universal,0,0,2,0,0
+1979,in kind,1,0,2,0,0
+1979,individual,2,3,11,0,0
+1979,periodic,0,0,2,0,0
+1979,unconditional,0,0,1,0,0
+1979,universal,0,0,3,0,0
+1980,in kind,1,1,0,0,0
+1980,individual,1,2,14,0,0
+1980,periodic,0,0,3,0,0
+1980,unconditional,0,0,1,0,0
+1980,universal,1,1,3,0,0
+1981,cash payment,0,0,2,0,0
+1981,individual,1,0,5,0,0
+1981,regularly,0,0,1,0,0
+1981,universal,1,0,0,0,0
+1982,in kind,1,0,0,0,0
+1982,individual,1,1,2,0,0
+1983,individual,0,1,4,0,0
+1983,regularly,0,0,1,0,0
+1983,unconditional,0,0,1,0,0
+1983,universal,0,1,1,0,0
+1984,in kind,1,0,1,1,0
+1984,individual,5,3,1,2,0
+1984,universal,2,1,1,1,0
+1985,cash payment,0,2,0,0,0
+1985,in kind,1,1,0,0,0
+1985,individual,2,3,1,0,0
+1985,periodic,1,1,1,0,0
+1985,unconditional,0,1,0,0,0
+1985,universal,0,2,0,0,0
+1986,in kind,0,1,0,0,0
+1986,individual,5,4,8,0,0
+1986,periodic,0,0,1,0,0
+1986,unconditional,3,0,0,0,0
+1986,universal,2,0,4,0,0
+1987,cash payment,1,1,0,0,0
+1987,in kind,1,1,0,0,0
+1987,individual,4,6,0,0,0
+1987,periodic,1,0,0,0,0
+1987,regularly,0,2,0,0,0
+1987,unconditional,1,1,0,0,0
+1987,universal,2,4,0,0,0
+1988,in kind,2,1,0,0,0
+1988,individual,2,5,3,0,0
+1988,periodic,0,0,1,0,0
+1988,unconditional,1,0,0,0,0
+1988,universal,2,2,3,0,0
+1989,cash payment,0,2,0,0,0
+1989,in kind,0,0,1,0,0
+1989,individual,3,5,1,1,0
+1989,regularly,1,0,0,0,0
+1989,unconditional,1,1,0,0,0
+1989,universal,2,4,1,0,0
+1990,cash payment,1,0,0,0,0
+1990,individual,1,4,3,1,0
+1990,periodic,0,0,1,0,0
+1990,regularly,0,0,2,0,0
+1990,unconditional,1,0,0,0,0
+1990,universal,0,4,0,0,0
+1991,cash payment,0,0,2,0,0
+1991,in kind,0,1,0,0,0
+1991,individual,0,5,5,0,0
+1991,periodic,0,1,0,0,0
+1991,unconditional,0,1,0,0,0
+1991,universal,0,4,3,0,0
+1992,individual,3,3,2,0,0
+1992,regularly,0,0,1,0,0
+1992,unconditional,1,1,1,0,0
+1992,universal,3,1,0,0,0
+1993,cash payment,0,0,1,0,0
+1993,in kind,1,0,0,0,0
+1993,individual,5,2,8,0,0
+1993,periodic,0,0,1,0,0
+1993,regularly,0,0,1,0,0
+1993,unconditional,2,0,2,0,0
+1993,universal,2,1,3,0,0
+1994,in kind,1,0,0,0,0
+1994,individual,4,7,7,1,0
+1994,periodic,0,0,1,1,0
+1994,regularly,2,0,0,0,0
+1994,unconditional,2,0,0,0,0
+1994,universal,4,2,1,1,0
+1995,cash payment,1,0,0,0,0
+1995,in kind,0,1,0,0,0
+1995,individual,7,5,5,0,0
+1995,periodic,0,0,1,0,0
+1995,regularly,1,0,0,0,0
+1995,unconditional,2,1,2,1,0
+1995,universal,5,2,2,0,0
+1996,in kind,1,2,0,0,0
+1996,individual,7,8,5,1,0
+1996,periodic,1,0,0,0,0
+1996,regularly,1,2,0,0,0
+1996,unconditional,4,5,2,0,0
+1996,universal,6,5,2,0,0
+1997,cash payment,1,0,0,0,0
+1997,in kind,3,1,0,0,0
+1997,individual,10,6,1,0,1
+1997,periodic,1,0,0,0,0
+1997,regularly,2,0,0,0,0
+1997,unconditional,4,3,0,0,0
+1997,universal,6,2,1,0,0
+1998,in kind,0,1,0,1,0
+1998,individual,8,7,5,2,0
+1998,periodic,1,0,0,0,0
+1998,regularly,1,0,0,0,0
+1998,unconditional,5,2,2,1,0
+1998,universal,7,5,2,1,0
+1999,cash payment,1,0,1,0,0
+1999,in kind,3,0,1,0,0
+1999,individual,10,4,7,1,0
+1999,periodic,1,0,0,0,0
+1999,regularly,0,0,1,0,0
+1999,unconditional,5,1,0,0,0
+1999,universal,8,0,3,1,0
+2000,in kind,2,0,0,0,0
+2000,individual,13,2,0,3,0
+2000,regularly,2,0,0,1,0
+2000,unconditional,7,0,0,0,0
+2000,universal,10,0,0,2,0
+2001,cash payment,0,1,0,1,0
+2001,in kind,1,0,0,0,0
+2001,individual,13,9,2,2,0
+2001,periodic,1,1,0,0,0
+2001,regularly,0,2,0,0,0
+2001,unconditional,9,3,0,1,0
+2001,universal,10,6,0,2,0
+2002,cash payment,0,0,1,1,0
+2002,in kind,1,0,2,1,1
+2002,individual,5,5,4,7,1
+2002,periodic,0,1,1,1,0
+2002,regularly,3,1,0,2,0
+2002,unconditional,4,2,0,0,0
+2002,universal,3,4,4,6,0
+2003,cash payment,1,0,1,0,0
+2003,in kind,1,0,0,0,0
+2003,individual,10,4,6,4,1
+2003,periodic,0,1,1,2,0
+2003,regularly,1,0,1,1,0
+2003,unconditional,3,1,0,0,0
+2003,universal,6,2,2,3,0
+2004,cash payment,3,2,0,1,0
+2004,in kind,3,1,1,1,0
+2004,individual,11,7,5,6,0
+2004,periodic,2,1,1,1,0
+2004,regularly,1,0,0,1,0
+2004,unconditional,8,4,2,2,0
+2004,universal,8,5,3,6,0
+2005,cash payment,1,2,0,0,0
+2005,in kind,2,1,0,0,0
+2005,individual,10,8,6,6,0
+2005,periodic,3,1,0,1,0
+2005,regularly,0,1,0,2,0
+2005,unconditional,7,6,4,1,0
+2005,universal,8,4,4,2,0
+2006,in kind,3,1,4,0,0
+2006,individual,12,5,13,2,1
+2006,periodic,3,0,0,0,0
+2006,regularly,3,1,0,1,0
+2006,unconditional,7,1,7,0,1
+2006,universal,7,4,6,1,0
+2007,in kind,0,1,0,0,0
+2007,individual,20,10,1,5,0
+2007,periodic,2,1,0,0,0
+2007,regularly,2,0,0,1,0
+2007,unconditional,12,3,0,2,0
+2007,universal,14,5,1,5,0
+2008,cash payment,5,0,0,1,0
+2008,in kind,3,2,0,0,0
+2008,individual,33,7,7,6,3
+2008,periodic,2,2,2,0,0
+2008,regularly,2,0,0,1,1
+2008,unconditional,19,4,5,1,0
+2008,universal,27,7,5,6,1
+2009,cash payment,1,0,0,0,0
+2009,in kind,2,0,0,0,0
+2009,individual,23,8,6,1,1
+2009,periodic,1,0,0,0,0
+2009,regularly,2,2,3,0,0
+2009,unconditional,8,2,1,0,0
+2009,universal,16,3,3,2,1
+2010,cash payment,1,0,1,2,0
+2010,in kind,3,0,0,1,1
+2010,individual,18,8,10,9,2
+2010,periodic,2,0,0,2,1
+2010,regularly,2,0,1,3,0
+2010,unconditional,8,3,3,7,0
+2010,universal,11,6,2,7,0
+2011,cash payment,1,0,2,1,0
+2011,in kind,1,0,3,0,0
+2011,individual,19,4,10,4,4
+2011,periodic,2,1,1,0,1
+2011,regularly,2,0,2,1,1
+2011,unconditional,16,0,3,0,0
+2011,universal,19,2,2,0,0
+2012,cash payment,5,0,2,0,0
+2012,in kind,5,1,0,0,0
+2012,individual,33,7,9,5,2
+2012,periodic,10,1,2,1,0
+2012,regularly,7,0,1,0,0
+2012,unconditional,20,3,4,1,1
+2012,universal,28,5,3,1,0
+2013,cash payment,1,0,1,0,0
+2013,in kind,2,0,1,0,0
+2013,individual,28,4,12,10,2
+2013,periodic,1,0,3,0,0
+2013,regularly,2,0,2,1,1
+2013,unconditional,21,1,7,2,0
+2013,universal,23,2,9,7,0
+2014,cash payment,0,0,1,0,0
+2014,in kind,0,1,0,1,0
+2014,individual,17,2,12,6,1
+2014,periodic,2,0,2,0,0
+2014,regularly,4,0,1,3,0
+2014,unconditional,12,1,5,3,1
+2014,universal,14,2,5,5,0
+2015,cash payment,2,0,3,0,0
+2015,in kind,4,1,0,2,0
+2015,individual,28,8,13,5,3
+2015,periodic,2,0,1,2,0
+2015,regularly,4,0,1,2,0
+2015,unconditional,24,1,7,2,0
+2015,universal,27,6,10,6,0
+2016,cash payment,2,0,1,0,0
+2016,in kind,7,1,2,0,0
+2016,individual,44,7,14,3,0
+2016,periodic,2,0,4,0,0
+2016,regularly,8,1,0,1,0
+2016,unconditional,25,4,7,4,0
+2016,universal,41,4,10,3,0
+2017,cash payment,5,0,4,0,0
+2017,in kind,4,1,4,2,0
+2017,individual,37,10,27,11,2
+2017,periodic,4,0,1,0,0
+2017,regularly,2,0,4,3,1
+2017,unconditional,26,2,20,5,0
+2017,universal,38,11,31,13,0
+2018,cash payment,5,1,5,0,0
+2018,in kind,6,0,2,1,0
+2018,individual,50,7,38,11,0
+2018,periodic,7,1,5,0,0
+2018,regularly,8,0,4,2,0
+2018,unconditional,31,4,29,5,0
+2018,universal,48,4,35,11,0
+2019,cash payment,5,0,1,1,0
+2019,in kind,2,0,2,1,0
+2019,individual,35,4,22,14,1
+2019,periodic,5,0,2,0,0
+2019,regularly,7,0,4,1,0
+2019,unconditional,28,2,20,7,0
+2019,universal,35,2,25,8,0
+2020,cash payment,0,0,2,0,0
+2020,in kind,0,0,1,0,0
+2020,individual,3,0,5,0,0
+2020,unconditional,9,0,9,2,0
+2020,universal,19,3,19,5,0

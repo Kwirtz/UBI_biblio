@@ -105,6 +105,17 @@ merged_df = df_national.merge(df, left_on="country", right_on="Node", how="inner
 merged_df = merged_df.drop(columns=["Node"])
 merged_df.to_csv("Data/national_output_bi.csv",index=False)
 
+agg_columns = ['n_total', 'n_solo_country', 'n_solo_author', 'n_collab']
+keep_columns = ['country', 'Community', 'unique_authors']
+
+# Aggregate the data
+result = merged_df.groupby('country_name').agg({
+    **{col: 'sum' for col in agg_columns},
+    **{col: 'first' for col in keep_columns}
+}).reset_index()
+
+result.to_csv("Data/soule.csv",index= False)
+
 #%%
 country2commu = {}
 
@@ -163,6 +174,7 @@ for country_commu in countries2df:
     df_year_comm_normalized["year"] = df_year_comm_normalized.index
     df_year_comm_normalized.to_csv("Data/Fig_commu_evolution_{}.csv".format(country_commu),index=False)
 
+
 topic2countries = {"community_"+str(i):pd.DataFrame(0, index=range(1960,2021),columns=[f'countries_{col}' for col in countries2df]) for i in commu2papers}
 
 for country_commu in countries2df:
@@ -190,3 +202,4 @@ for topic_commu in df_year_comm_normalized.columns:
     
 df_test.to_csv("Data/Fig_topics2countries_evolution.csv",index=False)
 
+#%%

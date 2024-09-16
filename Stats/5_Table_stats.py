@@ -1,5 +1,6 @@
 import tqdm
 import pymongo
+import numpy as np
 import pandas as pd
 
 client = pymongo.MongoClient("mongodb://localhost:27017")
@@ -55,7 +56,7 @@ len(list(set(author_list)))
 #%% full_tables
 
 list_of_insertion = []
-
+type_ = []
 docs = collection.find()
 for doc in tqdm.tqdm(docs):
     countries = doc["countries_distinct_count"]
@@ -76,17 +77,26 @@ for doc in tqdm.tqdm(docs):
     is_journal = 0
     is_book = 0
     is_preprint = 0
+    is_article = 0
     if doc["type"] == "preprint":
         is_preprint = 1
-    if doc["type"] == "book":
+    if doc["type"] == "book" or doc["type"] == "book-chapter":
         is_book = 1
     if doc["type"] == "article":
-        is_journal = 1
-    list_of_insertion.append([n_authors, n_citations, countries, n_ref, n_concepts, is_oa, is_preprint, is_journal, is_book])
+        is_article = 1
+    if doc["type"] == "review":
+        print(doc["id"])
+    #type_.append(doc["type"])
+    try:
+        if doc["primary_location"]["source"]["type"] == "journal":
+            is_journal = 1
+    except:
+        pass
+    list_of_insertion.append([n_authors, n_citations, countries, n_ref, n_concepts, is_oa, is_preprint, is_article, is_journal, is_book])
     
 
 df = pd.DataFrame(list_of_insertion, columns = ["Nb. Authors", "Nb. Citations", "Nb. Countries", "Nb. references",
-                                                "Nb. Concepts", "Open Access", "Preprint","Journal article", "Book"])
+                                                "Nb. Concepts", "Open Access", "Preprint","Research paper", "Journal article", "Book"])
 
 df["Open Access"] = df["Open Access"].astype(int)      
 
@@ -109,3 +119,76 @@ latex_table = stats_df.to_latex(float_format="%.2f")
 
 # Print or save latex_table to a .tex file
 print(latex_table)
+
+#%% 
+
+import string
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+from collections import defaultdict, Counter
+
+experimental_keywords = [
+    "experiment", "sample", "sampling", "field study", "case study", 
+    "survey", "questionnaire", "laboratory", "pilot study", "experimentation", "empirical study", "rct", "experience", "randomized controlled trial", 
+    ]
+
+lemmatizer = WordNetLemmatizer()
+
+def clear_text(text):
+    # Remove leading and trailing spaces
+    text = text.strip()
+    text = text.lower()
+    # Tokenize the text
+    tokens = word_tokenize(text)
+    
+    # Lemmatize each token
+    lemmatized_tokens = [lemmatizer.lemmatize(token) for token in tokens if len(token) > 1]
+    
+    # Remove punctuation from the text
+    lemmatized_text = ''.join([char for char in ' '.join(lemmatized_tokens) if char not in string.punctuation])
+    
+    cleaned_text = ' '.join(lemmatized_text.split())
+    return cleaned_text  
+
+expe_list_countries = []
+theo_list_countries = []
+expe_list_authors = []
+theo_list_authors = []
+
+docs = collection.find()
+for doc in tqdm.tqdm(docs):
+    countries = doc["countries_distinct_count"]
+    authors = doc["authors_count"]
+    done = False
+    try:
+        title = doc["title"]
+    except:
+        title = ""
+    try:
+        abstract = doc["abstract"]
+    except:
+        abstract = ""
+    if not title:
+        title = ""
+    if not abstract:
+        abstract = ""
+    text = title + " " + abstract 
+    text = text.lower()        
+    text = clear_text(text)   
+    if len([i for i in experimental_keywords if i in text.split(" ")]) > 0:
+        if countries > 0:
+            expe_list_countries.append(countries)
+        if authors > 0:
+            expe_list_authors.append(authors)
+    else:
+        if countries >0:
+            theo_list_countries.append(countries)
+        if authors > 0:
+            theo_list_authors.append(authors)
+        
+np.mean(expe_list_countries)
+np.mean(theo_list_countries)
+np.mean(expe_list_authors)
+np.mean(theo_list_authors)
+
+

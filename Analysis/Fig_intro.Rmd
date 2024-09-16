@@ -53,15 +53,15 @@ df = df %>%
 ```{r} 
 oma2 <- c(0.3,0,0,0.3)
 
-colors <- c("UBI publications" = "#1f77b4", "share SHS" = "#ff7f0e")
+colors <- c("BI publications" = "#1f77b4", "share SSH" = "#ff7f0e")
 
 
 fig_intro_a = ggplot(df[df$year<=2020,], aes(x = year)) + 
-  geom_line(linewidth=1,aes(y = n_ubi_SHS, color='UBI_publications')) + 
-  geom_line(linewidth=1,aes(y = share_ubi_ma*6768480, color='UBI_share')) +
+  geom_line(linewidth=1,aes(y = n_ubi_SHS, color='BI_publications')) + 
+  geom_line(linewidth=1,aes(y = share_ubi_ma*6768480, color='BI_share')) +
   scale_color_manual(name = "Group",
-                     values = c( "UBI_publications" = "#1f77b4", "UBI_share" = "black"),
-                     labels = c( "UBI publications","Share UBI publications in SHS")) +
+                     values = c( "BI_publications" = "#1f77b4", "BI_share" = "black"),
+                     labels = c( "BI publications","Share BI publications in SSH")) +
   labs(x = "Year",
          y = "Share",
          color = "Legend",
@@ -86,11 +86,11 @@ fig_intro_a = ggplot(df[df$year<=2020,], aes(x = year)) +
   )
 
 fig_intro_b = ggplot(df[df$year<=2020,], aes(x = year)) + 
-  geom_line(linewidth=1,aes(y = n_ubi_SHS_eco, color='UBI_publications')) + 
-  geom_line(linewidth=1,aes(y = share_ubi_eco_ma*3384240, color='UBI_share')) +
+  geom_line(linewidth=1,aes(y = n_ubi_SHS_eco, color='BI_publications')) + 
+  geom_line(linewidth=1,aes(y = share_ubi_eco_ma*1128080, color='BI_share')) +
   scale_color_manual(name = "Group",
-                     values = c( "UBI_publications" = "#1f77b4", "UBI_share" = "black"),
-                     labels = c( "UBI publications","Share UBI publications in Economics")) +
+                     values = c( "BI_publications" = "#1f77b4", "BI_share" = "black"),
+                     labels = c( "BI publications","Share BI publications in Economics")) +
   labs(x = "Year",
          y = "Share",
          color = "Legend",
@@ -111,7 +111,7 @@ fig_intro_b = ggplot(df[df$year<=2020,], aes(x = year)) +
       legend.text=element_text(size = 8)) +
   scale_y_continuous(
     name = "Publications",
-    sec.axis = sec_axis(~./3384240, name="Share")
+    sec.axis = sec_axis(~./1128080, name="Share")
   )
 
 fig_intro_a

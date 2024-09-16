@@ -160,15 +160,23 @@ df$Journal <- str_wrap(df$Journal, width = 30)
 df_long <- df %>%
   pivot_longer(cols = c(n_theo, n_expe), names_to = "Type", values_to = "Count")
 
-# Calculate the total count for each journal
-journal_totals <- df_long %>%
+# Calculate total count for each journal across all types
+total_journal_counts <- df_long %>%
   group_by(Journal) %>%
-  summarize(TotalCount = sum(Count))
+  summarize(TotalCount_AllTypes = sum(Count))
 
+# Calculate total count specifically for type "n_expe" for each journal
+expe_journal_counts <- df_long %>%
+  filter(Type == "n_expe") %>%
+  group_by(Journal) %>%
+  summarize(TotalCount_Expe = sum(Count))
+
+# Merge the two summaries by Journal
+journal_totals <- merge(total_journal_counts, expe_journal_counts, by = "Journal", all = TRUE)
 # Select the top 10 journals based on the total count
 top_journals <- journal_totals %>%
-  top_n(10, TotalCount) %>%
-  arrange(desc(TotalCount))
+  top_n(10, TotalCount_Expe) %>%
+  arrange(desc(TotalCount_AllTypes))
 
 # Filter the long-format data to include only the top 10 journals
 df_long_top10 <- df_long %>%
@@ -213,17 +221,16 @@ dev.off()
 Fig2 assemble
 ```{r} 
 fig2 = ggdraw() +
-  draw_plot(Fig2_a, x = 0, y = 0.5, width = 1, height = 0.5) + # Top plot
-  draw_plot(Fig2_b, x = 0, y = 0, width = 0.5, height = 0.5) + # Bottom left plot
-  draw_plot(Fig2_c, x = 0.5, y = 0, width = 0.5, height = 0.5) + # Bottom right plot
-  draw_plot_label(label = c("A", "B", "C"), 
-                  x = c(0, 0, 0.5), 
-                  y = c(1, 0.5, 0.5), 
+  draw_plot(Fig2_b, x = 0, y = 0, width = 0.5, height = 1) +  # Left plot (now takes the full height)
+  draw_plot(Fig2_c, x = 0.5, y = 0, width = 0.5, height = 1) + # Right plot (now takes the full height)
+  draw_plot_label(label = c("A", "B"), 
+                  x = c(0, 0.5), 
+                  y = c(1, 1), 
                   size = 10) +
   theme(plot.margin = margin(0.3, 0.3, 0.4, 0.3, "cm")) 
 
 fig2
-pdf(file = file.path(result_path, "Fig2.pdf"), width = 12, height = 12, family = "Helvetica", pointsize = 12)
+pdf(file = file.path(result_path, "Fig2_bc.pdf"), width = 12, height = 6, family = "Helvetica", pointsize = 12)
 fig2
 dev.off()
 ```
