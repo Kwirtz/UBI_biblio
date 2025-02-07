@@ -117,6 +117,9 @@ result = merged_df.groupby('country_name').agg({
 result.to_csv("Data/soule.csv",index= False)
 
 #%%
+
+merged_df = pd.read_csv("Data/national_output_bi.csv")
+
 country2commu = {}
 
 for row in merged_df.iterrows():
@@ -144,26 +147,30 @@ query = {
 
 docs = collection.find(query)
 for doc in tqdm.tqdm(docs):
+    topic_community = None
     for community, papers in commu2papers.items():
         if doc["id"] in papers:
             topic_community = community
-    country_list = []
-    authors = doc["authorships"]
-    year = doc["publication_year"]
-    for author in authors:
-        try:
-            country = author["institutions"][0]["country_code"]
-            if country != None:
-                country_list.append(country2commu[country])
-        except Exception as e:
-            pass
-    """
-    for commu in country_list:
-        countries2df[commu].at[year,"community_"+str(topic_community)] += 1
-    """
-    if len(set(country_list)) == 1:
-        countries2df[country_list[0]].at[year,"community_"+str(topic_community)] += 1
-
+    if topic_community:
+        country_list = []
+        authors = doc["authorships"]
+        year = doc["publication_year"]
+        for author in authors:
+            try:
+                country = author["institutions"][0]["country_code"]
+                if country != None:
+                    country_list.append(country2commu[country])
+            except Exception as e:
+                pass
+    
+        for commu in country_list:
+            countries2df[commu].at[year,"community_"+str(topic_community)] += 1
+            if commu == 0 and topic_community == 1 and doc["publication_year"]<1980:
+                print(doc["id"])
+        """
+        if len(set(country_list)) == 1:
+            countries2df[country_list[0]].at[year,"community_"+str(topic_community)] += 1
+        """
     
 for country_commu in countries2df:
     df_year_comm = countries2df[country_commu]
@@ -202,4 +209,4 @@ for topic_commu in df_year_comm_normalized.columns:
     
 df_test.to_csv("Data/Fig_topics2countries_evolution.csv",index=False)
 
-#%%
+#%% Get papers

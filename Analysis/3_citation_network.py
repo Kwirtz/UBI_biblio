@@ -81,7 +81,7 @@ g = g.simplify(multiple=True, loops=True)
 
 #%%
 
-for i in tqdm.tqdm(range(23,24)):
+for i in tqdm.tqdm(range(19,20)):
     random.seed(i)
     communities = g.community_leiden(objective_function="modularity", resolution=0.5)
     #communities = g.community_spinglass(gamma=0.9)
@@ -168,6 +168,8 @@ for i in tqdm.tqdm(range(23,24)):
                     community_value = community
             if community_value != None:
                 for ref in doc["referenced_works"]:
+                    if ref in ["https://openalex.org/W3147703848","https://openalex.org/W1676072121"]:
+                        pass
                     commu2cited[community_value].append(ref)
         
     commu2cited_authors = {i:[] for i in df["modularity_class"]}
@@ -227,7 +229,7 @@ for i in tqdm.tqdm(range(23,24)):
     
     for commu in commu2cited:
         for paper in commu2cited[commu]:
-            if paper in list_papers_ubi:
+            if paper in list_papers_ubi and paper not in ["https://openalex.org/W3147703848","https://openalex.org/W1676072121"]:
                 commu2papers_UBI_only[commu].append(paper)
     
     top_cited_per_community_sample = get_top_authors(commu2papers_UBI_only, top_n=20)
@@ -240,10 +242,11 @@ for i in tqdm.tqdm(range(23,24)):
     for community in commu2papers:
         for paper in commu2papers[community]:
             try:
-                doc = collection.find_one({"id":paper})
-                citations = doc["cited_by_count"]
-                title = doc["title"]
-                most_cited_global[community][doc["id"]] = citations
+                if paper not in ["https://openalex.org/W3147703848","https://openalex.org/W1676072121"]:
+                    doc = collection.find_one({"id":paper})
+                    citations = doc["cited_by_count"]
+                    title = doc["title"]
+                    most_cited_global[community][doc["id"]] = citations
             except:
                 pass
     
@@ -277,7 +280,8 @@ for i in tqdm.tqdm(range(23,24)):
     most_cited_UBI = defaultdict(lambda:defaultdict(int))
     for community, papers in commu2papers.items():
         for paper in papers:
-            most_cited_UBI[community][paper] = papers2cited_UBI[paper]
+            if paper not in ["https://openalex.org/W3147703848","https://openalex.org/W1676072121"]:
+                most_cited_UBI[community][paper] = papers2cited_UBI[paper]
     
     top_cited_per_community_UBI = {}
         
@@ -548,8 +552,9 @@ for i in tqdm.tqdm(range(23,24)):
             full_gram = ""
             if doc["has_fulltext"]:
                 doc_id = doc["id"].split("/")[-1]
-                response = requests.get("https://api.openalex.org/works/{}/ngrams?mailto=kevin-w@hotmail.fr".format(doc_id))
-                ngrams = json.loads(response.content)["ngrams"]
+                #response = requests.get("https://api.openalex.org/works/{}/ngrams?mailto=kevin-w@hotmail.fr".format(doc_id))
+                #ngrams = json.loads(response.content)["ngrams"]
+                ngrams = []
                 for gram in ngrams:
                     if gram['ngram_tokens']<4:
                         full_gram += gram["ngram"].lower() + " "
@@ -590,8 +595,9 @@ for i in tqdm.tqdm(range(23,24)):
             full_gram = ""
             if doc["has_fulltext"]:
                 doc_id = doc["id"].split("/")[-1]
-                response = requests.get("https://api.openalex.org/works/{}/ngrams?mailto=kevin-w@hotmail.fr".format(doc_id))
-                ngrams = json.loads(response.content)["ngrams"]
+                #response = requests.get("https://api.openalex.org/works/{}/ngrams?mailto=kevin-w@hotmail.fr".format(doc_id))
+                #ngrams = json.loads(response.content)["ngrams"]
+                ngrams = []
                 temp_freq_dict = {i:0 for i in keywords_to_check}
                 for gram in ngrams:
                     if gram['ngram_tokens']<4:
@@ -661,6 +667,8 @@ for i in tqdm.tqdm(range(23,24)):
         for community, papers in commu2papers.items():
             if doc["id"] in papers:
                 df_year_comm.at[doc["publication_year"],"community_"+str(community)] += 1
+                if community == 4 and doc["publication_year"] <1980:
+                    print(doc["id"])
         # Calculate the sum of each row
     row_sums = df_year_comm.sum(axis=1)
     
@@ -836,7 +844,7 @@ for i in tqdm.tqdm(range(23,24)):
         
         docs = collection_concept.find()
         for doc in tqdm.tqdm(docs):
-            if doc["level"] == 1:
+            if doc["level"] == 0:
                 lvl1.append(doc["display_name"])
         
         commu2discipline = {i:{j:0 for j in lvl1} for i in commu2papers}

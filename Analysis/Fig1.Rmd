@@ -41,24 +41,34 @@ result_path = file.path("../Results/Figures")
 ```{r} 
 df <- read_csv(file.path(data_path, "Fig1.csv"))
 oma2 <- c(0,0,0,0)
-#df$`minimum income guarantee v2` = df$`minimum income guarantee`+df$`guaranteed minimum income`
+df$`minimum income guarantee` = df$`minimum income guarantee`+df$`guaranteed minimum income` + df$`minimum income`
 df_long <- df %>%
-  select(`basic income`, `year`) %>%
-  filter(year >= 1950 & year <= 2010) %>%
-  pivot_longer(cols = -year, # exclude year column
-               names_to = "Variable",  # name for new column with variable names
+  select(`basic income`, `minimum income guarantee`, `negative income tax`, `year`) %>%
+  filter(year >= 1950 & year <= 2020) %>%
+  pivot_longer(cols = -year, 
+               names_to = "Variable",  
                values_to = "Value")
+
+# Compute total sum per year
+df_long <- df_long %>%
+  group_by(year) %>%
+  mutate(Total_Sum = sum(Value, na.rm = TRUE),  # Sum of all three variables per year
+         Share = Value / Total_Sum * 100) %>%   # Calculate share as percentage
+  ungroup()
 
 # Function to calculate 5-year moving average
 moving_average <- function(x) {
   rollapply(x, width = 5, FUN = mean, align = "center", fill = NA)
 }
 
-# Apply the moving average to each variable
+# Apply moving average to Share instead of raw Value
 df_long <- df_long %>%
   group_by(Variable) %>%
-  mutate(MA_Value = moving_average(Value))
+  mutate(MA_Share = moving_average(Share)) %>%
+  ungroup()
 
+# View results
+print(df_long)
 ```
 
 ```{r} 
@@ -66,11 +76,11 @@ df_long <- df_long %>%
 custom_colors <- c("First Period" = "orange", "Second Period" = "black", "Third Period" = "#3357FF")
 
 # Create the individual plots
-Fig1_a <- ggplot(df_long, aes(x = year, y = MA_Value, color = Variable)) +
+Fig1_a <- ggplot(df_long, aes(x = year, y = MA_Share, color = Variable)) +
   geom_line(linewidth=1) +
   labs(title = "",
        x = "Year",
-       y = "Number of Publications",
+       y = "Relative Share of Publications",
        color = "Variable") +
   theme(
     axis.text.y = element_text(size = 10),

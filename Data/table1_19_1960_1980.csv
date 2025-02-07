@@ -1,0 +1,76 @@
+community,discipline,n_discipline,share_discipline,author_most_used,title_most_used_ref,bib_most_used_ref,id_most_used_ref,n_most_used_ref,share_most_used_ref
+1,Law,871,0.7001607717041801,,,,,,
+1,Market economy,516,0.41479099678456594,,,,,,
+1,Public economics,404,0.3247588424437299,,,,,,
+1,Economic growth,302,0.2427652733118971,,,,,,
+1,Law and economics,266,0.21382636655948553,,,,,,
+1,Labour economics,245,0.19694533762057878,,,,,,
+1,Mechanical engineering,196,0.15755627009646303,,,,,,
+1,Finance,185,0.1487138263665595,,,,,,
+1,Positive economics,174,0.13987138263665594,,,,,,
+1,Political economy,167,0.1342443729903537,,,,,,
+1,Development economics,152,0.12218649517684887,,,,,,
+1,Epistemology,144,0.1157556270096463,,,,,,
+1,Mathematical analysis,137,0.11012861736334405,,,,,,
+1,Demographic economics,118,0.09485530546623794,,,,,,
+1,Linguistics,115,0.09244372990353698,,,,,,
+2,Market economy,296,0.46105919003115264,Christopher Green,Negative Taxes and Monetary Incentives to Work: The Static Theory,Christopher Green (1968),https://openalex.org/W2279741972,5.0,0.1282051282051282
+2,Public economics,259,0.40342679127725856,Michael C. Keeley,The Labor-Supply Effects and Costs of Alternative Negative Income Tax Programs,Michael C. Keeley et al. (1978),https://openalex.org/W1587444279,4.0,0.10256410256410256
+2,Law,258,0.40186915887850466,Philip K. Robins,The Effects of Welfare Programs on Experimental Responses,Irwin Garfinkel (1974),https://openalex.org/W216113217,3.0,0.07692307692307693
+2,Economic growth,220,0.3426791277258567,Robert G. Spiegelman,Capitalism and Freedom,Milton Friedman (1962),https://openalex.org/W1559924327,3.0,0.07692307692307693
+2,Labour economics,161,0.2507788161993769,Richard W. West,"Labor-Supply Effects of Income, Income-Work, and Wage Subsidies",Jonathan R. Kesselman (1969),https://openalex.org/W294349945,3.0,0.07692307692307693
+2,Finance,134,0.2087227414330218,Irwin Garfinkel,Simple Dynamic Effects in Work-Leisure Choice: A Skeptical Comment on the Static Theory,John Conlisk (1968),https://openalex.org/W2216732643,3.0,0.07692307692307693
+2,Demographic economics,115,0.1791277258566978,Milton Friedman,The Labor-Supply Response of Husbands,Harold W. Watts (1974),https://openalex.org/W1567167677,2.0,0.05128205128205128
+2,Mechanical engineering,85,0.13239875389408098,Jonathan R. Kesselman,Predicting the Effects of Permanent Programs from a Limited Duration Experiment,Charles E. Metcalf (1974),https://openalex.org/W214256899,2.0,0.05128205128205128
+2,Development economics,85,0.13239875389408098,John Conlisk,The Effects of Taxation on Risk Taking,Martin Feldstein (1969),https://openalex.org/W2083818924,1.0,0.02564102564102564
+2,Macroeconomics,76,0.11838006230529595,Harold W. Watts,The Effect of Taxation on Labor Supply: Evaluating the Gary Negative Income Tax Experiment,Gary Burtless et Jerry A. Hausman (1978),https://openalex.org/W1996567072,1.0,0.02564102564102564
+2,Mathematical analysis,67,0.1043613707165109,Jerry A. Hausman,Attrition Bias in Experimental and Panel Data: The Gary Income Maintenance Experiment,Jerry A. Hausman et David A. Wise (1979),https://openalex.org/W2061127918,1.0,0.02564102564102564
+2,Microeconomics,64,0.09968847352024922,Charles E. Metcalf,Income Maintenance and the Rural Poor: An Experimental Approach,David Bawden (1970),https://openalex.org/W2278871656,1.0,0.02564102564102564
+2,Linguistics,57,0.08878504672897196,Martin Feldstein,The Labor-Supply Response of the Family,Robinson G. Hollister (1974),https://openalex.org/W267512904,1.0,0.02564102564102564
+2,Demography,51,0.0794392523364486,Gary Burtless,A Negative-Income-Tax Experiment,David N. Kershaw (1972),https://openalex.org/W2060903017,1.0,0.02564102564102564
+2,Archaeology,46,0.07165109034267912,David A. Wise,"Work Response to Income Maintenance: Economic, Sociological, and Cultural Perspectives",Sonia R. Wright (1975),https://openalex.org/W4254784248,1.0,0.02564102564102564
+3,Market economy,261,0.5483193277310925,Anthony B. Atkinson,The Tax Credit Scheme and the Redistribution of Income.,Anthony B. Atkinson (1974),https://openalex.org/W2160300036,4.0,0.2
+3,Public economics,229,0.4810924369747899,John J. Isenhower,Negative Taxes and the Poverty Problem,John J. Isenhower (1968),https://openalex.org/W2510840972,3.0,0.15
+3,Law,222,0.46638655462184875,Joseph E. Stiglitz,The design of tax structure: Direct versus indirect taxation,Anthony B. Atkinson et Joseph E. Stiglitz (1976),https://openalex.org/W2168838273,2.0,0.1
+3,Labour economics,203,0.4264705882352941,Gary Burtless,The Effect of Taxation on Labor Supply: Evaluating the Gary Negative Income Tax Experiment,Gary Burtless et Jerry A. Hausman (1978),https://openalex.org/W1996567072,2.0,0.1
+3,Economic growth,138,0.28991596638655465,Jerry A. Hausman,A Guaranteed Minimum Income Scheme for Australia? Some Problems<sup>1</sup>,Peter Saunders (1976),https://openalex.org/W2265308498,2.0,0.1
+3,Microeconomics,98,0.20588235294117646,James Tobin,Capitalism and Freedom,Milton Friedman (1962),https://openalex.org/W1559924327,1.0,0.05
+3,Mechanical engineering,97,0.20378151260504201,Peter Saunders,The Relief of Poverty: Negative Income Taxes and Other Measures*,B. F. Henderson (1971),https://openalex.org/W2119625862,1.0,0.05
+3,Macroeconomics,96,0.20168067226890757,Milton Friedman,Government Against Poverty.,Joseph A. Kershaw et Paul N. Courant (1972),https://openalex.org/W2090347708,1.0,0.05
+3,Mathematical analysis,81,0.17016806722689076,B. F. Henderson,Is a Negative Income Tax Practical?,James Tobin et al. (1967),https://openalex.org/W4256487331,1.0,0.05
+3,Finance,73,0.15336134453781514,Joseph A. Kershaw,"Taxes, family grants and redistribution",Michael Bruno et Jack Habib (1976),https://openalex.org/W2056617855,1.0,0.05
+3,Demographic economics,52,0.1092436974789916,Paul N. Courant,"Work Response to Income Maintenance: Economic, Sociological, and Cultural Perspectives",Sonia R. Wright (1975),https://openalex.org/W2152073090,1.0,0.05
+3,Development economics,48,0.10084033613445378,Joseph A. Pechman,On Limiting the Domain of Inequality,James Tobin (1970),https://openalex.org/W4376595955,1.0,0.05
+3,Linguistics,43,0.09033613445378151,Peter Mieszkowski,,,,,
+3,Law and economics,40,0.08403361344537816,Michael Bruno,,,,,
+3,Econometrics,38,0.07983193277310924,Jack Habib,,,,,
+4,Law,105,0.621301775147929,,,,,,
+4,Market economy,81,0.47928994082840237,,,,,,
+4,Ecology,62,0.3668639053254438,,,,,,
+4,Public economics,51,0.30177514792899407,,,,,,
+4,Economic growth,50,0.2958579881656805,,,,,,
+4,Economic system,32,0.1893491124260355,,,,,,
+4,Finance,29,0.17159763313609466,,,,,,
+4,Social science,29,0.17159763313609466,,,,,,
+4,Mechanical engineering,27,0.15976331360946747,,,,,,
+4,Development economics,20,0.11834319526627218,,,,,,
+4,Mathematical analysis,19,0.11242603550295859,,,,,,
+4,Macroeconomics,19,0.11242603550295859,,,,,,
+4,Microeconomics,17,0.10059171597633136,,,,,,
+4,Political economy,17,0.10059171597633136,,,,,,
+4,Epistemology,16,0.09467455621301775,,,,,,
+5,Law,47,0.5465116279069767,,,,,,
+5,Market economy,40,0.46511627906976744,,,,,,
+5,Labour economics,37,0.43023255813953487,,,,,,
+5,Economic growth,36,0.4186046511627907,,,,,,
+5,Development economics,25,0.29069767441860467,,,,,,
+5,Demographic economics,24,0.27906976744186046,,,,,,
+5,Public economics,20,0.23255813953488372,,,,,,
+5,Archaeology,16,0.18604651162790697,,,,,,
+5,Macroeconomics,15,0.1744186046511628,,,,,,
+5,Linguistics,12,0.13953488372093023,,,,,,
+5,Mechanical engineering,12,0.13953488372093023,,,,,,
+5,Algorithm,11,0.12790697674418605,,,,,,
+5,Accounting,11,0.12790697674418605,,,,,,
+5,Finance,10,0.11627906976744186,,,,,,
+5,Mathematical analysis,8,0.09302325581395349,,,,,,

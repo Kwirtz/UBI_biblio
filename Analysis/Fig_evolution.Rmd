@@ -60,15 +60,15 @@ df_long <- df %>%
 
 # Define the custom colors for each community
 custom_colors <- c("community_1" = "#ff7e35",
-                   "community_2" = "#f381e7",
-                   "community_3" = "#00c4ed",
+                   "community_3" = "#f381e7",
+                   "community_2" = "#00c4ed",
                    "community_4" = "#5cc032",
                    "community_5" = "gray")
 
 # Update the community labels
 community_labels <- c("community_1" = "Social justice",
-                      "community_2" = "Tax/Labor supply",
-                      "community_3" = "Experiment",
+                      "community_2" = "Experiment",
+                      "community_3" = "Tax/Labor supply",
                       "community_4" = "Degrowth",
                       "community_5" = "Others")
 
@@ -151,15 +151,15 @@ df_with_share$Countries <- factor(df_with_share$Countries,
 ```{r} 
 # Define the custom colors for each community
 custom_colors_topics <- c("community_1" = "#ff7e35",
-                   "community_2" = "#f381e7",
-                   "community_3" = "#00c4ed",
+                   "community_3" = "#f381e7",
+                   "community_2" = "#00c4ed",
                    "community_4" = "#5cc032",
-                   "community_5" = "gray")
+                   "community_5" = "#808080")
 
 # Update the community labels
 topic_labels <- c("community_1" = "Social justice",
-                      "community_2" = "Tax/Labor supply",
-                      "community_3" = "Experiment",
+                      "community_2" = "Experiment",
+                      "community_3" = "Tax/Labor supply",
                       "community_4" = "Degrowth",
                       "community_5" = "Others")
 
