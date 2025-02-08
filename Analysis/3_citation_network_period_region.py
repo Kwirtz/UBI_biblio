@@ -50,7 +50,7 @@ start_year = 1960
 end_year = 1981
 
 for goal_region in set(country2commu.values()):
-    
+    print(goal_region)
     query = {
         'publication_year': {
             '$gte': start_year,
@@ -84,12 +84,7 @@ for goal_region in set(country2commu.values()):
     for doc in tqdm.tqdm(docs):
         list_papers_ubi.append(doc["id"])
 
-for i in list_of_papers:
-    for j in commu2papers:
-        if i in commu2papers[j]:
-            print(i,j)
-
-    
+      
     #%% get stats for communities refs
     # Most used ref and authors
     # Most cited by UBI ref and authors
@@ -282,6 +277,7 @@ for i in list_of_papers:
     df_top10['bib_most_cited_global'] = df_top10['id_most_cited_global'].apply(get_authors_year)
     df_top10['title_most_cited_UBI'] = df_top10['id_most_cited_UBI'].apply(get_title)
     df_top10['bib_most_cited_UBI'] = df_top10['id_most_cited_UBI'].apply(get_authors_year)
-    
+    print(goal_region)
+    print("Data/table_{}_{}_region{}.csv".format(start_year,end_year,goal_region))
     df_top10.to_csv("Data/table_{}_{}_region{}.csv".format(start_year,end_year,goal_region))
         

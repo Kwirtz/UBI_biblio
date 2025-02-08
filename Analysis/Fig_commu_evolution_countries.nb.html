@@ -2902,7 +2902,7 @@ font-size: 0.95em;
 
 <h1 class="title toc-ignore">Figures</h1>
 <h4 class="author">Kevin Wirtz (<a href="mailto:kevin.wirtz@unistra.fr" class="email">kevin.wirtz@unistra.fr</a>)</h4>
-<h4 class="date">Updated février 07, 2025</h4>
+<h4 class="date">Updated février 08, 2025</h4>
 
 </div>
 
@@ -2917,9 +2917,9 @@ font-size: 0.95em;
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgPC0gcmVhZF9jc3YoZmlsZS5wYXRoKGRhdGFfcGF0aCwgXCJGaWdfdG9waWNzMmNvdW50cmllc19ldm9sdXRpb24uY3N2XCIpKVxuYGBgIn0= -->
 <pre class="r"><code>df &lt;- read_csv(file.path(data_path, &quot;Fig_topics2countries_evolution.csv&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMzA1IENvbHVtbnM6IDZcbuKUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmNociAoMSk6IFRvcGljc1xuZGJsICg1KTogY291bnRyaWVzXzAsIGNvdW50cmllc18xLCBjb3VudHJpZXNfMiwgY291bnRyaWVzXzMsIHllYXJcblxu4oS5IFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxu4oS5IFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMzA1IENvbHVtbnM6IDZcbuKUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmNociAoMSk6IFRvcGljc1xuZGJsICg1KTogY291bnRyaWVzXzAsIGNvdW50cmllc18xLCBjb3VudHJpZXNfMiwgY291bnRyaWVzXzMsIHllYXJcblxu4oS5IFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxu4oS5IFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
 <pre><code>Rows: 305 Columns: 6
-── Column specification ──────────────────────────────────────────────────────────────
+── Column specification ─────────────────────────────────────────────────────────────────────────────────────────────────
 Delimiter: &quot;,&quot;
 chr (1): Topics
 dbl (5): countries_0, countries_1, countries_2, countries_3, year
@@ -2950,9 +2950,8 @@ df_summarized &lt;- df_long %&gt;%
   summarize(total_value = sum(value, na.rm = TRUE)) %&gt;%
   ungroup()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCBoYXMgZ3JvdXBlZCBvdXRwdXQgYnkgJ1RvcGljcycsICdwZXJpb2QnLiBZb3UgY2FuIG92ZXJyaWRlIHVzaW5nIHRoZVxuYC5ncm91cHNgIGFyZ3VtZW50LlxuIn0= -->
-<pre><code>`summarise()` has grouped output by &#39;Topics&#39;, &#39;period&#39;. You can override using the
-`.groups` argument.</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCBoYXMgZ3JvdXBlZCBvdXRwdXQgYnkgJ1RvcGljcycsICdwZXJpb2QnLiBZb3UgY2FuIG92ZXJyaWRlIHVzaW5nIHRoZSBgLmdyb3Vwc2AgYXJndW1lbnQuXG4ifQ== -->
+<pre><code>`summarise()` has grouped output by &#39;Topics&#39;, &#39;period&#39;. You can override using the `.groups` argument.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBDYWxjdWxhdGUgdGhlIHNoYXJlXG5kZl93aXRoX3NoYXJlIDwtIGRmX3N1bW1hcml6ZWQgJT4lXG4gIGdyb3VwX2J5KENvdW50cmllcyxwZXJpb2QpICU+JVxuICBtdXRhdGUodG90YWxfcGVyaW9kX3ZhbHVlID0gc3VtKHRvdGFsX3ZhbHVlLCBuYS5ybSA9IFRSVUUpLFxuICAgICAgICAgc2hhcmUgPSB0b3RhbF92YWx1ZSAvIHRvdGFsX3BlcmlvZF92YWx1ZSkgJT4lXG4gIHNlbGVjdCgtdG90YWxfcGVyaW9kX3ZhbHVlKSAlPiVcbiAgdW5ncm91cCgpJT4lXG4gIGFycmFuZ2UoVG9waWNzLCBwZXJpb2QsIENvdW50cmllcylcblxuZGZfd2l0aF9zaGFyZSRwZXJpb2QgPC0gZmFjdG9yKGRmX3dpdGhfc2hhcmUkcGVyaW9kLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsZXZlbHMgPSBjKFwicGVyaW9kMVwiLCBcInBlcmlvZDJcIiwgXCJwZXJpb2QzXCIpLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsYWJlbHMgPSBjKFwiMTk2MC0xOTgwXCIsIFwiMTk4MS0yMDAwXCIsIFwiMjAwMS0yMDIwXCIpKVxuXG5jb3VudHJ5X2xhYmVscyA8LSBjKFwiY291bnRyaWVzXzBcIiA9IFwiTm9ydGggRXVyb3BlXCIsXG4gICAgICAgICAgICAgICAgICAgIFwiY291bnRyaWVzXzFcIiA9IFwiVVNBLUFmcmljYS1Bc2lhXCIsXG4gICAgICAgICAgICAgICAgICAgIFwiY291bnRyaWVzXzJcIiA9IFwiV2VzdGVybiBFdXJvcGVcIixcbiAgICAgICAgICAgICAgICAgICAgXCJjb3VudHJpZXNfM1wiID0gXCJBbWVyaWNhIGFuZCBQYWNpZmljXCIpXG5cbiMgUmVwbGFjZSBjb3VudHJ5IGxhYmVscyBpbiB0aGUgZGF0YWZyYW1lXG5kZl93aXRoX3NoYXJlJENvdW50cmllcyA8LSBmYWN0b3IoZGZfd2l0aF9zaGFyZSRDb3VudHJpZXMsIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxldmVscyA9IG5hbWVzKGNvdW50cnlfbGFiZWxzKSwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbGFiZWxzID0gY291bnRyeV9sYWJlbHMpXG5cblxuYGBgIn0= -->
 <pre class="r"><code># Calculate the share
