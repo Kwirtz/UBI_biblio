@@ -1,6 +1,6 @@
-# The evolution of Basic Income research, a bibliometrical approach (Work in Progress)
+# Sixty years of Basic Income research (Work in Progress)
 
-This repository host codes from the paper The evolution of Basic Income research, a bibliometrical approach (Jacob and Wirtz, 2025).
+This repository host codes from the paper Sixty years of Basic Income research (Jacob and Wirtz, 2025).
 
 ## Aim of the paper
 
